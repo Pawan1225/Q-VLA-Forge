@@ -1,0 +1,27 @@
+experiment:
+  name: baseline
+  domain: autonomous_driving
+  seed: 42
+
+model:
+  vision_dim: 64
+  language_dim: 32
+  state_dim: 16
+  latent_dim: 64
+  action_dim: 3
+
+training:
+  optimizer: adamw
+  learning_rate: 0.001
+  weight_decay: 0.01
+  batch_size: 32
+  epochs: 10
+  scheduler: cosine
+
+evaluation:
+  seeds:
+    - 42
+    - 123
+    - 456
+  measure_latency: true
+  measure_training_time: true

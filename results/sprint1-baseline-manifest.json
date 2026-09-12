@@ -1,0 +1,46 @@
+{
+  "project": "Q-VLA Forge",
+  "baseline_name": "shared_vla_fp32",
+  "baseline_version": "1.0",
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "vision_dim": 64,
+  "language_dim": 32,
+  "state_dim": 16,
+  "fusion_dim": 64,
+  "latent_dim": 32,
+  "action_dim": 3,
+  "optimizer": "AdamW",
+  "scheduler": "CosineAnnealingLR",
+  "loss": "MSELoss",
+  "train_size": 512,
+  "validation_size": 128,
+  "test_size": 128,
+  "epochs": 20,
+  "batch_size": 32,
+  "driving_action_semantics": [
+    "steering",
+    "acceleration",
+    "braking"
+  ],
+  "robotics_action_semantics": [
+    "delta_x",
+    "delta_y",
+    "gripper"
+  ],
+  "parameters": 76179,
+  "fp32_model_size_bytes": 304716,
+  "evidence_files": [
+    "driving-baseline-seed-42.json",
+    "driving-baseline-seed-123.json",
+    "driving-baseline-seed-456.json",
+    "robotics-baseline-seed-42.json",
+    "robotics-baseline-seed-123.json",
+    "robotics-baseline-seed-456.json",
+    "baseline-validation-summary.json"
+  ],
+  "created_at": "2026-09-12T11:21:12.900354+00:00"
+}

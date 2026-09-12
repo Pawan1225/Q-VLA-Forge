@@ -1,0 +1,32 @@
+experiment:
+  name: compression
+
+methods:
+  - int8
+  - svd
+  - tensor_train
+  - mps
+  - tt_svd
+
+svd:
+  ranks:
+    - 4
+    - 8
+    - 16
+    - 32
+
+tensor_train:
+  ranks:
+    - 2
+    - 4
+    - 8
+
+targets:
+  minimum_compression_ratio: 2.0
+  maximum_accuracy_drop_percent: 5.0
+
+evaluation:
+  measure_parameters: true
+  measure_memory: true
+  measure_latency: true
+  measure_accuracy: true

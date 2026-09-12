@@ -1,0 +1,34 @@
+experiment:
+  name: hybrid_qml
+
+classical_policy:
+  algorithm: ppo
+  hidden_dim: 64
+
+quantum:
+  framework: pennylane
+  encoding: angle
+  qubits: 4
+  layers: 2
+  ansatz:
+    rotations:
+      - ry
+      - rz
+    entanglement: cnot
+  shots: null
+
+training:
+  learning_rate: 0.001
+  total_timesteps: 10000
+
+evaluation:
+  seeds:
+    - 42
+    - 123
+    - 456
+  compare_against:
+    - ppo_mlp
+  metrics:
+    - reward
+    - samples_to_threshold
+    - convergence_steps

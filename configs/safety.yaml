@@ -1,0 +1,27 @@
+experiment:
+  name: safety
+
+methods:
+  - none
+  - clipping
+  - lyapunov
+
+lyapunov:
+  epsilon: 0.001
+
+robustness:
+  gaussian_noise_std:
+    - 0.0
+    - 0.01
+    - 0.05
+    - 0.1
+
+  state_perturbation: true
+  action_perturbation: true
+
+evaluation:
+  metrics:
+    - safety_violations
+    - safe_episode_rate
+    - recovery_rate
+    - reward
