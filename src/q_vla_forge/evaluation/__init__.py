@@ -4,6 +4,15 @@ from q_vla_forge.evaluation.baseline_manifest import (
     load_json,
     save_baseline_manifest,
 )
+from q_vla_forge.evaluation.compression_selection import (
+    CompressionCandidate,
+    DomainCompressionSelection,
+    MethodSelection,
+    build_domain_compression_selection,
+    load_compression_candidate,
+    save_domain_compression_selection,
+    select_method_candidate,
+)
 from q_vla_forge.evaluation.driving_baseline import (
     DrivingBaselineResult,
     DrivingEvaluationMetrics,
@@ -31,10 +40,13 @@ from q_vla_forge.evaluation.robotics_baseline import (
 
 __all__ = [
     "BaselineManifest",
+    "CompressionCandidate",
     "DomainBaselineSummary",
+    "DomainCompressionSelection",
     "DrivingBaselineResult",
     "DrivingEvaluationMetrics",
     "LatencyMetrics",
+    "MethodSelection",
     "MetricSummary",
     "MultiSeedBaselineSummary",
     "RoboticsBaselineResult",
@@ -42,14 +54,18 @@ __all__ = [
     "RoboticsLatencyMetrics",
     "aggregate_baseline_payloads",
     "build_baseline_manifest",
+    "build_domain_compression_selection",
     "evaluate_driving_model",
     "evaluate_robotics_model",
+    "load_compression_candidate",
     "load_json",
     "measure_driving_latency",
     "measure_robotics_latency",
     "run_driving_baseline",
     "run_robotics_baseline",
     "save_baseline_manifest",
+    "save_domain_compression_selection",
     "save_multiseed_summary",
+    "select_method_candidate",
     "summarize_values",
 ]
