@@ -1,0 +1,262 @@
+{
+  "total_parameters": 76179,
+  "trainable_parameters": 76179,
+  "candidate_weight_parameters": 75184,
+  "uncategorized_parameters": 995,
+  "int8_target_parameters": 75184,
+  "svd_target_parameters": 35328,
+  "tensor_train_target_parameters": 34816,
+  "mps_target_parameters": 34816,
+  "int8_coverage_percent": 98.69386576353062,
+  "svd_coverage_percent": 46.37498523215059,
+  "tensor_train_coverage_percent": 45.70288399690203,
+  "mps_coverage_percent": 45.70288399690203,
+  "layers": [
+    {
+      "name": "vision_encoder.features.4",
+      "module_type": "Conv2d",
+      "weight_shape": [
+        64,
+        32,
+        3,
+        3
+      ],
+      "weight_parameters": 18432,
+      "module_parameters": 18496,
+      "model_parameter_percent": 24.195644468948135,
+      "int8_eligible": true,
+      "svd_eligible": false,
+      "tensor_train_eligible": false,
+      "mps_eligible": false,
+      "priority": "high"
+    },
+    {
+      "name": "language_encoder.embedding",
+      "module_type": "Embedding",
+      "weight_shape": [
+        512,
+        32
+      ],
+      "weight_parameters": 16384,
+      "module_parameters": 16384,
+      "model_parameter_percent": 21.507239527953896,
+      "int8_eligible": true,
+      "svd_eligible": false,
+      "tensor_train_eligible": false,
+      "mps_eligible": false,
+      "priority": "high"
+    },
+    {
+      "name": "fusion.network.0",
+      "module_type": "Linear",
+      "weight_shape": [
+        128,
+        112
+      ],
+      "weight_parameters": 14336,
+      "module_parameters": 14464,
+      "model_parameter_percent": 18.81883458695966,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": true,
+      "mps_eligible": true,
+      "priority": "high"
+    },
+    {
+      "name": "fusion.network.2",
+      "module_type": "Linear",
+      "weight_shape": [
+        64,
+        128
+      ],
+      "weight_parameters": 8192,
+      "module_parameters": 8256,
+      "model_parameter_percent": 10.753619763976948,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": true,
+      "mps_eligible": true,
+      "priority": "high"
+    },
+    {
+      "name": "vision_encoder.features.2",
+      "module_type": "Conv2d",
+      "weight_shape": [
+        32,
+        16,
+        3,
+        3
+      ],
+      "weight_parameters": 4608,
+      "module_parameters": 4640,
+      "model_parameter_percent": 6.048911117237034,
+      "int8_eligible": true,
+      "svd_eligible": false,
+      "tensor_train_eligible": false,
+      "mps_eligible": false,
+      "priority": "high"
+    },
+    {
+      "name": "vision_encoder.projection.1",
+      "module_type": "Linear",
+      "weight_shape": [
+        64,
+        64
+      ],
+      "weight_parameters": 4096,
+      "module_parameters": 4160,
+      "model_parameter_percent": 5.376809881988474,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": true,
+      "mps_eligible": true,
+      "priority": "high"
+    },
+    {
+      "name": "latent.network.0",
+      "module_type": "Linear",
+      "weight_shape": [
+        64,
+        64
+      ],
+      "weight_parameters": 4096,
+      "module_parameters": 4160,
+      "model_parameter_percent": 5.376809881988474,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": true,
+      "mps_eligible": true,
+      "priority": "high"
+    },
+    {
+      "name": "latent.network.2",
+      "module_type": "Linear",
+      "weight_shape": [
+        32,
+        64
+      ],
+      "weight_parameters": 2048,
+      "module_parameters": 2080,
+      "model_parameter_percent": 2.688404940994237,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": true,
+      "mps_eligible": true,
+      "priority": "medium"
+    },
+    {
+      "name": "language_encoder.projection.0",
+      "module_type": "Linear",
+      "weight_shape": [
+        32,
+        32
+      ],
+      "weight_parameters": 1024,
+      "module_parameters": 1056,
+      "model_parameter_percent": 1.3442024704971185,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": true,
+      "mps_eligible": true,
+      "priority": "medium"
+    },
+    {
+      "name": "action_head.network.0",
+      "module_type": "Linear",
+      "weight_shape": [
+        32,
+        32
+      ],
+      "weight_parameters": 1024,
+      "module_parameters": 1056,
+      "model_parameter_percent": 1.3442024704971185,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": true,
+      "mps_eligible": true,
+      "priority": "medium"
+    },
+    {
+      "name": "vision_encoder.features.0",
+      "module_type": "Conv2d",
+      "weight_shape": [
+        16,
+        3,
+        3,
+        3
+      ],
+      "weight_parameters": 432,
+      "module_parameters": 448,
+      "model_parameter_percent": 0.5670854172409718,
+      "int8_eligible": true,
+      "svd_eligible": false,
+      "tensor_train_eligible": false,
+      "mps_eligible": false,
+      "priority": "low"
+    },
+    {
+      "name": "state_encoder.shared_encoder.0",
+      "module_type": "Linear",
+      "weight_shape": [
+        16,
+        16
+      ],
+      "weight_parameters": 256,
+      "module_parameters": 272,
+      "model_parameter_percent": 0.3360506176242796,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": false,
+      "mps_eligible": false,
+      "priority": "low"
+    },
+    {
+      "name": "state_encoder.robotics_adapter.0",
+      "module_type": "Linear",
+      "weight_shape": [
+        16,
+        6
+      ],
+      "weight_parameters": 96,
+      "module_parameters": 112,
+      "model_parameter_percent": 0.12601898160910488,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": false,
+      "mps_eligible": false,
+      "priority": "low"
+    },
+    {
+      "name": "action_head.network.2",
+      "module_type": "Linear",
+      "weight_shape": [
+        3,
+        32
+      ],
+      "weight_parameters": 96,
+      "module_parameters": 99,
+      "model_parameter_percent": 0.12601898160910488,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": false,
+      "mps_eligible": false,
+      "priority": "low"
+    },
+    {
+      "name": "state_encoder.driving_adapter.0",
+      "module_type": "Linear",
+      "weight_shape": [
+        16,
+        4
+      ],
+      "weight_parameters": 64,
+      "module_parameters": 80,
+      "model_parameter_percent": 0.0840126544060699,
+      "int8_eligible": true,
+      "svd_eligible": true,
+      "tensor_train_eligible": false,
+      "mps_eligible": false,
+      "priority": "low"
+    }
+  ]
+}
