@@ -1,0 +1,71 @@
+{
+  "protocol": "paired_fp32_best_validation_loss",
+  "tolerance_fraction": 0.05,
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "targets": [
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "reference_best_validation_loss": 0.017008460126817226,
+      "target_validation_loss": 0.017858883133158088,
+      "fp32_epoch_to_target": 14,
+      "fp32_steps_to_target": 224,
+      "fp32_samples_to_target": 7168,
+      "fp32_seconds_to_target": 4.761861799983308
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 123,
+      "reference_best_validation_loss": 0.014578625870247683,
+      "target_validation_loss": 0.015307557163760067,
+      "fp32_epoch_to_target": 15,
+      "fp32_steps_to_target": 240,
+      "fp32_samples_to_target": 7680,
+      "fp32_seconds_to_target": 5.758739499957301
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 456,
+      "reference_best_validation_loss": 0.011023489913592735,
+      "target_validation_loss": 0.011574664409272373,
+      "fp32_epoch_to_target": 14,
+      "fp32_steps_to_target": 224,
+      "fp32_samples_to_target": 7168,
+      "fp32_seconds_to_target": 5.785434400080703
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "reference_best_validation_loss": 0.01678327618477245,
+      "target_validation_loss": 0.017622439994011075,
+      "fp32_epoch_to_target": 11,
+      "fp32_steps_to_target": 176,
+      "fp32_samples_to_target": 5632,
+      "fp32_seconds_to_target": 4.059061199979624
+    },
+    {
+      "domain": "robotics",
+      "seed": 123,
+      "reference_best_validation_loss": 0.008530454632515708,
+      "target_validation_loss": 0.008956977364141494,
+      "fp32_epoch_to_target": 16,
+      "fp32_steps_to_target": 256,
+      "fp32_samples_to_target": 8192,
+      "fp32_seconds_to_target": 6.138865899964003
+    },
+    {
+      "domain": "robotics",
+      "seed": 456,
+      "reference_best_validation_loss": 0.02097842834579448,
+      "target_validation_loss": 0.022027349763084205,
+      "fp32_epoch_to_target": 12,
+      "fp32_steps_to_target": 192,
+      "fp32_samples_to_target": 6144,
+      "fp32_seconds_to_target": 4.487141600053292
+    }
+  ]
+}

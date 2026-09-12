@@ -10,6 +10,10 @@ from q_vla_forge.training.efficiency import (
     percentage_reduction,
     training_efficiency_summary_to_dict,
 )
+from q_vla_forge.training.instrumented import (
+    InstrumentedTrainingResult,
+    train_supervised_instrumented,
+)
 from q_vla_forge.training.supervised import (
     EpochMetrics,
     TensorBatch,
@@ -24,6 +28,7 @@ __all__ = [
     "EfficiencyComparison",
     "EpochEfficiencyRecord",
     "EpochMetrics",
+    "InstrumentedTrainingResult",
     "TargetDefinition",
     "TargetReachResult",
     "TensorBatch",
@@ -37,5 +42,6 @@ __all__ = [
     "find_target_reach",
     "percentage_reduction",
     "train_supervised",
+    "train_supervised_instrumented",
     "training_efficiency_summary_to_dict",
 ]
