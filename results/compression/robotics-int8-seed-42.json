@@ -1,0 +1,223 @@
+{
+  "experiment_id": "robotics-int8-seed-42",
+  "domain": "robotics",
+  "method": "int8",
+  "seed": 42,
+  "metrics": {
+    "baseline_parameters": 76179,
+    "compressed_parameters": 76179,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 79224,
+    "compression_ratio": 3.846258709481975,
+    "parameter_reduction_percent": 0.0,
+    "storage_reduction_percent": 74.00070885677155,
+    "baseline_test_mse": 0.0054161748848855495,
+    "compressed_test_mse": 0.005365172866731882,
+    "mse_change_percent": -0.9416612136361101,
+    "baseline_test_mae": 0.031649086624383926,
+    "compressed_test_mae": 0.03163103014230728,
+    "mae_change_percent": -0.05705214273935269,
+    "baseline_mean_latency_ms": 2.2912920004455373,
+    "compressed_mean_latency_ms": 1.8236319997231476,
+    "mean_latency_change_percent": -20.41031874730301,
+    "baseline_p95_latency_ms": 3.1872999970801175,
+    "compressed_p95_latency_ms": 2.5750999921001494,
+    "p95_latency_change_percent": -19.207479858839893,
+    "compression_time_seconds": 0.016037199995480478
+  },
+  "configuration": {
+    "scheme": "symmetric_per_tensor_weight_int8",
+    "inference": "fp32_dequantized_weights",
+    "quantized_module_types": [
+      "Conv2d",
+      "Embedding",
+      "Linear"
+    ],
+    "bias_dtype": "fp32",
+    "normalization_dtype": "fp32"
+  },
+  "quantization": {
+    "total_parameters": 76179,
+    "quantized_weight_parameters": 75184,
+    "untouched_parameters": 995,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 79224,
+    "compression_ratio": 3.846258709481975,
+    "storage_reduction_percent": 74.00070885677155,
+    "quantized_tensor_count": 15,
+    "quantized_tensors": [
+      {
+        "name": "vision_encoder.features.0",
+        "shape": [
+          16,
+          3,
+          3,
+          3
+        ],
+        "elements": 432,
+        "original_bytes": 1728,
+        "quantized_bytes": 436,
+        "scale": 0.0016957090830239724
+      },
+      {
+        "name": "vision_encoder.features.2",
+        "shape": [
+          32,
+          16,
+          3,
+          3
+        ],
+        "elements": 4608,
+        "original_bytes": 18432,
+        "quantized_bytes": 4612,
+        "scale": 0.0009888469234226257
+      },
+      {
+        "name": "vision_encoder.features.4",
+        "shape": [
+          64,
+          32,
+          3,
+          3
+        ],
+        "elements": 18432,
+        "original_bytes": 73728,
+        "quantized_bytes": 18436,
+        "scale": 0.0009818396817042132
+      },
+      {
+        "name": "vision_encoder.projection.1",
+        "shape": [
+          64,
+          64
+        ],
+        "elements": 4096,
+        "original_bytes": 16384,
+        "quantized_bytes": 4100,
+        "scale": 0.0011296226518360648
+      },
+      {
+        "name": "language_encoder.embedding",
+        "shape": [
+          512,
+          32
+        ],
+        "elements": 16384,
+        "original_bytes": 65536,
+        "quantized_bytes": 16388,
+        "scale": 0.033739401599553624
+      },
+      {
+        "name": "language_encoder.projection.0",
+        "shape": [
+          32,
+          32
+        ],
+        "elements": 1024,
+        "original_bytes": 4096,
+        "quantized_bytes": 1028,
+        "scale": 0.001631676329402473
+      },
+      {
+        "name": "state_encoder.driving_adapter.0",
+        "shape": [
+          16,
+          4
+        ],
+        "elements": 64,
+        "original_bytes": 256,
+        "quantized_bytes": 68,
+        "scale": 0.003931252036507674
+      },
+      {
+        "name": "state_encoder.robotics_adapter.0",
+        "shape": [
+          16,
+          6
+        ],
+        "elements": 96,
+        "original_bytes": 384,
+        "quantized_bytes": 100,
+        "scale": 0.0035312997074577754
+      },
+      {
+        "name": "state_encoder.shared_encoder.0",
+        "shape": [
+          16,
+          16
+        ],
+        "elements": 256,
+        "original_bytes": 1024,
+        "quantized_bytes": 260,
+        "scale": 0.0021617912401364543
+      },
+      {
+        "name": "fusion.network.0",
+        "shape": [
+          128,
+          112
+        ],
+        "elements": 14336,
+        "original_bytes": 57344,
+        "quantized_bytes": 14340,
+        "scale": 0.0011978978951146283
+      },
+      {
+        "name": "fusion.network.2",
+        "shape": [
+          64,
+          128
+        ],
+        "elements": 8192,
+        "original_bytes": 32768,
+        "quantized_bytes": 8196,
+        "scale": 0.0009655609257577911
+      },
+      {
+        "name": "latent.network.0",
+        "shape": [
+          64,
+          64
+        ],
+        "elements": 4096,
+        "original_bytes": 16384,
+        "quantized_bytes": 4100,
+        "scale": 0.0013173815068297499
+      },
+      {
+        "name": "latent.network.2",
+        "shape": [
+          32,
+          64
+        ],
+        "elements": 2048,
+        "original_bytes": 8192,
+        "quantized_bytes": 2052,
+        "scale": 0.0014215929536368903
+      },
+      {
+        "name": "action_head.network.0",
+        "shape": [
+          32,
+          32
+        ],
+        "elements": 1024,
+        "original_bytes": 4096,
+        "quantized_bytes": 1028,
+        "scale": 0.0018109171174642608
+      },
+      {
+        "name": "action_head.network.2",
+        "shape": [
+          3,
+          32
+        ],
+        "elements": 96,
+        "original_bytes": 384,
+        "quantized_bytes": 100,
+        "scale": 0.0016052626718686322
+      }
+    ]
+  },
+  "notes": "Weight-storage INT8 simulation; inference uses FP32-dequantized weights."
+}
