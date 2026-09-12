@@ -1,0 +1,1167 @@
+{
+  "method": "tensor_train_open_boundary_mps",
+  "relationship": "Tensor Train and open-boundary Matrix Product State use the same three-index tensor-network core structure.",
+  "independent_compression_method": false,
+  "quantum_inspired": true,
+  "quantum_hardware_used": false,
+  "synthetic_equivalence_checks": [
+    {
+      "requested_rank": 2,
+      "tensor_shape": [
+        16,
+        16,
+        32
+      ],
+      "tt_ranks": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "mps_bond_dimensions": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "tt_parameters": 160,
+      "mps_parameters": 160,
+      "same_parameter_count": true,
+      "same_bond_dimensions": true,
+      "maximum_absolute_difference": 0.0,
+      "relative_difference": 0.0,
+      "reconstruction_equivalent": true
+    },
+    {
+      "requested_rank": 4,
+      "tensor_shape": [
+        16,
+        16,
+        32
+      ],
+      "tt_ranks": [
+        1,
+        4,
+        4,
+        1
+      ],
+      "mps_bond_dimensions": [
+        1,
+        4,
+        4,
+        1
+      ],
+      "tt_parameters": 448,
+      "mps_parameters": 448,
+      "same_parameter_count": true,
+      "same_bond_dimensions": true,
+      "maximum_absolute_difference": 0.0,
+      "relative_difference": 0.0,
+      "reconstruction_equivalent": true
+    },
+    {
+      "requested_rank": 8,
+      "tensor_shape": [
+        16,
+        16,
+        32
+      ],
+      "tt_ranks": [
+        1,
+        8,
+        8,
+        1
+      ],
+      "mps_bond_dimensions": [
+        1,
+        8,
+        8,
+        1
+      ],
+      "tt_parameters": 1408,
+      "mps_parameters": 1408,
+      "same_parameter_count": true,
+      "same_bond_dimensions": true,
+      "maximum_absolute_difference": 0.0,
+      "relative_difference": 0.0,
+      "reconstruction_equivalent": true
+    }
+  ],
+  "sprint_2_5_experiment_mappings": [
+    {
+      "source_file": "driving-tt-rank-2-seed-42.json",
+      "experiment_id": "driving-tt-rank-2-seed-42",
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "requested_rank": 2,
+      "compression_ratio": 1.8006240102110762,
+      "mse_change_percent": 1546.9435856559671,
+      "layers": [
+        {
+          "name": "vision_encoder.projection.1",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 128,
+          "mps_parameters": 128,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "language_encoder.projection.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 104,
+          "mps_parameters": 104,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            56
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 208,
+          "mps_parameters": 208,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.2",
+          "tensor_shape": [
+            16,
+            16,
+            32
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 160,
+          "mps_parameters": 160,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 128,
+          "mps_parameters": 128,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.2",
+          "tensor_shape": [
+            8,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 112,
+          "mps_parameters": 112,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "action_head.network.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 104,
+          "mps_parameters": 104,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        }
+      ]
+    },
+    {
+      "source_file": "driving-tt-rank-4-seed-42.json",
+      "experiment_id": "driving-tt-rank-4-seed-42",
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "requested_rank": 4,
+      "compression_ratio": 1.7255759168233402,
+      "mse_change_percent": 1894.2071773178718,
+      "layers": [
+        {
+          "name": "vision_encoder.projection.1",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 384,
+          "mps_parameters": 384,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "language_encoder.projection.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 336,
+          "mps_parameters": 336,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            56
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 544,
+          "mps_parameters": 544,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.2",
+          "tensor_shape": [
+            16,
+            16,
+            32
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 448,
+          "mps_parameters": 448,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 384,
+          "mps_parameters": 384,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.2",
+          "tensor_shape": [
+            8,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 352,
+          "mps_parameters": 352,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "action_head.network.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 336,
+          "mps_parameters": 336,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        }
+      ]
+    },
+    {
+      "source_file": "driving-tt-rank-8-seed-42.json",
+      "experiment_id": "driving-tt-rank-8-seed-42",
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "requested_rank": 8,
+      "compression_ratio": 1.5402454558321033,
+      "mse_change_percent": 1763.973822183372,
+      "layers": [
+        {
+          "name": "vision_encoder.projection.1",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1280,
+          "mps_parameters": 1280,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "language_encoder.projection.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            8,
+            1
+          ],
+          "tt_parameters": 656,
+          "mps_parameters": 656,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            56
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1600,
+          "mps_parameters": 1600,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.2",
+          "tensor_shape": [
+            16,
+            16,
+            32
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1408,
+          "mps_parameters": 1408,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1280,
+          "mps_parameters": 1280,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.2",
+          "tensor_shape": [
+            8,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1216,
+          "mps_parameters": 1216,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "action_head.network.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            8,
+            1
+          ],
+          "tt_parameters": 656,
+          "mps_parameters": 656,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        }
+      ]
+    },
+    {
+      "source_file": "robotics-tt-rank-2-seed-42.json",
+      "experiment_id": "robotics-tt-rank-2-seed-42",
+      "domain": "robotics",
+      "seed": 42,
+      "requested_rank": 2,
+      "compression_ratio": 1.8006240102110762,
+      "mse_change_percent": 4245.125515136211,
+      "layers": [
+        {
+          "name": "vision_encoder.projection.1",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 128,
+          "mps_parameters": 128,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "language_encoder.projection.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 104,
+          "mps_parameters": 104,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            56
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 208,
+          "mps_parameters": 208,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.2",
+          "tensor_shape": [
+            16,
+            16,
+            32
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 160,
+          "mps_parameters": 160,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 128,
+          "mps_parameters": 128,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.2",
+          "tensor_shape": [
+            8,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 112,
+          "mps_parameters": 112,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "action_head.network.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "tt_parameters": 104,
+          "mps_parameters": 104,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        }
+      ]
+    },
+    {
+      "source_file": "robotics-tt-rank-4-seed-42.json",
+      "experiment_id": "robotics-tt-rank-4-seed-42",
+      "domain": "robotics",
+      "seed": 42,
+      "requested_rank": 4,
+      "compression_ratio": 1.7255759168233402,
+      "mse_change_percent": 5759.577976273536,
+      "layers": [
+        {
+          "name": "vision_encoder.projection.1",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 384,
+          "mps_parameters": 384,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "language_encoder.projection.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 336,
+          "mps_parameters": 336,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            56
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 544,
+          "mps_parameters": 544,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.2",
+          "tensor_shape": [
+            16,
+            16,
+            32
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 448,
+          "mps_parameters": 448,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 384,
+          "mps_parameters": 384,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.2",
+          "tensor_shape": [
+            8,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 352,
+          "mps_parameters": 352,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "action_head.network.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            4,
+            1
+          ],
+          "tt_parameters": 336,
+          "mps_parameters": 336,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        }
+      ]
+    },
+    {
+      "source_file": "robotics-tt-rank-8-seed-42.json",
+      "experiment_id": "robotics-tt-rank-8-seed-42",
+      "domain": "robotics",
+      "seed": 42,
+      "requested_rank": 8,
+      "compression_ratio": 1.5402454558321033,
+      "mse_change_percent": 5132.562532310872,
+      "layers": [
+        {
+          "name": "vision_encoder.projection.1",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1280,
+          "mps_parameters": 1280,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "language_encoder.projection.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            8,
+            1
+          ],
+          "tt_parameters": 656,
+          "mps_parameters": 656,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            56
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1600,
+          "mps_parameters": 1600,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "fusion.network.2",
+          "tensor_shape": [
+            16,
+            16,
+            32
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1408,
+          "mps_parameters": 1408,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.0",
+          "tensor_shape": [
+            16,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1280,
+          "mps_parameters": 1280,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "latent.network.2",
+          "tensor_shape": [
+            8,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            8,
+            8,
+            1
+          ],
+          "tt_parameters": 1216,
+          "mps_parameters": 1216,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        },
+        {
+          "name": "action_head.network.0",
+          "tensor_shape": [
+            4,
+            16,
+            16
+          ],
+          "tt_ranks": [
+            1,
+            4,
+            8,
+            1
+          ],
+          "mps_bond_dimensions": [
+            1,
+            4,
+            8,
+            1
+          ],
+          "tt_parameters": 656,
+          "mps_parameters": 656,
+          "equivalent_storage": true,
+          "interpretation": "open_boundary_mps"
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-09-12T13:07:34.088547+00:00"
+}

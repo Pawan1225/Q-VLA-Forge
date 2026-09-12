@@ -21,6 +21,14 @@ from q_vla_forge.compression.int8 import (
     quantize_model_weights_int8,
     quantize_tensor_symmetric,
 )
+from q_vla_forge.compression.mps import (
+    MPSRepresentation,
+    TTMPSVerification,
+    mps_to_tt,
+    reconstruct_mps,
+    tt_to_mps,
+    verify_tt_mps_equivalence,
+)
 from q_vla_forge.compression.svd import (
     SVDCompressionReport,
     SVDLayerReport,
@@ -58,6 +66,7 @@ __all__ = [
     "FrozenBaselineReference",
     "Int8QuantizationReport",
     "LayerCompressionTarget",
+    "MPSRepresentation",
     "QuantizedTensorInfo",
     "SVDCompressionReport",
     "SVDLayerReport",
@@ -65,6 +74,7 @@ __all__ = [
     "TTCompressionReport",
     "TTDecomposition",
     "TTLayerReport",
+    "TTMPSVerification",
     "analyze_compression_targets",
     "build_compression_metrics",
     "compress_model_svd",
@@ -75,9 +85,11 @@ __all__ = [
     "interleaved_tensorize_matrix",
     "load_frozen_baseline",
     "load_seed_baseline",
+    "mps_to_tt",
     "profitable_svd_max_rank",
     "quantize_model_weights_int8",
     "quantize_tensor_symmetric",
+    "reconstruct_mps",
     "reconstruct_svd",
     "reconstruct_tt",
     "relative_frobenius_error",
@@ -86,4 +98,6 @@ __all__ = [
     "save_compression_target_report",
     "truncated_svd",
     "tt_svd",
+    "tt_to_mps",
+    "verify_tt_mps_equivalence",
 ]
