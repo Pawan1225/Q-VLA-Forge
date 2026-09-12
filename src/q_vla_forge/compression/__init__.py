@@ -21,6 +21,16 @@ from q_vla_forge.compression.int8 import (
     quantize_model_weights_int8,
     quantize_tensor_symmetric,
 )
+from q_vla_forge.compression.svd import (
+    SVDCompressionReport,
+    SVDLayerReport,
+    compress_model_svd,
+    profitable_svd_max_rank,
+    reconstruct_svd,
+    relative_frobenius_error,
+    resolve_rank,
+    truncated_svd,
+)
 from q_vla_forge.compression.target_analysis import (
     CompressionTargetReport,
     LayerCompressionTarget,
@@ -37,13 +47,21 @@ __all__ = [
     "Int8QuantizationReport",
     "LayerCompressionTarget",
     "QuantizedTensorInfo",
+    "SVDCompressionReport",
+    "SVDLayerReport",
     "SeedBaselineReference",
     "analyze_compression_targets",
     "build_compression_metrics",
+    "compress_model_svd",
     "dequantize_tensor",
     "load_frozen_baseline",
     "load_seed_baseline",
+    "profitable_svd_max_rank",
     "quantize_model_weights_int8",
     "quantize_tensor_symmetric",
+    "reconstruct_svd",
+    "relative_frobenius_error",
+    "resolve_rank",
     "save_compression_target_report",
+    "truncated_svd",
 ]
