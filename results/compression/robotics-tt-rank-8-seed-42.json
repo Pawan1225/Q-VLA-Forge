@@ -1,0 +1,274 @@
+{
+  "experiment_id": "robotics-tt-rank-8-seed-42",
+  "domain": "robotics",
+  "method": "tensor_train",
+  "seed": 42,
+  "metrics": {
+    "baseline_parameters": 76179,
+    "compressed_parameters": 49459,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 197836,
+    "baseline_test_mse": 0.0054161748848855495,
+    "compressed_test_mse": 0.28340473771095276,
+    "baseline_test_mae": 0.031649086624383926,
+    "compressed_test_mae": 0.4114859402179718,
+    "baseline_mean_latency_ms": 2.2912920004455373,
+    "compressed_mean_latency_ms": 2.2596900005009957,
+    "baseline_p95_latency_ms": 3.1872999970801175,
+    "compressed_p95_latency_ms": 3.2503999827895314,
+    "compression_time_seconds": 0.04289870001957752
+  },
+  "configuration": {
+    "algorithm": "tt_svd",
+    "tensor_order": 3,
+    "requested_max_rank": 8,
+    "minimum_weight_parameters": 1024,
+    "inference": "fp32_reconstructed_weights",
+    "native_tt_inference": false
+  },
+  "notes": "Quantum-inspired Tensor Train compression using TT-SVD. Effective storage is measured from TT cores. Runtime uses reconstructed FP32 dense weights rather than native TT core execution.",
+  "tt": {
+    "requested_rank": 8,
+    "total_parameters": 76179,
+    "compressed_layer_weight_parameters": 34816,
+    "effective_stored_parameters": 49459,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 197836,
+    "compression_ratio": 1.5402454558321033,
+    "storage_reduction_percent": 35.075283214534196,
+    "parameter_reduction_percent": 35.075283214534196,
+    "layers": [
+      {
+        "name": "vision_encoder.projection.1",
+        "input_dim": 64,
+        "output_dim": 64,
+        "row_factors": [
+          4,
+          4,
+          4
+        ],
+        "column_factors": [
+          4,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          16,
+          16,
+          16
+        ],
+        "requested_rank": 8,
+        "actual_ranks": [
+          1,
+          8,
+          8,
+          1
+        ],
+        "original_parameters": 4096,
+        "compressed_parameters": 1280,
+        "original_bytes": 16384,
+        "compressed_bytes": 5120,
+        "compression_ratio": 3.2,
+        "relative_reconstruction_error": 0.7807942628860474
+      },
+      {
+        "name": "language_encoder.projection.0",
+        "input_dim": 32,
+        "output_dim": 32,
+        "row_factors": [
+          2,
+          4,
+          4
+        ],
+        "column_factors": [
+          2,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          4,
+          16,
+          16
+        ],
+        "requested_rank": 8,
+        "actual_ranks": [
+          1,
+          4,
+          8,
+          1
+        ],
+        "original_parameters": 1024,
+        "compressed_parameters": 656,
+        "original_bytes": 4096,
+        "compressed_bytes": 2624,
+        "compression_ratio": 1.5609756097560976,
+        "relative_reconstruction_error": 0.5133731365203857
+      },
+      {
+        "name": "fusion.network.0",
+        "input_dim": 112,
+        "output_dim": 128,
+        "row_factors": [
+          4,
+          4,
+          8
+        ],
+        "column_factors": [
+          4,
+          4,
+          7
+        ],
+        "tensor_shape": [
+          16,
+          16,
+          56
+        ],
+        "requested_rank": 8,
+        "actual_ranks": [
+          1,
+          8,
+          8,
+          1
+        ],
+        "original_parameters": 14336,
+        "compressed_parameters": 1600,
+        "original_bytes": 57344,
+        "compressed_bytes": 6400,
+        "compression_ratio": 8.96,
+        "relative_reconstruction_error": 0.9085466265678406
+      },
+      {
+        "name": "fusion.network.2",
+        "input_dim": 128,
+        "output_dim": 64,
+        "row_factors": [
+          4,
+          4,
+          4
+        ],
+        "column_factors": [
+          4,
+          4,
+          8
+        ],
+        "tensor_shape": [
+          16,
+          16,
+          32
+        ],
+        "requested_rank": 8,
+        "actual_ranks": [
+          1,
+          8,
+          8,
+          1
+        ],
+        "original_parameters": 8192,
+        "compressed_parameters": 1408,
+        "original_bytes": 32768,
+        "compressed_bytes": 5632,
+        "compression_ratio": 5.818181818181818,
+        "relative_reconstruction_error": 0.8686201572418213
+      },
+      {
+        "name": "latent.network.0",
+        "input_dim": 64,
+        "output_dim": 64,
+        "row_factors": [
+          4,
+          4,
+          4
+        ],
+        "column_factors": [
+          4,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          16,
+          16,
+          16
+        ],
+        "requested_rank": 8,
+        "actual_ranks": [
+          1,
+          8,
+          8,
+          1
+        ],
+        "original_parameters": 4096,
+        "compressed_parameters": 1280,
+        "original_bytes": 16384,
+        "compressed_bytes": 5120,
+        "compression_ratio": 3.2,
+        "relative_reconstruction_error": 0.7757309079170227
+      },
+      {
+        "name": "latent.network.2",
+        "input_dim": 64,
+        "output_dim": 32,
+        "row_factors": [
+          2,
+          4,
+          4
+        ],
+        "column_factors": [
+          4,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          8,
+          16,
+          16
+        ],
+        "requested_rank": 8,
+        "actual_ranks": [
+          1,
+          8,
+          8,
+          1
+        ],
+        "original_parameters": 2048,
+        "compressed_parameters": 1216,
+        "original_bytes": 8192,
+        "compressed_bytes": 4864,
+        "compression_ratio": 1.6842105263157894,
+        "relative_reconstruction_error": 0.5916139483451843
+      },
+      {
+        "name": "action_head.network.0",
+        "input_dim": 32,
+        "output_dim": 32,
+        "row_factors": [
+          2,
+          4,
+          4
+        ],
+        "column_factors": [
+          2,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          4,
+          16,
+          16
+        ],
+        "requested_rank": 8,
+        "actual_ranks": [
+          1,
+          4,
+          8,
+          1
+        ],
+        "original_parameters": 1024,
+        "compressed_parameters": 656,
+        "original_bytes": 4096,
+        "compressed_bytes": 2624,
+        "compression_ratio": 1.5609756097560976,
+        "relative_reconstruction_error": 0.5291900634765625
+      }
+    ]
+  }
+}
