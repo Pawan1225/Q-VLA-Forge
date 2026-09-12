@@ -1,0 +1,76 @@
+sprint: 3
+phase: training_efficiency
+
+protocol:
+  status: frozen
+
+domains:
+  - autonomous_driving
+  - robotics
+
+seeds:
+  - 42
+  - 123
+  - 456
+
+dataset:
+  train_size: 512
+  validation_size: 128
+  test_size: 128
+
+training:
+  epochs: 20
+  batch_size: 32
+
+  optimizer: adamw
+  learning_rate: 0.001
+  weight_decay: 0.0001
+
+  scheduler: cosine_annealing
+  minimum_learning_rate: 0.00001
+
+  loss: mse
+
+convergence:
+  reference_method: fp32
+  target_source: paired_fp32_best_validation_loss
+  tolerance_fraction: 0.05
+
+efficiency_metrics:
+  primary:
+    - epochs_to_target
+    - optimizer_steps_to_target
+    - samples_to_target
+
+  secondary:
+    - seconds_to_target
+    - total_training_seconds
+    - mean_epoch_seconds
+    - trainable_parameters
+    - effective_parameters
+
+quality_metrics:
+  - best_validation_loss
+  - final_validation_loss
+  - test_mse
+  - test_mae
+
+timing:
+  interpretation: descriptive
+  primary_algorithmic_claims_use_wall_time: false
+
+int8:
+  included_as_training_method: false
+  reason: >
+    Sprint 2 INT8 uses post-training symmetric weight
+    quantization with FP32-dequantized inference and does
+    not implement native INT8 or quantization-aware training.
+
+svd:
+  family: classical_low_rank
+
+tensor_network:
+  family: quantum_inspired
+  representation: tt_open_boundary_mps
+  decomposition: tt_svd
+  quantum_hardware_used: false

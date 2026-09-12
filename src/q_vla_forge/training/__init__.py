@@ -1,3 +1,15 @@
+from q_vla_forge.training.efficiency import (
+    EfficiencyComparison,
+    EpochEfficiencyRecord,
+    TargetDefinition,
+    TargetReachResult,
+    TrainingEfficiencySummary,
+    build_target_definition,
+    compare_target_efficiency,
+    find_target_reach,
+    percentage_reduction,
+    training_efficiency_summary_to_dict,
+)
 from q_vla_forge.training.supervised import (
     EpochMetrics,
     TensorBatch,
@@ -9,11 +21,21 @@ from q_vla_forge.training.supervised import (
 )
 
 __all__ = [
+    "EfficiencyComparison",
+    "EpochEfficiencyRecord",
     "EpochMetrics",
+    "TargetDefinition",
+    "TargetReachResult",
     "TensorBatch",
     "TrainingConfig",
+    "TrainingEfficiencySummary",
     "TrainingResult",
+    "build_target_definition",
     "build_tensor_batch",
+    "compare_target_efficiency",
     "evaluate_supervised",
+    "find_target_reach",
+    "percentage_reduction",
     "train_supervised",
+    "training_efficiency_summary_to_dict",
 ]
