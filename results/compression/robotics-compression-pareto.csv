@@ -1,0 +1,5 @@
+method,configuration,family,compression_ratio_mean,compression_ratio_std,mse_change_mean,mse_change_std,mae_change_mean,mae_change_std,pilot_feasible_runs,all_runs_pilot_feasible,pareto_efficient,is_reference
+fp32,FP32,reference,1.0,0.0,0.0,0.0,0.0,0.0,0,False,False,True
+int8,INT8,classical_quantization,3.846258709481975,0.0,-0.15251875574570348,1.1282471790678248,-0.0667613939396421,0.050715548692474,3,True,True,False
+svd,SVD-50%,classical_low_rank,1.295913854109962,0.0,1818.5791423398518,519.4089151238921,710.0969217095092,71.17560791899798,0,False,False,False
+tensor_train,TT-rank-2,quantum_inspired_tensor_network,1.8006240102110762,0.0,3270.928450823199,895.500820600516,890.4449818135568,121.48318833782413,0,False,False,False

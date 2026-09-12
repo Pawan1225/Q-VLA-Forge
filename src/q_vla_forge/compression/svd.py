@@ -154,7 +154,11 @@ def truncated_svd(
     if rank > maximum_rank:
         raise ValueError("rank exceeds matrix maximum rank")
 
-    u, singular_values, vh = torch.linalg.svd(
+    (
+        u,
+        singular_values,
+        vh,
+    ) = torch.linalg.svd(
         weight.detach(),
         full_matrices=False,
     )
@@ -217,6 +221,7 @@ def compress_model_svd(
     *,
     rank_fraction: float,
     minimum_weight_parameters: int = 1024,
+    selected_layer_names: set[str] | None = None,
 ) -> tuple[
     nn.Module,
     SVDCompressionReport,
@@ -227,6 +232,9 @@ def compress_model_svd(
     The returned model retains ordinary Linear modules containing
     reconstructed FP32 weights. Reported compressed storage represents
     the U, singular-value, and Vh factors that would be stored instead.
+
+    When selected_layer_names is provided, only Linear modules whose
+    names are present in that set are considered for compression.
     """
     if minimum_weight_parameters <= 0:
         raise ValueError("minimum_weight_parameters must be greater than zero")
@@ -256,6 +264,9 @@ def compress_model_svd(
                 module,
                 nn.Linear,
             ):
+                continue
+
+            if selected_layer_names is not None and name not in selected_layer_names:
                 continue
 
             weight = module.weight

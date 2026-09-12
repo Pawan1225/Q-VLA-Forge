@@ -1,0 +1,29 @@
+{
+  "experiment_id": "driving-validation-svd-seed-42",
+  "domain": "autonomous_driving",
+  "method": "svd",
+  "seed": 42,
+  "metrics": {
+    "baseline_parameters": 76179,
+    "compressed_parameters": 67059,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 268236,
+    "baseline_test_mse": 0.01089190412312746,
+    "compressed_test_mse": 0.05133070424199104,
+    "baseline_test_mae": 0.07007423043251038,
+    "compressed_test_mae": 0.18850159645080566,
+    "baseline_mean_latency_ms": 1.8798059987602755,
+    "compressed_mean_latency_ms": 1.8850969994673505,
+    "baseline_p95_latency_ms": 2.05350000760518,
+    "compressed_p95_latency_ms": 2.8042999911122024,
+    "compression_time_seconds": 0.03440480001154356
+  },
+  "configuration": {
+    "label": "SVD-75%",
+    "rank_fraction": 0.75,
+    "rank_reference": "maximum_profitable_rank",
+    "minimum_weight_parameters": 1024,
+    "inference": "fp32_reconstructed_weights"
+  },
+  "notes": "Three-seed validation of the frozen post-training SVD configuration."
+}

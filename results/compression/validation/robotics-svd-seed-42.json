@@ -1,0 +1,29 @@
+{
+  "experiment_id": "robotics-validation-svd-seed-42",
+  "domain": "robotics",
+  "method": "svd",
+  "seed": 42,
+  "metrics": {
+    "baseline_parameters": 76179,
+    "compressed_parameters": 58784,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 235136,
+    "baseline_test_mse": 0.0054161748848855495,
+    "compressed_test_mse": 0.13591523468494415,
+    "baseline_test_mae": 0.031649090349674225,
+    "compressed_test_mae": 0.277546226978302,
+    "baseline_mean_latency_ms": 2.1330340020358562,
+    "compressed_mean_latency_ms": 2.0137170021189377,
+    "baseline_p95_latency_ms": 3.165999980410561,
+    "compressed_p95_latency_ms": 2.5308000040240586,
+    "compression_time_seconds": 0.028798699990147725
+  },
+  "configuration": {
+    "label": "SVD-50%",
+    "rank_fraction": 0.5,
+    "rank_reference": "maximum_profitable_rank",
+    "minimum_weight_parameters": 1024,
+    "inference": "fp32_reconstructed_weights"
+  },
+  "notes": "Three-seed validation of the frozen post-training SVD configuration."
+}

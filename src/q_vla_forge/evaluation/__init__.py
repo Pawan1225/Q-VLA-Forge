@@ -4,6 +4,13 @@ from q_vla_forge.evaluation.baseline_manifest import (
     load_json,
     save_baseline_manifest,
 )
+from q_vla_forge.evaluation.compression_evidence import (
+    CompressionEvidencePackage,
+    MethodEvidence,
+    build_compression_evidence,
+    evidence_to_markdown,
+    save_compression_evidence,
+)
 from q_vla_forge.evaluation.compression_selection import (
     CompressionCandidate,
     DomainCompressionSelection,
@@ -12,6 +19,15 @@ from q_vla_forge.evaluation.compression_selection import (
     load_compression_candidate,
     save_domain_compression_selection,
     select_method_candidate,
+)
+from q_vla_forge.evaluation.compression_validation import (
+    CompressionMethodValidation,
+    CompressionMetricSummary,
+    DomainCompressionValidation,
+    MultiSeedCompressionValidation,
+    aggregate_method_results,
+    save_multiseed_compression_validation,
+    summarize_metric,
 )
 from q_vla_forge.evaluation.driving_baseline import (
     DrivingBaselineResult,
@@ -29,6 +45,14 @@ from q_vla_forge.evaluation.multiseed import (
     save_multiseed_summary,
     summarize_values,
 )
+from q_vla_forge.evaluation.pareto import (
+    DomainParetoAnalysis,
+    ParetoPoint,
+    build_domain_pareto_analysis,
+    dominates,
+    pareto_frontier,
+    save_domain_pareto_analysis,
+)
 from q_vla_forge.evaluation.robotics_baseline import (
     RoboticsBaselineResult,
     RoboticsEvaluationMetrics,
@@ -37,35 +61,71 @@ from q_vla_forge.evaluation.robotics_baseline import (
     measure_robotics_latency,
     run_robotics_baseline,
 )
+from q_vla_forge.evaluation.sprint2_manifest import (
+    ArtifactRecord,
+    Sprint2Manifest,
+    artifact_record,
+    build_sprint2_manifest,
+    save_sprint2_manifest,
+    sha256_file,
+)
+from q_vla_forge.evaluation.sprint2_manifest import (
+    load_json as load_sprint2_json,
+)
 
 __all__ = [
+    "ArtifactRecord",
     "BaselineManifest",
     "CompressionCandidate",
+    "CompressionEvidencePackage",
+    "CompressionMethodValidation",
+    "CompressionMetricSummary",
     "DomainBaselineSummary",
     "DomainCompressionSelection",
+    "DomainCompressionValidation",
+    "DomainParetoAnalysis",
     "DrivingBaselineResult",
     "DrivingEvaluationMetrics",
     "LatencyMetrics",
+    "MethodEvidence",
     "MethodSelection",
     "MetricSummary",
     "MultiSeedBaselineSummary",
+    "MultiSeedCompressionValidation",
+    "ParetoPoint",
     "RoboticsBaselineResult",
     "RoboticsEvaluationMetrics",
     "RoboticsLatencyMetrics",
+    "Sprint2Manifest",
     "aggregate_baseline_payloads",
+    "aggregate_method_results",
+    "artifact_record",
     "build_baseline_manifest",
+    "build_compression_evidence",
     "build_domain_compression_selection",
+    "build_domain_pareto_analysis",
+    "build_sprint2_manifest",
+    "dominates",
     "evaluate_driving_model",
     "evaluate_robotics_model",
+    "evidence_to_markdown",
     "load_compression_candidate",
     "load_json",
+    "load_sprint2_json",
     "measure_driving_latency",
     "measure_robotics_latency",
+    "pareto_frontier",
     "run_driving_baseline",
     "run_robotics_baseline",
     "save_baseline_manifest",
+    "save_compression_evidence",
     "save_domain_compression_selection",
+    "save_domain_pareto_analysis",
+    "save_multiseed_compression_validation",
     "save_multiseed_summary",
+    "save_sprint2_manifest",
     "select_method_candidate",
+    "sha256_file",
+    "summarize_metric",
     "summarize_values",
 ]

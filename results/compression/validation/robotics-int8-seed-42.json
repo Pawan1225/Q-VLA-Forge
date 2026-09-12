@@ -1,0 +1,27 @@
+{
+  "experiment_id": "robotics-validation-int8-seed-42",
+  "domain": "robotics",
+  "method": "int8",
+  "seed": 42,
+  "metrics": {
+    "baseline_parameters": 76179,
+    "compressed_parameters": 76179,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 79224,
+    "baseline_test_mse": 0.0054161748848855495,
+    "compressed_test_mse": 0.005365172866731882,
+    "baseline_test_mae": 0.031649090349674225,
+    "compressed_test_mae": 0.03163102641701698,
+    "baseline_mean_latency_ms": 2.1330340020358562,
+    "compressed_mean_latency_ms": 1.387659999600146,
+    "baseline_p95_latency_ms": 3.165999980410561,
+    "compressed_p95_latency_ms": 2.0951000042259693,
+    "compression_time_seconds": 0.015577100013615564
+  },
+  "configuration": {
+    "label": "INT8",
+    "scheme": "symmetric_per_tensor_weight_int8",
+    "inference": "fp32_dequantized_weights"
+  },
+  "notes": "Three-seed validation of classical symmetric per-tensor INT8 weight quantization with FP32 dequantized inference."
+}

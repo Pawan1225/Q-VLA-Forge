@@ -1,0 +1,132 @@
+{
+  "sprint": "2",
+  "status": "complete",
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "validation_seeds": [
+    42,
+    123,
+    456
+  ],
+  "classical_methods": [
+    "INT8",
+    "SVD"
+  ],
+  "quantum_inspired_methods": [
+    "TT/open-boundary MPS via TT-SVD"
+  ],
+  "minimum_compression_ratio": 2.0,
+  "maximum_mse_increase_percent": 5.0,
+  "primary_size_metric": "effective representation payload bytes",
+  "primary_quality_metric": "relative test-MSE change",
+  "quantum_hardware_used": false,
+  "native_compressed_runtime_used": false,
+  "validation_result_count": 18,
+  "ablation_point_count": 20,
+  "artifacts": [
+    {
+      "path": "results\\compression\\compression-target-analysis.json",
+      "exists": true,
+      "size_bytes": 6948,
+      "sha256": "2df7da8649388d61d5a4242b7935a00f77cc0ff15487f4f492f5b31cec3f51ff"
+    },
+    {
+      "path": "results\\compression\\mps-mapping-verification.json",
+      "exists": true,
+      "size_bytes": 26236,
+      "sha256": "82949eee2967bbcea49750670ea13d0cfa25be0f95208864e9f63a85285a5a9b"
+    },
+    {
+      "path": "results\\compression\\driving-compression-selection.json",
+      "exists": true,
+      "size_bytes": 10324,
+      "sha256": "7db7c81c3934eca328f72ac1b0c19f8b732311b6eadb01e6938460cf5e84d34a"
+    },
+    {
+      "path": "results\\compression\\robotics-compression-selection.json",
+      "exists": true,
+      "size_bytes": 10271,
+      "sha256": "ca8bafe8e9e4797120cc5746056419b350cac2c8800846bb65b175ded891ddc4"
+    },
+    {
+      "path": "results\\compression\\cross-domain-compression-selection.json",
+      "exists": true,
+      "size_bytes": 2514,
+      "sha256": "e62e2a3eac71ce4ebbf6bf7b9cee0029aa8b12211b57aa6fcdad09a954336388"
+    },
+    {
+      "path": "results\\compression\\compression-validation-summary.json",
+      "exists": true,
+      "size_bytes": 18829,
+      "sha256": "8571297383f4e9d097a42dc2e3dc449d54e3c6b559a7282396ee5a7ef6d876a7"
+    },
+    {
+      "path": "results\\compression\\driving-compression-pareto.json",
+      "exists": true,
+      "size_bytes": 2120,
+      "sha256": "f39473e4fb691eb358fd5127db4e2f2bd1b871e6701686436346b56915ad77da"
+    },
+    {
+      "path": "results\\compression\\driving-compression-pareto.csv",
+      "exists": true,
+      "size_bytes": 747,
+      "sha256": "bf0e585e994c5991e2e6ef95ea20b69f5408e444d4f647d0bf2a481884c8bb36"
+    },
+    {
+      "path": "results\\compression\\robotics-compression-pareto.json",
+      "exists": true,
+      "size_bytes": 2107,
+      "sha256": "f28203bde023b4172798845ba0b2796c7fdf3b4aa96468882a3cbf64ac0c2523"
+    },
+    {
+      "path": "results\\compression\\robotics-compression-pareto.csv",
+      "exists": true,
+      "size_bytes": 744,
+      "sha256": "369f67401dabadbd12efda24e2aea8cc380c27758611418eaa7575b024513766"
+    },
+    {
+      "path": "results\\compression\\compression-pareto-summary.json",
+      "exists": true,
+      "size_bytes": 5590,
+      "sha256": "5dcdf2d618271cf0fb1bdc23c1ee6365871ade58ba06f6b150bfee787dcb710a"
+    },
+    {
+      "path": "results\\compression\\ablation\\compression-ablation-seed-42.json",
+      "exists": true,
+      "size_bytes": 19493,
+      "sha256": "d49f67d1840192702c382952cb6f0f3e8c367f3e9818d3332660312ce534c445"
+    },
+    {
+      "path": "results\\compression\\ablation\\compression-ablation-summary.csv",
+      "exists": true,
+      "size_bytes": 2127,
+      "sha256": "fad05076ba1a601be3385dc5a49045b35f7d3cbec5358909230785bab727a9b8"
+    },
+    {
+      "path": "results\\compression\\evidence\\sprint2-compression-evidence.json",
+      "exists": true,
+      "size_bytes": 6345,
+      "sha256": "f42a5a67e51a2d46875bb154f08278e41b317af55da4af8adfa92cd5dd403dd8"
+    },
+    {
+      "path": "results\\compression\\evidence\\sprint2-compression-evidence.md",
+      "exists": true,
+      "size_bytes": 4018,
+      "sha256": "ff07111b54f1f80fa08191164c3d89055a688fb01fa6c910b7bcb95197e586c9"
+    },
+    {
+      "path": "figures\\driving_compression_pareto.png",
+      "exists": true,
+      "size_bytes": 82127,
+      "sha256": "0448073b0cab8b86674099c0938454fba233d78a0552dc6ad9af75e266beb1f2"
+    },
+    {
+      "path": "figures\\robotics_compression_pareto.png",
+      "exists": true,
+      "size_bytes": 75475,
+      "sha256": "9f24c5f24726808c8b12ca12b4b67a8ceabe168bc48031e1a4102c4a88fd7f85"
+    }
+  ]
+}

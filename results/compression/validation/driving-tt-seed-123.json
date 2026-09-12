@@ -1,0 +1,31 @@
+{
+  "experiment_id": "driving-validation-tt-seed-123",
+  "domain": "autonomous_driving",
+  "method": "tensor_train",
+  "seed": 123,
+  "metrics": {
+    "baseline_parameters": 76179,
+    "compressed_parameters": 42307,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 169228,
+    "baseline_test_mse": 0.013768880628049374,
+    "compressed_test_mse": 0.19475896656513214,
+    "baseline_test_mae": 0.0712292343378067,
+    "compressed_test_mae": 0.318922758102417,
+    "baseline_mean_latency_ms": 1.7585120009607635,
+    "compressed_mean_latency_ms": 2.393182999221608,
+    "baseline_p95_latency_ms": 2.2684999858029187,
+    "compressed_p95_latency_ms": 3.125699993688613,
+    "compression_time_seconds": 0.03956380000454374
+  },
+  "configuration": {
+    "label": "TT-rank-2",
+    "algorithm": "tt_svd",
+    "representation": "tt_open_boundary_mps",
+    "requested_max_rank": 2,
+    "tensor_order": 3,
+    "minimum_weight_parameters": 1024,
+    "inference": "fp32_reconstructed_weights"
+  },
+  "notes": "Three-seed validation of the frozen quantum-inspired TT/MPS configuration constructed with TT-SVD."
+}

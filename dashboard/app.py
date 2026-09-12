@@ -48,7 +48,13 @@ def render_overview(dataframe: pd.DataFrame) -> None:
 
         seeds = int(dataframe["seed"].dropna().nunique())
 
-    column1, column2, column3, column4, column5 = st.columns(5)
+    (
+        column1,
+        column2,
+        column3,
+        column4,
+        column5,
+    ) = st.columns(5)
 
     column1.metric(
         "Experiments",
@@ -132,7 +138,8 @@ def render_overview(dataframe: pd.DataFrame) -> None:
             "Driving MSE",
             (
                 f"{summary['driving']['test_mse']['mean']:.6f} "
-                f"± {summary['driving']['test_mse']['std']:.6f}"
+                f"± "
+                f"{summary['driving']['test_mse']['std']:.6f}"
             ),
         )
 
@@ -140,7 +147,8 @@ def render_overview(dataframe: pd.DataFrame) -> None:
             "Driving MAE",
             (
                 f"{summary['driving']['test_mae']['mean']:.6f} "
-                f"± {summary['driving']['test_mae']['std']:.6f}"
+                f"± "
+                f"{summary['driving']['test_mae']['std']:.6f}"
             ),
         )
 
@@ -148,7 +156,8 @@ def render_overview(dataframe: pd.DataFrame) -> None:
             "Robotics MSE",
             (
                 f"{summary['robotics']['test_mse']['mean']:.6f} "
-                f"± {summary['robotics']['test_mse']['std']:.6f}"
+                f"± "
+                f"{summary['robotics']['test_mse']['std']:.6f}"
             ),
         )
 
@@ -156,7 +165,8 @@ def render_overview(dataframe: pd.DataFrame) -> None:
             "Robotics MAE",
             (
                 f"{summary['robotics']['test_mae']['mean']:.6f} "
-                f"± {summary['robotics']['test_mae']['std']:.6f}"
+                f"± "
+                f"{summary['robotics']['test_mae']['std']:.6f}"
             ),
         )
 
@@ -174,51 +184,204 @@ def render_overview(dataframe: pd.DataFrame) -> None:
     else:
         st.info("Frozen Sprint 1 baseline artifacts " "are not available yet.")
 
+    st.subheader("Frozen Sprint 2 Compression Result")
+
+    (
+        sprint2_col1,
+        sprint2_col2,
+        sprint2_col3,
+        sprint2_col4,
+    ) = st.columns(4)
+
+    sprint2_col1.metric(
+        "Validation Results",
+        "18",
+    )
+
+    sprint2_col2.metric(
+        "Ablation Points",
+        "20",
+    )
+
+    sprint2_col3.metric(
+        "Frozen Artifacts",
+        "17",
+    )
+
+    sprint2_col4.metric(
+        "Cross-Domain Pareto",
+        "INT8",
+    )
+
+    st.caption(
+        "INT8 was the only tested compression "
+        "family that satisfied the ≥2× compression "
+        "and ≤5% relative test-MSE-change pilot "
+        "criterion across all three seeds in both "
+        "domains."
+    )
+
+    st.caption(
+        "TT/open-boundary MPS via TT-SVD was "
+        "evaluated as one quantum-inspired "
+        "tensor-network family. No quantum "
+        "hardware or native compressed-runtime "
+        "speedup is claimed."
+    )
+
+    sprint2_manifest_path = (
+        RESULTS_DIR / "compression" / "sprint2-compression-manifest.json"
+    )
+
+    if sprint2_manifest_path.exists():
+        sprint2_manifest = json.loads(
+            sprint2_manifest_path.read_text(
+                encoding="utf-8",
+            )
+        )
+
+        st.caption(
+            "Sprint 2 manifest status: "
+            f"{sprint2_manifest['status']} "
+            "| Validation seeds: "
+            + ", ".join(str(seed) for seed in sprint2_manifest["validation_seeds"])
+            + " | Quantum hardware used: "
+            + str(sprint2_manifest["quantum_hardware_used"])
+        )
+
     st.subheader("Sprint Progress")
 
     progress = pd.DataFrame(
-        {
-            "Sprint": [
+        [
+            (
                 "0.1 Repository",
+                "Complete",
+            ),
+            (
                 "0.2 Environment",
+                "Complete",
+            ),
+            (
                 "0.3 Classical Stack",
+                "Complete",
+            ),
+            (
                 "0.4 Quantum Stack",
+                "Complete",
+            ),
+            (
                 "0.5 Experiment Foundation",
+                "Complete",
+            ),
+            (
                 "0.6 Configuration",
+                "Complete",
+            ),
+            (
                 "0.7 Dashboard",
+                "Complete",
+            ),
+            (
                 "1 Shared AI/DL Baseline",
+                "Complete",
+            ),
+            (
                 "1.11 Driving Baseline",
+                "Complete",
+            ),
+            (
                 "1.12 Robotics Baseline",
+                "Complete",
+            ),
+            (
                 "1.13 Multi-Seed Validation",
+                "Complete",
+            ),
+            (
                 "1.14 Sprint 1 Final Quality Gate",
+                "Complete",
+            ),
+            (
                 "2 Compression",
+                "Complete",
+            ),
+            (
+                "2.1 Compression Contracts",
+                "Complete",
+            ),
+            (
+                "2.2 Compression Target Analysis",
+                "Complete",
+            ),
+            (
+                "2.3 INT8 Quantization",
+                "Complete",
+            ),
+            (
+                "2.4 SVD Low-Rank Compression",
+                "Complete",
+            ),
+            (
+                "2.5 TT / TT-SVD",
+                "Complete",
+            ),
+            (
+                "2.6 MPS Mapping",
+                "Complete",
+            ),
+            (
+                "2.7 Driving Compression Experiments",
+                "Complete",
+            ),
+            (
+                "2.8 Robotics Compression Experiments",
+                "Complete",
+            ),
+            (
+                "2.9 Three-Seed Compression Validation",
+                "Complete",
+            ),
+            (
+                "2.10 Compression–Accuracy Pareto",
+                "Complete",
+            ),
+            (
+                "2.11 Ablation + Classical vs QI",
+                "Complete",
+            ),
+            (
+                "2.12 Dashboard + Proposal Evidence",
+                "Complete",
+            ),
+            (
+                "2.13 Sprint 2 Final Quality Gate",
+                "Complete",
+            ),
+            (
                 "3 Training Efficiency",
+                "Pending",
+            ),
+            (
                 "4 RL + QML",
+                "Pending",
+            ),
+            (
                 "5 Safety + Robustness",
+                "Pending",
+            ),
+            (
                 "6 Unified Architecture",
+                "Pending",
+            ),
+            (
                 "7 Validation",
-            ],
-            "Status": [
-                "Complete",
-                "Complete",
-                "Complete",
-                "Complete",
-                "Complete",
-                "Complete",
-                "Complete",
-                "Complete",
-                "Complete",
-                "Complete",
-                "Complete",
-                "Complete",
                 "Pending",
-                "Pending",
-                "Pending",
-                "Pending",
-                "Pending",
-                "Pending",
-            ],
-        }
+            ),
+        ],
+        columns=[
+            "Sprint",
+            "Status",
+        ],
     )
 
     st.dataframe(
@@ -311,12 +474,16 @@ def render_benchmarks(
 def render_ablation(
     dataframe: pd.DataFrame,
 ) -> None:
-    """Render the planned Q-VLA Forge ablation structure."""
+    """Render current and planned Q-VLA Forge ablations."""
     st.header("Ablation Dashboard")
 
-    st.markdown("""
-The final validation sprint will compare:
+    st.write(
+        "Sprint 2 compression-target ablation is "
+        "complete. The final system-level ablation "
+        "in Sprint 7 will compare:"
+    )
 
+    st.markdown("""
 | Variant | Compression | QML | Safety |
 |---|---|---|---|
 | Baseline | No | No | No |
@@ -329,11 +496,31 @@ The final validation sprint will compare:
 | Full Hybrid | Yes | Yes | Yes |
 """)
 
+    st.subheader("Sprint 2 Compression Ablation")
+
+    st.metric(
+        "Completed Target-Level Points",
+        "20",
+    )
+
+    st.caption(
+        "Classical SVD and quantum-inspired "
+        "TT/MPS were evaluated on matched "
+        "architectural targets using seed 42."
+    )
+
+    st.caption(
+        "Targets: fusion, latent, action, " "fusion + latent, and all eligible layers."
+    )
+
     if dataframe.empty:
-        st.info("Ablation results have not " "been generated yet.")
+        st.info("Experiment-tracker records are not " "available yet.")
         return
 
-    st.caption("Experiment records will populate " "this section during Sprint 7.")
+    st.caption(
+        "Future system-level experiment records "
+        "will populate this section during Sprint 7."
+    )
 
 
 def render_evidence() -> None:
@@ -341,40 +528,80 @@ def render_evidence() -> None:
     st.header("Proposal Evidence")
 
     evidence = pd.DataFrame(
-        {
-            "Claim": [
-                "QI compression reduces model size",
-                "Compression retains task performance",
-                "Compressed models improve efficiency",
-                "Hybrid QML policy is trainable",
-                "Safety layer reduces violations",
-                "Architecture works across both domains",
-            ],
-            "Evidence": [
-                "Pending Sprint 2",
-                "Pending Sprint 2",
-                "Pending Sprint 3",
-                "Pending Sprint 4",
-                "Pending Sprint 5",
-                "Pending Sprint 6",
-            ],
-            "Figure": [
-                "Compression Pareto",
-                "Compression Pareto",
-                "Training Convergence",
-                "RL Learning Curve",
-                "Safety Violations",
-                "Cross-Domain Comparison",
-            ],
-            "Proposal Ready": [
-                False,
-                False,
-                False,
-                False,
-                False,
-                False,
-            ],
-        }
+        [
+            {
+                "Claim": (
+                    "INT8 compression exceeds the " "2× pilot target in both domains"
+                ),
+                "Evidence": ("Sprint 2 — 3-seed validation"),
+                "Figure": "Compression Pareto",
+                "Proposal Ready": True,
+            },
+            {
+                "Claim": (
+                    "INT8 preserves task performance " "under the Sprint 2 criterion"
+                ),
+                "Evidence": ("Sprint 2 — 3-seed validation"),
+                "Figure": "Compression Pareto",
+                "Proposal Ready": True,
+            },
+            {
+                "Claim": (
+                    "TT/MPS quantum-inspired "
+                    "compression was implemented "
+                    "and evaluated"
+                ),
+                "Evidence": ("Sprint 2 — TT-SVD + MPS mapping"),
+                "Figure": ("Compression Pareto / Ablation"),
+                "Proposal Ready": True,
+            },
+            {
+                "Claim": (
+                    "TT/MPS did not satisfy the "
+                    "compression-quality pilot "
+                    "criterion"
+                ),
+                "Evidence": ("Sprint 2 — 3-seed validation"),
+                "Figure": "Compression Pareto",
+                "Proposal Ready": True,
+            },
+            {
+                "Claim": (
+                    "Classical SVD and quantum-inspired "
+                    "TT/MPS were compared on matched "
+                    "architectural targets"
+                ),
+                "Evidence": ("Sprint 2 — 20-point ablation"),
+                "Figure": "Compression Ablation",
+                "Proposal Ready": True,
+            },
+            {
+                "Claim": (
+                    "Shared architecture operates " "across driving and robotics"
+                ),
+                "Evidence": ("Sprint 1 + Sprint 2"),
+                "Figure": ("Cross-Domain Comparison"),
+                "Proposal Ready": True,
+            },
+            {
+                "Claim": ("Compressed representations " "improve training efficiency"),
+                "Evidence": "Pending Sprint 3",
+                "Figure": "Training Convergence",
+                "Proposal Ready": False,
+            },
+            {
+                "Claim": ("Hybrid QML policy is trainable"),
+                "Evidence": "Pending Sprint 4",
+                "Figure": "RL Learning Curve",
+                "Proposal Ready": False,
+            },
+            {
+                "Claim": ("Safety layer reduces violations"),
+                "Evidence": "Pending Sprint 5",
+                "Figure": "Safety Violations",
+                "Proposal Ready": False,
+            },
+        ]
     )
 
     st.dataframe(
@@ -382,6 +609,21 @@ def render_evidence() -> None:
         width="stretch",
         hide_index=True,
     )
+
+    st.subheader("Sprint 2 Evidence Summary")
+
+    st.markdown("""
+**Proposal-safe Sprint 2 conclusions**
+
+- INT8 achieved approximately **3.846× effective whole-model compression** in both domains.
+- INT8 satisfied the **≥2× compression and ≤5% relative test-MSE-change** criterion in **3/3 seeds** for both autonomous driving and robotics.
+- INT8 was the only tested compression family on the three-seed Pareto frontier in both domains.
+- Classical truncated SVD and quantum-inspired TT/MPS were implemented and evaluated as comparison methods.
+- TT/MPS achieved greater compression than the selected SVD configurations, but substantially larger task-error degradation.
+- TT/MPS is treated as one **quantum-inspired tensor-network family**, not as an independent TT and MPS benchmark.
+- No quantum hardware was used in Sprint 2.
+- No native INT8, SVD-factorized, or TT/MPS compressed-runtime speedup is claimed.
+""")
 
 
 def main() -> None:

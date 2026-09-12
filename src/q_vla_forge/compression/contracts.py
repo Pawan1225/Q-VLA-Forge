@@ -67,11 +67,11 @@ class CompressionMetrics:
             "compression_time_seconds": self.compression_time_seconds,
         }
 
-        for name, value in non_negative_float_fields.items():
-            if not math.isfinite(value):
+        for name, float_value in non_negative_float_fields.items():
+            if not math.isfinite(float_value):
                 raise ValueError(f"{name} must be finite")
 
-            if value < 0.0:
+            if float_value < 0.0:
                 raise ValueError(f"{name} must not be negative")
 
     @property

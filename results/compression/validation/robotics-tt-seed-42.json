@@ -1,0 +1,31 @@
+{
+  "experiment_id": "robotics-validation-tt-seed-42",
+  "domain": "robotics",
+  "method": "tensor_train",
+  "seed": 42,
+  "metrics": {
+    "baseline_parameters": 76179,
+    "compressed_parameters": 42307,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 169228,
+    "baseline_test_mse": 0.0054161748848855495,
+    "compressed_test_mse": 0.23533959686756134,
+    "baseline_test_mae": 0.031649090349674225,
+    "compressed_test_mae": 0.35365918278694153,
+    "baseline_mean_latency_ms": 2.1330340020358562,
+    "compressed_mean_latency_ms": 2.6809829979902133,
+    "baseline_p95_latency_ms": 3.165999980410561,
+    "compressed_p95_latency_ms": 3.8324999914038926,
+    "compression_time_seconds": 0.041066200006753206
+  },
+  "configuration": {
+    "label": "TT-rank-2",
+    "algorithm": "tt_svd",
+    "representation": "tt_open_boundary_mps",
+    "requested_max_rank": 2,
+    "tensor_order": 3,
+    "minimum_weight_parameters": 1024,
+    "inference": "fp32_reconstructed_weights"
+  },
+  "notes": "Three-seed validation of the frozen quantum-inspired TT/MPS configuration constructed with TT-SVD."
+}

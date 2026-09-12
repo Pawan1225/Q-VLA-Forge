@@ -45,6 +45,11 @@ from q_vla_forge.compression.target_analysis import (
     analyze_compression_targets,
     save_compression_target_report,
 )
+from q_vla_forge.compression.targets import (
+    CompressionTarget,
+    module_matches_target,
+    selected_linear_layer_names,
+)
 from q_vla_forge.compression.tensor_train import (
     TTCompressionReport,
     TTDecomposition,
@@ -62,6 +67,7 @@ __all__ = [
     "CompressionMethod",
     "CompressionMetrics",
     "CompressionResult",
+    "CompressionTarget",
     "CompressionTargetReport",
     "FrozenBaselineReference",
     "Int8QuantizationReport",
@@ -85,6 +91,7 @@ __all__ = [
     "interleaved_tensorize_matrix",
     "load_frozen_baseline",
     "load_seed_baseline",
+    "module_matches_target",
     "mps_to_tt",
     "profitable_svd_max_rank",
     "quantize_model_weights_int8",
@@ -96,6 +103,7 @@ __all__ = [
     "relative_tt_error",
     "resolve_rank",
     "save_compression_target_report",
+    "selected_linear_layer_names",
     "truncated_svd",
     "tt_svd",
     "tt_to_mps",

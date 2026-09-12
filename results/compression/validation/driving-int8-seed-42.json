@@ -1,0 +1,27 @@
+{
+  "experiment_id": "driving-validation-int8-seed-42",
+  "domain": "autonomous_driving",
+  "method": "int8",
+  "seed": 42,
+  "metrics": {
+    "baseline_parameters": 76179,
+    "compressed_parameters": 76179,
+    "baseline_size_bytes": 304716,
+    "compressed_size_bytes": 79224,
+    "baseline_test_mse": 0.01089190412312746,
+    "compressed_test_mse": 0.0108817582949996,
+    "baseline_test_mae": 0.07007423043251038,
+    "compressed_test_mae": 0.07047062367200851,
+    "baseline_mean_latency_ms": 1.8798059987602755,
+    "compressed_mean_latency_ms": 1.7159079987322912,
+    "baseline_p95_latency_ms": 2.05350000760518,
+    "compressed_p95_latency_ms": 2.4824000138323754,
+    "compression_time_seconds": 0.015696899994509295
+  },
+  "configuration": {
+    "label": "INT8",
+    "scheme": "symmetric_per_tensor_weight_int8",
+    "inference": "fp32_dequantized_weights"
+  },
+  "notes": "Three-seed validation of classical symmetric per-tensor INT8 weight quantization with FP32 dequantized inference."
+}

@@ -421,6 +421,7 @@ def compress_model_tt(
     max_rank: int,
     minimum_weight_parameters: int = 1024,
     tensor_order: int = 3,
+    selected_layer_names: set[str] | None = None,
 ) -> tuple[
     nn.Module,
     TTCompressionReport,
@@ -430,6 +431,9 @@ def compress_model_tt(
 
     The returned model retains reconstructed FP32 dense matrices.
     Effective storage is calculated from TT cores.
+
+    When selected_layer_names is provided, only Linear modules whose
+    names are present in that set are considered for compression.
     """
     if max_rank <= 0:
         raise ValueError("max_rank must be greater than zero")
@@ -465,6 +469,9 @@ def compress_model_tt(
                 module,
                 nn.Linear,
             ):
+                continue
+
+            if selected_layer_names is not None and name not in selected_layer_names:
                 continue
 
             weight = module.weight
@@ -537,10 +544,10 @@ def compress_model_tt(
                     input_dim=input_dim,
                     output_dim=output_dim,
                     row_factors=row_factors,
-                    column_factors=column_factors,
-                    tensor_shape=tensor_shape,
-                    requested_rank=max_rank,
-                    actual_ranks=decomposition.ranks,
+                    column_factors=(column_factors),
+                    tensor_shape=(tensor_shape),
+                    requested_rank=(max_rank),
+                    actual_ranks=(decomposition.ranks),
                     original_parameters=(original_parameters),
                     compressed_parameters=(tt_parameters),
                     original_bytes=(original_parameters * 4),
@@ -563,7 +570,7 @@ def compress_model_tt(
             effective_stored_parameters=(effective_stored_parameters),
             baseline_size_bytes=(baseline_size_bytes),
             compressed_size_bytes=(compressed_size_bytes),
-            requested_rank=max_rank,
+            requested_rank=(max_rank),
             layers=tuple(reports),
         ),
     )

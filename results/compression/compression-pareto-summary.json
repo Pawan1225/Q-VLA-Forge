@@ -1,0 +1,161 @@
+{
+  "source": "results\\compression\\compression-validation-summary.json",
+  "driving": {
+    "analysis": {
+      "domain": "autonomous_driving",
+      "points": [
+        {
+          "method": "fp32",
+          "configuration": "FP32",
+          "family": "reference",
+          "compression_ratio_mean": 1.0,
+          "compression_ratio_std": 0.0,
+          "mse_change_mean": 0.0,
+          "mse_change_std": 0.0,
+          "mae_change_mean": 0.0,
+          "mae_change_std": 0.0,
+          "pilot_feasible_runs": 0,
+          "all_runs_pilot_feasible": false,
+          "is_reference": true
+        },
+        {
+          "method": "int8",
+          "configuration": "INT8",
+          "family": "classical_quantization",
+          "compression_ratio_mean": 3.846258709481975,
+          "compression_ratio_std": 0.0,
+          "mse_change_mean": -0.22516096466215424,
+          "mse_change_std": 0.13334689015909043,
+          "mae_change_mean": 0.35397373462460174,
+          "mae_change_std": 0.31661518248832826,
+          "pilot_feasible_runs": 3,
+          "all_runs_pilot_feasible": true,
+          "is_reference": false
+        },
+        {
+          "method": "svd",
+          "configuration": "SVD-75%",
+          "family": "classical_low_rank",
+          "compression_ratio_mean": 1.135999642106205,
+          "compression_ratio_std": 0.0,
+          "mse_change_mean": 382.6244778073404,
+          "mse_change_std": 15.1872399337003,
+          "mae_change_mean": 175.88719127378644,
+          "mae_change_std": 9.93107540063336,
+          "pilot_feasible_runs": 0,
+          "all_runs_pilot_feasible": false,
+          "is_reference": false
+        },
+        {
+          "method": "tensor_train",
+          "configuration": "TT-rank-2",
+          "family": "quantum_inspired_tensor_network",
+          "compression_ratio_mean": 1.8006240102110762,
+          "compression_ratio_std": 0.0,
+          "mse_change_mean": 1300.1915003210524,
+          "mse_change_std": 254.20125367869903,
+          "mae_change_mean": 344.9883997296834,
+          "mae_change_std": 4.191561494914069,
+          "pilot_feasible_runs": 0,
+          "all_runs_pilot_feasible": false,
+          "is_reference": false
+        }
+      ],
+      "pareto_frontier": [
+        "INT8"
+      ],
+      "dominated": [
+        "SVD-75%",
+        "TT-rank-2"
+      ],
+      "minimum_compression_ratio": 2.0,
+      "maximum_mse_increase_percent": 5.0
+    },
+    "json": "results\\compression\\driving-compression-pareto.json",
+    "csv": "results\\compression\\driving-compression-pareto.csv",
+    "figure": "figures\\driving_compression_pareto.png"
+  },
+  "robotics": {
+    "analysis": {
+      "domain": "robotics",
+      "points": [
+        {
+          "method": "fp32",
+          "configuration": "FP32",
+          "family": "reference",
+          "compression_ratio_mean": 1.0,
+          "compression_ratio_std": 0.0,
+          "mse_change_mean": 0.0,
+          "mse_change_std": 0.0,
+          "mae_change_mean": 0.0,
+          "mae_change_std": 0.0,
+          "pilot_feasible_runs": 0,
+          "all_runs_pilot_feasible": false,
+          "is_reference": true
+        },
+        {
+          "method": "int8",
+          "configuration": "INT8",
+          "family": "classical_quantization",
+          "compression_ratio_mean": 3.846258709481975,
+          "compression_ratio_std": 0.0,
+          "mse_change_mean": -0.15251875574570348,
+          "mse_change_std": 1.1282471790678248,
+          "mae_change_mean": -0.0667613939396421,
+          "mae_change_std": 0.050715548692474,
+          "pilot_feasible_runs": 3,
+          "all_runs_pilot_feasible": true,
+          "is_reference": false
+        },
+        {
+          "method": "svd",
+          "configuration": "SVD-50%",
+          "family": "classical_low_rank",
+          "compression_ratio_mean": 1.295913854109962,
+          "compression_ratio_std": 0.0,
+          "mse_change_mean": 1818.5791423398518,
+          "mse_change_std": 519.4089151238921,
+          "mae_change_mean": 710.0969217095092,
+          "mae_change_std": 71.17560791899798,
+          "pilot_feasible_runs": 0,
+          "all_runs_pilot_feasible": false,
+          "is_reference": false
+        },
+        {
+          "method": "tensor_train",
+          "configuration": "TT-rank-2",
+          "family": "quantum_inspired_tensor_network",
+          "compression_ratio_mean": 1.8006240102110762,
+          "compression_ratio_std": 0.0,
+          "mse_change_mean": 3270.928450823199,
+          "mse_change_std": 895.500820600516,
+          "mae_change_mean": 890.4449818135568,
+          "mae_change_std": 121.48318833782413,
+          "pilot_feasible_runs": 0,
+          "all_runs_pilot_feasible": false,
+          "is_reference": false
+        }
+      ],
+      "pareto_frontier": [
+        "INT8"
+      ],
+      "dominated": [
+        "SVD-50%",
+        "TT-rank-2"
+      ],
+      "minimum_compression_ratio": 2.0,
+      "maximum_mse_increase_percent": 5.0
+    },
+    "json": "results\\compression\\robotics-compression-pareto.json",
+    "csv": "results\\compression\\robotics-compression-pareto.csv",
+    "figure": "figures\\robotics_compression_pareto.png"
+  },
+  "pareto_objectives": {
+    "maximize": "effective whole-model compression ratio",
+    "minimize": "relative test MSE increase percent"
+  },
+  "pilot_feasibility": {
+    "minimum_compression_ratio": 2.0,
+    "maximum_mse_increase_percent": 5.0
+  }
+}

@@ -1,0 +1,584 @@
+{
+  "seed": 42,
+  "points": [
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-75%",
+      "target": "fusion",
+      "selected_layers": [
+        "fusion.network.0",
+        "fusion.network.2"
+      ],
+      "compressed_layers": [
+        "fusion.network.0",
+        "fusion.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 70431,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 281724,
+      "compression_ratio": 1.0816117902628104,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.02021435834467411,
+      "mse_change_percent": 85.5906746530361,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.1082424521446228,
+      "mae_change_percent": 54.4682709699864
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "fusion",
+      "selected_layers": [
+        "fusion.network.0",
+        "fusion.network.2"
+      ],
+      "compressed_layers": [
+        "fusion.network.0",
+        "fusion.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 54019,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 216076,
+      "compression_ratio": 1.4102260315814805,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.251110315322876,
+      "mse_change_percent": 2205.4767328485545,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.3688144385814667,
+      "mae_change_percent": 426.31964176428284
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-75%",
+      "target": "latent",
+      "selected_layers": [
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "compressed_layers": [
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 74554,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 298216,
+      "compression_ratio": 1.0217962818896371,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.02599308453500271,
+      "mse_change_percent": 138.6459175655978,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.12162517756223679,
+      "mae_change_percent": 73.5661980324935
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "latent",
+      "selected_layers": [
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "compressed_layers": [
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 70275,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 281100,
+      "compression_ratio": 1.0840128068303094,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.24376678466796875,
+      "mse_change_percent": 2138.054814955298,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.38146719336509705,
+      "mae_change_percent": 444.37585830142547
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-75%",
+      "target": "action",
+      "selected_layers": [
+        "action_head.network.0"
+      ],
+      "compressed_layers": [
+        "action_head.network.0"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 75870,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 303480,
+      "compression_ratio": 1.0040727560300513,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.042461052536964417,
+      "mse_change_percent": 289.8404912214037,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.17984257638454437,
+      "mae_change_percent": 156.64581012809504
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "action",
+      "selected_layers": [
+        "action_head.network.0"
+      ],
+      "compressed_layers": [
+        "action_head.network.0"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 75259,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 301036,
+      "compression_ratio": 1.0122244515606107,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.09438607841730118,
+      "mse_change_percent": 766.5709627106,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.245635986328125,
+      "mae_change_percent": 250.53683046109367
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-75%",
+      "target": "fusion_latent",
+      "selected_layers": [
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "compressed_layers": [
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 68806,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 275224,
+      "compression_ratio": 1.1071563526436647,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.027447685599327087,
+      "mse_change_percent": 152.00080067768593,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.12734448909759521,
+      "mae_change_percent": 81.72798803726108
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "fusion_latent",
+      "selected_layers": [
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "compressed_layers": [
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 48115,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 192460,
+      "compression_ratio": 1.5832692507534034,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.2292097955942154,
+      "mse_change_percent": 2004.4051894243169,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.36474868655204773,
+      "mae_change_percent": 420.5175772901896
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-75%",
+      "target": "all",
+      "selected_layers": [
+        "action_head.network.0",
+        "fusion.network.0",
+        "fusion.network.2",
+        "language_encoder.projection.0",
+        "latent.network.0",
+        "latent.network.2",
+        "vision_encoder.projection.1"
+      ],
+      "compressed_layers": [
+        "vision_encoder.projection.1",
+        "language_encoder.projection.0",
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2",
+        "action_head.network.0"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 67059,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 268236,
+      "compression_ratio": 1.135999642106205,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.05133070424199104,
+      "mse_change_percent": 371.2739265946838,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.18850159645080566,
+      "mae_change_percent": 169.00273508155698
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "all",
+      "selected_layers": [
+        "action_head.network.0",
+        "fusion.network.0",
+        "fusion.network.2",
+        "language_encoder.projection.0",
+        "latent.network.0",
+        "latent.network.2",
+        "vision_encoder.projection.1"
+      ],
+      "compressed_layers": [
+        "vision_encoder.projection.1",
+        "language_encoder.projection.0",
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2",
+        "action_head.network.0"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 42307,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 169228,
+      "compression_ratio": 1.8006240102110762,
+      "baseline_test_mse": 0.01089190412312746,
+      "compressed_test_mse": 0.1793835163116455,
+      "mse_change_percent": 1546.9435856559671,
+      "baseline_test_mae": 0.07007423043251038,
+      "compressed_test_mae": 0.3084418475627899,
+      "mae_change_percent": 340.1644451305894
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-50%",
+      "target": "fusion",
+      "selected_layers": [
+        "fusion.network.0",
+        "fusion.network.2"
+      ],
+      "compressed_layers": [
+        "fusion.network.0",
+        "fusion.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 64934,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 259736,
+      "compression_ratio": 1.1731758400837773,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.042274609208106995,
+      "mse_change_percent": 680.5251881005373,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.1464991718530655,
+      "mae_change_percent": 362.8858846635807
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "fusion",
+      "selected_layers": [
+        "fusion.network.0",
+        "fusion.network.2"
+      ],
+      "compressed_layers": [
+        "fusion.network.0",
+        "fusion.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 54019,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 216076,
+      "compression_ratio": 1.4102260315814805,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.26225414872169495,
+      "mse_change_percent": 4742.054665803811,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.4067801535129547,
+      "mae_change_percent": 1185.282290955771
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-50%",
+      "target": "latent",
+      "selected_layers": [
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "compressed_layers": [
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 73069,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 292276,
+      "compression_ratio": 1.0425625094089148,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.056999918073415756,
+      "mse_change_percent": 952.4017278777408,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.1839302033185959,
+      "mae_change_percent": 481.15478608215085
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "latent",
+      "selected_layers": [
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "compressed_layers": [
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 70275,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 281100,
+      "compression_ratio": 1.0840128068303094,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.38746675848960876,
+      "mse_change_percent": 7053.881968820444,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.4835537374019623,
+      "mae_change_percent": 1427.859828069086
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-50%",
+      "target": "action",
+      "selected_layers": [
+        "action_head.network.0"
+      ],
+      "compressed_layers": [
+        "action_head.network.0"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 75675,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 302700,
+      "compression_ratio": 1.0066600594648167,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.015540637075901031,
+      "mse_change_percent": 186.9301196176095,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.09265995770692825,
+      "mae_change_percent": 192.772893891031
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "action",
+      "selected_layers": [
+        "action_head.network.0"
+      ],
+      "compressed_layers": [
+        "action_head.network.0"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 75259,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 301036,
+      "compression_ratio": 1.0122244515606107,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.13056586682796478,
+      "mse_change_percent": 2310.6656377053787,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.27116134762763977,
+      "mae_change_percent": 756.774538009529
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-50%",
+      "target": "fusion_latent",
+      "selected_layers": [
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "compressed_layers": [
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 61824,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 247296,
+      "compression_ratio": 1.2321913819875776,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.08899613469839096,
+      "mse_change_percent": 1543.1547464751327,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.21047337353229523,
+      "mae_change_percent": 565.0218733204814
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "fusion_latent",
+      "selected_layers": [
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "compressed_layers": [
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 48115,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 192460,
+      "compression_ratio": 1.5832692507534034,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.3656691014766693,
+      "mse_change_percent": 6651.427146437062,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.46460556983947754,
+      "mae_change_percent": 1367.9902793612514
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "svd",
+      "configuration": "SVD-50%",
+      "target": "all",
+      "selected_layers": [
+        "action_head.network.0",
+        "fusion.network.0",
+        "fusion.network.2",
+        "language_encoder.projection.0",
+        "latent.network.0",
+        "latent.network.2",
+        "vision_encoder.projection.1"
+      ],
+      "compressed_layers": [
+        "vision_encoder.projection.1",
+        "language_encoder.projection.0",
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2",
+        "action_head.network.0"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 58784,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 235136,
+      "compression_ratio": 1.295913854109962,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.13591523468494415,
+      "mse_change_percent": 2409.4321652026233,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.277546226978302,
+      "mae_change_percent": 776.9485123011091
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "method": "tensor_train",
+      "representation": "open_boundary_mps",
+      "configuration": "TT-rank-2",
+      "target": "all",
+      "selected_layers": [
+        "action_head.network.0",
+        "fusion.network.0",
+        "fusion.network.2",
+        "language_encoder.projection.0",
+        "latent.network.0",
+        "latent.network.2",
+        "vision_encoder.projection.1"
+      ],
+      "compressed_layers": [
+        "vision_encoder.projection.1",
+        "language_encoder.projection.0",
+        "fusion.network.0",
+        "fusion.network.2",
+        "latent.network.0",
+        "latent.network.2",
+        "action_head.network.0"
+      ],
+      "baseline_parameters": 76179,
+      "effective_stored_parameters": 42307,
+      "baseline_size_bytes": 304716,
+      "compressed_size_bytes": 169228,
+      "compression_ratio": 1.8006240102110762,
+      "baseline_test_mse": 0.0054161748848855495,
+      "compressed_test_mse": 0.23533959686756134,
+      "mse_change_percent": 4245.125515136211,
+      "baseline_test_mae": 0.031649090349674225,
+      "compressed_test_mae": 0.35365918278694153,
+      "mae_change_percent": 1017.4386969089678
+    }
+  ],
+  "notes": "Architectural target ablation. SVD is the classical low-rank comparator; TT/MPS is the quantum-inspired tensor-network method. Only profitable eligible layers are counted as compressed."
+}

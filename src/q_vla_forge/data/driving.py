@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterator, Sequence
+from typing import overload
 
 import numpy as np
 
@@ -307,10 +308,22 @@ class SyntheticDrivingDataset(Sequence[TaskSample]):
     def __len__(self) -> int:
         return self._size
 
+    @overload
     def __getitem__(
         self,
         index: int,
-    ) -> TaskSample:
+    ) -> TaskSample: ...
+
+    @overload
+    def __getitem__(
+        self,
+        index: slice,
+    ) -> Sequence[TaskSample]: ...
+
+    def __getitem__(
+        self,
+        index: int | slice,
+    ) -> TaskSample | Sequence[TaskSample]:
         return self._samples[index]
 
     def __iter__(self) -> Iterator[TaskSample]:
