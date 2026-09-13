@@ -43,6 +43,7 @@ EXPECTED_EVALUATION_STEPS = list(
 def load_json(
     path: Path,
 ) -> dict[str, Any]:
+    """Load one JSON artifact."""
     return json.loads(path.read_text(encoding="utf-8"))
 
 
@@ -52,6 +53,7 @@ def assert_close(
     *,
     tolerance: float = 1e-12,
 ) -> None:
+    """Assert that two floating-point values are equal within tolerance."""
     assert math.isclose(
         actual,
         expected,
@@ -63,6 +65,7 @@ def assert_close(
 
 
 def verify_ppo_baselines() -> None:
+    """Independently verify the frozen Sprint 4.5 PPO evidence."""
     audit = load_json(AUDIT_PATH)
 
     targets = load_json(TARGET_PATH)
@@ -76,8 +79,8 @@ def verify_ppo_baselines() -> None:
     assert summary["seeds"] == list(SEEDS)
 
     random_references = {
-        "autonomous_driving": audit["summaries"]["driving_random"]["mean_reward"],
-        "robotics": audit["summaries"]["robotics_random"]["mean_reward"],
+        "autonomous_driving": (audit["summaries"]["driving_random"]["mean_reward"]),
+        "robotics": (audit["summaries"]["robotics_random"]["mean_reward"]),
     }
 
     for domain in DOMAINS:
@@ -104,13 +107,9 @@ def verify_ppo_baselines() -> None:
         assert set(summary_runs) == set(SEEDS)
 
         best_rewards: list[float] = []
-
         final_rewards: list[float] = []
-
         final_success_rates: list[float] = []
-
         steps_to_target: list[float] = []
-
         episodes_to_target: list[float] = []
 
         for seed in SEEDS:
@@ -315,6 +314,7 @@ def verify_ppo_baselines() -> None:
 
 
 def verify_claim_boundary() -> None:
+    """Verify the historical Sprint 4.5 PPO/QML claim boundary."""
     targets = load_json(TARGET_PATH)
 
     print()
@@ -372,7 +372,7 @@ def verify_claim_boundary() -> None:
             qml_result_candidates.append(str(path))
 
     print(
-        "QML-like result artifacts found:",
+        "Post-freeze QML-like result artifacts found:",
         len(qml_result_candidates),
     )
 
@@ -382,13 +382,31 @@ def verify_claim_boundary() -> None:
             candidate,
         )
 
-    assert not qml_result_candidates, (
-        "QML-like result artifacts exist "
-        "before the frozen classical "
-        "baseline boundary"
+    # Sprint 4.5's scientific contamination boundary is temporal.
+    #
+    # Classical PPO results and their paired reward targets were
+    # established and frozen before principal QML experimentation.
+    #
+    # Later Sprint 4.6+ work is expected to create QML, PQC, and
+    # hybrid-policy artifacts. Their presence after the freeze does
+    # not invalidate the historical Sprint 4.5 baseline boundary.
+    #
+    # The frozen target artifact remains the source of truth for
+    # whether QML results had been observed when those targets were
+    # created.
+    assert targets["qml_results_seen"] is False
+
+    assert all(
+        domain["targets_frozen_before_qml"] is True
+        for domain in targets["domains"].values()
     )
 
-    print("No QML result contamination: PASS")
+    if qml_result_candidates:
+        print("Post-freeze QML artifacts present: " "EXPECTED after Sprint 4.5")
+    else:
+        print("Post-freeze QML artifacts present: NONE")
+
+    print("Historical PPO/QML contamination boundary: PASS")
 
     claim_files = [
         path for path in RESULTS_ROOT.rglob("*.json") if "claim" in path.name.lower()
@@ -448,8 +466,20 @@ def verify_claim_boundary() -> None:
     print("Classical PPO baselines and paired " "reward targets have been established.")
 
     print()
+    print("Historical Sprint 4.5 boundary:")
 
-    print("Not yet allowed:")
+    print(
+        "No principal QML result had been seen when "
+        "the paired classical PPO targets were frozen."
+    )
+
+    print()
+    print("Later Sprint 4.6+ QML artifacts:")
+
+    print("Allowed after the historical Sprint 4.5 freeze.")
+
+    print()
+    print("Not established by Sprint 4.5:")
 
     print(
         "QML sample-efficiency improvement, " "quantum advantage, or quantum speedup."
@@ -461,6 +491,7 @@ def verify_claim_boundary() -> None:
 
 
 def main() -> None:
+    """Run the complete Sprint 4.5 independent verification."""
     verify_ppo_baselines()
     verify_claim_boundary()
 

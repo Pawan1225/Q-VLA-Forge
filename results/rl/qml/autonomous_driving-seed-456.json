@@ -1,0 +1,171 @@
+{
+  "domain": "autonomous_driving",
+  "seed": 456,
+  "total_environment_steps": 20000,
+  "completed_training_episodes": 200,
+  "projection_parameters": 20,
+  "quantum_parameters": 16,
+  "action_head_parameters": 15,
+  "actor_parameters": 54,
+  "critic_parameters": 1249,
+  "total_parameters": 1303,
+  "training_seconds": 5631.7648189999745,
+  "evaluations": [
+    {
+      "environment_steps": 0,
+      "completed_training_episodes": 0,
+      "mean_reward": -62.797406398666695,
+      "reward_standard_deviation": 6.500358543145626,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 1000,
+      "completed_training_episodes": 10,
+      "mean_reward": -38.91244259462943,
+      "reward_standard_deviation": 5.169722173648495,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 2000,
+      "completed_training_episodes": 20,
+      "mean_reward": -11.656608868840888,
+      "reward_standard_deviation": 6.411666952557851,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 3000,
+      "completed_training_episodes": 30,
+      "mean_reward": -26.457298304537165,
+      "reward_standard_deviation": 8.878097471118455,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 4000,
+      "completed_training_episodes": 40,
+      "mean_reward": -35.58563958514492,
+      "reward_standard_deviation": 8.313967562536277,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 5000,
+      "completed_training_episodes": 50,
+      "mean_reward": -22.493462355090536,
+      "reward_standard_deviation": 10.878656246786333,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 6000,
+      "completed_training_episodes": 60,
+      "mean_reward": -23.80540184200623,
+      "reward_standard_deviation": 13.9175342115985,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 7000,
+      "completed_training_episodes": 70,
+      "mean_reward": -36.86116760293044,
+      "reward_standard_deviation": 17.21616331937496,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 8000,
+      "completed_training_episodes": 80,
+      "mean_reward": -20.476227265487488,
+      "reward_standard_deviation": 5.897427458179647,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 9000,
+      "completed_training_episodes": 90,
+      "mean_reward": -15.630152992443223,
+      "reward_standard_deviation": 8.827930511054507,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 10000,
+      "completed_training_episodes": 100,
+      "mean_reward": -11.778216656137358,
+      "reward_standard_deviation": 6.328981926636813,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 11000,
+      "completed_training_episodes": 110,
+      "mean_reward": -31.390958056533265,
+      "reward_standard_deviation": 13.237421936530179,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 12000,
+      "completed_training_episodes": 120,
+      "mean_reward": -15.682403071377394,
+      "reward_standard_deviation": 9.351926579803786,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 13000,
+      "completed_training_episodes": 130,
+      "mean_reward": -21.318599999458787,
+      "reward_standard_deviation": 10.892896411635153,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 14000,
+      "completed_training_episodes": 140,
+      "mean_reward": -10.2212840584195,
+      "reward_standard_deviation": 5.725828966658091,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 15000,
+      "completed_training_episodes": 150,
+      "mean_reward": -7.700611070313817,
+      "reward_standard_deviation": 3.698890505554113,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 16000,
+      "completed_training_episodes": 160,
+      "mean_reward": -9.053799716496572,
+      "reward_standard_deviation": 3.4264945878276816,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 17000,
+      "completed_training_episodes": 170,
+      "mean_reward": -7.186715916596775,
+      "reward_standard_deviation": 3.3593713392462003,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 18000,
+      "completed_training_episodes": 180,
+      "mean_reward": -22.110788145678953,
+      "reward_standard_deviation": 9.164475027354438,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 19000,
+      "completed_training_episodes": 190,
+      "mean_reward": -24.671792109209356,
+      "reward_standard_deviation": 9.427362989468714,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 20000,
+      "completed_training_episodes": 200,
+      "mean_reward": -13.702906984621373,
+      "reward_standard_deviation": 6.233171872710112,
+      "success_rate": 0.0
+    }
+  ],
+  "comparison": {
+    "target_source": "frozen_sprint4_ppo_target",
+    "target_evaluation_reward": -5.174479723234718,
+    "classical_ppo_environment_steps_to_target": 13000,
+    "qml_environment_steps_to_target": null,
+    "qml_episodes_to_target": null,
+    "sample_efficiency_improvement_percent": null,
+    "positive_means": "QML required fewer environment steps"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "sprint": "4.8",
+  "domain": "autonomous_driving",
+  "experiment": "classical_ppo_vs_hybrid_qml_ppo",
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "training_budget_environment_steps_per_seed": 20000,
+  "evaluation_frequency_environment_steps": 1000,
+  "principal_seed_results": [
+    {
+      "seed": 42,
+      "target_evaluation_reward": -13.240820897521317,
+      "classical_ppo_environment_steps_to_target": 12000,
+      "qml_environment_steps_to_target": null,
+      "qml_episodes_to_target": null,
+      "sample_efficiency_improvement_percent": null,
+      "target_reached": false,
+      "best_qml_reward": -36.908996765879564,
+      "final_qml_reward": -44.04820391567478,
+      "final_success_rate": 0.0,
+      "total_environment_steps": 20000,
+      "completed_training_episodes": 411,
+      "training_seconds": 5487.063758800039
+    },
+    {
+      "seed": 123,
+      "target_evaluation_reward": -8.172756779529806,
+      "classical_ppo_environment_steps_to_target": 15000,
+      "qml_environment_steps_to_target": null,
+      "qml_episodes_to_target": null,
+      "sample_efficiency_improvement_percent": null,
+      "target_reached": false,
+      "best_qml_reward": -48.58139184767694,
+      "final_qml_reward": -48.58139184767694,
+      "final_success_rate": 0.0,
+      "total_environment_steps": 20000,
+      "completed_training_episodes": 261,
+      "training_seconds": 5502.987127500004
+    },
+    {
+      "seed": 456,
+      "target_evaluation_reward": -5.174479723234718,
+      "classical_ppo_environment_steps_to_target": 13000,
+      "qml_environment_steps_to_target": null,
+      "qml_episodes_to_target": null,
+      "sample_efficiency_improvement_percent": null,
+      "target_reached": false,
+      "best_qml_reward": -7.186715916596775,
+      "final_qml_reward": -13.702906984621373,
+      "final_success_rate": 0.0,
+      "total_environment_steps": 20000,
+      "completed_training_episodes": 200,
+      "training_seconds": 5631.7648189999745
+    }
+  ],
+  "aggregate": {
+    "best_qml_reward": {
+      "mean": -30.89236817671776,
+      "sample_standard_deviation": 21.343140901580682
+    },
+    "final_qml_reward": {
+      "mean": -35.4441675826577,
+      "sample_standard_deviation": 18.964420832192783
+    },
+    "final_success_rate": {
+      "mean": 0.0,
+      "sample_standard_deviation": 0.0
+    },
+    "qml_environment_steps_to_target": {
+      "mean_over_reached_seeds": null,
+      "sample_standard_deviation_over_reached_seeds": null,
+      "missing_value_rule": "Seeds that did not reach the target remain None and are not censored to the training budget."
+    },
+    "sample_efficiency_improvement_percent": {
+      "mean_over_reached_seeds": null,
+      "sample_standard_deviation_over_reached_seeds": null,
+      "missing_value_rule": "Improvement remains None when the paired QML target was not reached."
+    },
+    "target_reach_count": 0,
+    "target_reach_total": 3,
+    "all_seeds_reached_target": false
+  },
+  "robust_sample_efficiency_criterion": {
+    "required_seed_reach_count": 3,
+    "required_mean_improvement_percent": 10.0,
+    "criterion": "All three seeds must reach their paired frozen PPO reward target and the mean valid sample-efficiency improvement must be at least 10 percent.",
+    "met": false
+  },
+  "parameter_accounting": {
+    "classical_ppo_actor_parameters": 1318,
+    "hybrid_qml_actor_parameters": 54,
+    "hybrid_quantum_parameters": 16,
+    "hybrid_actor_parameter_reduction_percent": 95.90288315629742
+  },
+  "outcome": "No hybrid QML seed reached its paired frozen PPO reward target within the 20,000-step training budget.",
+  "scientific_boundaries": {
+    "quantum_hardware_used": false,
+    "quantum_speedup_claimed": false,
+    "wall_clock_speedup_claimed": false,
+    "robotics_result_included": false,
+    "cross_domain_claim_included": false,
+    "production_autonomous_driving_claimed": false,
+    "runtime_interpretation": "Wall-clock runtime is simulator and machine dependent and is not used as evidence of quantum speedup or sample-efficiency advantage."
+  }
+}
