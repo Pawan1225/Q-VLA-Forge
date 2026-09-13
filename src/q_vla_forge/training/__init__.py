@@ -30,6 +30,12 @@ from q_vla_forge.training.supervised import (
     evaluate_supervised,
     train_supervised,
 )
+from q_vla_forge.training.tensor_network import (
+    TrainableTTLayerReport,
+    TrainableTTLinear,
+    TrainableTTModelReport,
+    convert_model_to_trainable_tt,
+)
 
 __all__ = [
     "EfficiencyComparison",
@@ -42,6 +48,9 @@ __all__ = [
     "TrainableSVDLayerReport",
     "TrainableSVDLinear",
     "TrainableSVDModelReport",
+    "TrainableTTLayerReport",
+    "TrainableTTLinear",
+    "TrainableTTModelReport",
     "TrainingConfig",
     "TrainingEfficiencySummary",
     "TrainingResult",
@@ -49,6 +58,7 @@ __all__ = [
     "build_tensor_batch",
     "compare_target_efficiency",
     "convert_model_to_trainable_svd",
+    "convert_model_to_trainable_tt",
     "evaluate_supervised",
     "find_target_reach",
     "percentage_reduction",
