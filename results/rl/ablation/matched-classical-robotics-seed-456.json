@@ -1,0 +1,227 @@
+{
+  "sprint": "4.12",
+  "experiment": "matched_classical_parameter_ablation",
+  "policy": "matched_classical",
+  "domain": "robotics",
+  "seed": 456,
+  "protocol": {
+    "total_environment_steps": 20000,
+    "evaluation_frequency_steps": 1000,
+    "evaluation_episode_count": 20,
+    "evaluation_seeds": [
+      20000,
+      20001,
+      20002,
+      20003,
+      20004,
+      20005,
+      20006,
+      20007,
+      20008,
+      20009,
+      20010,
+      20011,
+      20012,
+      20013,
+      20014,
+      20015,
+      20016,
+      20017,
+      20018,
+      20019
+    ],
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_coefficient": 0.2,
+    "learning_rate": 0.0003,
+    "rollout_steps": 256,
+    "update_epochs": 10,
+    "minibatch_size": 64,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.01,
+    "max_gradient_norm": 0.5
+  },
+  "parameter_counts": {
+    "projection_parameters": 28,
+    "core_parameters": 16,
+    "action_head_parameters": 15,
+    "actor_parameters": 62,
+    "critic_parameters": 1313,
+    "total_parameters": 1375
+  },
+  "evaluations": [
+    {
+      "environment_steps": 0,
+      "completed_training_episodes": 0,
+      "mean_reward": -2.1948765523982603,
+      "reward_standard_deviation": 1.1564575525780914,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 1000,
+      "completed_training_episodes": 10,
+      "mean_reward": -2.0109582990358073,
+      "reward_standard_deviation": 1.2412850769785673,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 2000,
+      "completed_training_episodes": 20,
+      "mean_reward": -2.0325295349163115,
+      "reward_standard_deviation": 1.1906037335735478,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 3000,
+      "completed_training_episodes": 30,
+      "mean_reward": -1.6768653008339336,
+      "reward_standard_deviation": 1.2234857690285794,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 4000,
+      "completed_training_episodes": 40,
+      "mean_reward": -1.5358639484330099,
+      "reward_standard_deviation": 1.0309726351344213,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 5000,
+      "completed_training_episodes": 50,
+      "mean_reward": -1.009382203100612,
+      "reward_standard_deviation": 0.9279270175350486,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 6000,
+      "completed_training_episodes": 60,
+      "mean_reward": -0.51905633877639,
+      "reward_standard_deviation": 0.938743374383455,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 7000,
+      "completed_training_episodes": 70,
+      "mean_reward": -0.2783305218165033,
+      "reward_standard_deviation": 0.9060507524667909,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 8000,
+      "completed_training_episodes": 80,
+      "mean_reward": -0.21197189744739092,
+      "reward_standard_deviation": 0.844026380554537,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 9000,
+      "completed_training_episodes": 90,
+      "mean_reward": -0.23417547413427647,
+      "reward_standard_deviation": 0.8141193421892461,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 10000,
+      "completed_training_episodes": 100,
+      "mean_reward": -0.04228273297375108,
+      "reward_standard_deviation": 0.8261605550420419,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 11000,
+      "completed_training_episodes": 110,
+      "mean_reward": 0.04215103355038012,
+      "reward_standard_deviation": 0.7954522566968694,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 12000,
+      "completed_training_episodes": 120,
+      "mean_reward": 0.15229779718815759,
+      "reward_standard_deviation": 0.8055091719144539,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 13000,
+      "completed_training_episodes": 130,
+      "mean_reward": 0.23046574169554018,
+      "reward_standard_deviation": 0.7783216674803835,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 14000,
+      "completed_training_episodes": 140,
+      "mean_reward": 0.34334565540621564,
+      "reward_standard_deviation": 0.7593853088541511,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 15000,
+      "completed_training_episodes": 150,
+      "mean_reward": 0.41058965109350815,
+      "reward_standard_deviation": 0.7439761742965013,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 16000,
+      "completed_training_episodes": 160,
+      "mean_reward": 0.4682497790310095,
+      "reward_standard_deviation": 0.768610050085926,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 17000,
+      "completed_training_episodes": 170,
+      "mean_reward": 0.48259505385825563,
+      "reward_standard_deviation": 0.7536442667231186,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 18000,
+      "completed_training_episodes": 180,
+      "mean_reward": 0.5453864552503461,
+      "reward_standard_deviation": 0.7381308202552063,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 19000,
+      "completed_training_episodes": 190,
+      "mean_reward": 0.5919359958111607,
+      "reward_standard_deviation": 0.7271409680910972,
+      "success_rate": 0.0
+    },
+    {
+      "environment_steps": 20000,
+      "completed_training_episodes": 200,
+      "mean_reward": 0.6255024247968409,
+      "reward_standard_deviation": 0.734813783418064,
+      "success_rate": 0.0
+    }
+  ],
+  "summary": {
+    "evaluation_count": 21,
+    "total_environment_steps": 20000,
+    "completed_training_episodes": 200,
+    "best_mean_reward": 0.6255024247968409,
+    "best_reward_standard_deviation": 0.734813783418064,
+    "best_success_rate": 0.0,
+    "best_environment_steps": 20000,
+    "final_mean_reward": 0.6255024247968409,
+    "final_reward_standard_deviation": 0.734813783418064,
+    "final_success_rate": 0.0
+  },
+  "scientific_boundary": {
+    "new_training_performed": true,
+    "new_qml_training_performed": false,
+    "matched_classical_training_performed": true,
+    "qml_architecture_modified": false,
+    "ppo_protocol_modified": false,
+    "targets_modified": false,
+    "environments_modified": false,
+    "parameter_matched_ablation": true,
+    "statistical_significance_claimed": false,
+    "quantum_speedup_claimed": false,
+    "quantum_hardware_advantage_claimed": false
+  },
+  "training_seconds": 41.77596270001959
+}

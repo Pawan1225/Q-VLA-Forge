@@ -1,0 +1,331 @@
+{
+  "sprint": "4.12",
+  "title": "Classical vs QML Matched-Budget Ablation",
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "new_training_performed": true,
+  "new_qml_training_performed": false,
+  "matched_classical_training_performed": true,
+  "principal_matched_classical_runs": 6,
+  "reused_principal_qml_runs": 6,
+  "parameter_matched_ablation": true,
+  "primary_target_reach": {
+    "matched_classical": {
+      "reached": 1,
+      "available": 6
+    },
+    "qml": {
+      "reached": 0,
+      "available": 6
+    }
+  },
+  "paired_records": [
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "matched_actor_parameters": 54,
+      "qml_actor_parameters": 54,
+      "matched_target_reached": false,
+      "qml_target_reached": false,
+      "matched_normalized_auc": -0.4033283648650451,
+      "qml_normalized_auc": 0.07423257282304387,
+      "normalized_auc_delta": -0.47756093768808894,
+      "matched_best_progress": 0.9664081813946608,
+      "qml_best_progress": 0.34784085832466943,
+      "best_progress_delta": 0.6185673230699913,
+      "matched_final_progress": 0.34945825200049635,
+      "qml_final_progress": 0.1511252671887569,
+      "final_progress_delta": 0.19833298481173944
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 123,
+      "matched_actor_parameters": 54,
+      "qml_actor_parameters": 54,
+      "matched_target_reached": false,
+      "qml_target_reached": false,
+      "matched_normalized_auc": -0.1272364071623616,
+      "qml_normalized_auc": -0.22505780373000345,
+      "normalized_auc_delta": 0.09782139656764186,
+      "matched_best_progress": 0.4745510841414876,
+      "qml_best_progress": 0.02300415840952612,
+      "best_progress_delta": 0.4515469257319615,
+      "matched_final_progress": -0.7254745410053464,
+      "qml_final_progress": 0.02300415840952612,
+      "final_progress_delta": -0.7484786994148724
+    },
+    {
+      "domain": "autonomous_driving",
+      "seed": 456,
+      "matched_actor_parameters": 54,
+      "qml_actor_parameters": 54,
+      "matched_target_reached": false,
+      "qml_target_reached": false,
+      "matched_normalized_auc": 0.006899553161205532,
+      "qml_normalized_auc": 0.6305610860298821,
+      "normalized_auc_delta": -0.6236615328686766,
+      "matched_best_progress": 0.65969480985502,
+      "qml_best_progress": 0.9546368280151568,
+      "best_progress_delta": -0.29494201816013677,
+      "matched_final_progress": 0.23079422845678788,
+      "qml_final_progress": 0.8077380210659504,
+      "final_progress_delta": -0.5769437926091625
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "matched_actor_parameters": 62,
+      "qml_actor_parameters": 62,
+      "matched_target_reached": false,
+      "qml_target_reached": false,
+      "matched_normalized_auc": 0.6112923854030039,
+      "qml_normalized_auc": 0.36537714811873073,
+      "normalized_auc_delta": 0.24591523728427317,
+      "matched_best_progress": 0.8477611644025375,
+      "qml_best_progress": 0.4913787263521762,
+      "best_progress_delta": 0.35638243805036124,
+      "matched_final_progress": 0.847080077698001,
+      "qml_final_progress": 0.4913787263521762,
+      "final_progress_delta": 0.35570135134582476
+    },
+    {
+      "domain": "robotics",
+      "seed": 123,
+      "matched_actor_parameters": 62,
+      "qml_actor_parameters": 62,
+      "matched_target_reached": false,
+      "qml_target_reached": false,
+      "matched_normalized_auc": 0.6210482812509162,
+      "qml_normalized_auc": 0.6088422719444482,
+      "normalized_auc_delta": 0.01220600930646798,
+      "matched_best_progress": 0.8543994858563136,
+      "qml_best_progress": 0.8340253643790764,
+      "best_progress_delta": 0.020374121477237273,
+      "matched_final_progress": 0.843548733907807,
+      "qml_final_progress": 0.8340253643790764,
+      "final_progress_delta": 0.009523369528730674
+    },
+    {
+      "domain": "robotics",
+      "seed": 456,
+      "matched_actor_parameters": 62,
+      "qml_actor_parameters": 62,
+      "matched_target_reached": true,
+      "qml_target_reached": false,
+      "matched_normalized_auc": 0.7268393843949651,
+      "qml_normalized_auc": 0.7475079418964635,
+      "normalized_auc_delta": -0.02066855750149843,
+      "matched_best_progress": 1.002794171832053,
+      "qml_best_progress": 0.9502308753191346,
+      "best_progress_delta": 0.052563296512918356,
+      "matched_final_progress": 1.002794171832053,
+      "qml_final_progress": 0.9502308753191346,
+      "final_progress_delta": 0.052563296512918356
+    }
+  ],
+  "domains": {
+    "autonomous_driving": {
+      "methods": {
+        "full_ppo": {
+          "target_reach_count": 3,
+          "target_reach_rate": 1.0,
+          "normalized_auc": {
+            "mean": 0.5548114402144297,
+            "sample_standard_deviation": 0.2646057407662727
+          },
+          "best_normalized_progress": {
+            "mean": 1.0526315789473686,
+            "sample_standard_deviation": 1.2819751242557092e-16
+          },
+          "final_normalized_progress": {
+            "mean": 0.9952824582742731,
+            "sample_standard_deviation": 0.05359814404275625
+          },
+          "actor_parameters": 1318
+        },
+        "matched_classical": {
+          "target_reach_count": 0,
+          "target_reach_rate": 0.0,
+          "normalized_auc": {
+            "mean": -0.17455507295540038,
+            "sample_standard_deviation": 0.20916746468168282
+          },
+          "best_normalized_progress": {
+            "mean": 0.7002180251303894,
+            "sample_standard_deviation": 0.2484199051239047
+          },
+          "final_normalized_progress": {
+            "mean": -0.04840735351602071,
+            "sample_standard_deviation": 0.5893515673194776
+          },
+          "actor_parameters": 54
+        },
+        "qml": {
+          "target_reach_count": 0,
+          "target_reach_rate": 0.0,
+          "normalized_auc": {
+            "mean": 0.15991195170764086,
+            "sample_standard_deviation": 0.4341965431725851
+          },
+          "best_normalized_progress": {
+            "mean": 0.44182728158311746,
+            "sample_standard_deviation": 0.4728741308073594
+          },
+          "final_normalized_progress": {
+            "mean": 0.3272891488880778,
+            "sample_standard_deviation": 0.42098348389390194
+          },
+          "actor_parameters": 54
+        }
+      },
+      "paired_delta_summary": {
+        "normalized_auc_delta": {
+          "mean": -0.33446702466304123,
+          "sample_standard_deviation": 0.3814332252513117,
+          "win_counts": {
+            "matched_classical_wins": 1,
+            "qml_wins": 2,
+            "ties": 0
+          }
+        },
+        "best_progress_delta": {
+          "mean": 0.258390743547272,
+          "sample_standard_deviation": 0.48642246264517774,
+          "win_counts": {
+            "matched_classical_wins": 2,
+            "qml_wins": 1,
+            "ties": 0
+          }
+        },
+        "final_progress_delta": {
+          "mean": -0.3756965024040985,
+          "sample_standard_deviation": 0.5044684779133076,
+          "win_counts": {
+            "matched_classical_wins": 1,
+            "qml_wins": 2,
+            "ties": 0
+          }
+        }
+      }
+    },
+    "robotics": {
+      "methods": {
+        "full_ppo": {
+          "target_reach_count": 3,
+          "target_reach_rate": 1.0,
+          "normalized_auc": {
+            "mean": 0.9229137368698397,
+            "sample_standard_deviation": 0.03220700626307124
+          },
+          "best_normalized_progress": {
+            "mean": 1.0526315789473686,
+            "sample_standard_deviation": 0.0
+          },
+          "final_normalized_progress": {
+            "mean": 1.0159038656954695,
+            "sample_standard_deviation": 0.013049764495390644
+          },
+          "actor_parameters": 1382
+        },
+        "matched_classical": {
+          "target_reach_count": 1,
+          "target_reach_rate": 0.3333333333333333,
+          "normalized_auc": {
+            "mean": 0.653060017016295,
+            "sample_standard_deviation": 0.06408073551424327
+          },
+          "best_normalized_progress": {
+            "mean": 0.9016516073636347,
+            "sample_standard_deviation": 0.08765489483404237
+          },
+          "final_normalized_progress": {
+            "mean": 0.8978076611459537,
+            "sample_standard_deviation": 0.09093812823438237
+          },
+          "actor_parameters": 62
+        },
+        "qml": {
+          "target_reach_count": 0,
+          "target_reach_rate": 0.0,
+          "normalized_auc": {
+            "mean": 0.5739091206532141,
+            "sample_standard_deviation": 0.19344567630901505
+          },
+          "best_normalized_progress": {
+            "mean": 0.7585449886834624,
+            "sample_standard_deviation": 0.23855667877731326
+          },
+          "final_normalized_progress": {
+            "mean": 0.7585449886834624,
+            "sample_standard_deviation": 0.23855667877731326
+          },
+          "actor_parameters": 62
+        }
+      },
+      "paired_delta_summary": {
+        "normalized_auc_delta": {
+          "mean": 0.07915089636308091,
+          "sample_standard_deviation": 0.14535454357488312,
+          "win_counts": {
+            "matched_classical_wins": 2,
+            "qml_wins": 1,
+            "ties": 0
+          }
+        },
+        "best_progress_delta": {
+          "mean": 0.1431066186801723,
+          "sample_standard_deviation": 0.18540217661448458,
+          "win_counts": {
+            "matched_classical_wins": 3,
+            "qml_wins": 0,
+            "ties": 0
+          }
+        },
+        "final_progress_delta": {
+          "mean": 0.13926267246249127,
+          "sample_standard_deviation": 0.1886726930858653,
+          "win_counts": {
+            "matched_classical_wins": 3,
+            "qml_wins": 0,
+            "ties": 0
+          }
+        }
+      }
+    }
+  },
+  "parameter_matching": {
+    "autonomous_driving": {
+      "matched_actor": 54,
+      "qml_actor": 54,
+      "matched_critic": 1249,
+      "qml_critic": 1249,
+      "matched_total": 1303,
+      "qml_total": 1303
+    },
+    "robotics": {
+      "matched_actor": 62,
+      "qml_actor": 62,
+      "matched_critic": 1313,
+      "qml_critic": 1313,
+      "matched_total": 1375,
+      "qml_total": 1375
+    }
+  },
+  "scientific_boundary": {
+    "qml_architecture_modified": false,
+    "ppo_protocol_modified": false,
+    "targets_modified": false,
+    "environments_modified": false,
+    "qml_retrained": false,
+    "matched_classical_new_training": true,
+    "parameter_matched_representation_ablation": true,
+    "formal_significance_test_performed": false,
+    "statistical_significance_claimed": false,
+    "quantum_speedup_claimed": false,
+    "quantum_hardware_advantage_claimed": false,
+    "universal_quantum_claimed": false
+  }
+}
