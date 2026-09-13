@@ -1,0 +1,40 @@
+{
+  "sprint": "4.9",
+  "domain": "robotics",
+  "method": "hybrid_quantum_classical_ppo",
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "run_count": 3,
+  "budget_environment_steps_per_run": 20000,
+  "best_reward": {
+    "mean": -0.26700841941663056,
+    "sample_standard_deviation": 0.852654762072075
+  },
+  "final_reward": {
+    "mean": -0.26700841941663056,
+    "sample_standard_deviation": 0.852654762072075
+  },
+  "final_success_rate": {
+    "mean": 0.0,
+    "sample_standard_deviation": 0.0
+  },
+  "qml_target_reach_count": 0,
+  "qml_steps_to_target": null,
+  "sample_efficiency_improvement_percent": null,
+  "robotics_robust_10_percent_criterion": false,
+  "robust_rule": "all 3 QML seeds reach paired targets and mean environment-step reduction >= 10%",
+  "parameter_accounting": {
+    "classical_actor_parameters": 1382,
+    "hybrid_actor_parameters": 62,
+    "hybrid_quantum_parameters": 16
+  },
+  "scientific_boundary": {
+    "quantum_hardware_used": false,
+    "quantum_speedup_claimed": false,
+    "wall_clock_speedup_claimed": false,
+    "cross_domain_claim_deferred": true
+  }
+}
