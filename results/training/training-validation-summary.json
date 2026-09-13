@@ -1,0 +1,266 @@
+{
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "statistics": {
+    "center": "arithmetic_mean",
+    "spread": "sample_standard_deviation"
+  },
+  "primary_efficiency_metric": "optimizer_steps_to_paired_fp32_target",
+  "wall_clock_interpretation": "descriptive",
+  "strong_efficiency_rule": {
+    "all_three_seeds_must_reach_target": true,
+    "mean_step_reduction_percent_at_least": 10.0
+  },
+  "methods": [
+    {
+      "domain": "autonomous_driving",
+      "method": "trainable_svd",
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "target_reach": {
+        "reached": 3,
+        "total": 3
+      },
+      "trainable_parameters": {
+        "mean": 67059.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "effective_parameters": {
+        "mean": 67059.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "best_validation_loss": {
+        "mean": 0.014640106974790493,
+        "std": 0.0032371153650969874,
+        "n": 3
+      },
+      "final_validation_loss": {
+        "mean": 0.014642086242222125,
+        "std": 0.0032339790591294944,
+        "n": 3
+      },
+      "test_mse": {
+        "mean": 0.013266859265665213,
+        "std": 0.0008241783408470323,
+        "n": 3
+      },
+      "test_mae": {
+        "mean": 0.07368921985228856,
+        "std": 0.00798121159882979,
+        "n": 3
+      },
+      "epoch_to_target": {
+        "mean": 17.666666666666668,
+        "std": 1.5275252316519468,
+        "n": 3
+      },
+      "steps_to_target": {
+        "mean": 282.6666666666667,
+        "std": 24.440403706431148,
+        "n": 3
+      },
+      "samples_to_target": {
+        "mean": 9045.333333333334,
+        "std": 782.0929186057967,
+        "n": 3
+      },
+      "seconds_to_target": {
+        "mean": 9.37075679997603,
+        "std": 0.5106967160528261,
+        "n": 3
+      },
+      "epoch_reduction_percent": {
+        "mean": -23.333333333333332,
+        "std": 11.096362093077186,
+        "n": 3
+      },
+      "step_reduction_percent": {
+        "mean": -23.333333333333332,
+        "std": 11.096362093077186,
+        "n": 3
+      },
+      "sample_reduction_percent": {
+        "mean": -23.333333333333332,
+        "std": 11.096362093077186,
+        "n": 3
+      },
+      "wall_time_reduction_percent": {
+        "mean": -74.4826087279227,
+        "std": 29.266575803304374,
+        "n": 3
+      },
+      "robust_ten_percent_step_efficiency": false
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "trainable_tt_mps",
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "target_reach": {
+        "reached": 0,
+        "total": 3
+      },
+      "trainable_parameters": {
+        "mean": 42307.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "effective_parameters": {
+        "mean": 42307.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "best_validation_loss": {
+        "mean": 0.040066889849387936,
+        "std": 0.029402103327320277,
+        "n": 3
+      },
+      "final_validation_loss": {
+        "mean": 0.040066889849387936,
+        "std": 0.029402103327320277,
+        "n": 3
+      },
+      "test_mse": {
+        "mean": 0.03847440145909786,
+        "std": 0.02940076872611797,
+        "n": 3
+      },
+      "test_mae": {
+        "mean": 0.13858458896478018,
+        "std": 0.055887570668262714,
+        "n": 3
+      },
+      "epoch_to_target": null,
+      "steps_to_target": null,
+      "samples_to_target": null,
+      "seconds_to_target": null,
+      "epoch_reduction_percent": null,
+      "step_reduction_percent": null,
+      "sample_reduction_percent": null,
+      "wall_time_reduction_percent": null,
+      "robust_ten_percent_step_efficiency": false
+    },
+    {
+      "domain": "robotics",
+      "method": "trainable_svd",
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "target_reach": {
+        "reached": 0,
+        "total": 3
+      },
+      "trainable_parameters": {
+        "mean": 58784.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "effective_parameters": {
+        "mean": 58784.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "best_validation_loss": {
+        "mean": 0.018955613641689222,
+        "std": 0.006407961268873604,
+        "n": 3
+      },
+      "final_validation_loss": {
+        "mean": 0.018957995033512514,
+        "std": 0.006411102858198912,
+        "n": 3
+      },
+      "test_mse": {
+        "mean": 0.011115143541246653,
+        "std": 0.003145102091263956,
+        "n": 3
+      },
+      "test_mae": {
+        "mean": 0.04417944326996803,
+        "std": 0.004831997073557076,
+        "n": 3
+      },
+      "epoch_to_target": null,
+      "steps_to_target": null,
+      "samples_to_target": null,
+      "seconds_to_target": null,
+      "epoch_reduction_percent": null,
+      "step_reduction_percent": null,
+      "sample_reduction_percent": null,
+      "wall_time_reduction_percent": null,
+      "robust_ten_percent_step_efficiency": false
+    },
+    {
+      "domain": "robotics",
+      "method": "trainable_tt_mps",
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "target_reach": {
+        "reached": 0,
+        "total": 3
+      },
+      "trainable_parameters": {
+        "mean": 42307.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "effective_parameters": {
+        "mean": 42307.0,
+        "std": 0.0,
+        "n": 3
+      },
+      "best_validation_loss": {
+        "mean": 0.04976393634246455,
+        "std": 0.0074749645265317815,
+        "n": 3
+      },
+      "final_validation_loss": {
+        "mean": 0.04976393634246455,
+        "std": 0.0074749645265317815,
+        "n": 3
+      },
+      "test_mse": {
+        "mean": 0.05013266702493032,
+        "std": 0.0040610481314515435,
+        "n": 3
+      },
+      "test_mae": {
+        "mean": 0.10504786670207977,
+        "std": 0.025033135717079203,
+        "n": 3
+      },
+      "epoch_to_target": null,
+      "steps_to_target": null,
+      "samples_to_target": null,
+      "seconds_to_target": null,
+      "epoch_reduction_percent": null,
+      "step_reduction_percent": null,
+      "sample_reduction_percent": null,
+      "wall_time_reduction_percent": null,
+      "robust_ten_percent_step_efficiency": false
+    }
+  ],
+  "limitations": [
+    "The experiments use compact synthetic driving and robotics proxy tasks.",
+    "Target-reaching metrics are absent rather than censored to the final epoch when a candidate fails to reach its paired target.",
+    "Conditional target-efficiency statistics include only reached seeds and therefore must be interpreted together with the target reach rate.",
+    "CPU wall-clock timing is descriptive.",
+    "TT/MPS uses quantum-inspired tensor-network parameterization without quantum hardware."
+  ]
+}

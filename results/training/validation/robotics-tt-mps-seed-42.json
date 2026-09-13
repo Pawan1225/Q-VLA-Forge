@@ -1,0 +1,495 @@
+{
+  "domain": "robotics",
+  "method": "trainable_tt_mps",
+  "seed": 42,
+  "summary": {
+    "domain": "robotics",
+    "method": "trainable_tt_mps",
+    "seed": 42,
+    "trainable_parameters": 42307,
+    "effective_parameters": 42307,
+    "total_training_seconds": 15.570435700123198,
+    "mean_epoch_seconds": 0.7785217850061599,
+    "best_validation_loss": 0.04744276652733485,
+    "best_epoch": 20,
+    "final_validation_loss": 0.04744276652733485,
+    "target": {
+      "reference_best_validation_loss": 0.01678327618477245,
+      "tolerance_fraction": 0.05,
+      "target_validation_loss": 0.017622439994011075
+    },
+    "target_reach": {
+      "reached_target": false,
+      "epoch_to_target": null,
+      "steps_to_target": null,
+      "samples_to_target": null,
+      "seconds_to_target": null
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.2447515781968832,
+        "validation_loss": 0.20703285932540894,
+        "learning_rate": 0.0009939057285945933,
+        "epoch_seconds": 0.9104036000207998,
+        "cumulative_seconds": 0.9104036000207998,
+        "optimizer_steps": 16,
+        "samples_processed": 512
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.23476627748459578,
+        "validation_loss": 0.19801512360572815,
+        "learning_rate": 0.0009757729755661012,
+        "epoch_seconds": 0.8525133000221103,
+        "cumulative_seconds": 1.7629169000429101,
+        "optimizer_steps": 32,
+        "samples_processed": 1024
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.21500034350901842,
+        "validation_loss": 0.16682069500287375,
+        "learning_rate": 0.0009460482294732422,
+        "epoch_seconds": 0.9526924000238068,
+        "cumulative_seconds": 2.715609300066717,
+        "optimizer_steps": 48,
+        "samples_processed": 1536
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.16812194883823395,
+        "validation_loss": 0.13580394287904105,
+        "learning_rate": 0.0009054634122155991,
+        "epoch_seconds": 0.875,
+        "cumulative_seconds": 3.590609300066717,
+        "optimizer_steps": 64,
+        "samples_processed": 2048
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.13677601562812924,
+        "validation_loss": 0.11252384881178538,
+        "learning_rate": 0.0008550178566873411,
+        "epoch_seconds": 0.7966379999998026,
+        "cumulative_seconds": 4.3872473000665195,
+        "optimizer_steps": 80,
+        "samples_processed": 2560
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.1207942208275199,
+        "validation_loss": 0.1004476547241211,
+        "learning_rate": 0.0007959536998847743,
+        "epoch_seconds": 0.8907750999787822,
+        "cumulative_seconds": 5.278022400045302,
+        "optimizer_steps": 96,
+        "samples_processed": 3072
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.11266287555918097,
+        "validation_loss": 0.09388794874151547,
+        "learning_rate": 0.0007297252973710758,
+        "epoch_seconds": 0.8714390000095591,
+        "cumulative_seconds": 6.149461400054861,
+        "optimizer_steps": 112,
+        "samples_processed": 3584
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.10355553170666099,
+        "validation_loss": 0.08358598997195561,
+        "learning_rate": 0.0006579634122155991,
+        "epoch_seconds": 0.8974257999798283,
+        "cumulative_seconds": 7.046887200034689,
+        "optimizer_steps": 128,
+        "samples_processed": 4096
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.09241485805250704,
+        "validation_loss": 0.07995032891631126,
+        "learning_rate": 0.0005824350601949144,
+        "epoch_seconds": 0.8880941999959759,
+        "cumulative_seconds": 7.934981400030665,
+        "optimizer_steps": 144,
+        "samples_processed": 4608
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.08297831239178777,
+        "validation_loss": 0.0683632418513298,
+        "learning_rate": 0.0005050000000000001,
+        "epoch_seconds": 0.728672600002028,
+        "cumulative_seconds": 8.663654000032693,
+        "optimizer_steps": 160,
+        "samples_processed": 5120
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.0750336789060384,
+        "validation_loss": 0.06393070022265117,
+        "learning_rate": 0.000427564939805086,
+        "epoch_seconds": 0.7726566000492312,
+        "cumulative_seconds": 9.436310600081924,
+        "optimizer_steps": 176,
+        "samples_processed": 5632
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.06786899059079587,
+        "validation_loss": 0.060056112706661224,
+        "learning_rate": 0.0003520365877844012,
+        "epoch_seconds": 0.7597288999822922,
+        "cumulative_seconds": 10.196039500064217,
+        "optimizer_steps": 192,
+        "samples_processed": 6144
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.06215443951077759,
+        "validation_loss": 0.0573715108136336,
+        "learning_rate": 0.00028027470262892445,
+        "epoch_seconds": 0.6899723000242375,
+        "cumulative_seconds": 10.886011800088454,
+        "optimizer_steps": 208,
+        "samples_processed": 6656
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.05795388016849756,
+        "validation_loss": 0.05343110424776872,
+        "learning_rate": 0.0002140463001152259,
+        "epoch_seconds": 0.6418586000218056,
+        "cumulative_seconds": 11.52787040011026,
+        "optimizer_steps": 224,
+        "samples_processed": 7168
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.054463706677779555,
+        "validation_loss": 0.050464057053128876,
+        "learning_rate": 0.00015498214331265904,
+        "epoch_seconds": 0.6071763999643736,
+        "cumulative_seconds": 12.135046800074633,
+        "optimizer_steps": 240,
+        "samples_processed": 7680
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.05226805596612394,
+        "validation_loss": 0.05028563986221949,
+        "learning_rate": 0.00010453658778440108,
+        "epoch_seconds": 0.7002034999895841,
+        "cumulative_seconds": 12.835250300064217,
+        "optimizer_steps": 256,
+        "samples_processed": 8192
+      },
+      {
+        "epoch": 17,
+        "train_loss": 0.05065245204605162,
+        "validation_loss": 0.048576238875587784,
+        "learning_rate": 6.395177052675796e-05,
+        "epoch_seconds": 0.6681970999925397,
+        "cumulative_seconds": 13.503447400056757,
+        "optimizer_steps": 272,
+        "samples_processed": 8704
+      },
+      {
+        "epoch": 18,
+        "train_loss": 0.049587622517719865,
+        "validation_loss": 0.04829338379204273,
+        "learning_rate": 3.422702443389901e-05,
+        "epoch_seconds": 0.7254297000472434,
+        "cumulative_seconds": 14.228877100104,
+        "optimizer_steps": 288,
+        "samples_processed": 9216
+      },
+      {
+        "epoch": 19,
+        "train_loss": 0.04889123176690191,
+        "validation_loss": 0.047457720463474594,
+        "learning_rate": 1.6094271405406862e-05,
+        "epoch_seconds": 0.6966766000259668,
+        "cumulative_seconds": 14.925553700129967,
+        "optimizer_steps": 304,
+        "samples_processed": 9728
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.04851013422012329,
+        "validation_loss": 0.04744276652733485,
+        "learning_rate": 1e-05,
+        "epoch_seconds": 0.6448819999932311,
+        "cumulative_seconds": 15.570435700123198,
+        "optimizer_steps": 320,
+        "samples_processed": 10240
+      }
+    ]
+  },
+  "test_metrics": {
+    "test_mse": 0.04772639274597168,
+    "test_mae": 0.13389091193675995,
+    "delta_x_mae": 0.15298649668693542,
+    "delta_y_mae": 0.1655208021402359,
+    "gripper_mae": 0.08316542953252792
+  },
+  "comparison_vs_fp32": {
+    "domain": "robotics",
+    "seed": 42,
+    "reference_method": "shared_vla_fp32",
+    "candidate_method": "trainable_tt_mps",
+    "reference_reached_target": true,
+    "candidate_reached_target": false,
+    "epoch_reduction_percent": null,
+    "step_reduction_percent": null,
+    "sample_reduction_percent": null,
+    "wall_time_reduction_percent": null
+  },
+  "conversion_report": {
+    "original_trainable_parameters": 76179,
+    "structured_trainable_parameters": 42307,
+    "replaced_weight_parameters": 34816,
+    "structured_core_parameters": 944,
+    "requested_rank": 2,
+    "tensor_order": 3,
+    "layers": [
+      {
+        "name": "vision_encoder.projection.1",
+        "input_dim": 64,
+        "output_dim": 64,
+        "row_factors": [
+          4,
+          4,
+          4
+        ],
+        "column_factors": [
+          4,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          16,
+          16,
+          16
+        ],
+        "requested_rank": 2,
+        "actual_ranks": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "original_weight_parameters": 4096,
+        "core_parameters": 128,
+        "bias_parameters": 64,
+        "original_total_parameters": 4160,
+        "structured_total_parameters": 192,
+        "relative_initialization_error": 0.9743474721908569
+      },
+      {
+        "name": "language_encoder.projection.0",
+        "input_dim": 32,
+        "output_dim": 32,
+        "row_factors": [
+          2,
+          4,
+          4
+        ],
+        "column_factors": [
+          2,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          4,
+          16,
+          16
+        ],
+        "requested_rank": 2,
+        "actual_ranks": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "original_weight_parameters": 1024,
+        "core_parameters": 104,
+        "bias_parameters": 32,
+        "original_total_parameters": 1056,
+        "structured_total_parameters": 136,
+        "relative_initialization_error": 0.9089536070823669
+      },
+      {
+        "name": "fusion.network.0",
+        "input_dim": 112,
+        "output_dim": 128,
+        "row_factors": [
+          4,
+          4,
+          8
+        ],
+        "column_factors": [
+          4,
+          4,
+          7
+        ],
+        "tensor_shape": [
+          16,
+          16,
+          56
+        ],
+        "requested_rank": 2,
+        "actual_ranks": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "original_weight_parameters": 14336,
+        "core_parameters": 208,
+        "bias_parameters": 128,
+        "original_total_parameters": 14464,
+        "structured_total_parameters": 336,
+        "relative_initialization_error": 0.9870832562446594
+      },
+      {
+        "name": "fusion.network.2",
+        "input_dim": 128,
+        "output_dim": 64,
+        "row_factors": [
+          4,
+          4,
+          4
+        ],
+        "column_factors": [
+          4,
+          4,
+          8
+        ],
+        "tensor_shape": [
+          16,
+          16,
+          32
+        ],
+        "requested_rank": 2,
+        "actual_ranks": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "original_weight_parameters": 8192,
+        "core_parameters": 160,
+        "bias_parameters": 64,
+        "original_total_parameters": 8256,
+        "structured_total_parameters": 224,
+        "relative_initialization_error": 0.9806417226791382
+      },
+      {
+        "name": "latent.network.0",
+        "input_dim": 64,
+        "output_dim": 64,
+        "row_factors": [
+          4,
+          4,
+          4
+        ],
+        "column_factors": [
+          4,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          16,
+          16,
+          16
+        ],
+        "requested_rank": 2,
+        "actual_ranks": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "original_weight_parameters": 4096,
+        "core_parameters": 128,
+        "bias_parameters": 64,
+        "original_total_parameters": 4160,
+        "structured_total_parameters": 192,
+        "relative_initialization_error": 0.968972384929657
+      },
+      {
+        "name": "latent.network.2",
+        "input_dim": 64,
+        "output_dim": 32,
+        "row_factors": [
+          2,
+          4,
+          4
+        ],
+        "column_factors": [
+          4,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          8,
+          16,
+          16
+        ],
+        "requested_rank": 2,
+        "actual_ranks": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "original_weight_parameters": 2048,
+        "core_parameters": 112,
+        "bias_parameters": 32,
+        "original_total_parameters": 2080,
+        "structured_total_parameters": 144,
+        "relative_initialization_error": 0.9568835496902466
+      },
+      {
+        "name": "action_head.network.0",
+        "input_dim": 32,
+        "output_dim": 32,
+        "row_factors": [
+          2,
+          4,
+          4
+        ],
+        "column_factors": [
+          2,
+          4,
+          4
+        ],
+        "tensor_shape": [
+          4,
+          16,
+          16
+        ],
+        "requested_rank": 2,
+        "actual_ranks": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "original_weight_parameters": 1024,
+        "core_parameters": 104,
+        "bias_parameters": 32,
+        "original_total_parameters": 1056,
+        "structured_total_parameters": 136,
+        "relative_initialization_error": 0.9021016359329224
+      }
+    ],
+    "quantum_inspired": true,
+    "quantum_hardware_used": false
+  },
+  "source": "results\\training\\robotics\\robotics-training-efficiency-seed-42.json",
+  "reused_seed42": true
+}
