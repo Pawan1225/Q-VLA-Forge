@@ -1,0 +1,175 @@
+{
+  "audit": "Sprint 3.13 Proposal Claim and Limitation Registry",
+  "statuses": [
+    "NOT_SUPPORTED",
+    "NOT_YET_TESTED",
+    "SUPPORTED",
+    "SUPPORTED_WITH_LIMITATION"
+  ],
+  "pilot_scope_statement": "Q-VLA Forge Phase-1 is a pilot-scale controlled experimental framework using synthetic autonomous-driving and robotics proxy tasks. It isolates and compares classical, quantum-inspired, and later hybrid QML components under reproducible conditions. Results must not be interpreted as validation of a production-scale VLA, autonomous-driving stack, robotic system, or functional-safety certification.",
+  "claims": [
+    {
+      "claim_id": "shared-vla-architecture-both-domains",
+      "status": "SUPPORTED",
+      "statement": "The shared VLA proxy architecture operates in both autonomous-driving and robotics proxy domains.",
+      "evidence_basis": "Sprint 1 established the same shared architecture with domain-specific state adapters and one common multimodal latent/action stack."
+    },
+    {
+      "claim_id": "three-seed-fp32-baseline",
+      "status": "SUPPORTED",
+      "statement": "The FP32 baseline was validated using deterministic seeds 42, 123, and 456 in both proxy domains.",
+      "evidence_basis": "Sprint 1 baseline manifest and validation summary."
+    },
+    {
+      "claim_id": "int8-effective-compression",
+      "status": "SUPPORTED",
+      "statement": "INT8 achieved approximately 3.846x effective whole-model storage compression.",
+      "evidence_basis": "Sprint 2 three-seed compression validation."
+    },
+    {
+      "claim_id": "int8-pilot-criterion",
+      "status": "SUPPORTED",
+      "statement": "INT8 satisfied the frozen >=2x compression and <=5% relative MSE-change criterion in all three seeds in both proxy domains.",
+      "evidence_basis": "Sprint 2 compression validation summary."
+    },
+    {
+      "claim_id": "tt-mps-parameter-reduction",
+      "status": "SUPPORTED",
+      "statement": "Trainable TT/MPS reduced trainable parameter count by approximately 44.46% in both proxy domains.",
+      "evidence_basis": "Sprint 3 three-seed structured-training evidence."
+    },
+    {
+      "claim_id": "matched-tt-vs-svd-quality",
+      "status": "SUPPORTED_WITH_LIMITATION",
+      "statement": "In the seed-42 matched-parameter ablation, TT/MPS produced lower validation and test MSE than matched SVD in both proxy domains.",
+      "evidence_basis": "Sprint 3 matched-budget ablation; seed 42 only, and neither representation reached the paired FP32 convergence target."
+    },
+    {
+      "claim_id": "shared-architecture-reuse",
+      "status": "SUPPORTED_WITH_LIMITATION",
+      "statement": "The same architecture can reuse common computational modules across both proxy domains.",
+      "evidence_basis": "Cross-domain Sprint 1-3 architecture evidence. This does not imply one universally trained model."
+    },
+    {
+      "claim_id": "proxy-latency-under-100ms",
+      "status": "SUPPORTED_WITH_LIMITATION",
+      "statement": "Measured latency for the compact synthetic proxy model was below 100 ms in both domains.",
+      "evidence_basis": "Sprint 1 mean and p95 latency measurements on the 76,179-parameter proxy model. This is not production deployment validation."
+    },
+    {
+      "claim_id": "quantum-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish quantum advantage.",
+      "evidence_basis": "TT/MPS was executed classically and no quantum hardware comparison was performed."
+    },
+    {
+      "claim_id": "quantum-speedup",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish quantum speedup.",
+      "evidence_basis": "No quantum-runtime benchmark has been performed."
+    },
+    {
+      "claim_id": "native-tt-runtime-speedup",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish native TT/MPS runtime acceleration.",
+      "evidence_basis": "Sprint 2 TT/MPS inference reconstructs dense FP32 weights, and Sprint 3 TT/MPS does not claim native runtime speedup."
+    },
+    {
+      "claim_id": "native-int8-runtime-speedup",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish native INT8 runtime acceleration.",
+      "evidence_basis": "Sprint 2 uses FP32-dequantized weights for inference."
+    },
+    {
+      "claim_id": "svd-training-efficiency-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish an SVD training-efficiency advantage.",
+      "evidence_basis": "Driving SVD required more optimizer steps on average, and robotics SVD reached the paired target in 0/3 seeds."
+    },
+    {
+      "claim_id": "tt-mps-training-efficiency-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a TT/MPS training-efficiency advantage.",
+      "evidence_basis": "TT/MPS reached the paired FP32 target in 0/3 seeds in both proxy domains."
+    },
+    {
+      "claim_id": "production-vla-validation",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish performance on a production-scale VLA.",
+      "evidence_basis": "Experiments use a compact synthetic proxy architecture."
+    },
+    {
+      "claim_id": "production-autonomous-driving-validation",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish production autonomous-driving performance.",
+      "evidence_basis": "No production driving stack or real-world benchmark was evaluated."
+    },
+    {
+      "claim_id": "production-robotics-validation",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish production robotics performance.",
+      "evidence_basis": "No production robotics stack or real-world benchmark was evaluated."
+    },
+    {
+      "claim_id": "functional-safety-certification",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish ISO 26262, IEC 62061, or ISO 10218 compliance or certification.",
+      "evidence_basis": "Functional-safety certification has not been performed."
+    },
+    {
+      "claim_id": "ppo-sample-efficiency",
+      "status": "NOT_YET_TESTED",
+      "statement": "Classical PPO sample efficiency has not yet been tested.",
+      "evidence_basis": "Planned for Sprint 4."
+    },
+    {
+      "claim_id": "pqc-vqc-sample-efficiency",
+      "status": "NOT_YET_TESTED",
+      "statement": "Hybrid PQC/VQC policy sample efficiency has not yet been tested.",
+      "evidence_basis": "Planned for Sprint 4."
+    },
+    {
+      "claim_id": "hybrid-qml-policy-advantage",
+      "status": "NOT_YET_TESTED",
+      "statement": "A hybrid QML policy advantage has not yet been tested.",
+      "evidence_basis": "Planned for Sprint 4."
+    },
+    {
+      "claim_id": "lyapunov-safety-improvement",
+      "status": "NOT_YET_TESTED",
+      "statement": "Lyapunov safety-filter improvement has not yet been tested.",
+      "evidence_basis": "Planned for Sprint 5."
+    },
+    {
+      "claim_id": "perturbation-robustness",
+      "status": "NOT_YET_TESTED",
+      "statement": "Robustness under Gaussian, state, and action perturbations has not yet been tested.",
+      "evidence_basis": "Planned for Sprint 5."
+    },
+    {
+      "claim_id": "cross-domain-rl-consistency",
+      "status": "NOT_YET_TESTED",
+      "statement": "Cross-domain RL consistency has not yet been tested.",
+      "evidence_basis": "Planned for Sprint 4."
+    }
+  ],
+  "future_validation_pathways": {
+    "driving": [
+      "CARLA",
+      "nuScenes",
+      "larger VLA backbone"
+    ],
+    "robotics": [
+      "RLBench",
+      "LIBERO",
+      "Open X-Embodiment",
+      "OpenVLA or comparable backbone"
+    ],
+    "quantum": [
+      "shallow hardware-compatible PQC",
+      "simulator-first validation",
+      "hardware pathway after controlled simulation"
+    ]
+  },
+  "overall_passed": true
+}

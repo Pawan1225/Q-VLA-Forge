@@ -1,0 +1,47 @@
+{
+  "project": "Q-VLA Forge",
+  "audit": "Sprint 3.13 Pilot Readiness and Scientific Audit",
+  "scope": {
+    "new_training_performed": false,
+    "new_model_tuning_performed": false,
+    "new_algorithm_introduced": false,
+    "frozen_sprint_results_recomputed": false,
+    "purpose": "Audit the frozen Sprint 1-3 evidence chain before Sprint 4 reinforcement-learning and hybrid-QML experiments."
+  },
+  "sprint_manifests": {
+    "sprint1": "results\\sprint1-baseline-manifest.json",
+    "sprint2": "results\\compression\\sprint2-compression-manifest.json",
+    "sprint3": "results\\training\\sprint3-training-manifest.json"
+  },
+  "audit_artifacts": {
+    "dataset_integrity": "results\\pilot-readiness\\dataset-audit.json",
+    "representation_accounting": "results\\pilot-readiness\\representation-accounting.json",
+    "claim_registry": "results\\pilot-readiness\\claim-registry.json"
+  },
+  "checks": {
+    "seed_consistency": true,
+    "domain_consistency": true,
+    "baseline_identity": true,
+    "dataset_integrity": true,
+    "representation_accounting": true,
+    "quantum_taxonomy": true,
+    "architecture_terminology": true,
+    "claim_controls": true
+  },
+  "pilot_scope_statement": "Q-VLA Forge Phase-1 is a pilot-scale controlled experimental framework using synthetic autonomous-driving and robotics proxy tasks. It isolates and compares classical, quantum-inspired, and later hybrid QML components under reproducible conditions. Results must not be interpreted as validation of a production-scale VLA, autonomous-driving stack, robotic system, or functional-safety certification.",
+  "handoff": {
+    "next_sprint": "Sprint 4 - PPO + Hybrid QML",
+    "classical_rl": "PPO",
+    "qml_path": "angle encoding + PQC/VQC + hybrid classical-QML policy",
+    "domains": [
+      "autonomous_driving",
+      "robotics"
+    ],
+    "seeds": [
+      42,
+      123,
+      456
+    ]
+  },
+  "sprint4_ready": true
+}

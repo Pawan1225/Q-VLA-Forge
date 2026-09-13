@@ -1,0 +1,195 @@
+{
+  "audit": "Sprint 3.13 Representation and Parameter Accounting",
+  "baseline": {
+    "source": "results\\sprint1-baseline-manifest.json",
+    "representation": "dense_fp32",
+    "trainable_parameters": 76179,
+    "payload_bytes": 304716
+  },
+  "accounting_distinctions": {
+    "sprint2": "effective post-training storage representation",
+    "sprint3": "actual trainable structured parameterization",
+    "runtime": "storage reduction does not imply native runtime acceleration"
+  },
+  "sprint2_post_training_compression": {
+    "autonomous_driving": {
+      "int8": {
+        "source": "results\\compression\\driving-int8-seed-42.json",
+        "experiment_id": "driving-int8-seed-42",
+        "method": "int8",
+        "seed": 42,
+        "baseline_parameters": 76179,
+        "effective_stored_parameters": 76179,
+        "baseline_size_bytes": 304716,
+        "effective_storage_bytes": 79224,
+        "compression_ratio": 3.846258709481975,
+        "storage_reduction_percent": 74.00070885677155,
+        "parameter_reduction_percent": 0.0,
+        "runtime_representation": "fp32_dequantized_weights",
+        "native_compressed_runtime_used": false,
+        "notes": "Weight-storage INT8 simulation; inference uses FP32-dequantized weights."
+      },
+      "svd": {
+        "source": "results\\compression\\driving-svd-rf75-seed-42.json",
+        "experiment_id": "driving-svd-rf75-seed-42",
+        "method": "svd",
+        "seed": 42,
+        "baseline_parameters": 76179,
+        "effective_stored_parameters": 67059,
+        "baseline_size_bytes": 304716,
+        "effective_storage_bytes": 268236,
+        "compression_ratio": 1.135999642106205,
+        "storage_reduction_percent": 11.971803252864966,
+        "parameter_reduction_percent": 11.971803252864966,
+        "runtime_representation": "fp32_reconstructed_dense_weights",
+        "native_compressed_runtime_used": false,
+        "notes": "Post-training truncated SVD. Effective storage is estimated from U, singular-value, and Vh factors; inference uses reconstructed FP32 dense weights."
+      },
+      "tt_mps": {
+        "source": "results\\compression\\driving-tt-rank-2-seed-42.json",
+        "experiment_id": "driving-tt-rank-2-seed-42",
+        "method": "tensor_train",
+        "seed": 42,
+        "baseline_parameters": 76179,
+        "effective_stored_parameters": 42307,
+        "baseline_size_bytes": 304716,
+        "effective_storage_bytes": 169228,
+        "compression_ratio": 1.8006240102110762,
+        "storage_reduction_percent": 44.4636973444125,
+        "parameter_reduction_percent": 44.4636973444125,
+        "runtime_representation": "fp32_reconstructed_weights",
+        "native_compressed_runtime_used": false,
+        "notes": "Quantum-inspired Tensor Train compression using TT-SVD. Effective storage is measured from TT cores. Runtime uses reconstructed FP32 dense weights rather than native TT core execution."
+      }
+    },
+    "robotics": {
+      "int8": {
+        "source": "results\\compression\\robotics-int8-seed-42.json",
+        "experiment_id": "robotics-int8-seed-42",
+        "method": "int8",
+        "seed": 42,
+        "baseline_parameters": 76179,
+        "effective_stored_parameters": 76179,
+        "baseline_size_bytes": 304716,
+        "effective_storage_bytes": 79224,
+        "compression_ratio": 3.846258709481975,
+        "storage_reduction_percent": 74.00070885677155,
+        "parameter_reduction_percent": 0.0,
+        "runtime_representation": "fp32_dequantized_weights",
+        "native_compressed_runtime_used": false,
+        "notes": "Weight-storage INT8 simulation; inference uses FP32-dequantized weights."
+      },
+      "svd": {
+        "source": "results\\compression\\robotics-svd-rf50-seed-42.json",
+        "experiment_id": "robotics-svd-rf50-seed-42",
+        "method": "svd",
+        "seed": 42,
+        "baseline_parameters": 76179,
+        "effective_stored_parameters": 58784,
+        "baseline_size_bytes": 304716,
+        "effective_storage_bytes": 235136,
+        "compression_ratio": 1.295913854109962,
+        "storage_reduction_percent": 22.83437692802478,
+        "parameter_reduction_percent": 22.83437692802478,
+        "runtime_representation": "fp32_reconstructed_dense_weights",
+        "native_compressed_runtime_used": false,
+        "notes": "Post-training truncated SVD. Effective storage is estimated from U, singular-value, and Vh factors; inference uses reconstructed FP32 dense weights."
+      },
+      "tt_mps": {
+        "source": "results\\compression\\robotics-tt-rank-2-seed-42.json",
+        "experiment_id": "robotics-tt-rank-2-seed-42",
+        "method": "tensor_train",
+        "seed": 42,
+        "baseline_parameters": 76179,
+        "effective_stored_parameters": 42307,
+        "baseline_size_bytes": 304716,
+        "effective_storage_bytes": 169228,
+        "compression_ratio": 1.8006240102110762,
+        "storage_reduction_percent": 44.4636973444125,
+        "parameter_reduction_percent": 44.4636973444125,
+        "runtime_representation": "fp32_reconstructed_weights",
+        "native_compressed_runtime_used": false,
+        "notes": "Quantum-inspired Tensor Train compression using TT-SVD. Effective storage is measured from TT cores. Runtime uses reconstructed FP32 dense weights rather than native TT core execution."
+      }
+    }
+  },
+  "sprint2_runtime_controls": {
+    "int8": "FP32-dequantized weights",
+    "svd": "reconstructed FP32 dense weights",
+    "tt_mps": "reconstructed FP32 dense weights",
+    "native_compressed_runtime_used": false,
+    "quantum_hardware_used": false
+  },
+  "sprint3_primary_structured_training": [
+    {
+      "domain": "autonomous_driving",
+      "method": "trainable_svd",
+      "trainable_parameters": 67059,
+      "effective_parameters": 67059,
+      "parameter_count_seed_invariant": true
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "trainable_tt_mps",
+      "trainable_parameters": 42307,
+      "effective_parameters": 42307,
+      "parameter_count_seed_invariant": true
+    },
+    {
+      "domain": "robotics",
+      "method": "trainable_svd",
+      "trainable_parameters": 58784,
+      "effective_parameters": 58784,
+      "parameter_count_seed_invariant": true
+    },
+    {
+      "domain": "robotics",
+      "method": "trainable_tt_mps",
+      "trainable_parameters": 42307,
+      "effective_parameters": 42307,
+      "parameter_count_seed_invariant": true
+    }
+  ],
+  "sprint3_matched_parameter_ablation": [
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "ablation_type": "matched_layer_matched_parameter_budget",
+      "selection_uses_performance_data": false,
+      "svd_configuration": "SVD-25%",
+      "svd_trainable_parameters": 49977,
+      "tt_mps_configuration": "TT-rank-8",
+      "tt_mps_trainable_parameters": 49459,
+      "absolute_parameter_difference": 518,
+      "relative_parameter_difference_percent": 1.0364767793184866
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "ablation_type": "matched_layer_matched_parameter_budget",
+      "selection_uses_performance_data": false,
+      "svd_configuration": "SVD-25%",
+      "svd_trainable_parameters": 49977,
+      "tt_mps_configuration": "TT-rank-8",
+      "tt_mps_trainable_parameters": 49459,
+      "absolute_parameter_difference": 518,
+      "relative_parameter_difference_percent": 1.0364767793184866
+    }
+  ],
+  "sprint3_runtime_controls": {
+    "tt_mps_quantum_inspired": true,
+    "quantum_hardware_used": false,
+    "quantum_advantage_claimed": false,
+    "quantum_speedup_claimed": false,
+    "native_tt_runtime_speedup_claimed": false
+  },
+  "audit_checks": {
+    "baseline_parameter_identity": true,
+    "baseline_byte_identity": true,
+    "sprint2_storage_vs_runtime_distinguished": true,
+    "sprint3_trainable_vs_storage_distinguished": true,
+    "quantum_taxonomy_consistent": true,
+    "native_runtime_speedup_not_claimed": true
+  },
+  "overall_passed": true
+}
