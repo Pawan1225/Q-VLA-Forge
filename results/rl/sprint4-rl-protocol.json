@@ -1,0 +1,161 @@
+{
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "episode_horizon": 100,
+  "maximum_environment_steps": 20000,
+  "evaluation_frequency_steps": 1000,
+  "evaluation_episodes": 20,
+  "action_dimension": 3,
+  "target_fraction": 0.95,
+  "robust_efficiency_threshold_percent": 10.0,
+  "qml_qubits": 4,
+  "qml_circuit_layers": 2,
+  "qml_execution_backend": "simulator",
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "primary_efficiency_metric": "environment_steps_to_target",
+  "secondary_metrics": [
+    "episodes_to_target",
+    "final_evaluation_reward",
+    "final_success_rate",
+    "training_seconds",
+    "policy_parameters"
+  ],
+  "target_rule": {
+    "reference": "classical_ppo",
+    "baseline_reference": "random_policy",
+    "performance_source": "best_completed_reference_evaluation",
+    "fraction": 0.95,
+    "formula": "random_reference + target_fraction * (classical_ppo_best - random_reference)",
+    "comparison_direction": "higher_reward_is_better",
+    "supports_negative_reward_scales": true,
+    "random_reference_required": true,
+    "numerical_targets_frozen_before_qml": true,
+    "numerical_targets_available_in_4_1": false
+  },
+  "success_definitions": {
+    "autonomous_driving": {
+      "semantic_definition": "episode reaches intended horizon or task completion without collision and without terminal lane departure",
+      "collision_free_required": true,
+      "terminal_lane_departure_forbidden": true,
+      "exact_lane_departure_tolerance_frozen_in": "sprint_4_2",
+      "tolerance_frozen_before_classical_ppo": true,
+      "same_success_rule_for_all_methods": true
+    },
+    "robotics": {
+      "semantic_definition": "task or object reaches the target condition within the environment completion tolerance",
+      "task_completion_required": true,
+      "exact_completion_tolerance_frozen_in": "sprint_4_3",
+      "tolerance_frozen_before_classical_ppo": true,
+      "same_success_rule_for_all_methods": true
+    }
+  },
+  "comparison_hierarchy": {
+    "primary": [
+      "environment_steps_to_target"
+    ],
+    "secondary": [
+      "episodes_to_target",
+      "final_evaluation_reward",
+      "final_success_rate"
+    ],
+    "resource_metrics": [
+      "policy_parameters",
+      "qubits",
+      "trainable_circuit_parameters",
+      "circuit_evaluations",
+      "circuit_layers"
+    ],
+    "descriptive_only": [
+      "training_seconds"
+    ],
+    "primary_metric_must_drive_efficiency_claims": true,
+    "wall_clock_must_not_define_qml_advantage": true,
+    "simulator_runtime_must_not_imply_hardware_performance": true,
+    "failed_target_uses_none_not_budget_cap": true
+  },
+  "robust_qml_efficiency_rule": {
+    "paired_seed_comparison_required": true,
+    "paired_seeds": [
+      42,
+      123,
+      456
+    ],
+    "all_three_qml_seeds_must_reach_target": true,
+    "all_three_classical_seeds_must_have_valid_targets": true,
+    "per_seed_formula": "100 * (classical_steps_to_target - qml_steps_to_target) / classical_steps_to_target",
+    "aggregation": "mean_and_sample_standard_deviation",
+    "mean_environment_step_reduction_percent": 10.0,
+    "minimum_required_mean_reduction_percent": 10.0,
+    "failed_qml_target_invalidates_robust_improvement": true,
+    "failed_target_must_remain_none": true,
+    "budget_cap_must_not_replace_failed_target": true,
+    "claim_if_rule_passes": "pilot-scale evidence of improved RL sample efficiency",
+    "claim_if_rule_fails": "no robust sample-efficiency improvement established"
+  },
+  "qml": {
+    "encoding": "angle_encoding",
+    "qubits": 4,
+    "circuit_layers": 2,
+    "trainable_rotations": [
+      "RY",
+      "RZ"
+    ],
+    "entanglement": "CNOT",
+    "execution": "simulator",
+    "quantum_hardware_used": false
+  },
+  "claim_controls": {
+    "pilot_scale_proxy": true,
+    "allowed_qml_terms": [
+      "hybrid_classical_quantum_policy",
+      "parameterized_quantum_circuit",
+      "variational_quantum_circuit",
+      "angle_encoded_pqc_vqc",
+      "four_qubit_simulator",
+      "qml_policy",
+      "quantum_circuit_simulation"
+    ],
+    "conditionally_allowed_after_evidence": [
+      "pilot_scale_evidence_of_improved_rl_sample_efficiency"
+    ],
+    "disallowed_without_additional_evidence": [
+      "quantum_advantage",
+      "quantum_supremacy",
+      "quantum_speedup",
+      "quantum_enhanced_autonomous_driving_performance",
+      "production_quantum_controller"
+    ],
+    "quantum_hardware_used": false,
+    "quantum_advantage_claimed": false,
+    "quantum_speedup_claimed": false,
+    "quantum_supremacy_claimed": false,
+    "production_vla_claimed": false,
+    "production_autonomous_driving_claimed": false,
+    "production_robotics_claimed": false,
+    "functional_safety_certification_claimed": false,
+    "simulator_execution_must_be_disclosed": true,
+    "proxy_environment_must_be_disclosed": true,
+    "wall_clock_is_primary_efficiency_metric": false,
+    "sample_efficiency_claim_requires_robust_rule": true
+  },
+  "claim_registry_handoff": {
+    "source_sprint": "sprint_3_13",
+    "source_registry_path": "results/pilot-readiness/claim-registry.json",
+    "historical_registry_must_not_be_rewritten": true,
+    "sprint_3_13_statuses_preserved": {
+      "ppo_sample_efficiency": "NOT_YET_TESTED",
+      "pqc_vqc_sample_efficiency": "NOT_YET_TESTED",
+      "hybrid_qml_policy_advantage": "NOT_YET_TESTED",
+      "cross_domain_rl_consistency": "NOT_YET_TESTED"
+    },
+    "sprint_4_may_generate_new_evidence": true,
+    "proposal_level_claims_may_be_updated_after_sprint_4": true,
+    "prior_audit_history_must_remain_immutable": true
+  }
+}
