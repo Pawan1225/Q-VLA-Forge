@@ -1,0 +1,89 @@
+{
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "primary_metric": "optimizer_steps_to_paired_fp32_target",
+  "points": [
+    {
+      "domain": "autonomous_driving",
+      "method": "trainable_svd",
+      "target_reach_count": 3,
+      "target_reach_total": 3,
+      "trainable_parameters": 67059.0,
+      "parameter_reduction_percent": 11.971803252864966,
+      "step_reduction_percent_mean": -23.333333333333332,
+      "step_reduction_percent_std": 11.096362093077186,
+      "test_mse_mean": 0.013266859265665213,
+      "test_mse_std": 0.0008241783408470323,
+      "test_mae_mean": 0.07368921985228856,
+      "test_mae_std": 0.00798121159882979,
+      "robust_ten_percent_efficiency": false,
+      "target_reach_rate_percent": 100.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "trainable_tt_mps",
+      "target_reach_count": 0,
+      "target_reach_total": 3,
+      "trainable_parameters": 42307.0,
+      "parameter_reduction_percent": 44.4636973444125,
+      "step_reduction_percent_mean": null,
+      "step_reduction_percent_std": null,
+      "test_mse_mean": 0.03847440145909786,
+      "test_mse_std": 0.02940076872611797,
+      "test_mae_mean": 0.13858458896478018,
+      "test_mae_std": 0.055887570668262714,
+      "robust_ten_percent_efficiency": false,
+      "target_reach_rate_percent": 0.0
+    },
+    {
+      "domain": "robotics",
+      "method": "trainable_svd",
+      "target_reach_count": 0,
+      "target_reach_total": 3,
+      "trainable_parameters": 58784.0,
+      "parameter_reduction_percent": 22.83437692802478,
+      "step_reduction_percent_mean": null,
+      "step_reduction_percent_std": null,
+      "test_mse_mean": 0.011115143541246653,
+      "test_mse_std": 0.003145102091263956,
+      "test_mae_mean": 0.04417944326996803,
+      "test_mae_std": 0.004831997073557076,
+      "robust_ten_percent_efficiency": false,
+      "target_reach_rate_percent": 0.0
+    },
+    {
+      "domain": "robotics",
+      "method": "trainable_tt_mps",
+      "target_reach_count": 0,
+      "target_reach_total": 3,
+      "trainable_parameters": 42307.0,
+      "parameter_reduction_percent": 44.4636973444125,
+      "step_reduction_percent_mean": null,
+      "step_reduction_percent_std": null,
+      "test_mse_mean": 0.05013266702493032,
+      "test_mse_std": 0.0040610481314515435,
+      "test_mae_mean": 0.10504786670207977,
+      "test_mae_std": 0.025033135717079203,
+      "robust_ten_percent_efficiency": false,
+      "target_reach_rate_percent": 0.0
+    }
+  ],
+  "figures": [
+    "figures\\training\\driving-training-convergence.png",
+    "figures\\training\\robotics-training-convergence.png",
+    "figures\\training\\parameter-vs-training-efficiency.png"
+  ],
+  "claim_rules": {
+    "robust_training_efficiency": "all three seeds reach their paired FP32 targets and mean optimizer-step reduction is at least 10%",
+    "quantum_advantage_claim": false
+  },
+  "limitations": [
+    "Results are based on compact synthetic autonomous-driving and robotics proxies.",
+    "The analysis evaluates structured training efficiency, not full-scale 7B-class VLA models.",
+    "Wall-clock timing is descriptive and is not used as the primary efficiency criterion.",
+    "Trainable TT/MPS is quantum-inspired and does not use quantum hardware."
+  ]
+}
