@@ -1,0 +1,157 @@
+{
+  "sprint": "4.5",
+  "method": "classical_ppo",
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "domains": {
+    "autonomous_driving": {
+      "runs": [
+        {
+          "seed": 42,
+          "best_evaluation_reward": -11.330714319001789,
+          "final_evaluation_reward": -11.330714319001789,
+          "final_success_rate": 0.0,
+          "environment_steps_to_target": 12000,
+          "episodes_to_target": 120,
+          "completed_training_episodes": 200,
+          "actor_parameters": 1318,
+          "critic_parameters": 1249,
+          "total_parameters": 2567,
+          "training_seconds": 40.859755799989216
+        },
+        {
+          "seed": 123,
+          "best_evaluation_reward": -5.995909984273877,
+          "final_evaluation_reward": -8.720402744322062,
+          "final_success_rate": 0.0,
+          "environment_steps_to_target": 15000,
+          "episodes_to_target": 150,
+          "completed_training_episodes": 200,
+          "actor_parameters": 1318,
+          "critic_parameters": 1249,
+          "total_parameters": 2567,
+          "training_seconds": 40.44829289999325
+        },
+        {
+          "seed": 456,
+          "best_evaluation_reward": -2.839828872384318,
+          "final_evaluation_reward": -7.549571968284115,
+          "final_success_rate": 0.15,
+          "environment_steps_to_target": 13000,
+          "episodes_to_target": 131,
+          "completed_training_episodes": 202,
+          "actor_parameters": 1318,
+          "critic_parameters": 1249,
+          "total_parameters": 2567,
+          "training_seconds": 40.12123550003162
+        }
+      ],
+      "best_evaluation_reward": {
+        "mean": -6.722151058553328,
+        "sample_standard_deviation": 4.291777427869835
+      },
+      "final_evaluation_reward": {
+        "mean": -9.200229677202655,
+        "sample_standard_deviation": 1.9357000757441458
+      },
+      "final_success_rate": {
+        "mean": 0.049999999999999996,
+        "sample_standard_deviation": 0.08660254037844387
+      },
+      "environment_steps_to_target": {
+        "mean": 13333.333333333334,
+        "sample_standard_deviation": 1527.5252316519466
+      },
+      "episodes_to_target": {
+        "mean": 133.66666666666666,
+        "sample_standard_deviation": 15.17673658377628
+      },
+      "training_seconds": {
+        "mean": 40.47642806667136,
+        "sample_standard_deviation": 0.37006316902033026
+      },
+      "target_reach_count": 3,
+      "parameter_count": {
+        "actor": 1318,
+        "critic": 1249,
+        "total": 2567
+      }
+    },
+    "robotics": {
+      "runs": [
+        {
+          "seed": 42,
+          "best_evaluation_reward": 0.7475991372717792,
+          "final_evaluation_reward": 0.6022628891812771,
+          "final_success_rate": 0.0,
+          "environment_steps_to_target": 9000,
+          "episodes_to_target": 90,
+          "completed_training_episodes": 200,
+          "actor_parameters": 1382,
+          "critic_parameters": 1313,
+          "total_parameters": 2695,
+          "training_seconds": 54.39085950003937
+        },
+        {
+          "seed": 123,
+          "best_evaluation_reward": 0.7359706056653001,
+          "final_evaluation_reward": 0.6594945290536207,
+          "final_success_rate": 0.0,
+          "environment_steps_to_target": 9000,
+          "episodes_to_target": 90,
+          "completed_training_episodes": 200,
+          "actor_parameters": 1382,
+          "critic_parameters": 1313,
+          "total_parameters": 2695,
+          "training_seconds": 43.594322699995246
+        },
+        {
+          "seed": 456,
+          "best_evaluation_reward": 0.8023019131290386,
+          "final_evaluation_reward": 0.6367803966173644,
+          "final_success_rate": 0.0,
+          "environment_steps_to_target": 12000,
+          "episodes_to_target": 120,
+          "completed_training_episodes": 200,
+          "actor_parameters": 1382,
+          "critic_parameters": 1313,
+          "total_parameters": 2695,
+          "training_seconds": 43.45953719998943
+        }
+      ],
+      "best_evaluation_reward": {
+        "mean": 0.761957218688706,
+        "sample_standard_deviation": 0.03542000090264789
+      },
+      "final_evaluation_reward": {
+        "mean": 0.6328459382840874,
+        "sample_standard_deviation": 0.02881796527171248
+      },
+      "final_success_rate": {
+        "mean": 0.0,
+        "sample_standard_deviation": 0.0
+      },
+      "environment_steps_to_target": {
+        "mean": 10000.0,
+        "sample_standard_deviation": 1732.0508075688772
+      },
+      "episodes_to_target": {
+        "mean": 100.0,
+        "sample_standard_deviation": 17.320508075688775
+      },
+      "training_seconds": {
+        "mean": 47.148239800008014,
+        "sample_standard_deviation": 6.272654690975318
+      },
+      "target_reach_count": 3,
+      "parameter_count": {
+        "actor": 1382,
+        "critic": 1313,
+        "total": 2695
+      }
+    }
+  }
+}

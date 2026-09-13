@@ -1,0 +1,85 @@
+{
+  "sprint": "4.5",
+  "reference_method": "classical_ppo",
+  "target_rule": "random + 0.95 * (ppo_best - random)",
+  "target_fraction": 0.95,
+  "qml_results_seen": false,
+  "domains": {
+    "autonomous_driving": {
+      "random_reference_reward": -49.532845889392334,
+      "seeds": [
+        {
+          "seed": 42,
+          "random_reference_reward": -49.532845889392334,
+          "ppo_best_evaluation_reward": -11.330714319001789,
+          "target_fraction": 0.95,
+          "target_evaluation_reward": -13.240820897521317,
+          "ppo_environment_steps_to_target": 12000,
+          "ppo_episodes_to_target": 120
+        },
+        {
+          "seed": 123,
+          "random_reference_reward": -49.532845889392334,
+          "ppo_best_evaluation_reward": -5.995909984273877,
+          "target_fraction": 0.95,
+          "target_evaluation_reward": -8.172756779529806,
+          "ppo_environment_steps_to_target": 15000,
+          "ppo_episodes_to_target": 150
+        },
+        {
+          "seed": 456,
+          "random_reference_reward": -49.532845889392334,
+          "ppo_best_evaluation_reward": -2.839828872384318,
+          "target_fraction": 0.95,
+          "target_evaluation_reward": -5.174479723234718,
+          "ppo_environment_steps_to_target": 13000,
+          "ppo_episodes_to_target": 131
+        }
+      ],
+      "ppo_target_reach_count": 3,
+      "mean_ppo_steps_to_target": 13333.333333333334,
+      "sample_sd_ppo_steps_to_target": 1527.5252316519466,
+      "mean_ppo_episodes_to_target": 133.66666666666666,
+      "sample_sd_ppo_episodes_to_target": 15.17673658377628,
+      "targets_frozen_before_qml": true
+    },
+    "robotics": {
+      "random_reference_reward": -2.9319357876725434,
+      "seeds": [
+        {
+          "seed": 42,
+          "random_reference_reward": -2.9319357876725434,
+          "ppo_best_evaluation_reward": 0.7475991372717792,
+          "target_fraction": 0.95,
+          "target_evaluation_reward": 0.5636223910245626,
+          "ppo_environment_steps_to_target": 9000,
+          "ppo_episodes_to_target": 90
+        },
+        {
+          "seed": 123,
+          "random_reference_reward": -2.9319357876725434,
+          "ppo_best_evaluation_reward": 0.7359706056653001,
+          "target_fraction": 0.95,
+          "target_evaluation_reward": 0.5525752859984077,
+          "ppo_environment_steps_to_target": 9000,
+          "ppo_episodes_to_target": 90
+        },
+        {
+          "seed": 456,
+          "random_reference_reward": -2.9319357876725434,
+          "ppo_best_evaluation_reward": 0.8023019131290386,
+          "target_fraction": 0.95,
+          "target_evaluation_reward": 0.6155900280889592,
+          "ppo_environment_steps_to_target": 12000,
+          "ppo_episodes_to_target": 120
+        }
+      ],
+      "ppo_target_reach_count": 3,
+      "mean_ppo_steps_to_target": 10000,
+      "sample_sd_ppo_steps_to_target": 1732.0508075688772,
+      "mean_ppo_episodes_to_target": 100,
+      "sample_sd_ppo_episodes_to_target": 17.320508075688775,
+      "targets_frozen_before_qml": true
+    }
+  }
+}
