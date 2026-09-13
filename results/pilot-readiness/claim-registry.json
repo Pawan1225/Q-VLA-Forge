@@ -151,6 +151,54 @@
       "status": "NOT_YET_TESTED",
       "statement": "Cross-domain RL consistency has not yet been tested.",
       "evidence_basis": "Planned for Sprint 4."
+    },
+    {
+      "claim_id": "sprint4-classical-ppo-baseline",
+      "status": "SUPPORTED",
+      "statement": "Classical PPO baselines were established for autonomous-driving and robotics proxy domains using principal seeds 42, 123, and 456.",
+      "evidence_basis": "Sprint 4.5 classical PPO evidence; all six domain-seed runs completed the frozen 20,000-step protocol and all six paired PPO-derived targets were reached."
+    },
+    {
+      "claim_id": "sprint4-hybrid-pqc-ppo-implementation",
+      "status": "SUPPORTED",
+      "statement": "A hybrid quantum-classical PPO policy with a variational quantum actor and classical value critic was implemented and evaluated in both proxy domains.",
+      "evidence_basis": "Sprints 4.6-4.10: four-qubit PennyLane PQC, hybrid policy integration, six principal QML runs, and independent three-seed validation."
+    },
+    {
+      "claim_id": "sprint4-hybrid-actor-compactness",
+      "status": "SUPPORTED",
+      "statement": "The hybrid PQC actor substantially reduced actor parameter count relative to the classical PPO actor in both proxy domains.",
+      "evidence_basis": "Driving actor parameters reduced from 1318 to 54 (approximately 95.90%); robotics reduced from 1382 to 62 (approximately 95.51%). Counts were identical across seeds 42, 123, and 456."
+    },
+    {
+      "claim_id": "sprint4-driving-qml-sample-efficiency-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a hybrid-QML sample-efficiency advantage for autonomous driving.",
+      "evidence_basis": "Sprint 4.8 and Sprint 4.10 validation: the hybrid QML policy reached 0/3 paired frozen driving PPO reward targets within 20,000 environment steps."
+    },
+    {
+      "claim_id": "sprint4-robotics-qml-sample-efficiency-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a hybrid-QML sample-efficiency advantage for robotics.",
+      "evidence_basis": "Sprint 4.9 and Sprint 4.10 validation: the hybrid QML policy reached 0/3 paired frozen robotics PPO reward targets within 20,000 environment steps."
+    },
+    {
+      "claim_id": "sprint4-robust-qml-sample-efficiency-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a robust hybrid-QML sample-efficiency advantage across the six principal domain-seed comparisons.",
+      "evidence_basis": "Sprint 4.10 three-seed validation reconstructed 0/6 QML target reaches versus 6/6 classical PPO target reaches. The pre-specified requirement of all three seeds reaching target with mean >=10% sample-efficiency improvement was not satisfied in either domain."
+    },
+    {
+      "claim_id": "sprint4-quantum-computational-speedup",
+      "status": "NOT_SUPPORTED",
+      "statement": "Sprint 4 does not establish quantum computational speedup.",
+      "evidence_basis": "Hybrid QML experiments used PennyLane default.qubit with shots=None. Wall-clock runtime was treated as diagnostic only and was not used for a speedup claim."
+    },
+    {
+      "claim_id": "sprint4-quantum-hardware-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "Sprint 4 does not establish quantum hardware advantage.",
+      "evidence_basis": "No quantum hardware execution or hardware-vs-classical comparison was performed; all QML experiments used simulation."
     }
   ],
   "future_validation_pathways": {

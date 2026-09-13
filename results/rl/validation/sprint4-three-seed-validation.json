@@ -1,0 +1,182 @@
+{
+  "sprint": "4.10",
+  "title": "Three-Seed RL Validation",
+  "principal_training_performed": false,
+  "principal_seed_count_per_domain": 3,
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "domains": {
+    "autonomous_driving": {
+      "records": [
+        {
+          "domain": "autonomous_driving",
+          "seed": 42,
+          "target_reward": -13.240820897521317,
+          "classical_best_reward": -11.330714319001789,
+          "classical_final_reward": -11.330714319001789,
+          "classical_final_success_rate": 0.0,
+          "classical_steps_to_target": 12000,
+          "qml_best_reward": -36.908996765879564,
+          "qml_final_reward": -44.04820391567478,
+          "qml_final_success_rate": 0.0,
+          "qml_steps_to_target": null,
+          "qml_target_reached": false,
+          "best_reward_target_gap": -23.668175868358247,
+          "sample_efficiency_improvement_percent": null
+        },
+        {
+          "domain": "autonomous_driving",
+          "seed": 123,
+          "target_reward": -8.172756779529806,
+          "classical_best_reward": -5.995909984273877,
+          "classical_final_reward": -8.720402744322062,
+          "classical_final_success_rate": 0.0,
+          "classical_steps_to_target": 15000,
+          "qml_best_reward": -48.58139184767694,
+          "qml_final_reward": -48.58139184767694,
+          "qml_final_success_rate": 0.0,
+          "qml_steps_to_target": null,
+          "qml_target_reached": false,
+          "best_reward_target_gap": -40.408635068147134,
+          "sample_efficiency_improvement_percent": null
+        },
+        {
+          "domain": "autonomous_driving",
+          "seed": 456,
+          "target_reward": -5.174479723234718,
+          "classical_best_reward": -2.839828872384318,
+          "classical_final_reward": -7.549571968284115,
+          "classical_final_success_rate": 0.15,
+          "classical_steps_to_target": 13000,
+          "qml_best_reward": -7.186715916596775,
+          "qml_final_reward": -13.702906984621373,
+          "qml_final_success_rate": 0.0,
+          "qml_steps_to_target": null,
+          "qml_target_reached": false,
+          "best_reward_target_gap": -2.0122361933620567,
+          "sample_efficiency_improvement_percent": null
+        }
+      ],
+      "summary": {
+        "domain": "autonomous_driving",
+        "seeds": [
+          42,
+          123,
+          456
+        ],
+        "classical_target_reach_count": 3,
+        "qml_target_reach_count": 0,
+        "qml_target_reach_rate": 0.0,
+        "classical_best_reward_mean": -6.722151058553328,
+        "classical_best_reward_sd": 4.291777427869835,
+        "qml_best_reward_mean": -30.89236817671776,
+        "qml_best_reward_sd": 21.343140901580682,
+        "qml_final_reward_mean": -35.4441675826577,
+        "qml_final_reward_sd": 18.964420832192783,
+        "qml_final_success_mean": 0.0,
+        "qml_final_success_sd": 0.0,
+        "qml_best_reward_target_gap_mean": -22.02968237662248,
+        "qml_best_reward_target_gap_sd": 19.250567714479086,
+        "valid_qml_efficiency_count": 0,
+        "robust_10_percent_criterion": false
+      }
+    },
+    "robotics": {
+      "records": [
+        {
+          "domain": "robotics",
+          "seed": 42,
+          "target_reward": 0.5636223910245626,
+          "classical_best_reward": 0.7475991372717792,
+          "classical_final_reward": 0.6022628891812771,
+          "classical_final_success_rate": 0.0,
+          "classical_steps_to_target": 9000,
+          "qml_best_reward": -1.2142928619344266,
+          "qml_final_reward": -1.2142928619344266,
+          "qml_final_success_rate": 0.0,
+          "qml_steps_to_target": null,
+          "qml_target_reached": false,
+          "best_reward_target_gap": -1.7779152529589892,
+          "sample_efficiency_improvement_percent": null
+        },
+        {
+          "domain": "robotics",
+          "seed": 123,
+          "target_reward": 0.5525752859984077,
+          "classical_best_reward": 0.7359706056653001,
+          "classical_final_reward": 0.6594945290536207,
+          "classical_final_success_rate": 0.0,
+          "classical_steps_to_target": 9000,
+          "qml_best_reward": -0.025765169771201614,
+          "qml_final_reward": -0.025765169771201614,
+          "qml_final_success_rate": 0.0,
+          "qml_steps_to_target": null,
+          "qml_target_reached": false,
+          "best_reward_target_gap": -0.5783404557696092,
+          "sample_efficiency_improvement_percent": null
+        },
+        {
+          "domain": "robotics",
+          "seed": 456,
+          "target_reward": 0.6155900280889592,
+          "classical_best_reward": 0.8023019131290386,
+          "classical_final_reward": 0.6367803966173644,
+          "classical_final_success_rate": 0.0,
+          "classical_steps_to_target": 12000,
+          "qml_best_reward": 0.43903277345573655,
+          "qml_final_reward": 0.43903277345573655,
+          "qml_final_success_rate": 0.0,
+          "qml_steps_to_target": null,
+          "qml_target_reached": false,
+          "best_reward_target_gap": -0.1765572546332227,
+          "sample_efficiency_improvement_percent": null
+        }
+      ],
+      "summary": {
+        "domain": "robotics",
+        "seeds": [
+          42,
+          123,
+          456
+        ],
+        "classical_target_reach_count": 3,
+        "qml_target_reach_count": 0,
+        "qml_target_reach_rate": 0.0,
+        "classical_best_reward_mean": 0.761957218688706,
+        "classical_best_reward_sd": 0.03542000090264789,
+        "qml_best_reward_mean": -0.26700841941663056,
+        "qml_best_reward_sd": 0.852654762072075,
+        "qml_final_reward_mean": -0.26700841941663056,
+        "qml_final_reward_sd": 0.852654762072075,
+        "qml_final_success_mean": 0.0,
+        "qml_final_success_sd": 0.0,
+        "qml_best_reward_target_gap_mean": -0.8442709877872737,
+        "qml_best_reward_target_gap_sd": 0.8331423321347169,
+        "valid_qml_efficiency_count": 0,
+        "robust_10_percent_criterion": false
+      }
+    }
+  },
+  "global_validation": {
+    "principal_classical_runs": 6,
+    "principal_qml_runs": 6,
+    "principal_runs_total": 12,
+    "qml_targets_reached": 0,
+    "qml_targets_available": 6,
+    "driving_seed42_reproduction_exists": true,
+    "robotics_seed42_reproduction_exists": true
+  },
+  "scientific_boundary": {
+    "new_training_performed": false,
+    "hyperparameter_tuning_performed": false,
+    "targets_modified": false,
+    "environments_modified": false,
+    "target_gap_is_descriptive_only": true,
+    "cross_domain_reward_scale_comparison_allowed": false,
+    "quantum_speedup_claimed": false,
+    "quantum_hardware_advantage_claimed": false
+  }
+}
