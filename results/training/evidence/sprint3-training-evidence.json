@@ -1,0 +1,199 @@
+{
+  "sprint": "3",
+  "title": "Training Efficiency Evidence",
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "methods": [
+    "shared_vla_fp32",
+    "trainable_svd",
+    "trainable_tt_mps"
+  ],
+  "primary_metric": "optimizer_steps_to_paired_fp32_target",
+  "challenge_efficiency_threshold_percent": 10.0,
+  "table": [
+    {
+      "domain": "autonomous_driving",
+      "method": "trainable_svd",
+      "target_reach": "3/3",
+      "parameter_reduction_percent": 11.971803252864966,
+      "step_reduction_mean_percent": -23.333333333333332,
+      "step_reduction_std_percent": 11.096362093077186,
+      "test_mse_mean": 0.013266859265665213,
+      "test_mse_std": 0.0008241783408470323,
+      "test_mae_mean": 0.07368921985228856,
+      "test_mae_std": 0.00798121159882979,
+      "robust_ten_percent_efficiency": false
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "trainable_tt_mps",
+      "target_reach": "0/3",
+      "parameter_reduction_percent": 44.4636973444125,
+      "step_reduction_mean_percent": null,
+      "step_reduction_std_percent": null,
+      "test_mse_mean": 0.03847440145909786,
+      "test_mse_std": 0.02940076872611797,
+      "test_mae_mean": 0.13858458896478018,
+      "test_mae_std": 0.055887570668262714,
+      "robust_ten_percent_efficiency": false
+    },
+    {
+      "domain": "robotics",
+      "method": "trainable_svd",
+      "target_reach": "0/3",
+      "parameter_reduction_percent": 22.83437692802478,
+      "step_reduction_mean_percent": null,
+      "step_reduction_std_percent": null,
+      "test_mse_mean": 0.011115143541246653,
+      "test_mse_std": 0.003145102091263956,
+      "test_mae_mean": 0.04417944326996803,
+      "test_mae_std": 0.004831997073557076,
+      "robust_ten_percent_efficiency": false
+    },
+    {
+      "domain": "robotics",
+      "method": "trainable_tt_mps",
+      "target_reach": "0/3",
+      "parameter_reduction_percent": 44.4636973444125,
+      "step_reduction_mean_percent": null,
+      "step_reduction_std_percent": null,
+      "test_mse_mean": 0.05013266702493032,
+      "test_mse_std": 0.0040610481314515435,
+      "test_mae_mean": 0.10504786670207977,
+      "test_mae_std": 0.025033135717079203,
+      "robust_ten_percent_efficiency": false
+    }
+  ],
+  "supported_claims": [
+    {
+      "claim_id": "autonomous_driving-trainable_svd-training-efficiency",
+      "category": "training_efficiency",
+      "supported": true,
+      "statement": "Trainable SVD reached the paired FP32 target in all 3 seeds for autonomous driving; the mean optimizer-step reduction was -23.33 \u00b1 11.10%, below the predefined robust 10% criterion.",
+      "evidence_basis": "Three-seed validation completed, but the predefined robust >=10% efficiency rule was not satisfied."
+    },
+    {
+      "claim_id": "autonomous_driving-trainable_tt_mps-training-efficiency",
+      "category": "training_efficiency",
+      "supported": true,
+      "statement": "Trainable TT/MPS reached the paired FP32 target in 0/3 seeds for autonomous driving; therefore the experiment does not support a robust three-seed training-efficiency claim.",
+      "evidence_basis": "Target reach was incomplete across the three deterministic seeds."
+    },
+    {
+      "claim_id": "robotics-trainable_svd-training-efficiency",
+      "category": "training_efficiency",
+      "supported": true,
+      "statement": "Trainable SVD reached the paired FP32 target in 0/3 seeds for robotics; therefore the experiment does not support a robust three-seed training-efficiency claim.",
+      "evidence_basis": "Target reach was incomplete across the three deterministic seeds."
+    },
+    {
+      "claim_id": "robotics-trainable_tt_mps-training-efficiency",
+      "category": "training_efficiency",
+      "supported": true,
+      "statement": "Trainable TT/MPS reached the paired FP32 target in 0/3 seeds for robotics; therefore the experiment does not support a robust three-seed training-efficiency claim.",
+      "evidence_basis": "Target reach was incomplete across the three deterministic seeds."
+    },
+    {
+      "claim_id": "trainable_svd-cross-domain-efficiency",
+      "category": "cross_domain",
+      "supported": true,
+      "statement": "Trainable SVD was architecturally reusable across both domains, but did not demonstrate robust training-efficiency improvement in both; target consistency was mixed and efficiency consistency was none.",
+      "evidence_basis": "Cross-domain comparison of the frozen three-seed experiments."
+    },
+    {
+      "claim_id": "trainable_tt_mps-cross-domain-efficiency",
+      "category": "cross_domain",
+      "supported": true,
+      "statement": "Trainable TT/MPS was architecturally reusable across both domains, but did not demonstrate robust training-efficiency improvement in both; target consistency was weak and efficiency consistency was none.",
+      "evidence_basis": "Cross-domain comparison of the frozen three-seed experiments."
+    }
+  ],
+  "unsupported_claims": [
+    {
+      "claim_id": "quantum-advantage",
+      "category": "claim_control",
+      "supported": false,
+      "statement": "Sprint 3 does not establish quantum advantage.",
+      "evidence_basis": "TT/MPS is a quantum-inspired tensor-network method executed classically."
+    },
+    {
+      "claim_id": "quantum-speedup",
+      "category": "claim_control",
+      "supported": false,
+      "statement": "Sprint 3 does not establish quantum speedup.",
+      "evidence_basis": "No quantum hardware or quantum runtime comparison was performed."
+    },
+    {
+      "claim_id": "native-tt-runtime-speedup",
+      "category": "claim_control",
+      "supported": false,
+      "statement": "Sprint 3 does not establish native TT/MPS runtime acceleration.",
+      "evidence_basis": "The current TT/MPS forward path reconstructs a temporary differentiable dense-equivalent weight during classical execution."
+    },
+    {
+      "claim_id": "production-vla-validation",
+      "category": "claim_control",
+      "supported": false,
+      "statement": "Sprint 3 does not establish performance on full-scale production 7B-class VLA models.",
+      "evidence_basis": "The pilot uses compact synthetic driving and robotics proxy tasks."
+    }
+  ],
+  "matched_ablation": [
+    {
+      "domain": "autonomous_driving",
+      "seed": 42,
+      "svd_configuration": "SVD-25%",
+      "tt_mps_configuration": "TT-rank-8",
+      "parameter_difference_percent": 1.0364767793184866,
+      "svd_reached_target": false,
+      "tt_mps_reached_target": false,
+      "svd_test_mse": 0.027144286160667736,
+      "tt_mps_test_mse": 0.01359387207776308,
+      "interpretation": "Neither matched representation reached the paired FP32 target."
+    },
+    {
+      "domain": "robotics",
+      "seed": 42,
+      "svd_configuration": "SVD-25%",
+      "tt_mps_configuration": "TT-rank-8",
+      "parameter_difference_percent": 1.0364767793184866,
+      "svd_reached_target": false,
+      "tt_mps_reached_target": false,
+      "svd_test_mse": 0.02211491794635852,
+      "tt_mps_test_mse": 0.007570933007324736,
+      "interpretation": "Neither matched representation reached the paired FP32 target."
+    }
+  ],
+  "cross_domain": {
+    "tt_mps_robust_cross_domain_efficiency": false,
+    "tt_mps_target_consistency": "weak",
+    "tt_mps_efficiency_consistency": "none",
+    "shared_architecture_claim": true,
+    "universal_trained_model_claim": false
+  },
+  "quantum_inspired_method": "Trainable Tensor Train / open-boundary Matrix Product State parameterization (TT/MPS), executed classically.",
+  "quantum_hardware_used": false,
+  "figures": {
+    "driving_convergence": "figures/training/driving-training-convergence.png",
+    "robotics_convergence": "figures/training/robotics-training-convergence.png",
+    "parameter_vs_efficiency": "figures/training/parameter-vs-training-efficiency.png",
+    "cross_domain_efficiency": "figures/training/cross-domain/cross-domain-step-efficiency.png",
+    "cross_domain_parameter_reduction": "figures/training/cross-domain/cross-domain-parameter-reduction.png"
+  },
+  "limitations": [
+    "Experiments use compact synthetic autonomous-driving and robotics proxy tasks.",
+    "The pilot does not train or evaluate a full 7B-class production VLA model.",
+    "The lightweight language component is a trainable hashed-token embedding encoder, not a large Transformer language model.",
+    "CPU wall-clock timing is descriptive; optimizer steps and samples to target are the primary efficiency measures.",
+    "TT/MPS executes classically and does not constitute a quantum-hardware speedup.",
+    "The matched SVD-vs-TT/MPS ablation uses seed 42 as a controlled isolation experiment.",
+    "Architectural reuse across domains does not imply one universally trained model."
+  ]
+}
