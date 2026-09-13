@@ -45,6 +45,17 @@ def test_reset_observation_is_inside_space() -> None:
     assert env.observation_space.contains(observation)
 
 
+def test_reset_info_contains_progress_contract() -> None:
+    env = DrivingRLEnv()
+
+    _, info = env.reset(seed=42)
+
+    assert info["progress"] == 0.0
+    assert info["cumulative_progress"] == 0.0
+    assert info["minimum_success_progress"] == 1.75
+    assert info["success"] is False
+
+
 def test_action_space_matches_frozen_contract() -> None:
     env = DrivingRLEnv()
 
@@ -93,7 +104,7 @@ def test_frozen_dynamics_are_deterministic() -> None:
         dtype=np.float32,
     )
 
-    observation, _, terminated, truncated, _ = env.step(action)
+    observation, _, terminated, truncated, info = env.step(action)
 
     speed = float(initial_observation[0])
     lane_offset = float(initial_observation[1])
@@ -131,6 +142,14 @@ def test_frozen_dynamics_are_deterministic() -> None:
         expected,
         rtol=1e-6,
         atol=1e-6,
+    )
+
+    assert info["progress"] == pytest.approx(
+        expected_progress,
+    )
+
+    assert info["cumulative_progress"] == pytest.approx(
+        expected_progress,
     )
 
     assert terminated is False
@@ -192,7 +211,53 @@ def test_normal_step_is_not_terminal() -> None:
     assert info["success"] is False
 
 
-def test_horizon_completion_is_successful_truncation() -> None:
+def test_cumulative_progress_accumulates_across_steps() -> None:
+    env = DrivingRLEnv(
+        DrivingEnvConfig(
+            horizon=10,
+            initial_obstacle_min=10.0,
+            initial_obstacle_max=10.0,
+            initial_speed_min=0.20,
+            initial_speed_max=0.20,
+            initial_lane_offset_limit=0.0,
+            initial_heading_error_limit=0.0,
+        )
+    )
+
+    env.reset(seed=42)
+
+    _, _, _, _, first_info = env.step(
+        np.zeros(
+            3,
+            dtype=np.float32,
+        )
+    )
+
+    _, _, _, _, second_info = env.step(
+        np.zeros(
+            3,
+            dtype=np.float32,
+        )
+    )
+
+    assert first_info["progress"] == pytest.approx(
+        0.01,
+    )
+
+    assert first_info["cumulative_progress"] == pytest.approx(
+        0.01,
+    )
+
+    assert second_info["progress"] == pytest.approx(
+        0.01,
+    )
+
+    assert second_info["cumulative_progress"] == pytest.approx(
+        0.02,
+    )
+
+
+def test_horizon_completion_requires_minimum_progress() -> None:
     env = DrivingRLEnv(
         DrivingEnvConfig(
             horizon=3,
@@ -228,6 +293,56 @@ def test_horizon_completion_is_successful_truncation() -> None:
 
     assert terminated is False
     assert truncated is True
+    assert info["cumulative_progress"] == pytest.approx(
+        0.03,
+    )
+    assert info["minimum_success_progress"] == 1.75
+    assert info["success"] is False
+    assert env.last_success is False
+    assert reward < 1.0
+
+
+def test_horizon_completion_is_successful_when_progress_requirement_met() -> None:
+    env = DrivingRLEnv(
+        DrivingEnvConfig(
+            horizon=3,
+            minimum_success_progress=0.02,
+            initial_obstacle_min=10.0,
+            initial_obstacle_max=10.0,
+            initial_speed_min=0.20,
+            initial_speed_max=0.20,
+            initial_lane_offset_limit=0.0,
+            initial_heading_error_limit=0.0,
+        )
+    )
+
+    env.reset(seed=42)
+
+    terminated = False
+    truncated = False
+    reward = 0.0
+    info: dict[str, object] = {}
+
+    for _ in range(3):
+        (
+            _,
+            reward,
+            terminated,
+            truncated,
+            info,
+        ) = env.step(
+            np.zeros(
+                3,
+                dtype=np.float32,
+            )
+        )
+
+    assert terminated is False
+    assert truncated is True
+    assert info["cumulative_progress"] == pytest.approx(
+        0.03,
+    )
+    assert info["minimum_success_progress"] == 0.02
     assert info["success"] is True
     assert env.last_success is True
     assert reward > 4.0
@@ -253,6 +368,15 @@ def test_step_info_contains_provenance() -> None:
     assert info["truncated"] is truncated
     assert info["terminal_lane_offset"] == 2.0
     assert info["collision_distance"] == 0.0
+    assert info["minimum_success_progress"] == 1.75
+    assert isinstance(
+        info["progress"],
+        float,
+    )
+    assert isinstance(
+        info["cumulative_progress"],
+        float,
+    )
 
 
 def test_collision_causes_termination_and_penalty() -> None:
@@ -390,10 +514,11 @@ def test_exact_negative_lane_boundary_is_departure() -> None:
     assert truncated is False
 
 
-def test_success_bonus_applies_only_on_successful_horizon() -> None:
+def test_success_bonus_applies_only_when_progress_requirement_met() -> None:
     env = DrivingRLEnv(
         DrivingEnvConfig(
             horizon=1,
+            minimum_success_progress=0.01,
             initial_obstacle_min=10.0,
             initial_obstacle_max=10.0,
             initial_speed_min=0.20,
@@ -414,9 +539,49 @@ def test_success_bonus_applies_only_on_successful_horizon() -> None:
 
     assert terminated is False
     assert truncated is True
+    assert info["cumulative_progress"] == pytest.approx(
+        0.01,
+    )
     assert info["success"] is True
+
     assert reward == pytest.approx(
         5.02,
+        abs=1e-6,
+    )
+
+
+def test_success_bonus_is_not_applied_without_progress_requirement() -> None:
+    env = DrivingRLEnv(
+        DrivingEnvConfig(
+            horizon=1,
+            minimum_success_progress=0.02,
+            initial_obstacle_min=10.0,
+            initial_obstacle_max=10.0,
+            initial_speed_min=0.20,
+            initial_speed_max=0.20,
+            initial_lane_offset_limit=0.0,
+            initial_heading_error_limit=0.0,
+        )
+    )
+
+    env.reset(seed=42)
+
+    _, reward, terminated, truncated, info = env.step(
+        np.zeros(
+            3,
+            dtype=np.float32,
+        )
+    )
+
+    assert terminated is False
+    assert truncated is True
+    assert info["cumulative_progress"] == pytest.approx(
+        0.01,
+    )
+    assert info["success"] is False
+
+    assert reward == pytest.approx(
+        0.02,
         abs=1e-6,
     )
 
@@ -425,6 +590,7 @@ def test_collision_penalty_does_not_receive_success_bonus() -> None:
     env = DrivingRLEnv(
         DrivingEnvConfig(
             horizon=1,
+            minimum_success_progress=0.0,
             initial_obstacle_min=0.01,
             initial_obstacle_max=0.01,
             initial_speed_min=1.0,
@@ -458,6 +624,7 @@ def test_lane_departure_penalty_does_not_receive_success_bonus() -> None:
     env = DrivingRLEnv(
         DrivingEnvConfig(
             horizon=1,
+            minimum_success_progress=0.0,
             terminal_lane_offset=0.10,
             initial_obstacle_min=10.0,
             initial_obstacle_max=10.0,
@@ -490,6 +657,7 @@ def test_lane_departure_penalty_does_not_receive_success_bonus() -> None:
     env = DrivingRLEnv(
         DrivingEnvConfig(
             horizon=1,
+            minimum_success_progress=0.0,
             terminal_lane_offset=0.01,
             initial_obstacle_min=10.0,
             initial_obstacle_max=10.0,
@@ -521,6 +689,7 @@ def test_terminal_event_takes_priority_over_horizon_truncation() -> None:
     env = DrivingRLEnv(
         DrivingEnvConfig(
             horizon=1,
+            minimum_success_progress=0.0,
             initial_obstacle_min=0.01,
             initial_obstacle_max=0.01,
             initial_speed_min=1.0,

@@ -25,6 +25,7 @@ class DrivingEnvConfig:
     braking_gain: float = 0.12
 
     progress_scale: float = 0.05
+    minimum_success_progress: float = 1.75
 
     collision_distance: float = 0.0
     terminal_lane_offset: float = 2.0
@@ -102,6 +103,7 @@ class DrivingRLEnv(gym.Env[np.ndarray, np.ndarray]):
         )
 
         self._step_count = 0
+        self._cumulative_progress = 0.0
         self._last_success = False
 
     @property
@@ -161,6 +163,7 @@ class DrivingRLEnv(gym.Env[np.ndarray, np.ndarray]):
         )
 
         self._step_count = 0
+        self._cumulative_progress = 0.0
         self._last_success = False
 
         info = {
@@ -168,6 +171,9 @@ class DrivingRLEnv(gym.Env[np.ndarray, np.ndarray]):
             "environment": "synthetic_proxy",
             "step_count": 0,
             "horizon": self.config.horizon,
+            "progress": 0.0,
+            "cumulative_progress": 0.0,
+            "minimum_success_progress": (self.config.minimum_success_progress),
             "success": False,
             "collision": False,
             "lane_departure": False,
@@ -233,6 +239,8 @@ class DrivingRLEnv(gym.Env[np.ndarray, np.ndarray]):
 
         progress = self.config.progress_scale * speed
 
+        self._cumulative_progress += progress
+
         obstacle_distance = obstacle_distance - progress
 
         self._step_count += 1
@@ -245,7 +253,12 @@ class DrivingRLEnv(gym.Env[np.ndarray, np.ndarray]):
 
         truncated = bool(self._step_count >= self.config.horizon and not terminated)
 
-        success = bool(truncated and not collision and not lane_departure)
+        success = bool(
+            truncated
+            and not collision
+            and not lane_departure
+            and self._cumulative_progress >= self.config.minimum_success_progress
+        )
 
         reward = self._reward(
             speed=speed,
@@ -277,6 +290,8 @@ class DrivingRLEnv(gym.Env[np.ndarray, np.ndarray]):
             "step_count": self._step_count,
             "horizon": self.config.horizon,
             "progress": float(progress),
+            "cumulative_progress": float(self._cumulative_progress),
+            "minimum_success_progress": (self.config.minimum_success_progress),
             "speed": float(speed),
             "lane_offset": float(lane_offset),
             "heading_error": float(heading_error),
