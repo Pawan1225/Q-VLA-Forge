@@ -19,6 +19,13 @@ from q_vla_forge.rl.protocol import (
     action_semantics,
     protocol_to_dict,
 )
+from q_vla_forge.rl.robotics_controller import (
+    deterministic_robotics_action,
+)
+from q_vla_forge.rl.robotics_env import (
+    RoboticsEnvConfig,
+    RoboticsRLEnv,
+)
 
 __all__ = [
     "DEFAULT_RL_PROTOCOL",
@@ -33,7 +40,10 @@ __all__ = [
     "RLRunRecord",
     "RLTargetDefinition",
     "RLTargetReach",
+    "RoboticsEnvConfig",
+    "RoboticsRLEnv",
     "action_semantics",
+    "deterministic_robotics_action",
     "protocol_to_dict",
     "run_record_to_dict",
 ]
