@@ -1,0 +1,212 @@
+{
+  "sprint": "3",
+  "title": "Training Efficiency",
+  "status": "ready_for_final_quality_gate",
+  "protocol": {
+    "domains": [
+      "autonomous_driving",
+      "robotics"
+    ],
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "train_size": 512,
+    "validation_size": 128,
+    "test_size": 128,
+    "epochs": 20,
+    "batch_size": 32,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "CosineAnnealingLR",
+    "minimum_learning_rate": 1e-05,
+    "loss": "MSE",
+    "primary_efficiency_metric": "optimizer_steps_to_paired_fp32_target",
+    "robust_efficiency_threshold_percent": 10.0
+  },
+  "methods": {
+    "reference": "shared_vla_fp32",
+    "classical_structured": "trainable_svd",
+    "quantum_inspired_structured": "trainable_tt_mps"
+  },
+  "primary_run_matrix": {
+    "fp32_runs": 6,
+    "structured_runs": 12,
+    "total_runs": 18,
+    "expected_total": 18
+  },
+  "ablation": {
+    "seed": 42,
+    "runs": 4,
+    "type": "matched_layer_matched_parameter_budget",
+    "performance_blind_pair_selection": true
+  },
+  "total_scientific_training_runs": 22,
+  "evidence_chain": {
+    "three_seed_validation": "results/training/training-validation-summary.json",
+    "training_analysis": "results/training/analysis/training-efficiency-analysis.json",
+    "matched_ablation": "results/training/ablation/classical-vs-qi-ablation-summary.json",
+    "cross_domain_comparison": "results/training/cross-domain/cross-domain-training-comparison.json",
+    "proposal_evidence_json": "results/training/evidence/sprint3-training-evidence.json",
+    "proposal_evidence_markdown": "results/training/evidence/sprint3-training-evidence.md",
+    "proposal_evidence_csv": "results/training/evidence/sprint3-training-evidence.csv"
+  },
+  "headline_controls": {
+    "three_seed_requirement": true,
+    "sample_standard_deviation": true,
+    "paired_fp32_targets": true,
+    "robust_claim_requires_all_seeds": true,
+    "robust_claim_requires_ten_percent": true,
+    "negative_results_retained": true
+  },
+  "quantum_claim_control": {
+    "tt_mps_is_quantum_inspired": true,
+    "quantum_hardware_used": false,
+    "quantum_advantage_claimed": false,
+    "quantum_speedup_claimed": false,
+    "native_tt_runtime_speedup_claimed": false
+  },
+  "architecture_claim_control": {
+    "shared_architecture": true,
+    "universal_trained_model": false,
+    "language_component": "lightweight trainable text encoder"
+  },
+  "derived_evidence": {
+    "validation_methods": 4,
+    "analysis_points": 4,
+    "cross_domain_methods": 2,
+    "proposal_table_rows": 4,
+    "supported_claims": 6,
+    "unsupported_claims": 4,
+    "ablation_domains": 2
+  },
+  "artifacts": [
+    {
+      "path": "results/training/fp32/driving-fp32-seed-123.json",
+      "sha256": "dac1481240a683012e6288920bbdc0cf1f8a05588030f503000294feea16e0c1",
+      "size_bytes": 7297
+    },
+    {
+      "path": "results/training/fp32/driving-fp32-seed-42.json",
+      "sha256": "2528a33e8b466538eabaf5104da24f36f6b1a9be934b17b61a82f3abfa52cb9e",
+      "size_bytes": 7285
+    },
+    {
+      "path": "results/training/fp32/driving-fp32-seed-456.json",
+      "sha256": "d41b312689d61bc251885d59c10ba6823f8c28456c37388f1b143ba8fca1b9cc",
+      "size_bytes": 7308
+    },
+    {
+      "path": "results/training/fp32/robotics-fp32-seed-123.json",
+      "sha256": "be74872b1b139f6438de331c251eb1a26b28916b7e43e66c3c7a03b256cca76f",
+      "size_bytes": 7287
+    },
+    {
+      "path": "results/training/fp32/robotics-fp32-seed-42.json",
+      "sha256": "3e07d86ae617217b2b3e8c4079bb50a668438f2d99038e723bb0a31df93ae367",
+      "size_bytes": 7282
+    },
+    {
+      "path": "results/training/fp32/robotics-fp32-seed-456.json",
+      "sha256": "396d604b6c54a780c18bd564a1989e45c168009e76daf16f0aa35965c43f1c66",
+      "size_bytes": 7286
+    },
+    {
+      "path": "results/training/validation/driving-svd-seed-123.json",
+      "sha256": "81eb21c34ec8c7efff422a8279ee37ad4c5b9ec57759e0ed7f666169a782d064",
+      "size_bytes": 11531
+    },
+    {
+      "path": "results/training/validation/driving-svd-seed-42.json",
+      "sha256": "c00d8aca423d971adb10f958d34ed3255758afb5f4460deb502ae691f7be0907",
+      "size_bytes": 11674
+    },
+    {
+      "path": "results/training/validation/driving-svd-seed-456.json",
+      "sha256": "b9db7f48f64e0216312eff5c7b8be871a26065a7535e6185285be50c511c4128",
+      "size_bytes": 11574
+    },
+    {
+      "path": "results/training/validation/driving-tt-mps-seed-123.json",
+      "sha256": "96b8c54b62c29e0f6b32039723b51a19ad08dccaf92dae58c9f12bc82dd9e129",
+      "size_bytes": 14018
+    },
+    {
+      "path": "results/training/validation/driving-tt-mps-seed-42.json",
+      "sha256": "3367e44617a30ea54ea4adfbc212062f3a0089a566f7e695ae7da011a86cbdeb",
+      "size_bytes": 14074
+    },
+    {
+      "path": "results/training/validation/driving-tt-mps-seed-456.json",
+      "sha256": "22955c58e19fe23cca817b9b74775e6cbe30b0012f5a45a9daba2e1c1e82150e",
+      "size_bytes": 14037
+    },
+    {
+      "path": "results/training/validation/robotics-svd-seed-123.json",
+      "sha256": "3919eeb7c4d6f6eb54a76adc1be556f1b4d33ce37d18a32ec11d64df59280efd",
+      "size_bytes": 11469
+    },
+    {
+      "path": "results/training/validation/robotics-svd-seed-42.json",
+      "sha256": "2feef10827fc4c4a2853bf82a66be26a20d077449dfcac86839fbdad648d8d68",
+      "size_bytes": 11561
+    },
+    {
+      "path": "results/training/validation/robotics-svd-seed-456.json",
+      "sha256": "32b917f39cb1b260b93210d9eb4cbe40f68399a8aa595f746ac8816d3a482c2a",
+      "size_bytes": 11464
+    },
+    {
+      "path": "results/training/validation/robotics-tt-mps-seed-123.json",
+      "sha256": "586d465ee162503685bc5e0a18ba0d41cbc945bc35e4b75d30d1b8fe83cc305d",
+      "size_bytes": 13991
+    },
+    {
+      "path": "results/training/validation/robotics-tt-mps-seed-42.json",
+      "sha256": "3e7a8cfcb02b0f9a8592052b5504a7ea224d006358d3b58e351e95c405243f1a",
+      "size_bytes": 14045
+    },
+    {
+      "path": "results/training/validation/robotics-tt-mps-seed-456.json",
+      "sha256": "352e909a651cc69ad2777d675bd8ed17f5abf15221744f3ada0bcd40f0d2fb55",
+      "size_bytes": 13971
+    },
+    {
+      "path": "results/training/training-validation-summary.json",
+      "sha256": "65e39db18b8a80006875eaca15d3bd328f2614f5d1172a14eed3f58306282989",
+      "size_bytes": 6951
+    },
+    {
+      "path": "results/training/analysis/training-efficiency-analysis.json",
+      "sha256": "e8046daa2215aa66eefd52d0d09afd5ed0ba3f095814107a19da78e978b65fa4",
+      "size_bytes": 3355
+    },
+    {
+      "path": "results/training/ablation/classical-vs-qi-ablation-summary.json",
+      "sha256": "7a54d89c8e3c9ce4083e981770462261b231b3c3a3b13348c67c2b64b67fb052",
+      "size_bytes": 60115
+    },
+    {
+      "path": "results/training/cross-domain/cross-domain-training-comparison.json",
+      "sha256": "aa0802982ca4650245591e4bb8f73e5d62f2100b80f7dbcf09862e6fb460c077",
+      "size_bytes": 4531
+    },
+    {
+      "path": "results/training/evidence/sprint3-training-evidence.json",
+      "sha256": "9b9841008e0fb9a28c88b191321862716276a46884daee99dd62349d3a3f54a9",
+      "size_bytes": 8989
+    },
+    {
+      "path": "results/training/evidence/sprint3-training-evidence.md",
+      "sha256": "5eee940bc735e0c9d850e0b1b2972cc149997bb19a73f1abbec753250a7873fa",
+      "size_bytes": 3565
+    },
+    {
+      "path": "results/training/evidence/sprint3-training-evidence.csv",
+      "sha256": "651ba734d493a61679bf639315c2a658e9c51e25a8e76b6d41be06f6f0cd3d69",
+      "size_bytes": 803
+    }
+  ]
+}
