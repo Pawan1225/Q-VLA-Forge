@@ -1,0 +1,125 @@
+{
+  "comparison_type": "shared_structured_training_cross_domain",
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "methods": [
+    {
+      "method": "trainable_svd",
+      "driving": {
+        "domain": "autonomous_driving",
+        "method": "trainable_svd",
+        "target_reached": 3,
+        "target_total": 3,
+        "parameter_reduction_percent": 11.971803252864966,
+        "step_reduction_percent_mean": -23.333333333333332,
+        "step_reduction_percent_std": 11.096362093077186,
+        "test_mse_mean": 0.013266859265665213,
+        "test_mse_std": 0.0008241783408470323,
+        "robust_ten_percent_efficiency": false
+      },
+      "robotics": {
+        "domain": "robotics",
+        "method": "trainable_svd",
+        "target_reached": 0,
+        "target_total": 3,
+        "parameter_reduction_percent": 22.83437692802478,
+        "step_reduction_percent_mean": null,
+        "step_reduction_percent_std": null,
+        "test_mse_mean": 0.011115143541246653,
+        "test_mse_std": 0.003145102091263956,
+        "robust_ten_percent_efficiency": false
+      },
+      "target_consistency": "mixed",
+      "efficiency_consistency": "none",
+      "parameter_reduction_difference_percent": 10.862573675159815,
+      "robust_cross_domain_efficiency": false
+    },
+    {
+      "method": "trainable_tt_mps",
+      "driving": {
+        "domain": "autonomous_driving",
+        "method": "trainable_tt_mps",
+        "target_reached": 0,
+        "target_total": 3,
+        "parameter_reduction_percent": 44.4636973444125,
+        "step_reduction_percent_mean": null,
+        "step_reduction_percent_std": null,
+        "test_mse_mean": 0.03847440145909786,
+        "test_mse_std": 0.02940076872611797,
+        "robust_ten_percent_efficiency": false
+      },
+      "robotics": {
+        "domain": "robotics",
+        "method": "trainable_tt_mps",
+        "target_reached": 0,
+        "target_total": 3,
+        "parameter_reduction_percent": 44.4636973444125,
+        "step_reduction_percent_mean": null,
+        "step_reduction_percent_std": null,
+        "test_mse_mean": 0.05013266702493032,
+        "test_mse_std": 0.0040610481314515435,
+        "robust_ten_percent_efficiency": false
+      },
+      "target_consistency": "weak",
+      "efficiency_consistency": "none",
+      "parameter_reduction_difference_percent": 0.0,
+      "robust_cross_domain_efficiency": false
+    }
+  ],
+  "matched_ablation_transfer": {
+    "seed": 42,
+    "driving": {
+      "svd_reached_target": false,
+      "tt_mps_reached_target": false,
+      "matched_parameter_difference_percent": 1.0364767793184866
+    },
+    "robotics": {
+      "svd_reached_target": false,
+      "tt_mps_reached_target": false,
+      "matched_parameter_difference_percent": 1.0364767793184866
+    },
+    "same_qualitative_winner": true,
+    "performance_blind_pair_selection": true
+  },
+  "architecture_interpretation": {
+    "shared_mechanisms": [
+      "vision encoder",
+      "lightweight trainable text encoder",
+      "multimodal fusion",
+      "shared latent representation",
+      "structured SVD conversion",
+      "structured TT/MPS conversion",
+      "AdamW training protocol",
+      "cosine learning-rate schedule",
+      "paired target evaluation"
+    ],
+    "domain_specific_components": [
+      "state adapter input semantics",
+      "synthetic task generation",
+      "action semantics",
+      "selected SVD rank fraction",
+      "paired FP32 target values"
+    ],
+    "universal_trained_model_claim": false,
+    "shared_architecture_claim": true
+  },
+  "claim_control": {
+    "cross_domain_quantum_advantage": false,
+    "quantum_speedup": false,
+    "quantum_hardware_used": false,
+    "native_tt_runtime_acceleration": false
+  },
+  "figures": [
+    "figures\\training\\cross-domain\\cross-domain-step-efficiency.png",
+    "figures\\training\\cross-domain\\cross-domain-parameter-reduction.png"
+  ],
+  "limitations": [
+    "Cross-domain evidence uses compact synthetic proxy tasks rather than full-scale production VLA systems.",
+    "Shared architecture does not imply one universally trained model for both domains.",
+    "Domain-specific SVD fractions were frozen from the preceding compression study.",
+    "TT/MPS is quantum-inspired and executes classically in this pilot.",
+    "The matched classical-vs-QI ablation uses seed 42 as a controlled isolation study rather than a three-seed benchmark."
+  ]
+}
