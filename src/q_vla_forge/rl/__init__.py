@@ -10,6 +10,11 @@ from q_vla_forge.rl.contracts import (
     RLTargetReach,
     run_record_to_dict,
 )
+from q_vla_forge.rl.hybrid_qml_policy import (
+    DEFAULT_HYBRID_QML_POLICY_CONFIG,
+    HybridQMLPolicyConfig,
+    HybridQuantumActorCritic,
+)
 from q_vla_forge.rl.protocol import (
     DEFAULT_RL_PROTOCOL,
     DRIVING_ACTION_SEMANTICS,
@@ -28,11 +33,14 @@ from q_vla_forge.rl.robotics_env import (
 )
 
 __all__ = [
+    "DEFAULT_HYBRID_QML_POLICY_CONFIG",
     "DEFAULT_RL_PROTOCOL",
     "DRIVING_ACTION_SEMANTICS",
     "ROBOTICS_ACTION_SEMANTICS",
     "SPRINT4_SEEDS",
     "EvaluationPoint",
+    "HybridQMLPolicyConfig",
+    "HybridQuantumActorCritic",
     "QuantumResourceRecord",
     "RLDomain",
     "RLMethod",

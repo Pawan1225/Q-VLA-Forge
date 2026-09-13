@@ -1,0 +1,102 @@
+{
+  "sprint": "4.7",
+  "component": "hybrid_quantum_classical_ppo_policy",
+  "architecture": {
+    "classical_projection": "observation_dim -> 4",
+    "angle_mapping": "pi * tanh(projection)",
+    "quantum_circuit": "Sprint 4.6 frozen 4-qubit PQC",
+    "quantum_outputs": "4 Pauli-Z expectations",
+    "classical_action_head": "4 -> 3",
+    "policy_distribution": "Gaussian",
+    "critic": "classical 32-32 MLP"
+  },
+  "configuration": {
+    "quantum_features": 4,
+    "angle_scale": 3.141592653589793,
+    "critic_hidden_dim": 32
+  },
+  "domains": {
+    "autonomous_driving": {
+      "resources": {
+        "domain": "autonomous_driving",
+        "observation_dim": 4,
+        "action_dim": 3,
+        "projection_parameters": 20,
+        "quantum_parameters": 16,
+        "action_head_parameters": 15,
+        "log_std_parameters": 3,
+        "actor_parameters": 54,
+        "critic_parameters": 1249,
+        "total_parameters": 1303,
+        "classical_reference_actor_parameters": 1318,
+        "classical_reference_total_parameters": 2567,
+        "actor_parameter_reduction_percent": 95.90288315629742,
+        "total_parameter_reduction_percent": 49.24035839501364
+      },
+      "verification": {
+        "checks": {
+          "angles_shape": true,
+          "angles_bounded": true,
+          "quantum_features_shape": true,
+          "quantum_outputs_finite": true,
+          "distribution_shape": true,
+          "values_shape": true,
+          "actions_shape": true,
+          "projection_gradient_finite": true,
+          "quantum_gradient_finite": true,
+          "action_head_gradient_finite": true,
+          "quantum_gradient_nonzero": true
+        },
+        "quantum_gradient_norm": 0.09897860139608383,
+        "projection_gradient_norm": 0.13279670476913452,
+        "action_head_gradient_norm": 0.21812455356121063
+      }
+    },
+    "robotics": {
+      "resources": {
+        "domain": "robotics",
+        "observation_dim": 6,
+        "action_dim": 3,
+        "projection_parameters": 28,
+        "quantum_parameters": 16,
+        "action_head_parameters": 15,
+        "log_std_parameters": 3,
+        "actor_parameters": 62,
+        "critic_parameters": 1313,
+        "total_parameters": 1375,
+        "classical_reference_actor_parameters": 1382,
+        "classical_reference_total_parameters": 2695,
+        "actor_parameter_reduction_percent": 95.5137481910275,
+        "total_parameter_reduction_percent": 48.97959183673469
+      },
+      "verification": {
+        "checks": {
+          "angles_shape": true,
+          "angles_bounded": true,
+          "quantum_features_shape": true,
+          "quantum_outputs_finite": true,
+          "distribution_shape": true,
+          "values_shape": true,
+          "actions_shape": true,
+          "projection_gradient_finite": true,
+          "quantum_gradient_finite": true,
+          "action_head_gradient_finite": true,
+          "quantum_gradient_nonzero": true
+        },
+        "quantum_gradient_norm": 0.1394636482000351,
+        "projection_gradient_norm": 0.08041560649871826,
+        "action_head_gradient_norm": 0.95465087890625
+      }
+    }
+  },
+  "scientific_boundary": {
+    "rl_training_performed": false,
+    "principal_qml_runs_performed": false,
+    "ppo_vs_qml_comparison_performed": false,
+    "sample_efficiency_tested": false,
+    "quantum_advantage_claimed": false,
+    "quantum_speedup_claimed": false,
+    "quantum_hardware_used": false,
+    "frozen_ppo_targets_modified": false
+  }
+}
