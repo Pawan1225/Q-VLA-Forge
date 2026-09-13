@@ -109,23 +109,20 @@ class TrainableSVDLinear(nn.Module):
         self.output_dim = output_dim
         self.rank = rank
 
-        factory_kwargs = {
-            "device": device,
-            "dtype": dtype,
-        }
-
         self.u = nn.Parameter(
             torch.empty(
                 output_dim,
                 rank,
-                **factory_kwargs,
+                device=device,
+                dtype=dtype,
             )
         )
 
         self.singular_values = nn.Parameter(
             torch.empty(
                 rank,
-                **factory_kwargs,
+                device=device,
+                dtype=dtype,
             )
         )
 
@@ -133,7 +130,8 @@ class TrainableSVDLinear(nn.Module):
             torch.empty(
                 rank,
                 input_dim,
-                **factory_kwargs,
+                device=device,
+                dtype=dtype,
             )
         )
 
@@ -141,7 +139,8 @@ class TrainableSVDLinear(nn.Module):
             self.bias = nn.Parameter(
                 torch.empty(
                     output_dim,
-                    **factory_kwargs,
+                    device=device,
+                    dtype=dtype,
                 )
             )
         else:
@@ -399,12 +398,12 @@ def convert_model_to_trainable_svd(
         reports.append(
             TrainableSVDLayerReport(
                 name=name,
-                input_dim=dense_layer.in_features,
-                output_dim=dense_layer.out_features,
+                input_dim=(dense_layer.in_features),
+                output_dim=(dense_layer.out_features),
                 rank=rank,
                 original_weight_parameters=(original_weight_count),
-                factor_parameters=factor_count,
-                bias_parameters=bias_parameters,
+                factor_parameters=(factor_count),
+                bias_parameters=(bias_parameters),
                 original_total_parameters=(original_weight_count + bias_parameters),
                 structured_total_parameters=(factor_count + bias_parameters),
                 relative_initialization_error=(reconstruction_error),
