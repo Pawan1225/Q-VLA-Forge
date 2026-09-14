@@ -1,0 +1,294 @@
+{
+  "artifact": "driving-lyapunov-safety-summary",
+  "category_comparison": {
+    "acceleration_braking_conflict": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.3736060606060606
+    },
+    "lane_boundary": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.0
+    },
+    "steering_risk": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.0
+    },
+    "unsafe_obstacle_distance": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.027083333333333334
+    },
+    "unsafe_speed_condition": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.042045454545454546
+    }
+  },
+  "claims": {
+    "collision_free_driving_claim": false,
+    "formal_safety_guarantee": false,
+    "formal_stability_proven": false,
+    "iso_26262_claim": false,
+    "lyapunov_superior_to_clipping_claim": false,
+    "production_safety_claim": false
+  },
+  "clipping_comparison_scope": "descriptive_only_no_superiority_threshold",
+  "condition": "clean",
+  "criterion_definition": {
+    "maximum_reward_degradation_fraction": 0.1,
+    "maximum_success_rate_drop": 0.1,
+    "minimum_domain_mean_violation_reduction": 0.2,
+    "positive_baseline_seed": "lyapunov_rate < none_rate",
+    "reward_degradation_definition": "max(0, none_reward - lyapunov_reward) / abs(none_reward)",
+    "zero_baseline_seed": "lyapunov_rate <= none_rate"
+  },
+  "domain": "autonomous_driving",
+  "effectiveness": {
+    "domain_mean_violation_reduction": 1.0,
+    "domain_mean_violation_reduction_pass": true,
+    "driving_lyapunov_empirical_effectiveness_supported": true,
+    "reward_degradation_fraction": 0.0,
+    "reward_requirement_pass": true,
+    "seed_safety_requirements_pass": true,
+    "seed_safety_results": {
+      "123": true,
+      "42": true,
+      "456": true
+    },
+    "success_rate_drop": 0.0,
+    "success_requirement_pass": true
+  },
+  "evaluation_seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009,
+    20010,
+    20011,
+    20012,
+    20013,
+    20014,
+    20015,
+    20016,
+    20017,
+    20018,
+    20019
+  ],
+  "mechanism_interpretation": {
+    "all_selected_lyapunov_transitions_nonincreasing": true,
+    "emergency_fallback_observed": false,
+    "interpretation": "Under the frozen clean driving protocol, the complete Lyapunov-guided filter achieved the measured safety outcome. Principal action changes were triggered by domain hard guards; no additional LYAPUNOV_DECREASE intervention was observed.",
+    "principal_lyapunov_decrease_interventions_observed": false
+  },
+  "new_training_performed": false,
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "seed_level_comparisons": [
+    {
+      "checkpoint_sha256": "671ec3b742dbfdc1468f9ff9944a59dfad35aca7765fa3302e611baf9f533db2",
+      "clipping_intervention_rate": 0.0,
+      "clipping_mean_correction_l2": 0.0,
+      "clipping_reward": -11.330714319001789,
+      "clipping_success_rate": 0.0,
+      "clipping_violation_rate": 0.0,
+      "emergency_fallback_rate": 0.0,
+      "intervention_reason_counts": {
+        "action_bound": 0,
+        "domain_constraint": 0,
+        "emergency_fallback": 0,
+        "lyapunov_decrease": 0,
+        "none": 2000
+      },
+      "lyapunov_intervention_rate": 0.0,
+      "lyapunov_mean_correction_l2": 0.0,
+      "lyapunov_nonincrease_rate": 1.0,
+      "lyapunov_relative_reduction_vs_none": null,
+      "lyapunov_reward": -11.330714319001789,
+      "lyapunov_seed_safety_requirement_pass": true,
+      "lyapunov_success_rate": 0.0,
+      "lyapunov_violation_rate": 0.0,
+      "mean_filter_latency_ms": 1.86092305,
+      "none_reward": -11.330714319001789,
+      "none_success_rate": 0.0,
+      "none_violation_rate": 0.0,
+      "p95_filter_latency_ms": 2.4403449999999993,
+      "principal_seed": 42,
+      "proposed_hard_guard_failure_rate": 0.0,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 2000
+      },
+      "selected_hard_guard_failure_rate": 0.0,
+      "selected_lower_than_proposed_rate": 0.0,
+      "strict_lyapunov_decrease_rate": 0.0
+    },
+    {
+      "checkpoint_sha256": "af8b7ea9efe3eab81c45589f04a706d7c8b473382ccda3c0f110c6b7a93d4563",
+      "clipping_intervention_rate": 0.839,
+      "clipping_mean_correction_l2": 0.2459494072794914,
+      "clipping_reward": -8.588031328756164,
+      "clipping_success_rate": 0.0,
+      "clipping_violation_rate": 0.0,
+      "emergency_fallback_rate": 0.0,
+      "intervention_reason_counts": {
+        "action_bound": 0,
+        "domain_constraint": 1678,
+        "emergency_fallback": 0,
+        "lyapunov_decrease": 0,
+        "none": 322
+      },
+      "lyapunov_intervention_rate": 0.839,
+      "lyapunov_mean_correction_l2": 0.2459494072794914,
+      "lyapunov_nonincrease_rate": 1.0,
+      "lyapunov_relative_reduction_vs_none": 1.0,
+      "lyapunov_reward": -8.588031328756164,
+      "lyapunov_seed_safety_requirement_pass": true,
+      "lyapunov_success_rate": 0.0,
+      "lyapunov_violation_rate": 0.0,
+      "mean_filter_latency_ms": 1.8997443,
+      "none_reward": -8.72040274432206,
+      "none_success_rate": 0.0,
+      "none_violation_rate": 0.839,
+      "p95_filter_latency_ms": 3.2742899999999997,
+      "principal_seed": 123,
+      "proposed_hard_guard_failure_rate": 0.839,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 322,
+        "coast": 1678
+      },
+      "selected_hard_guard_failure_rate": 0.0,
+      "selected_lower_than_proposed_rate": 0.0,
+      "strict_lyapunov_decrease_rate": 0.0
+    },
+    {
+      "checkpoint_sha256": "71e35c17743d5f422a4b50e5dd1d6dea641c3e071713896d5acdd2c2f6a24788",
+      "clipping_intervention_rate": 0.4135,
+      "clipping_mean_correction_l2": 0.19892772370576858,
+      "clipping_reward": 4.2810686987899205,
+      "clipping_success_rate": 1.0,
+      "clipping_violation_rate": 0.0,
+      "emergency_fallback_rate": 0.0,
+      "intervention_reason_counts": {
+        "action_bound": 0,
+        "domain_constraint": 827,
+        "emergency_fallback": 0,
+        "lyapunov_decrease": 0,
+        "none": 1173
+      },
+      "lyapunov_intervention_rate": 0.4135,
+      "lyapunov_mean_correction_l2": 0.19892772370576858,
+      "lyapunov_nonincrease_rate": 1.0,
+      "lyapunov_relative_reduction_vs_none": 1.0,
+      "lyapunov_reward": 4.2810686987899205,
+      "lyapunov_seed_safety_requirement_pass": true,
+      "lyapunov_success_rate": 1.0,
+      "lyapunov_violation_rate": 0.0,
+      "mean_filter_latency_ms": 2.07604765,
+      "none_reward": -7.549571968284115,
+      "none_success_rate": 0.15,
+      "none_violation_rate": 0.33352272727272725,
+      "p95_filter_latency_ms": 3.147579999999999,
+      "principal_seed": 456,
+      "proposed_hard_guard_failure_rate": 0.4135,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 1173,
+        "coast": 827
+      },
+      "selected_hard_guard_failure_rate": 0.0,
+      "selected_lower_than_proposed_rate": 0.0,
+      "strict_lyapunov_decrease_rate": 0.0
+    }
+  ],
+  "sprint": "5.8",
+  "three_method_summary": {
+    "clipping": {
+      "intervention_rate": {
+        "mean": 0.4175,
+        "sample_sd": 0.41951430249754296
+      },
+      "reward": {
+        "mean_of_seed_means": -5.212558982989345,
+        "sample_sd_of_seed_means": 8.335304578504005
+      },
+      "success": {
+        "mean_of_seed_rates": 0.3333333333333333,
+        "sample_sd_of_seed_rates": 0.5773502691896257
+      },
+      "violation_step_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    "lyapunov": {
+      "emergency_fallback_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "intervention_rate": {
+        "mean": 0.4175,
+        "sample_sd": 0.41951430249754296
+      },
+      "lyapunov_nonincrease_rate": {
+        "mean": 1.0,
+        "sample_sd": 0.0
+      },
+      "mean_action_correction_l2": {
+        "mean": 0.14829237699508666,
+        "sample_sd": 0.13055930257038947
+      },
+      "mean_filter_latency_ms": {
+        "mean": 1.9455716666666667,
+        "sample_sd": 0.11465059543234318
+      },
+      "p95_filter_latency_ms": {
+        "mean": 2.954071666666666,
+        "sample_sd": 0.44938866480846335
+      },
+      "reward": {
+        "mean_of_seed_means": -5.212558982989345,
+        "sample_sd_of_seed_means": 8.335304578504005
+      },
+      "strict_lyapunov_decrease_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "success": {
+        "mean_of_seed_rates": 0.3333333333333333,
+        "sample_sd_of_seed_rates": 0.5773502691896257
+      },
+      "violation_step_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    "none": {
+      "intervention_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "reward": {
+        "mean_of_seed_means": -9.200229677202655,
+        "sample_sd_of_seed_means": 1.935700075744146
+      },
+      "success": {
+        "mean_of_seed_rates": 0.049999999999999996,
+        "sample_sd_of_seed_rates": 0.08660254037844387
+      },
+      "violation_step_rate": {
+        "mean": 0.39084090909090907,
+        "sample_sd": 0.42242665691834197
+      }
+    }
+  }
+}
