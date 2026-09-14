@@ -1,0 +1,79 @@
+sprint: "5.2"
+domain: "autonomous_driving"
+
+scope:
+  constraint_definition_only: true
+  safety_filter_implementation: false
+  safety_evaluation_performed: false
+  threshold_tuning_from_results: false
+  environment_dynamics_modified: false
+  reward_modified: false
+
+state:
+  dimension: 4
+  dimensions:
+    - speed
+    - lane_offset
+    - heading_error
+    - obstacle_distance
+
+action:
+  dimension: 3
+  dimensions:
+    - steering
+    - acceleration
+    - braking
+
+  environment_bounds:
+    steering:
+      minimum: -1.0
+      maximum: 1.0
+    acceleration:
+      minimum: -1.0
+      maximum: 1.0
+    braking:
+      minimum: 0.0
+      maximum: 1.0
+
+constraints:
+  lane_boundary:
+    warning_abs: 0.75
+    critical_abs: 0.95
+
+  obstacle_distance:
+    warning_distance: 0.30
+    critical_distance: 0.15
+
+  speed_distance_envelope:
+    base_distance: 0.15
+    speed_scale: 0.35
+    critical_fraction: 0.50
+    interpretation: "pilot heuristic safety envelope"
+
+  steering_risk:
+    steering_warning_abs: 0.80
+    steering_critical_abs: 0.95
+    lane_warning_abs: 0.60
+    lane_critical_abs: 0.80
+    heading_warning_abs: 0.50
+    heading_critical_abs: 0.75
+
+  acceleration_braking_conflict:
+    warning_threshold: 0.25
+    critical_threshold: 0.60
+
+violation_categories:
+  - lane_boundary
+  - unsafe_obstacle_distance
+  - unsafe_speed_condition
+  - steering_risk
+  - acceleration_braking_conflict
+
+claims:
+  deterministic_driving_constraint_contract: true
+  safety_improvement_demonstrated: false
+  collision_reduction_demonstrated: false
+  physical_stopping_distance_model: false
+  production_vehicle_safety_model: false
+  iso_26262_compliance: false
+  certification_claim: false
