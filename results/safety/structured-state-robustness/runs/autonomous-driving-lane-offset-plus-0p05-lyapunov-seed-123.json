@@ -1,0 +1,4925 @@
+{
+  "action_perturbation_applied": false,
+  "artifact_type": "principal",
+  "checkpoint_sha256": "af8b7ea9efe3eab81c45589f04a706d7c8b473382ccda3c0f110c6b7a93d4563",
+  "clean_reference_path": "results\\safety\\lyapunov-driving\\sprint5-driving-lyapunov-summary.json",
+  "clean_reference_sha256": "b0d1515eef5b19013773b54c782a0ad4ec056f8f5872ea6d68fb090212d2db95",
+  "condition": "state_perturbation",
+  "domain": "autonomous_driving",
+  "environment_dynamics_perturbation": false,
+  "environment_uses_true_state": true,
+  "episode_count": 20,
+  "episodes": [
+    {
+      "action_correction_l2_max": 0.3345280885696411,
+      "action_correction_l2_sum": 27.858309984207153,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.3345280885696411,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.09678834676742554,
+            0.0,
+            0.5791358947753906
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.25535789132118225,
+            0.2509992718696594,
+            -0.14290174841880798,
+            4.216041564941406
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.09678834676742554,
+            0.3345280885696411,
+            0.5791358947753906
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.25535789132118225,
+            0.20099927484989166,
+            -0.14290174841880798,
+            4.216041564941406
+          ]
+        },
+        {
+          "correction_l2": 0.3244140148162842,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.07907015085220337,
+            0.0,
+            0.5798448920249939
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.18586158752441406,
+            0.23669084906578064,
+            -0.14308421313762665,
+            4.2067484855651855
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.07907015085220337,
+            0.3244140148162842,
+            0.5798448920249939
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.18586158752441406,
+            0.18669085204601288,
+            -0.14308421313762665,
+            4.2067484855651855
+          ]
+        },
+        {
+          "correction_l2": 0.31486964225769043,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.06267893314361572,
+            0.0,
+            0.5805494785308838
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.116280198097229,
+            0.2225782573223114,
+            -0.14112588763237,
+            4.200934410095215
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.06267893314361572,
+            0.31486964225769043,
+            0.5805494785308838
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.116280198097229,
+            0.17257826030254364,
+            -0.14112588763237,
+            4.200934410095215
+          ]
+        },
+        {
+          "correction_l2": 0.3058481216430664,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.04747992753982544,
+            0.0,
+            0.5812285542488098
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.046614259481430054,
+            0.20884253084659576,
+            -0.13735729455947876,
+            4.198603630065918
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.04747992753982544,
+            0.3058481216430664,
+            0.5812285542488098
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.046614259481430054,
+            0.158842533826828,
+            -0.13735729455947876,
+            4.198603630065918
+          ]
+        },
+        {
+          "correction_l2": 0.2995333671569824,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.03714841604232788,
+            0.0,
+            0.5821644067764282
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            0.19563589990139008,
+            -0.13206630945205688,
+            4.198603630065918
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.03714841604232788,
+            0.2995333671569824,
+            0.5821644067764282
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            0.14563590288162231,
+            -0.13206630945205688,
+            4.198603630065918
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20000,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -11.3000789148722,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.4537055492401123,
+      "action_correction_l2_sum": 32.09547317028046,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.4537055492401123,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.26628756523132324,
+            0.0,
+            0.5886037349700928
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.1638377159833908,
+            0.19733674824237823,
+            0.13808637857437134,
+            3.5370049476623535
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.26628756523132324,
+            0.4537055492401123,
+            0.5886037349700928
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.1638377159833908,
+            0.14733675122261047,
+            0.13808637857437134,
+            3.5370049476623535
+          ]
+        },
+        {
+          "correction_l2": 0.4347374439239502,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.22958940267562866,
+            0.0,
+            0.5852687358856201
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.09320526570081711,
+            0.2068452388048172,
+            0.09508495777845383,
+            3.5323445796966553
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.22958940267562866,
+            0.4347374439239502,
+            0.5852687358856201
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.09320526570081711,
+            0.15684524178504944,
+            0.09508495777845383,
+            3.5323445796966553
+          ]
+        },
+        {
+          "correction_l2": 0.4168204069137573,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.19568049907684326,
+            0.0,
+            0.5824633836746216
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.022973017767071724,
+            0.21283797919750214,
+            0.05992743372917175,
+            3.531195878982544
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.19568049907684326,
+            0.4168204069137573,
+            0.5824633836746216
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.022973017767071724,
+            0.16283798217773438,
+            0.05992743372917175,
+            3.531195878982544
+          ]
+        },
+        {
+          "correction_l2": 0.40430283546447754,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.17187738418579102,
+            0.0,
+            0.5809851884841919
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            0.21600313484668732,
+            0.0316515788435936,
+            3.531195878982544
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.17187738418579102,
+            0.40430283546447754,
+            0.5809851884841919
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.0,
+            0.16600313782691956,
+            0.0316515788435936,
+            3.531195878982544
+          ]
+        },
+        {
+          "correction_l2": 0.39502036571502686,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.15410661697387695,
+            0.0,
+            0.5803366899490356
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            0.21685254573822021,
+            0.008494166657328606,
+            3.531195878982544
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.15410661697387695,
+            0.39502036571502686,
+            0.5803366899490356
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            0.16685254871845245,
+            0.008494166657328606,
+            3.531195878982544
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20001,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -10.210569779054941,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.3518364429473877,
+      "action_correction_l2_sum": 33.233805894851685,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.3518364429473877,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.026437222957611084,
+            0.0,
+            0.6402562856674194
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.30683231353759766,
+            -0.18910041451454163,
+            0.08530201762914658,
+            2.7194812297821045
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.026437222957611084,
+            0.3518364429473877,
+            0.6402562856674194
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.30683231353759766,
+            -0.2391004115343094,
+            0.08530201762914658,
+            2.7194812297821045
+          ]
+        },
+        {
+          "correction_l2": 0.34370851516723633,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.013478577136993408,
+            0.0,
+            0.6375308036804199
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.2300015538930893,
+            -0.1815698742866516,
+            0.07530538737773895,
+            2.7079811096191406
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.013478577136993408,
+            0.34370851516723633,
+            0.6375308036804199
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.2300015538930893,
+            -0.23156987130641937,
+            0.07530538737773895,
+            2.7079811096191406
+          ]
+        },
+        {
+          "correction_l2": 0.3359159231185913,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.0018111467361450195,
+            0.0,
+            0.6348284482955933
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.1534978598356247,
+            -0.17480352520942688,
+            0.0676635280251503,
+            2.7003061771392822
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.0018111467361450195,
+            0.3359159231185913,
+            0.6348284482955933
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.1534978598356247,
+            -0.22480352222919464,
+            0.0676635280251503,
+            2.7003061771392822
+          ]
+        },
+        {
+          "correction_l2": 0.3284033536911011,
+          "current_v": 0.0,
+          "executed_action": [
+            0.008731842041015625,
+            0.0,
+            0.6321336030960083
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.07731844484806061,
+            -0.16860021650791168,
+            0.06203310936689377,
+            2.6964402198791504
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.008731842041015625,
+            0.3284033536911011,
+            0.6321336030960083
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.07731844484806061,
+            -0.21860021352767944,
+            0.06203310936689377,
+            2.6964402198791504
+          ]
+        },
+        {
+          "correction_l2": 0.3211221694946289,
+          "current_v": 0.0,
+          "executed_action": [
+            0.018308520317077637,
+            0.0,
+            0.6294337511062622
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0014624125324189663,
+            -0.16278839111328125,
+            0.05811828002333641,
+            2.696367025375366
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.018308520317077637,
+            0.3211221694946289,
+            0.6294337511062622
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0014624125324189663,
+            -0.212788388133049,
+            0.05811828002333641,
+            2.696367025375366
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20002,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -13.667310511644015,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.3717203140258789,
+      "action_correction_l2_sum": 28.994614005088806,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.3717203140258789,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.15709561109542847,
+            0.0,
+            0.6090435981750488
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.21950972080230713,
+            0.006555318832397461,
+            0.109359510242939,
+            3.9947590827941895
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.15709561109542847,
+            0.3717203140258789,
+            0.6090435981750488
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.21950972080230713,
+            -0.0434446819126606,
+            0.109359510242939,
+            3.9947590827941895
+          ]
+        },
+        {
+          "correction_l2": 0.35687899589538574,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.12964856624603271,
+            0.0,
+            0.606999397277832
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.14642448723316193,
+            0.01473124697804451,
+            0.08175927400588989,
+            3.9874379634857178
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.12964856624603271,
+            0.35687899589538574,
+            0.606999397277832
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.14642448723316193,
+            -0.03526875376701355,
+            0.08175927400588989,
+            3.9874379634857178
+          ]
+        },
+        {
+          "correction_l2": 0.3431131839752197,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.10466903448104858,
+            0.0,
+            0.6051830649375916
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.07358455657958984,
+            0.020697318017482758,
+            0.05966070294380188,
+            3.9837586879730225
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.10466903448104858,
+            0.3431131839752197,
+            0.6051830649375916
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.07358455657958984,
+            -0.029302682727575302,
+            0.05966070294380188,
+            3.9837586879730225
+          ]
+        },
+        {
+          "correction_l2": 0.33035123348236084,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.08197033405303955,
+            0.0,
+            0.6035524010658264
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0009625887614674866,
+            0.02493007481098175,
+            0.04232756420969963,
+            3.983710527420044
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.08197033405303955,
+            0.33035123348236084,
+            0.6035524010658264
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.0009625887614674866,
+            -0.02506992593407631,
+            0.04232756420969963,
+            3.983710527420044
+          ]
+        },
+        {
+          "correction_l2": 0.32537388801574707,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.07292073965072632,
+            0.0,
+            0.6030223965644836
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            0.027840565890073776,
+            0.029104918241500854,
+            3.983710527420044
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.07292073965072632,
+            0.32537388801574707,
+            0.6030223965644836
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.022159434854984283,
+            0.029104918241500854,
+            3.983710527420044
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20003,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -9.735382775523528,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.30011236667633057,
+      "action_correction_l2_sum": 28.04318118095398,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.30011236667633057,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.02600783109664917,
+            0.0,
+            0.5940187573432922
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.2806167006492615,
+            0.12049895524978638,
+            -0.14496763050556183,
+            4.060772895812988
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.02600783109664917,
+            0.30011236667633057,
+            0.5940187573432922
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.2806167006492615,
+            0.07049895823001862,
+            -0.14496763050556183,
+            4.060772895812988
+          ]
+        },
+        {
+          "correction_l2": 0.29363226890563965,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.015530765056610107,
+            0.0,
+            0.5946976542472839
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.20933444797992706,
+            0.10684984177350998,
+            -0.13649116456508636,
+            4.05030632019043
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.015530765056610107,
+            0.29363226890563965,
+            0.5946976542472839
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.20933444797992706,
+            0.05684984102845192,
+            -0.13649116456508636,
+            4.05030632019043
+          ]
+        },
+        {
+          "correction_l2": 0.2873622179031372,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.005636334419250488,
+            0.0,
+            0.5952712297439575
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.1379707306623459,
+            0.0941062867641449,
+            -0.127435564994812,
+            4.043407917022705
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.005636334419250488,
+            0.2873622179031372,
+            0.5952712297439575
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.1379707306623459,
+            0.04410628601908684,
+            -0.127435564994812,
+            4.043407917022705
+          ]
+        },
+        {
+          "correction_l2": 0.2812802791595459,
+          "current_v": 0.0,
+          "executed_action": [
+            0.0037485361099243164,
+            0.0,
+            0.5957326292991638
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.06653818488121033,
+            0.08231458067893982,
+            -0.11791708320379257,
+            4.040081024169922
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.0037485361099243164,
+            0.2812802791595459,
+            0.5957326292991638
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.06653818488121033,
+            0.03231457620859146,
+            -0.11791708320379257,
+            4.040081024169922
+          ]
+        },
+        {
+          "correction_l2": 0.2758527994155884,
+          "current_v": 0.0,
+          "executed_action": [
+            0.011915922164916992,
+            0.0,
+            0.5961463451385498
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            0.07151118665933609,
+            -0.10803389549255371,
+            4.040081024169922
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.011915922164916992,
+            0.2758527994155884,
+            0.5961463451385498
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            0.02151118777692318,
+            -0.10803389549255371,
+            4.040081024169922
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20004,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -10.84798424078914,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.35057222843170166,
+      "action_correction_l2_sum": 27.64815580844879,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.35057222843170166,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.14145302772521973,
+            0.0,
+            0.614179253578186
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.22679980099201202,
+            -0.054309945553541183,
+            0.12457896769046783,
+            4.228276252746582
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.14145302772521973,
+            0.35057222843170166,
+            0.614179253578186
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.22679980099201202,
+            -0.10430994629859924,
+            0.12457896769046783,
+            4.228276252746582
+          ]
+        },
+        {
+          "correction_l2": 0.33620691299438477,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.1151004433631897,
+            0.0,
+            0.6123059988021851
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.15309828519821167,
+            -0.04454611614346504,
+            0.09763828665018082,
+            4.220621109008789
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.1151004433631897,
+            0.33620691299438477,
+            0.6123059988021851
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.15309828519821167,
+            -0.0945461168885231,
+            0.09763828665018082,
+            4.220621109008789
+          ]
+        },
+        {
+          "correction_l2": 0.3229503631591797,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.09113848209381104,
+            0.0,
+            0.6106233596801758
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0796215683221817,
+            -0.03694460168480873,
+            0.0760151669383049,
+            4.216639995574951
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.09113848209381104,
+            0.3229503631591797,
+            0.6106233596801758
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.0796215683221817,
+            -0.08694460242986679,
+            0.0760151669383049,
+            4.216639995574951
+          ]
+        },
+        {
+          "correction_l2": 0.3107186555862427,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.0693671703338623,
+            0.0,
+            0.6090932488441467
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.006346764974296093,
+            -0.031044866889715195,
+            0.05899733677506447,
+            4.216322422027588
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.0693671703338623,
+            0.3107186555862427,
+            0.6090932488441467
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.006346764974296093,
+            -0.08104486763477325,
+            0.05899733677506447,
+            4.216322422027588
+          ]
+        },
+        {
+          "correction_l2": 0.305804967880249,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.060559213161468506,
+            0.0,
+            0.6083996891975403
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            -0.026449520140886307,
+            0.04595348984003067,
+            4.216322422027588
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.060559213161468506,
+            0.305804967880249,
+            0.6083996891975403
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.07644952088594437,
+            0.04595348984003067,
+            4.216322422027588
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20005,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -11.545395309524096,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.0,
+      "action_correction_l2_sum": 0.0,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.08980822563171387,
+            0.18677997589111328,
+            0.6202228665351868
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.18892470002174377,
+            -0.1646347939968109,
+            -0.10805317014455795,
+            4.739560127258301
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.08980822563171387,
+            0.18677997589111328,
+            0.6202228665351868
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.18892470002174377,
+            -0.21463479101657867,
+            -0.10805317014455795,
+            4.739560127258301
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.08833730220794678,
+            0.18769609928131104,
+            0.6207848191261292
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.12944035232067108,
+            -0.1734979897737503,
+            -0.08863192796707153,
+            4.73308801651001
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.08833730220794678,
+            0.18769609928131104,
+            0.6207848191261292
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.12944035232067108,
+            -0.22349798679351807,
+            -0.08863192796707153,
+            4.73308801651001
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.08751535415649414,
+            0.18822824954986572,
+            0.6211574077606201
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.06996186077594757,
+            -0.18059207499027252,
+            -0.07094089686870575,
+            4.729589939117432
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.08751535415649414,
+            0.18822824954986572,
+            0.6211574077606201
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.06996186077594757,
+            -0.23059207201004028,
+            -0.07094089686870575,
+            4.729589939117432
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.08726978302001953,
+            0.18842172622680664,
+            0.6213538646697998
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.010481231845915318,
+            -0.18606846034526825,
+            -0.054763782769441605,
+            4.729065895080566
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.08726978302001953,
+            0.18842172622680664,
+            0.6213538646697998
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.010481231845915318,
+            -0.236068457365036,
+            -0.054763782769441605,
+            4.729065895080566
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.07973837852478027,
+            0.19303202629089355,
+            0.6217234134674072
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            -0.19005949795246124,
+            -0.03991030529141426,
+            4.729065895080566
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.07973837852478027,
+            0.19303202629089355,
+            0.6217234134674072
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.240059494972229,
+            -0.03991030529141426,
+            4.729065895080566
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20006,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {},
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 0,
+      "proposed_violation_step_count": 0,
+      "reward": -19.231766656567498,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.34053683280944824,
+      "action_correction_l2_sum": 25.929805278778076,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.34053683280944824,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.15449261665344238,
+            0.0,
+            0.6160557866096497
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.31351014971733093,
+            -0.09416143596172333,
+            0.1457112729549408,
+            4.570796012878418
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.15449261665344238,
+            0.34053683280944824,
+            0.6160557866096497
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.31351014971733093,
+            -0.1441614329814911,
+            0.1457112729549408,
+            4.570796012878418
+          ]
+        },
+        {
+          "correction_l2": 0.3256262540817261,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.12706845998764038,
+            0.0,
+            0.6144742369651794
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.23958346247673035,
+            -0.08260990679264069,
+            0.11551525443792343,
+            4.558816909790039
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.12706845998764038,
+            0.3256262540817261,
+            0.6144742369651794
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.23958346247673035,
+            -0.13260990381240845,
+            0.11551525443792343,
+            4.558816909790039
+          ]
+        },
+        {
+          "correction_l2": 0.3119187355041504,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.10207456350326538,
+            0.0,
+            0.6130757927894592
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.1658465564250946,
+            -0.07350732386112213,
+            0.09102582186460495,
+            4.550524711608887
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.10207456350326538,
+            0.3119187355041504,
+            0.6130757927894592
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.1658465564250946,
+            -0.12350732088088989,
+            0.09102582186460495,
+            4.550524711608887
+          ]
+        },
+        {
+          "correction_l2": 0.299328088760376,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.07932746410369873,
+            0.0,
+            0.6118215322494507
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.09227745980024338,
+            -0.06635783612728119,
+            0.07149481028318405,
+            4.545910835266113
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.07932746410369873,
+            0.299328088760376,
+            0.6118215322494507
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.09227745980024338,
+            -0.11635784059762955,
+            0.07149481028318405,
+            4.545910835266113
+          ]
+        },
+        {
+          "correction_l2": 0.287761926651001,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.0586237907409668,
+            0.0,
+            0.6106780171394348
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.018858876079320908,
+            -0.06073224917054176,
+            0.05625592917203903,
+            4.544968128204346
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.0586237907409668,
+            0.287761926651001,
+            0.6106780171394348
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.018858876079320908,
+            -0.11073224991559982,
+            0.05625592917203903,
+            4.544968128204346
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20007,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -13.189445131456816,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.42960143089294434,
+      "action_correction_l2_sum": 31.775768518447876,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.42960143089294434,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.21799111366271973,
+            0.0,
+            0.598121166229248
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.33484742045402527,
+            0.1334599256515503,
+            0.08975496143102646,
+            3.521907329559326
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.21799111366271973,
+            0.42960143089294434,
+            0.598121166229248
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.33484742045402527,
+            0.08345992863178253,
+            0.08975496143102646,
+            3.521907329559326
+          ]
+        },
+        {
+          "correction_l2": 0.413419246673584,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.1866217851638794,
+            0.0,
+            0.5956211686134338
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.2630728781223297,
+            0.13910149037837982,
+            0.056415632367134094,
+            3.508753776550293
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.1866217851638794,
+            0.413419246673584,
+            0.5956211686134338
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.2630728781223297,
+            0.08910149335861206,
+            0.056415632367134094,
+            3.508753776550293
+          ]
+        },
+        {
+          "correction_l2": 0.3981889486312866,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.15784239768981934,
+            0.0,
+            0.5934809446334839
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.1915983408689499,
+            0.1420522779226303,
+            0.029507767409086227,
+            3.499173879623413
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.15784239768981934,
+            0.3981889486312866,
+            0.5934809446334839
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.1915983408689499,
+            0.09205227345228195,
+            0.029507767409086227,
+            3.499173879623413
+          ]
+        },
+        {
+          "correction_l2": 0.38389360904693604,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.13157445192337036,
+            0.0,
+            0.5916433334350586
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.12038062512874603,
+            0.1428728848695755,
+            0.008206058293581009,
+            3.493154764175415
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.13157445192337036,
+            0.38389360904693604,
+            0.5916433334350586
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.12038062512874603,
+            0.09287288039922714,
+            0.008206058293581009,
+            3.493154764175415
+          ]
+        },
+        {
+          "correction_l2": 0.3704935312271118,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.1076737642288208,
+            0.0,
+            0.5900557041168213
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.04938342422246933,
+            0.1420489400625229,
+            -0.00823936052620411,
+            3.4906857013702393
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.1076737642288208,
+            0.3704935312271118,
+            0.5900557041168213
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.04938342422246933,
+            0.09204894304275513,
+            -0.00823936052620411,
+            3.4906857013702393
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20008,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -8.807343162663923,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.35778260231018066,
+      "action_correction_l2_sum": 32.766515493392944,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.35778260231018066,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.04826927185058594,
+            0.0,
+            0.6122118830680847
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.2199569195508957,
+            -0.006696645170450211,
+            -0.0025928195100277662,
+            2.994253396987915
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.04826927185058594,
+            0.35778260231018066,
+            0.6122118830680847
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.2199569195508957,
+            -0.05669664591550827,
+            -0.0025928195100277662,
+            2.994253396987915
+          ]
+        },
+        {
+          "correction_l2": 0.34877467155456543,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.03384894132614136,
+            0.0,
+            0.6105670928955078
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.14649149775505066,
+            -0.0075144171714782715,
+            -0.008177706971764565,
+            2.986928939819336
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.03384894132614136,
+            0.34877467155456543,
+            0.6105670928955078
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.14649149775505066,
+            -0.05751441791653633,
+            -0.008177706971764565,
+            2.986928939819336
+          ]
+        },
+        {
+          "correction_l2": 0.3401651382446289,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.02074223756790161,
+            0.0,
+            0.6089609861373901
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.07322344928979874,
+            -0.008672952651977539,
+            -0.011585363186895847,
+            2.9832677841186523
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.02074223756790161,
+            0.3401651382446289,
+            0.6089609861373901
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.07322344928979874,
+            -0.0586729533970356,
+            -0.011585363186895847,
+            2.9832677841186523
+          ]
+        },
+        {
+          "correction_l2": 0.3319031000137329,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.008783519268035889,
+            0.0,
+            0.607373058795929
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.00014813095913268626,
+            -0.009987711906433105,
+            -0.013147602789103985,
+            2.9832603931427
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.008783519268035889,
+            0.3319031000137329,
+            0.607373058795929
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.00014813095913268626,
+            -0.059987712651491165,
+            -0.013147602789103985,
+            2.9832603931427
+          ]
+        },
+        {
+          "correction_l2": 0.33143913745880127,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.008009135723114014,
+            0.0,
+            0.6075373888015747
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            -0.01130269467830658,
+            -0.013149816542863846,
+            2.9832603931427
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.008009135723114014,
+            0.33143913745880127,
+            0.6075373888015747
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.06130269542336464,
+            -0.013149816542863846,
+            2.9832603931427
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20009,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -9.567876912541246,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.31772422790527344,
+      "action_correction_l2_sum": 26.387168288230896,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.31772422790527344,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.10106629133224487,
+            0.0,
+            0.6236475110054016
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.28708502650260925,
+            -0.15633201599121094,
+            0.125945582985878,
+            4.399590492248535
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.10106629133224487,
+            0.31772422790527344,
+            0.6236475110054016
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.28708502650260925,
+            -0.2063320130109787,
+            0.125945582985878,
+            4.399590492248535
+          ]
+        },
+        {
+          "correction_l2": 0.3053464889526367,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.07862305641174316,
+            0.0,
+            0.6220272183418274
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.2122473269701004,
+            -0.145957812666893,
+            0.10374198108911514,
+            4.388978004455566
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.07862305641174316,
+            0.3053464889526367,
+            0.6220272183418274
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.2122473269701004,
+            -0.19595780968666077,
+            0.10374198108911514,
+            4.388978004455566
+          ]
+        },
+        {
+          "correction_l2": 0.2939639091491699,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.058246612548828125,
+            0.0,
+            0.6205272078514099
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.13760405778884888,
+            -0.13735702633857727,
+            0.08600785583257675,
+            4.3820977210998535
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.058246612548828125,
+            0.2939639091491699,
+            0.6205272078514099
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.13760405778884888,
+            -0.18735702335834503,
+            0.08600785583257675,
+            4.3820977210998535
+          ]
+        },
+        {
+          "correction_l2": 0.28348422050476074,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.039727210998535156,
+            0.0,
+            0.6191182136535645
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.06314079463481903,
+            -0.13014326989650726,
+            0.07213763147592545,
+            4.378940582275391
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.039727210998535156,
+            0.28348422050476074,
+            0.6191182136535645
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.06314079463481903,
+            -0.18014326691627502,
+            0.07213763147592545,
+            4.378940582275391
+          ]
+        },
+        {
+          "correction_l2": 0.27488088607788086,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.024661123752593994,
+            0.0,
+            0.6178752183914185
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            -0.12398333847522736,
+            0.061599355190992355,
+            4.378940582275391
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.024661123752593994,
+            0.27488088607788086,
+            0.6178752183914185
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.17398333549499512,
+            0.061599355190992355,
+            4.378940582275391
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20010,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -14.61405825291617,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.2934892177581787,
+      "action_correction_l2_sum": 27.712147116661072,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.09117794036865234,
+            0.24328315258026123,
+            0.613119900226593
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.16769050061702728,
+            -0.06034485623240471,
+            -0.14050403237342834,
+            3.7494819164276123
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.09117794036865234,
+            0.24328315258026123,
+            0.613119900226593
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.16769050061702728,
+            -0.11034485697746277,
+            -0.14050403237342834,
+            3.7494819164276123
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.08696508407592773,
+            0.2447446584701538,
+            0.6139814853668213
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.11357876658439636,
+            -0.07217709720134735,
+            -0.11832235753536224,
+            3.743803024291992
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.08696508407592773,
+            0.2447446584701538,
+            0.6139814853668213
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.11357876658439636,
+            -0.12217709422111511,
+            -0.11832235753536224,
+            3.743803024291992
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.08367681503295898,
+            0.24564921855926514,
+            0.6145749688148499
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.059480562806129456,
+            -0.08201918005943298,
+            -0.09842076152563095,
+            3.7408289909362793
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.08367681503295898,
+            0.24564921855926514,
+            0.6145749688148499
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.059480562806129456,
+            -0.13201917707920074,
+            -0.09842076152563095,
+            3.7408289909362793
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.08120858669281006,
+            0.24605822563171387,
+            0.6149235367774963
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.0053835040889680386,
+            -0.09006977081298828,
+            -0.08050588518381119,
+            3.7405598163604736
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.08120858669281006,
+            0.24605822563171387,
+            0.6149235367774963
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.0053835040889680386,
+            -0.14006976783275604,
+            -0.08050588518381119,
+            3.7405598163604736
+          ]
+        },
+        {
+          "correction_l2": 0.25094008445739746,
+          "current_v": 0.0,
+          "executed_action": [
+            0.07238984107971191,
+            0.0,
+            0.6158660054206848
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            -0.09650181233882904,
+            -0.0643203854560852,
+            3.7405598163604736
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.07238984107971191,
+            0.25094008445739746,
+            0.6158660054206848
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.1465018093585968,
+            -0.0643203854560852,
+            3.7405598163604736
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20011,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 96
+      },
+      "intervention_count": 96,
+      "intervention_reason_counts": {
+        "domain_constraint": 96,
+        "none": 4
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 96,
+      "proposed_violation_step_count": 96,
+      "reward": -14.056022914336728,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 4,
+        "coast": 96
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.26738905906677246,
+      "action_correction_l2_sum": 0.5252156257629395,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.26738905906677246,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.0576208233833313,
+            0.0,
+            0.6060137748718262
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.15617503225803375,
+            -0.028098028153181076,
+            -0.004747902974486351,
+            4.933547496795654
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.0576208233833313,
+            0.26738905906677246,
+            0.6060137748718262
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.15617503225803375,
+            -0.07809802889823914,
+            -0.004747902974486351,
+            4.933547496795654
+          ]
+        },
+        {
+          "correction_l2": 0.257826566696167,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.040295302867889404,
+            0.0,
+            0.6058654189109802
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.08345337957143784,
+            -0.029226284474134445,
+            -0.011282569728791714,
+            4.929374694824219
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.040295302867889404,
+            0.257826566696167,
+            0.6058654189109802
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.08345337957143784,
+            -0.0792262852191925,
+            -0.011282569728791714,
+            4.929374694824219
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.024345040321350098,
+            0.24900579452514648,
+            0.6057167053222656
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.010749529115855694,
+            -0.030747827142477036,
+            -0.015215400606393814,
+            4.928837299346924
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.024345040321350098,
+            0.24900579452514648,
+            0.6057167053222656
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.010749529115855694,
+            -0.0807478278875351,
+            -0.015215400606393814,
+            4.928837299346924
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.020383894443511963,
+            0.24671530723571777,
+            0.6058335304260254
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            -0.032439786940813065,
+            -0.01691957376897335,
+            4.928837299346924
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.020383894443511963,
+            0.24671530723571777,
+            0.6058335304260254
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.0,
+            -0.08243978768587112,
+            -0.01691957376897335,
+            4.928837299346924
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.01867234706878662,
+            0.24565088748931885,
+            0.6060065031051636
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            -0.03424099460244179,
+            -0.018012074753642082,
+            4.928837299346924
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.01867234706878662,
+            0.24565088748931885,
+            0.6060065031051636
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.08424099534749985,
+            -0.018012074753642082,
+            4.928837299346924
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20012,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 2
+      },
+      "intervention_count": 2,
+      "intervention_reason_counts": {
+        "domain_constraint": 2,
+        "none": 98
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 2,
+      "proposed_violation_step_count": 2,
+      "reward": -14.311551075099691,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 98,
+        "coast": 2
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.3641277551651001,
+      "action_correction_l2_sum": 32.220378041267395,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.3641277551651001,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.062373995780944824,
+            0.0,
+            0.5845332145690918
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.31105369329452515,
+            0.19829753041267395,
+            -0.14055196940898895,
+            3.235774278640747
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.062373995780944824,
+            0.3641277551651001,
+            0.5845332145690918
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.31105369329452515,
+            0.1482975333929062,
+            -0.14055196940898895,
+            3.235774278640747
+          ]
+        },
+        {
+          "correction_l2": 0.3557997941970825,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.048973798751831055,
+            0.0,
+            0.584800124168396
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.24090971052646637,
+            0.1846182644367218,
+            -0.13679268956184387,
+            3.223728895187378
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.048973798751831055,
+            0.3557997941970825,
+            0.584800124168396
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.24090971052646637,
+            0.13461826741695404,
+            -0.13679268956184387,
+            3.223728895187378
+          ]
+        },
+        {
+          "correction_l2": 0.34777164459228516,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.036610186100006104,
+            0.0,
+            0.5850299596786499
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.17073369026184082,
+            0.17144565284252167,
+            -0.13172613084316254,
+            3.2151923179626465
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.036610186100006104,
+            0.34777164459228516,
+            0.5850299596786499
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.17073369026184082,
+            0.1214456558227539,
+            -0.13172613084316254,
+            3.2151923179626465
+          ]
+        },
+        {
+          "correction_l2": 0.34000635147094727,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.025163471698760986,
+            0.0,
+            0.5852043032646179
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.10053009539842606,
+            0.15888753533363342,
+            -0.1255812644958496,
+            3.2101657390594482
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.025163471698760986,
+            0.34000635147094727,
+            0.5852043032646179
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.10053009539842606,
+            0.10888753086328506,
+            -0.1255812644958496,
+            3.2101657390594482
+          ]
+        },
+        {
+          "correction_l2": 0.33247053623199463,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.014519810676574707,
+            0.0,
+            0.5853078365325928
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.03030557930469513,
+            0.14703209698200226,
+            -0.11855438351631165,
+            3.2086503505706787
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.014519810676574707,
+            0.33247053623199463,
+            0.5853078365325928
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.03030557930469513,
+            0.0970320925116539,
+            -0.11855438351631165,
+            3.2086503505706787
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20013,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -9.148437275258896,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.27857327461242676,
+      "action_correction_l2_sum": 26.055578351020813,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.27857327461242676,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.028091490268707275,
+            0.0,
+            0.6068090200424194
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.3143927752971649,
+            -0.0007184520363807678,
+            -0.07700582593679428,
+            4.4183878898620605
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.028091490268707275,
+            0.27857327461242676,
+            0.6068090200424194
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.3143927752971649,
+            -0.05071845278143883,
+            -0.07700582593679428,
+            4.4183878898620605
+          ]
+        },
+        {
+          "correction_l2": 0.27165019512176514,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.016101360321044922,
+            0.0,
+            0.6070124506950378
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.241575688123703,
+            -0.008140087127685547,
+            -0.0742163360118866,
+            4.406309127807617
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.016101360321044922,
+            0.27165019512176514,
+            0.6070124506950378
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.241575688123703,
+            -0.05814008787274361,
+            -0.0742163360118866,
+            4.406309127807617
+          ]
+        },
+        {
+          "correction_l2": 0.2650775909423828,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.004903137683868408,
+            0.0,
+            0.6071473360061646
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.16873419284820557,
+            -0.01516120508313179,
+            -0.07021119445562363,
+            4.397872447967529
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.004903137683868408,
+            0.2650775909423828,
+            0.6071473360061646
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.16873419284820557,
+            -0.06516120582818985,
+            -0.07021119445562363,
+            4.397872447967529
+          ]
+        },
+        {
+          "correction_l2": 0.25881826877593994,
+          "current_v": 0.0,
+          "executed_action": [
+            0.005602359771728516,
+            0.0,
+            0.6072047352790833
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.09587651491165161,
+            -0.02167947217822075,
+            -0.06518267840147018,
+            4.393078804016113
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.005602359771728516,
+            0.25881826877593994,
+            0.6072047352790833
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.09587651491165161,
+            -0.07167947292327881,
+            -0.06518267840147018,
+            4.393078804016113
+          ]
+        },
+        {
+          "correction_l2": 0.25284016132354736,
+          "current_v": 0.0,
+          "executed_action": [
+            0.015504956245422363,
+            0.0,
+            0.6071773767471313
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.02301194705069065,
+            -0.027609046548604965,
+            -0.05929578095674515,
+            4.391928195953369
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.015504956245422363,
+            0.25284016132354736,
+            0.6071773767471313
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.02301194705069065,
+            -0.07760904729366302,
+            -0.05929578095674515,
+            4.391928195953369
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20014,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -13.199405717022492,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.3833906650543213,
+      "action_correction_l2_sum": 32.567917704582214,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.3833906650543213,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.09733694791793823,
+            0.0,
+            0.5824683904647827
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.27127185463905334,
+            0.21422851085662842,
+            -0.10339300334453583,
+            3.199920415878296
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.09733694791793823,
+            0.3833906650543213,
+            0.5824683904647827
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.27127185463905334,
+            0.16422851383686066,
+            -0.10339300334453583,
+            3.199920415878296
+          ]
+        },
+        {
+          "correction_l2": 0.372969388961792,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.07959908246994019,
+            0.0,
+            0.5821612477302551
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.20137564837932587,
+            0.20354831218719482,
+            -0.10680199414491653,
+            3.1898515224456787
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.07959908246994019,
+            0.372969388961792,
+            0.5821612477302551
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.20137564837932587,
+            0.15354831516742706,
+            -0.10680199414491653,
+            3.1898515224456787
+          ]
+        },
+        {
+          "correction_l2": 0.3630490303039551,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.06339144706726074,
+            0.0,
+            0.581917405128479
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.13151629269123077,
+            0.19276733696460724,
+            -0.10780972242355347,
+            3.1832756996154785
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.06339144706726074,
+            0.3630490303039551,
+            0.581917405128479
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.13151629269123077,
+            0.14276733994483948,
+            -0.10780972242355347,
+            3.1832756996154785
+          ]
+        },
+        {
+          "correction_l2": 0.3535810708999634,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.04855310916900635,
+            0.0,
+            0.5817063450813293
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0616862028837204,
+            0.18208815157413483,
+            -0.1067919209599495,
+            3.1801912784576416
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.04855310916900635,
+            0.3535810708999634,
+            0.5817063450813293
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.0616862028837204,
+            0.13208815455436707,
+            -0.1067919209599495,
+            3.1801912784576416
+          ]
+        },
+        {
+          "correction_l2": 0.3453376293182373,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.03611040115356445,
+            0.0,
+            0.5816917419433594
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            0.17168065905570984,
+            -0.10407494008541107,
+            3.1801912784576416
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.03611040115356445,
+            0.3453376293182373,
+            0.5816917419433594
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            0.12168066203594208,
+            -0.10407494008541107,
+            3.1801912784576416
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20015,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -9.201186984128888,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.27561354637145996,
+      "action_correction_l2_sum": 0.7965868711471558,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.27561354637145996,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.06151944398880005,
+            0.0,
+            0.6222431063652039
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.23804669082164764,
+            -0.18116897344589233,
+            0.09027067571878433,
+            4.766014575958252
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.06151944398880005,
+            0.27561354637145996,
+            0.6222431063652039
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.23804669082164764,
+            -0.2311689704656601,
+            0.09027067571878433,
+            4.766014575958252
+          ]
+        },
+        {
+          "correction_l2": 0.26524245738983154,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.04286295175552368,
+            0.0,
+            0.6212241053581238
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.1633775234222412,
+            -0.17360229790210724,
+            0.07566668838262558,
+            4.757845878601074
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.04286295175552368,
+            0.26524245738983154,
+            0.6212241053581238
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.1633775234222412,
+            -0.223602294921875,
+            0.07566668838262558,
+            4.757845878601074
+          ]
+        },
+        {
+          "correction_l2": 0.25573086738586426,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.02584606409072876,
+            0.0,
+            0.6202557682991028
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0888306275010109,
+            -0.16715532541275024,
+            0.06446979939937592,
+            4.753404140472412
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.02584606409072876,
+            0.25573086738586426,
+            0.6202557682991028
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.0888306275010109,
+            -0.217155322432518,
+            0.06446979939937592,
+            4.753404140472412
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.010279178619384766,
+            0.24699079990386963,
+            0.619317352771759
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.014399935491383076,
+            -0.16153424978256226,
+            0.05621068924665451,
+            4.752684116363525
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.010279178619384766,
+            0.24699079990386963,
+            0.619317352771759
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.014399935491383076,
+            -0.21153424680233002,
+            0.05621068924665451,
+            4.752684116363525
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.006075501441955566,
+            0.24465739727020264,
+            0.6187400817871094
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            -0.15648621320724487,
+            0.05048033222556114,
+            4.752684116363525
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.006075501441955566,
+            0.24465739727020264,
+            0.6187400817871094
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.20648621022701263,
+            0.05048033222556114,
+            4.752684116363525
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20016,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 3
+      },
+      "intervention_count": 3,
+      "intervention_reason_counts": {
+        "domain_constraint": 3,
+        "none": 97
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 3,
+      "proposed_violation_step_count": 3,
+      "reward": -16.863823938907878,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 97,
+        "coast": 3
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.4063382148742676,
+      "action_correction_l2_sum": 31.369791507720947,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.4063382148742676,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.1776542067527771,
+            0.0,
+            0.5947186350822449
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.24250546097755432,
+            0.14113180339336395,
+            0.04641848802566528,
+            3.5608890056610107
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.1776542067527771,
+            0.4063382148742676,
+            0.5947186350822449
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.24250546097755432,
+            0.09113180637359619,
+            0.04641848802566528,
+            3.5608890056610107
+          ]
+        },
+        {
+          "correction_l2": 0.39139866828918457,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.14966154098510742,
+            0.0,
+            0.592758059501648
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.17113922536373138,
+            0.14327046275138855,
+            0.02138650417327881,
+            3.5523321628570557
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.14966154098510742,
+            0.39139866828918457,
+            0.592758059501648
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.17113922536373138,
+            0.09327045828104019,
+            0.02138650417327881,
+            3.5523321628570557
+          ]
+        },
+        {
+          "correction_l2": 0.3773921728134155,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.12413126230239868,
+            0.0,
+            0.5910763740539551
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.10000825673341751,
+            0.1434420794248581,
+            0.0017161988653242588,
+            3.5473318099975586
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.12413126230239868,
+            0.3773921728134155,
+            0.5910763740539551
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.10000825673341751,
+            0.09344207495450974,
+            0.0017161988653242588,
+            3.5473318099975586
+          ]
+        },
+        {
+          "correction_l2": 0.36427247524261475,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.10090482234954834,
+            0.0,
+            0.5896234512329102
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.029079092666506767,
+            0.14211039245128632,
+            -0.013316848315298557,
+            3.5458779335021973
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.10090482234954834,
+            0.36427247524261475,
+            0.5896234512329102
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.029079092666506767,
+            0.09211038798093796,
+            -0.013316848315298557,
+            3.5458779335021973
+          ]
+        },
+        {
+          "correction_l2": 0.35601377487182617,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.08623731136322021,
+            0.0,
+            0.5891330242156982
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            0.1396743804216385,
+            -0.02436007931828499,
+            3.5458779335021973
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.08623731136322021,
+            0.35601377487182617,
+            0.5891330242156982
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            0.08967438340187073,
+            -0.02436007931828499,
+            3.5458779335021973
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20017,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -8.905258041972633,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.3422813415527344,
+      "action_correction_l2_sum": 29.051918506622314,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.3422813415527344,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.09471219778060913,
+            0.0,
+            0.6064738035202026
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.22863918542861938,
+            0.02402007393538952,
+            0.017968347296118736,
+            3.913214921951294
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.09471219778060913,
+            0.3422813415527344,
+            0.6064738035202026
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.22863918542861938,
+            -0.02597992680966854,
+            0.017968347296118736,
+            3.913214921951294
+          ]
+        },
+        {
+          "correction_l2": 0.33098578453063965,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.0745781660079956,
+            0.0,
+            0.6053239703178406
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.15586233139038086,
+            0.02453661523759365,
+            0.005165415816009045,
+            3.905421733856201
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.0745781660079956,
+            0.33098578453063965,
+            0.6053239703178406
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.15586233139038086,
+            -0.02546338550746441,
+            0.005165415816009045,
+            3.905421733856201
+          ]
+        },
+        {
+          "correction_l2": 0.3204382658004761,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.05623209476470947,
+            0.0,
+            0.6042656898498535
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.08322345465421677,
+            0.024116896092891693,
+            -0.004197197500616312,
+            3.9012606143951416
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.05623209476470947,
+            0.3204382658004761,
+            0.6042656898498535
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.08322345465421677,
+            -0.025883104652166367,
+            -0.004197197500616312,
+            3.9012606143951416
+          ]
+        },
+        {
+          "correction_l2": 0.31056904792785645,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.03948432207107544,
+            0.0,
+            0.6032716631889343
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.010711572133004665,
+            0.023055968806147575,
+            -0.010609272867441177,
+            3.9007251262664795
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.03948432207107544,
+            0.31056904792785645,
+            0.6032716631889343
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.010711572133004665,
+            -0.026944031938910484,
+            -0.010609272867441177,
+            3.9007251262664795
+          ]
+        },
+        {
+          "correction_l2": 0.30733823776245117,
+          "current_v": 0.0,
+          "executed_action": [
+            -0.03392744064331055,
+            0.0,
+            0.6032195687294006
+          ],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            0.02160610444843769,
+            -0.014498650096356869,
+            3.9007251262664795
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            -0.03392744064331055,
+            0.30733823776245117,
+            0.6032195687294006
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "coast",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.02839389629662037,
+            -0.014498650096356869,
+            3.9007251262664795
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20018,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 100
+      },
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 100,
+      "proposed_violation_step_count": 100,
+      "reward": -10.118376889900984,
+      "selected_candidate_source_counts": {
+        "coast": 100
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    },
+    {
+      "action_correction_l2_max": 0.26541614532470703,
+      "action_correction_l2_sum": 24.276251196861267,
+      "audit_snapshots": [
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.041011691093444824,
+            0.2433013916015625,
+            0.6066490411758423
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.17154783010482788,
+            -0.011322379112243652,
+            -0.1291021704673767,
+            4.310047149658203
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.041011691093444824,
+            0.2433013916015625,
+            0.6066490411758423
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 0,
+          "true_state": [
+            0.17154783010482788,
+            -0.06132237985730171,
+            -0.1291021704673767,
+            4.310047149658203
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.042890191078186035,
+            0.2418578863143921,
+            0.6074221730232239
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.11821405589580536,
+            -0.022707637399435043,
+            -0.1138525903224945,
+            4.304136276245117
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.042890191078186035,
+            0.2418578863143921,
+            0.6074221730232239
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 1,
+          "true_state": [
+            0.11821405589580536,
+            -0.0727076381444931,
+            -0.1138525903224945,
+            4.304136276245117
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.045012831687927246,
+            0.24024295806884766,
+            0.6080282330513
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.06467202305793762,
+            -0.03266739472746849,
+            -0.09959755837917328,
+            4.300902843475342
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.045012831687927246,
+            0.24024295806884766,
+            0.6080282330513
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 2,
+          "true_state": [
+            0.06467202305793762,
+            -0.08266739547252655,
+            -0.09959755837917328,
+            4.300902843475342
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.04735302925109863,
+            0.23847532272338867,
+            0.6084757447242737
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.010928072035312653,
+            -0.04129021242260933,
+            -0.08622821420431137,
+            4.300356388092041
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.04735302925109863,
+            0.23847532272338867,
+            0.6084757447242737
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 3,
+          "true_state": [
+            0.010928072035312653,
+            -0.09129021316766739,
+            -0.08622821420431137,
+            4.300356388092041
+          ]
+        },
+        {
+          "correction_l2": 0.0,
+          "current_v": 0.0,
+          "executed_action": [
+            0.043089985847473145,
+            0.2407817840576172,
+            0.6092468500137329
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "observed_state": [
+            0.0,
+            -0.04865496978163719,
+            -0.07364759594202042,
+            4.300356388092041
+          ],
+          "perturbation_vector": [
+            0.0,
+            0.05000000074505806,
+            0.0,
+            0.0
+          ],
+          "proposed_action": [
+            0.043089985847473145,
+            0.2407817840576172,
+            0.6092468500137329
+          ],
+          "proposed_next_v": 0.0,
+          "selected_candidate_source": "bounded_proposed",
+          "selected_delta_v": 0.0,
+          "selected_next_v": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0,
+            -0.09865497052669525,
+            -0.07364759594202042,
+            4.300356388092041
+          ]
+        }
+      ],
+      "category_violation_counts": {},
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "episode_length": 100,
+      "evaluation_seed": 20019,
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervened_candidate_source_counts": {
+        "coast": 92
+      },
+      "intervention_count": 92,
+      "intervention_reason_counts": {
+        "domain_constraint": 92,
+        "none": 8
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 100,
+      "method": "lyapunov",
+      "perturbation_family": "lane_offset",
+      "perturbation_l1_sum": 5.000000074505806,
+      "perturbation_l2_sum": 5.000000074505806,
+      "perturbation_linf_max": 0.05000000074505806,
+      "perturbation_name": "lane_offset_plus_0p05",
+      "principal_seed": 123,
+      "proposed_constraint_violation_count": 92,
+      "proposed_violation_step_count": 92,
+      "reward": -13.848273237295597,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 8,
+        "coast": 92
+      },
+      "selected_lower_than_proposed_count": 0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false
+    }
+  ],
+  "evaluation_seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009,
+    20010,
+    20011,
+    20012,
+    20013,
+    20014,
+    20015,
+    20016,
+    20017,
+    20018,
+    20019
+  ],
+  "filter_tuning_performed": false,
+  "gaussian_noise_applied": false,
+  "method": "lyapunov",
+  "new_training_performed": false,
+  "object_grasped_added_to_policy_observation": false,
+  "object_grasped_perturbed": false,
+  "observation_clipped_after_perturbation": false,
+  "perturbation_family": "lane_offset",
+  "perturbation_name": "lane_offset_plus_0p05",
+  "perturbation_updates": [
+    {
+      "delta": 0.05,
+      "index": 1
+    }
+  ],
+  "policy_fine_tuning_performed": false,
+  "policy_uses_perturbed_observation": true,
+  "principal_seed": 123,
+  "safety_uses_true_state": true,
+  "seed_summary": {
+    "category_violation_rates": {},
+    "critical_violation_step_rate": 0.0,
+    "domain": "autonomous_driving",
+    "emergency_fallback_rate": 0.0,
+    "episode_count": 20,
+    "executed_constraint_violation_rate": 0.0,
+    "executed_violation_step_rate": 0.0,
+    "intervened_candidate_source_rates": {
+      "coast": 0.8465
+    },
+    "intervention_rate": 0.8465,
+    "intervention_reason_rates": {
+      "domain_constraint": 0.8465,
+      "none": 0.1535
+    },
+    "interventions_while_grasped": 0,
+    "lyapunov_nonincrease_rate": 1.0,
+    "max_action_correction_l2": 0.4537055492401123,
+    "max_perturbation_linf": 0.05000000074505806,
+    "mean_action_correction_l2": 0.2496542912721634,
+    "mean_episode_length": 100.0,
+    "mean_perturbation_l1": 0.05000000074505806,
+    "mean_perturbation_l2": 0.05000000074505806,
+    "mean_reward": -12.118477386073868,
+    "method": "lyapunov",
+    "perturbation_family": "lane_offset",
+    "perturbation_name": "lane_offset_plus_0p05",
+    "principal_seed": 123,
+    "proposed_constraint_violation_rate": 0.8465,
+    "proposed_violation_step_rate": 0.8465,
+    "reward_sample_sd": 2.8715749450447263,
+    "selected_candidate_source_rates": {
+      "bounded_proposed": 0.1535,
+      "coast": 0.8465
+    },
+    "selected_lower_than_proposed_rate": 0.0,
+    "steps_object_grasped": 0,
+    "steps_object_not_grasped": 0,
+    "strict_lyapunov_decrease_rate": 0.0,
+    "success_rate": 0.0,
+    "total_environment_steps": 2000
+  },
+  "sprint": "5.11"
+}

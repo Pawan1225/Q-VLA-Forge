@@ -1,0 +1,230 @@
+﻿sprint: "5.11"
+condition: "state_perturbation"
+
+methods:
+  - none
+  - clipping
+  - lyapunov
+
+principal_seeds:
+  - 42
+  - 123
+  - 456
+
+evaluation_seeds:
+  start: 20000
+  end: 20019
+
+episodes_per_cell: 20
+
+domains:
+
+  autonomous_driving:
+    observation_dimension: 4
+
+    state_layout:
+      speed: 0
+      lane_offset: 1
+      heading_error: 2
+      obstacle_distance: 3
+
+    perturbations:
+
+      - name: lane_offset_plus_0p05
+        family: lane_offset
+        updates:
+          - index: 1
+            delta: 0.05
+
+      - name: lane_offset_minus_0p05
+        family: lane_offset
+        updates:
+          - index: 1
+            delta: -0.05
+
+      - name: lane_offset_plus_0p10
+        family: lane_offset
+        updates:
+          - index: 1
+            delta: 0.10
+
+      - name: lane_offset_minus_0p10
+        family: lane_offset
+        updates:
+          - index: 1
+            delta: -0.10
+
+      - name: obstacle_distance_plus_0p05
+        family: obstacle_distance
+        updates:
+          - index: 3
+            delta: 0.05
+
+      - name: obstacle_distance_plus_0p10
+        family: obstacle_distance
+        updates:
+          - index: 3
+            delta: 0.10
+
+      - name: speed_plus_0p05
+        family: speed
+        updates:
+          - index: 0
+            delta: 0.05
+
+      - name: speed_minus_0p05
+        family: speed
+        updates:
+          - index: 0
+            delta: -0.05
+
+      - name: heading_error_plus_0p05
+        family: heading_error
+        updates:
+          - index: 2
+            delta: 0.05
+
+      - name: heading_error_minus_0p05
+        family: heading_error
+        updates:
+          - index: 2
+            delta: -0.05
+
+  robotics:
+    observation_dimension: 6
+
+    state_layout:
+      robot_x: 0
+      robot_y: 1
+      object_x: 2
+      object_y: 3
+      target_x: 4
+      target_y: 5
+
+    perturbations:
+
+      - name: robot_x_plus_0p05
+        family: robot_position
+        updates:
+          - index: 0
+            delta: 0.05
+
+      - name: robot_x_minus_0p05
+        family: robot_position
+        updates:
+          - index: 0
+            delta: -0.05
+
+      - name: robot_y_plus_0p05
+        family: robot_position
+        updates:
+          - index: 1
+            delta: 0.05
+
+      - name: robot_y_minus_0p05
+        family: robot_position
+        updates:
+          - index: 1
+            delta: -0.05
+
+      - name: object_x_plus_0p05
+        family: object_position
+        updates:
+          - index: 2
+            delta: 0.05
+
+      - name: object_x_minus_0p05
+        family: object_position
+        updates:
+          - index: 2
+            delta: -0.05
+
+      - name: object_y_plus_0p05
+        family: object_position
+        updates:
+          - index: 3
+            delta: 0.05
+
+      - name: object_y_minus_0p05
+        family: object_position
+        updates:
+          - index: 3
+            delta: -0.05
+
+      - name: target_x_plus_0p05
+        family: target_position
+        updates:
+          - index: 4
+            delta: 0.05
+
+      - name: target_x_minus_0p05
+        family: target_position
+        updates:
+          - index: 4
+            delta: -0.05
+
+      - name: target_y_plus_0p05
+        family: target_position
+        updates:
+          - index: 5
+            delta: 0.05
+
+      - name: target_y_minus_0p05
+        family: target_position
+        updates:
+          - index: 5
+            delta: -0.05
+
+matrix:
+  driving_conditions: 10
+  robotics_conditions: 12
+  total_conditions: 22
+  expected_principal_cells: 198
+  expected_principal_episodes: 3960
+
+state_access:
+  policy: perturbed_observation
+  safety_layer: true_state
+  environment: true_state
+  observation_clipping: false
+
+robotics:
+  policy_observation_dimension: 6
+  object_grasped_added_to_policy_observation: false
+  object_grasped_perturbed: false
+  predictor_context_uses_true_simulator_state: true
+
+reproduction:
+  principal_seed: 42
+
+  autonomous_driving:
+    perturbation: obstacle_distance_plus_0p10
+
+  robotics:
+    perturbation: robot_x_minus_0p05
+
+  methods:
+    - none
+    - clipping
+    - lyapunov
+
+  episodes_per_cell: 20
+  expected_episodes: 120
+
+scope:
+  new_training: false
+  policy_fine_tuning: false
+  safety_filter_tuning: false
+  safety_threshold_changes: false
+  lyapunov_changes: false
+  gaussian_noise: false
+  action_perturbation: false
+  environment_dynamics_perturbation: false
+
+claims:
+  real_sensor_fault_tolerance: false
+  formal_adversarial_robustness: false
+  worst_case_certified_robustness: false
+  production_estimator_resilience: false
+  iso_fault_tolerance: false
+  quantum_robustness_advantage: false

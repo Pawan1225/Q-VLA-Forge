@@ -228,3 +228,284 @@ def perturb_gaussian_observation(
         sigma=float(sigma),
         noise_seed=noise_seed,
     )
+
+
+# ============================================================
+# Sprint 5.11 structured state perturbations
+# ============================================================
+
+
+@dataclass(frozen=True)
+class StructuredStatePerturbation:
+    """Deterministic sparse perturbation of policy state input."""
+
+    name: str
+    family: str
+    updates: tuple[tuple[int, float], ...]
+
+    def __post_init__(self) -> None:
+        if not self.name.strip():
+            raise ValueError("perturbation name must be non-empty")
+
+        if not self.family.strip():
+            raise ValueError("perturbation family must be non-empty")
+
+        if not self.updates:
+            raise ValueError(
+                "structured perturbation must contain " "at least one update"
+            )
+
+        indices: set[int] = set()
+
+        for index, delta in self.updates:
+            if index < 0:
+                raise ValueError("perturbation index must be nonnegative")
+
+            if index in indices:
+                raise ValueError("duplicate perturbation index")
+
+            indices.add(index)
+
+            if not np.isfinite(delta):
+                raise ValueError("perturbation delta must be finite")
+
+
+@dataclass(frozen=True)
+class StructuredPerturbationResult:
+    """Auditable result of deterministic state perturbation."""
+
+    true_state: FloatArray
+    observed_state: FloatArray
+    perturbation_vector: FloatArray
+    perturbation_name: str
+    perturbation_family: str
+
+
+DRIVING_STRUCTURED_PERTURBATIONS = (
+    StructuredStatePerturbation(
+        name="lane_offset_plus_0p05",
+        family="lane_offset",
+        updates=((1, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="lane_offset_minus_0p05",
+        family="lane_offset",
+        updates=((1, -0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="lane_offset_plus_0p10",
+        family="lane_offset",
+        updates=((1, 0.10),),
+    ),
+    StructuredStatePerturbation(
+        name="lane_offset_minus_0p10",
+        family="lane_offset",
+        updates=((1, -0.10),),
+    ),
+    StructuredStatePerturbation(
+        name="obstacle_distance_plus_0p05",
+        family="obstacle_distance",
+        updates=((3, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="obstacle_distance_plus_0p10",
+        family="obstacle_distance",
+        updates=((3, 0.10),),
+    ),
+    StructuredStatePerturbation(
+        name="speed_plus_0p05",
+        family="speed",
+        updates=((0, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="speed_minus_0p05",
+        family="speed",
+        updates=((0, -0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="heading_error_plus_0p05",
+        family="heading_error",
+        updates=((2, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="heading_error_minus_0p05",
+        family="heading_error",
+        updates=((2, -0.05),),
+    ),
+)
+
+
+ROBOTICS_STRUCTURED_PERTURBATIONS = (
+    StructuredStatePerturbation(
+        name="robot_x_plus_0p05",
+        family="robot_position",
+        updates=((0, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="robot_x_minus_0p05",
+        family="robot_position",
+        updates=((0, -0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="robot_y_plus_0p05",
+        family="robot_position",
+        updates=((1, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="robot_y_minus_0p05",
+        family="robot_position",
+        updates=((1, -0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="object_x_plus_0p05",
+        family="object_position",
+        updates=((2, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="object_x_minus_0p05",
+        family="object_position",
+        updates=((2, -0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="object_y_plus_0p05",
+        family="object_position",
+        updates=((3, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="object_y_minus_0p05",
+        family="object_position",
+        updates=((3, -0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="target_x_plus_0p05",
+        family="target_position",
+        updates=((4, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="target_x_minus_0p05",
+        family="target_position",
+        updates=((4, -0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="target_y_plus_0p05",
+        family="target_position",
+        updates=((5, 0.05),),
+    ),
+    StructuredStatePerturbation(
+        name="target_y_minus_0p05",
+        family="target_position",
+        updates=((5, -0.05),),
+    ),
+)
+
+
+def structured_perturbations_for_domain(
+    domain: str,
+) -> tuple[StructuredStatePerturbation, ...]:
+    """Return the frozen Sprint 5.11 perturbation set."""
+
+    if domain == "autonomous_driving":
+        return DRIVING_STRUCTURED_PERTURBATIONS
+
+    if domain == "robotics":
+        return ROBOTICS_STRUCTURED_PERTURBATIONS
+
+    raise ValueError(f"unsupported domain: {domain}")
+
+
+def structured_perturbation_by_name(
+    *,
+    domain: str,
+    name: str,
+) -> StructuredStatePerturbation:
+    """Resolve one frozen perturbation by exact name."""
+
+    matches = tuple(
+        perturbation
+        for perturbation in structured_perturbations_for_domain(domain)
+        if perturbation.name == name
+    )
+
+    if len(matches) != 1:
+        raise ValueError(f"unknown structured perturbation " f"for {domain}: {name}")
+
+    return matches[0]
+
+
+def apply_structured_state_perturbation(
+    *,
+    true_state: np.ndarray,
+    perturbation: StructuredStatePerturbation,
+) -> tuple[FloatArray, FloatArray]:
+    """Apply a deterministic sparse observation perturbation.
+
+    The true simulator state is never modified.
+
+    No clipping is applied to the observed state.
+    """
+
+    state = np.asarray(
+        true_state,
+        dtype=np.float32,
+    )
+
+    if state.ndim != 1:
+        raise ValueError("true_state must be one-dimensional")
+
+    if state.size == 0:
+        raise ValueError("true_state must be non-empty")
+
+    if not np.all(np.isfinite(state)):
+        raise ValueError("true_state must contain only finite values")
+
+    true_copy = state.copy()
+
+    perturbation_vector = np.zeros_like(
+        true_copy,
+        dtype=np.float32,
+    )
+
+    for index, delta in perturbation.updates:
+        if index >= true_copy.size:
+            raise ValueError(
+                "perturbation index out of range: "
+                f"{index} for state size {true_copy.size}"
+            )
+
+        perturbation_vector[index] = np.float32(delta)
+
+    observed_state = true_copy + perturbation_vector
+
+    return (
+        observed_state.astype(
+            np.float32,
+            copy=False,
+        ),
+        perturbation_vector,
+    )
+
+
+def perturb_structured_observation(
+    *,
+    true_state: np.ndarray,
+    perturbation: StructuredStatePerturbation,
+) -> StructuredPerturbationResult:
+    """Return the full structured perturbation audit contract."""
+
+    observed_state, perturbation_vector = apply_structured_state_perturbation(
+        true_state=true_state,
+        perturbation=perturbation,
+    )
+
+    true_copy = np.asarray(
+        true_state,
+        dtype=np.float32,
+    ).copy()
+
+    return StructuredPerturbationResult(
+        true_state=true_copy,
+        observed_state=observed_state,
+        perturbation_vector=perturbation_vector,
+        perturbation_name=perturbation.name,
+        perturbation_family=perturbation.family,
+    )
