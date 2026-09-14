@@ -564,6 +564,7 @@ def train_ppo(
     ],
     evaluation_seeds: tuple[int, ...],
     config: PPOConfig = DEFAULT_PPO_CONFIG,
+    checkpoint_path: str | None = None,
 ) -> PPOTrainingResult:
     """Train one frozen-budget classical PPO reference."""
     set_ppo_seed(seed)
@@ -748,6 +749,26 @@ def train_ppo(
     training_seconds = time.perf_counter() - started
 
     env.close()
+
+    if checkpoint_path is not None:
+        torch.save(
+            {
+                "schema_version": 1,
+                "policy_family": "classical_ppo",
+                "domain": domain,
+                "seed": seed,
+                "checkpoint_selection": "final_20000_step_policy",
+                "total_environment_steps": environment_steps,
+                "observation_dim": observation_dim,
+                "action_low": action_low.tolist(),
+                "action_high": action_high.tolist(),
+                "actor_hidden_dim": config.actor_hidden_dim,
+                "critic_hidden_dim": config.critic_hidden_dim,
+                "initial_log_std": config.initial_log_std,
+                "model_state_dict": model.state_dict(),
+            },
+            checkpoint_path,
+        )
 
     return PPOTrainingResult(
         seed=seed,
