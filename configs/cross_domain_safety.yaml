@@ -1,0 +1,109 @@
+﻿sprint: "5.14"
+
+scope:
+  analysis_only: true
+  new_training: false
+  new_ppo_runs: false
+  new_safety_episodes: false
+  new_robustness_episodes: false
+  filter_changes: false
+  threshold_changes: false
+  lyapunov_changes: false
+  environment_changes: false
+
+research_questions:
+  rq_cd1_architecture_reuse: >
+    Can the same safety-filter architecture and evaluation protocol
+    operate across autonomous driving and robotics while using
+    domain-specific constraints and Lyapunov potentials?
+
+  rq_cd2_safety_effectiveness: >
+    Do explicit safety filters reduce measured violations in both domains?
+
+  rq_cd3_robustness_consistency: >
+    Does qualitative safety-filter behavior persist across Gaussian
+    observation noise, structured state perturbations, and structured
+    action perturbations in both domains?
+
+  rq_cd4_mechanism_consistency: >
+    Are the mechanisms responsible for safety intervention the same
+    across domains and perturbation regimes?
+
+principal_seeds:
+  - 42
+  - 123
+  - 456
+
+domains:
+  - autonomous_driving
+  - robotics
+
+methods:
+  - none
+  - clipping
+  - lyapunov
+
+regimes:
+  - clean
+  - gaussian_state_perturbation
+  - structured_state_perturbation
+  - action_perturbation
+
+architecture:
+  shared_safety_interface: true
+  shared_action_dimension: true
+  shared_action_dim: 3
+  shared_decision_contract: true
+  shared_metric_schema: true
+  shared_seed_protocol: true
+  shared_robustness_harness: true
+
+  domain_specific_constraints: true
+  domain_specific_clipping: true
+  domain_specific_predictor: true
+  domain_specific_lyapunov: true
+
+  same_policy_weights: false
+  transfer_tested: false
+  universal_controller_supported: false
+
+comparison_rules:
+  raw_cross_domain_violation_rate_ranking_allowed: false
+  raw_cross_domain_reward_ranking_allowed: false
+  universal_safety_score_allowed: false
+
+  relative_violation_reduction:
+    enabled: true
+    zero_denominator: null
+    calculate_per_seed_before_aggregation: true
+
+  reward_comparison:
+    use_delta_from_domain_reference: true
+
+  success_comparison:
+    use_delta_from_domain_reference: true
+
+  direction_reversal_must_be_preserved: true
+  tie_is_valid_result: true
+
+privileged_state_limitation:
+  gaussian:
+    policy_uses_perturbed_observation: true
+    safety_layer_uses_true_state: true
+
+  structured_state:
+    policy_uses_perturbed_observation: true
+    safety_layer_uses_true_state: true
+    environment_uses_true_state: true
+
+prohibited_claims:
+  - universal safety controller
+  - same safety function
+  - same Lyapunov function
+  - same safety thresholds
+  - same trained policy
+  - zero-shot safety transfer
+  - formal cross-domain safety guarantee
+  - production safety
+  - ISO compliance
+  - quantum safety advantage

@@ -1,0 +1,179 @@
+{
+  "activation_consistency": {
+    "driving_activation_observed": true,
+    "lyapunov_activation_cross_domain_consistent": false,
+    "robotics_activation_observed": false
+  },
+  "analysis_only": true,
+  "architecture_decomposition": [
+    {
+      "level": 1,
+      "mechanism": "action_space_guard",
+      "reason": "action_bound"
+    },
+    {
+      "level": 2,
+      "mechanism": "domain_constraint_guard",
+      "reason": "domain_constraint"
+    },
+    {
+      "level": 3,
+      "mechanism": "lyapunov_candidate_selection",
+      "reason": "lyapunov_decrease"
+    }
+  ],
+  "artifact": "cross-domain-lyapunov-mechanism",
+  "domain_mechanism_summary": [
+    {
+      "activation_observed": true,
+      "domain": "autonomous_driving",
+      "emergency_fallback_steps": 0,
+      "hard_guard_fraction_of_interventions": 0.9517896274653032,
+      "hard_guard_interventions": 31272,
+      "intervention_reason_counts": {
+        "action_bound": 1248,
+        "domain_constraint": 30024,
+        "lyapunov_decrease": 1584,
+        "none": 39144
+      },
+      "intervention_steps": 32856,
+      "lyapunov_decrease_interventions": 1584,
+      "lyapunov_fraction_of_interventions": 0.04821037253469686,
+      "run_cells": 36,
+      "selected_lower_than_perturbed_steps": 2255,
+      "strict_decrease_rate_among_environment_steps": 0.0009722222222222222,
+      "strict_decrease_rate_among_interventions": 0.002130508887265644,
+      "strict_lyapunov_decrease_steps": 70,
+      "total_environment_steps": 72000
+    },
+    {
+      "activation_observed": false,
+      "domain": "robotics",
+      "emergency_fallback_steps": 0,
+      "hard_guard_fraction_of_interventions": 1.0,
+      "hard_guard_interventions": 5950,
+      "intervention_reason_counts": {
+        "action_bound": 245,
+        "domain_constraint": 5705,
+        "lyapunov_decrease": 0,
+        "none": 66050
+      },
+      "intervention_steps": 5950,
+      "lyapunov_decrease_interventions": 0,
+      "lyapunov_fraction_of_interventions": 0.0,
+      "run_cells": 36,
+      "selected_lower_than_perturbed_steps": 2632,
+      "strict_decrease_rate_among_environment_steps": 0.0,
+      "strict_decrease_rate_among_interventions": 0.0,
+      "strict_lyapunov_decrease_steps": 0,
+      "total_environment_steps": 72000
+    }
+  ],
+  "frozen_run_sources": [
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-minus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-minus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-minus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-minus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-minus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-minus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-plus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-plus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-plus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-plus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-plus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-acceleration-plus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-minus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-minus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-minus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-minus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-minus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-minus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-plus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-plus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-plus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-plus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-plus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-braking-plus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-minus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-minus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-minus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-minus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-minus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-minus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-plus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-plus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-plus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-plus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-plus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/autonomous-driving-steering-plus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-minus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-minus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-minus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-minus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-minus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-minus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-plus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-plus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-plus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-plus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-plus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-delta-x-plus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-minus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-minus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-minus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-minus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-minus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-minus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-plus-0p10-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-plus-0p10-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-plus-0p10-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-plus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-plus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-delta-y-plus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-gripper-minus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-gripper-minus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-gripper-minus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-gripper-minus-0p50-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-gripper-minus-0p50-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-gripper-minus-0p50-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-gripper-plus-0p25-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-gripper-plus-0p25-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-gripper-plus-0p25-lyapunov-seed-456.json",
+    "results/safety/action-robustness/runs/robotics-gripper-plus-0p50-lyapunov-seed-123.json",
+    "results/safety/action-robustness/runs/robotics-gripper-plus-0p50-lyapunov-seed-42.json",
+    "results/safety/action-robustness/runs/robotics-gripper-plus-0p50-lyapunov-seed-456.json"
+  ],
+  "global_reconstruction": {
+    "emergency_fallback_steps": 0,
+    "intervention_reason_counts": {
+      "action_bound": 1493,
+      "domain_constraint": 35729,
+      "lyapunov_decrease": 1584,
+      "none": 105194
+    },
+    "selected_lower_than_perturbed_steps": 4887,
+    "strict_lyapunov_decrease_steps": 70
+  },
+  "interpretation": {
+    "formal_stability_claim_supported": false,
+    "global_superiority_claim_supported": false,
+    "hard_guards_are_part_of_complete_lyapunov_filter": true,
+    "lyapunov_decrease_reason_is_mechanism_activation": true,
+    "strict_decrease_is_separate_from_reason_count": true
+  },
+  "limitations": [
+    "Intervention-reason counts are reconstructed from frozen per-run rates using exact environment-step denominators and integer-integrity checks.",
+    "Lyapunov-specific activation demonstrates use of the candidate-selection mechanism, not a formal closed-loop stability proof.",
+    "Hard-guard and Lyapunov-specific intervention frequencies are empirical properties of the tested synthetic action perturbations.",
+    "Cross-domain consistency refers to observed activation in both domains and does not imply equal activation magnitude."
+  ],
+  "new_principal_runs": false,
+  "new_safety_episodes": false,
+  "new_training": false,
+  "source_artifacts": [
+    "results/safety/action-robustness/sprint5-action-robustness-summary.json",
+    "results/safety/consolidated/sprint5-action-three-seed-summary.json",
+    "results/safety/consolidated/sprint5-lyapunov-mechanism-attribution.json"
+  ],
+  "sprint": "5.14G"
+}

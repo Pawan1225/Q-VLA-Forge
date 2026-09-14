@@ -1,0 +1,327 @@
+{
+  "aggregates": [
+    {
+      "domain": "autonomous_driving",
+      "method": "none",
+      "relative_violation_reduction_vs_none": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "reward_delta_vs_none": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "success_delta_vs_none": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "clipping",
+      "relative_violation_reduction_vs_none": {
+        "mean": 1.0,
+        "sample_sd": 0.0
+      },
+      "reward_delta_vs_none": {
+        "mean": 3.9876706942133104,
+        "sample_sd": 6.792533698430281
+      },
+      "success_delta_vs_none": {
+        "mean": 0.2833333333333333,
+        "sample_sd": 0.4907477288111819
+      }
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "lyapunov",
+      "relative_violation_reduction_vs_none": {
+        "mean": 1.0,
+        "sample_sd": 0.0
+      },
+      "reward_delta_vs_none": {
+        "mean": 3.9876706942133104,
+        "sample_sd": 6.792533698430281
+      },
+      "success_delta_vs_none": {
+        "mean": 0.2833333333333333,
+        "sample_sd": 0.4907477288111819
+      }
+    },
+    {
+      "domain": "robotics",
+      "method": "none",
+      "relative_violation_reduction_vs_none": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "reward_delta_vs_none": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "success_delta_vs_none": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    {
+      "domain": "robotics",
+      "method": "clipping",
+      "relative_violation_reduction_vs_none": {
+        "mean": 1.0,
+        "sample_sd": 0.0
+      },
+      "reward_delta_vs_none": {
+        "mean": 0.045054006865109,
+        "sample_sd": 0.046383776565761335
+      },
+      "success_delta_vs_none": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    {
+      "domain": "robotics",
+      "method": "lyapunov",
+      "relative_violation_reduction_vs_none": {
+        "mean": 1.0,
+        "sample_sd": 0.0
+      },
+      "reward_delta_vs_none": {
+        "mean": 0.0450566937550528,
+        "sample_sd": 0.04638791332492345
+      },
+      "success_delta_vs_none": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    }
+  ],
+  "analysis_only": true,
+  "artifact": "cross-domain-clean-safety",
+  "cross_domain_consistency": {
+    "clipping": {
+      "direction_consistent": true,
+      "driving_effective": true,
+      "robotics_effective": true
+    },
+    "lyapunov": {
+      "direction_consistent": true,
+      "driving_effective": true,
+      "robotics_effective": true
+    }
+  },
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "interpretation": {
+    "normalized_reduction_calculated_per_seed_first": true,
+    "raw_domain_rewards_directly_comparable": false,
+    "raw_domain_violation_rates_directly_comparable": false,
+    "zero_baseline_returns_null": true
+  },
+  "limitations": [
+    "Raw violation-step rates are not interpreted as cross-domain safety rankings because the two domains use different safety contracts.",
+    "Raw rewards are not compared across domains because the task reward scales differ.",
+    "Relative violation reduction is undefined for a seed whose NONE violation-step rate is zero.",
+    "Results use three principal policy seeds and do not constitute formal statistical significance."
+  ],
+  "methods": [
+    "none",
+    "clipping",
+    "lyapunov"
+  ],
+  "new_principal_runs": false,
+  "new_training": false,
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "seed_rows": [
+    {
+      "domain": "autonomous_driving",
+      "method": "none",
+      "none_violation_step_rate": 0.0,
+      "principal_seed": 42,
+      "relative_violation_reduction_vs_none": null,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "none",
+      "none_violation_step_rate": 0.839,
+      "principal_seed": 123,
+      "relative_violation_reduction_vs_none": 0.0,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.839
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "none",
+      "none_violation_step_rate": 0.33352272727272725,
+      "principal_seed": 456,
+      "relative_violation_reduction_vs_none": 0.0,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.33352272727272725
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "clipping",
+      "none_violation_step_rate": 0.0,
+      "principal_seed": 42,
+      "relative_violation_reduction_vs_none": null,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "clipping",
+      "none_violation_step_rate": 0.839,
+      "principal_seed": 123,
+      "relative_violation_reduction_vs_none": 1.0,
+      "reward_delta_vs_none": 0.1323714155658955,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "clipping",
+      "none_violation_step_rate": 0.33352272727272725,
+      "principal_seed": 456,
+      "relative_violation_reduction_vs_none": 1.0,
+      "reward_delta_vs_none": 11.830640667074036,
+      "success_delta_vs_none": 0.85,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "lyapunov",
+      "none_violation_step_rate": 0.0,
+      "principal_seed": 42,
+      "relative_violation_reduction_vs_none": null,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "lyapunov",
+      "none_violation_step_rate": 0.839,
+      "principal_seed": 123,
+      "relative_violation_reduction_vs_none": 1.0,
+      "reward_delta_vs_none": 0.1323714155658955,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "lyapunov",
+      "none_violation_step_rate": 0.33352272727272725,
+      "principal_seed": 456,
+      "relative_violation_reduction_vs_none": 1.0,
+      "reward_delta_vs_none": 11.830640667074036,
+      "success_delta_vs_none": 0.85,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "method": "none",
+      "none_violation_step_rate": 0.0355,
+      "principal_seed": 42,
+      "relative_violation_reduction_vs_none": 0.0,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0355
+    },
+    {
+      "domain": "robotics",
+      "method": "none",
+      "none_violation_step_rate": 0.0085,
+      "principal_seed": 123,
+      "relative_violation_reduction_vs_none": 0.0,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0085
+    },
+    {
+      "domain": "robotics",
+      "method": "none",
+      "none_violation_step_rate": 0.0,
+      "principal_seed": 456,
+      "relative_violation_reduction_vs_none": null,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "method": "clipping",
+      "none_violation_step_rate": 0.0355,
+      "principal_seed": 42,
+      "relative_violation_reduction_vs_none": 1.0,
+      "reward_delta_vs_none": 0.09266202059532702,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "method": "clipping",
+      "none_violation_step_rate": 0.0085,
+      "principal_seed": 123,
+      "relative_violation_reduction_vs_none": 1.0,
+      "reward_delta_vs_none": 0.04249999999999998,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "method": "clipping",
+      "none_violation_step_rate": 0.0,
+      "principal_seed": 456,
+      "relative_violation_reduction_vs_none": null,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "method": "lyapunov",
+      "none_violation_step_rate": 0.0355,
+      "principal_seed": 42,
+      "relative_violation_reduction_vs_none": 1.0,
+      "reward_delta_vs_none": 0.09267008126515841,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "method": "lyapunov",
+      "none_violation_step_rate": 0.0085,
+      "principal_seed": 123,
+      "relative_violation_reduction_vs_none": 1.0,
+      "reward_delta_vs_none": 0.04249999999999998,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "method": "lyapunov",
+      "none_violation_step_rate": 0.0,
+      "principal_seed": 456,
+      "relative_violation_reduction_vs_none": null,
+      "reward_delta_vs_none": 0.0,
+      "success_delta_vs_none": 0.0,
+      "violation_step_rate": 0.0
+    }
+  ],
+  "source_artifact": "results/safety/consolidated/sprint5-clean-three-seed-summary.json",
+  "sprint": "5.14C",
+  "supported_statement": "Under each domain's frozen pilot safety contract, the unfiltered PPO policies produced measurable violations in at least part of the three-seed evidence, while explicit clipping and Lyapunov filtering reduced the observed clean executed violation-step rate to zero."
+}

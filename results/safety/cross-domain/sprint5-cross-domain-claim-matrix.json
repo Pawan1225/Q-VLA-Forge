@@ -1,0 +1,192 @@
+{
+  "analysis_only": true,
+  "artifact": "cross-domain-safety-claim-matrix",
+  "blocked_claim_ids": [
+    "S5-CD06",
+    "S5-CD08",
+    "S5-CD09",
+    "S5-CD10",
+    "S5-CD11",
+    "S5-CD12"
+  ],
+  "claim_count": 12,
+  "claims": [
+    {
+      "claim_id": "S5-CD01",
+      "evidence": [
+        "5.14B architecture reuse record"
+      ],
+      "limitations": [
+        "Constraints, clipping semantics, predictors, Lyapunov potentials, and trained policy weights remain domain-specific."
+      ],
+      "statement": "A common safety architecture was instantiated across autonomous driving and robotics.",
+      "status": "supported",
+      "supported": true
+    },
+    {
+      "claim_id": "S5-CD02",
+      "evidence": [
+        "5.14C clean cross-domain analysis"
+      ],
+      "limitations": [
+        "Raw violation-step rates are not interpreted as direct cross-domain safety rankings."
+      ],
+      "statement": "Clean explicit safety filtering was effective in both pilot domains under their respective safety contracts.",
+      "status": "supported",
+      "supported": true
+    },
+    {
+      "claim_id": "S5-CD03",
+      "evidence": [
+        "5.14D Gaussian cross-domain analysis"
+      ],
+      "limitations": [
+        "Seven of nine comparisons were directionally consistent; two showed domain differences.",
+        "The safety layer retained true simulator state while the policy received noisy observations."
+      ],
+      "statement": "Gaussian robustness behavior was directionally consistent across all tested cross-domain comparisons.",
+      "status": "supported_with_limitation",
+      "supported": false
+    },
+    {
+      "claim_id": "S5-CD04",
+      "evidence": [
+        "5.14E structured-state cross-domain analysis"
+      ],
+      "limitations": [
+        "Driving and robotics perturbation features are domain-specific and are not treated as semantically equivalent."
+      ],
+      "statement": "Structured-state robustness direction was consistent across driving and robotics.",
+      "status": "supported",
+      "supported": true
+    },
+    {
+      "claim_id": "S5-CD05",
+      "evidence": [
+        "5.14F action-recovery cross-domain analysis"
+      ],
+      "limitations": [
+        "Recovery rates differ by domain and are not required to be equal.",
+        "The action disturbances are synthetic and are not calibrated actuator-fault models."
+      ],
+      "statement": "Positive explicit action recovery was observed in both domains for clipping and Lyapunov filtering.",
+      "status": "supported",
+      "supported": true
+    },
+    {
+      "claim_id": "S5-CD06",
+      "evidence": [
+        "5.14G Lyapunov mechanism domain split"
+      ],
+      "limitations": [
+        "Lyapunov-decrease activation was observed in autonomous driving but not robotics."
+      ],
+      "statement": "Lyapunov-specific candidate-selection activation was observed in both domains under action perturbation.",
+      "status": "not_supported",
+      "supported": false
+    },
+    {
+      "claim_id": "S5-CD07",
+      "evidence": [
+        "5.14H task-preservation analysis"
+      ],
+      "limitations": [
+        "Raw reward magnitudes are not compared across domains because reward scales differ."
+      ],
+      "statement": "Clean task-preservation direction was consistent across both domains for clipping and Lyapunov.",
+      "status": "supported",
+      "supported": true
+    },
+    {
+      "claim_id": "S5-CD08",
+      "evidence": [],
+      "limitations": [
+        "The domains use different safety constraints and threshold semantics."
+      ],
+      "statement": "The same safety thresholds were used across autonomous driving and robotics.",
+      "status": "not_supported",
+      "supported": false
+    },
+    {
+      "claim_id": "S5-CD09",
+      "evidence": [],
+      "limitations": [
+        "Driving and robotics use separately trained policies; cross-domain weight transfer was not tested."
+      ],
+      "statement": "The same trained policy weights transfer directly between driving and robotics.",
+      "status": "not_supported",
+      "supported": false
+    },
+    {
+      "claim_id": "S5-CD10",
+      "evidence": [],
+      "limitations": [
+        "Only the safety framework and interfaces are shared; domain-specific safety semantics remain."
+      ],
+      "statement": "A universal cross-domain safety controller was demonstrated.",
+      "status": "not_supported",
+      "supported": false
+    },
+    {
+      "claim_id": "S5-CD11",
+      "evidence": [],
+      "limitations": [
+        "The evidence is empirical and does not provide a formal stability or worst-case robustness proof."
+      ],
+      "statement": "The results establish a formal cross-domain safety guarantee.",
+      "status": "not_supported",
+      "supported": false
+    },
+    {
+      "claim_id": "S5-CD12",
+      "evidence": [],
+      "limitations": [
+        "All evaluations use synthetic proxy environments; no physical vehicle or robot deployment was performed."
+      ],
+      "statement": "Production generalization across physical vehicles and robots was demonstrated.",
+      "status": "not_supported",
+      "supported": false
+    }
+  ],
+  "global_limitations": [
+    "Synthetic proxy environments.",
+    "Different domain-specific safety contracts.",
+    "Different state dimensions.",
+    "Different constraint semantics.",
+    "Different Lyapunov functions.",
+    "Separate trained policy weights.",
+    "No cross-domain weight transfer.",
+    "No zero-shot safety transfer.",
+    "Three principal policy seeds.",
+    "Privileged true safety state under Gaussian and structured-state observation perturbations.",
+    "No physical vehicle evaluation.",
+    "No physical robot evaluation.",
+    "No formal stability proof.",
+    "No certification claim.",
+    "No production generalization claim.",
+    "No quantum safety advantage claim."
+  ],
+  "new_principal_runs": false,
+  "new_training": false,
+  "proposal_safe_statements": [
+    "Q-VLA Forge reused a common safety-filter interface, intervention protocol, robustness harness, and evaluation schema across autonomous-driving and robotics proxy environments while retaining domain-specific safety semantics.",
+    "Explicit safety filtering reduced measured clean violations under both domain-specific pilot contracts.",
+    "Action perturbation produced positive explicit recovery in both domains for clipping and Lyapunov filtering.",
+    "Lyapunov-specific candidate-selection activation was observed in driving but not robotics under the tested action perturbations."
+  ],
+  "source_artifacts": [
+    "results/safety/cross-domain/sprint5-cross-domain-architecture.json",
+    "results/safety/cross-domain/sprint5-cross-domain-clean.json",
+    "results/safety/cross-domain/sprint5-cross-domain-gaussian.json",
+    "results/safety/cross-domain/sprint5-cross-domain-structured-state.json",
+    "results/safety/cross-domain/sprint5-cross-domain-action.json",
+    "results/safety/cross-domain/sprint5-cross-domain-lyapunov-mechanism.json",
+    "results/safety/cross-domain/sprint5-cross-domain-consistency.json"
+  ],
+  "sprint": "5.14I",
+  "status_counts": {
+    "not_supported": 6,
+    "supported": 5,
+    "supported_with_limitation": 1
+  }
+}

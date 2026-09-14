@@ -1,0 +1,135 @@
+{
+  "analysis_only": true,
+  "artifact": "cross-domain-action-recovery",
+  "cross_domain_consistency": [
+    {
+      "cross_domain_recovery_direction_consistent": true,
+      "driving_positive_recovery": false,
+      "driving_recovery_rate": 0.0,
+      "method": "none",
+      "robotics_positive_recovery": false,
+      "robotics_recovery_rate": 0.0
+    },
+    {
+      "cross_domain_recovery_direction_consistent": true,
+      "driving_positive_recovery": true,
+      "driving_recovery_rate": 0.8627303157323362,
+      "method": "clipping",
+      "robotics_positive_recovery": true,
+      "robotics_recovery_rate": 1.0
+    },
+    {
+      "cross_domain_recovery_direction_consistent": true,
+      "driving_positive_recovery": true,
+      "driving_recovery_rate": 0.9567883116459577,
+      "method": "lyapunov",
+      "robotics_positive_recovery": true,
+      "robotics_recovery_rate": 1.0
+    }
+  ],
+  "domain_method_summary": [
+    {
+      "condition_count": 12,
+      "domain": "autonomous_driving",
+      "mean_executed_violation_delta": 0.04305325779247782,
+      "mean_intervention_rate": 0.0,
+      "mean_reward_delta": -9.629316314378757,
+      "method": "none",
+      "recovered_unsafe_steps": 0,
+      "recovery_rate": 0.0,
+      "unresolved_unsafe_steps": 30380,
+      "unsafe_perturbed_steps": 30380
+    },
+    {
+      "condition_count": 12,
+      "domain": "autonomous_driving",
+      "mean_executed_violation_delta": 0.06322222222222222,
+      "mean_intervention_rate": 0.4754861111111111,
+      "mean_reward_delta": -10.380464128432711,
+      "method": "clipping",
+      "recovered_unsafe_steps": 28609,
+      "recovery_rate": 0.8627303157323362,
+      "unresolved_unsafe_steps": 4552,
+      "unsafe_perturbed_steps": 33161
+    },
+    {
+      "condition_count": 12,
+      "domain": "autonomous_driving",
+      "mean_executed_violation_delta": 0.024597222222222225,
+      "mean_intervention_rate": 0.4563333333333333,
+      "mean_reward_delta": -9.445471537133825,
+      "method": "lyapunov",
+      "recovered_unsafe_steps": 29338,
+      "recovery_rate": 0.9567883116459577,
+      "unresolved_unsafe_steps": 1325,
+      "unsafe_perturbed_steps": 30663
+    },
+    {
+      "condition_count": 12,
+      "domain": "robotics",
+      "mean_executed_violation_delta": 0.06473611111111112,
+      "mean_intervention_rate": 0.0,
+      "mean_reward_delta": -0.16821427724139493,
+      "method": "none",
+      "recovered_unsafe_steps": 0,
+      "recovery_rate": 0.0,
+      "unresolved_unsafe_steps": 5717,
+      "unsafe_perturbed_steps": 5717
+    },
+    {
+      "condition_count": 12,
+      "domain": "robotics",
+      "mean_executed_violation_delta": 0.0,
+      "mean_intervention_rate": 0.08277777777777778,
+      "mean_reward_delta": 0.008317629878973175,
+      "method": "clipping",
+      "recovered_unsafe_steps": 5715,
+      "recovery_rate": 1.0,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 5715
+    },
+    {
+      "condition_count": 12,
+      "domain": "robotics",
+      "mean_executed_violation_delta": 0.0,
+      "mean_intervention_rate": 0.08263888888888889,
+      "mean_reward_delta": 0.008873950269277647,
+      "method": "lyapunov",
+      "recovered_unsafe_steps": 5705,
+      "recovery_rate": 1.0,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 5705
+    }
+  ],
+  "environment_interface": {
+    "environment_adjustments_are_not_safety_interventions": true,
+    "environment_interface_adjustment_steps": 1579
+  },
+  "global_reconstruction": {
+    "recovered_unsafe_steps": 69367,
+    "recovery_fraction": 0.6230139840669654,
+    "unresolved_unsafe_steps": 41974,
+    "unsafe_perturbed_steps": 111341
+  },
+  "interpretation": {
+    "environment_clipping_kept_separate": true,
+    "equal_recovery_rate_required_across_domains": false,
+    "none_is_negative_control": true,
+    "positive_recovery_means_explicit_filter_changed_unsafe_action": true
+  },
+  "limitations": [
+    "Driving and robotics action channels have different semantics despite sharing a three-dimensional continuous action interface.",
+    "Recovery rate is undefined when a cell or aggregate contains no unsafe perturbed steps.",
+    "Environment-interface adjustments remain distinct from explicit safety-filter interventions.",
+    "The perturbations are synthetic action disturbances and are not calibrated physical actuator-fault models."
+  ],
+  "negative_control": {
+    "none_explicit_recovery_zero": true
+  },
+  "new_principal_runs": false,
+  "new_safety_episodes": false,
+  "new_training": false,
+  "source_artifact": "results/safety/consolidated/sprint5-action-three-seed-summary.json",
+  "sprint": "5.14F",
+  "supported_statement": "Action perturbation provides a shared architectural stress test because the disturbance is inserted between the policy and the explicit safety layer in both domains. Recovery is therefore analyzed separately by domain and safety method without requiring equal recovery rates."
+}

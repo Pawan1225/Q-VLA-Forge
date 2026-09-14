@@ -1,0 +1,128 @@
+{
+  "analysis_only": true,
+  "artifact": "cross-domain-structured-state-safety",
+  "direction_consistency": [
+    {
+      "direction_consistent": true,
+      "driving_direction": "degraded",
+      "driving_worst_violation_delta": 0.006752166959034189,
+      "method": "none",
+      "robotics_direction": "degraded",
+      "robotics_worst_violation_delta": 0.020333333333333335
+    },
+    {
+      "direction_consistent": true,
+      "driving_direction": "tie",
+      "driving_worst_violation_delta": 0.0,
+      "method": "clipping",
+      "robotics_direction": "tie",
+      "robotics_worst_violation_delta": 0.0
+    },
+    {
+      "direction_consistent": true,
+      "driving_direction": "tie",
+      "driving_worst_violation_delta": 0.0,
+      "method": "lyapunov",
+      "robotics_direction": "tie",
+      "robotics_worst_violation_delta": 0.0
+    }
+  ],
+  "feature_equivalence_assumed": false,
+  "interpretation": {
+    "domain_relative_summary_used": true,
+    "feature_spaces_directly_comparable": false,
+    "privileged_safety_state": true,
+    "worst_case_summary_is_empirical": true
+  },
+  "limitations": [
+    "Driving and robotics perturbation features are not treated as semantically equivalent.",
+    "The policy receives perturbed state observations while the safety layer and environment use true simulator state.",
+    "Worst-case degradation refers only to the tested structured perturbation set.",
+    "Results are based on three principal policy seeds."
+  ],
+  "new_principal_runs": false,
+  "new_safety_episodes": false,
+  "new_training": false,
+  "source_artifact": "results/safety/consolidated/sprint5-structured-state-three-seed-summary.json",
+  "sprint": "5.14E",
+  "state_separation": {
+    "environment_uses_true_state": true,
+    "policy_uses_perturbed_observation": true,
+    "safety_layer_uses_true_state": true
+  },
+  "structured_state_summary": [
+    {
+      "conditions_with_violation_growth": 4,
+      "conditions_with_zero_violation_growth": 0,
+      "domain": "autonomous_driving",
+      "highest_intervention_rate": 0.0,
+      "median_reward_delta": -0.3354099666445256,
+      "median_violation_delta": -0.0024745819614589715,
+      "method": "none",
+      "number_of_conditions": 10,
+      "worst_reward_delta": -2.1269906486429204,
+      "worst_violation_delta": 0.006752166959034189
+    },
+    {
+      "conditions_with_violation_growth": 0,
+      "conditions_with_zero_violation_growth": 10,
+      "domain": "autonomous_driving",
+      "highest_intervention_rate": 0.42416666666666664,
+      "median_reward_delta": -0.4270265467666374,
+      "median_violation_delta": 0.0,
+      "method": "clipping",
+      "number_of_conditions": 10,
+      "worst_reward_delta": -2.582322201569962,
+      "worst_violation_delta": 0.0
+    },
+    {
+      "conditions_with_violation_growth": 0,
+      "conditions_with_zero_violation_growth": 10,
+      "domain": "autonomous_driving",
+      "highest_intervention_rate": 0.42416666666666664,
+      "median_reward_delta": -0.4270265467666374,
+      "median_violation_delta": 0.0,
+      "method": "lyapunov",
+      "number_of_conditions": 10,
+      "worst_reward_delta": -2.582322201569962,
+      "worst_violation_delta": 0.0
+    },
+    {
+      "conditions_with_violation_growth": 5,
+      "conditions_with_zero_violation_growth": 0,
+      "domain": "robotics",
+      "highest_intervention_rate": 0.0,
+      "median_reward_delta": -0.006480317282730944,
+      "median_violation_delta": -0.0003333333333333323,
+      "method": "none",
+      "number_of_conditions": 12,
+      "worst_reward_delta": -0.03831087219991628,
+      "worst_violation_delta": 0.020333333333333335
+    },
+    {
+      "conditions_with_violation_growth": 0,
+      "conditions_with_zero_violation_growth": 12,
+      "domain": "robotics",
+      "highest_intervention_rate": 0.035,
+      "median_reward_delta": -0.003075100767676105,
+      "median_violation_delta": 0.0,
+      "method": "clipping",
+      "number_of_conditions": 12,
+      "worst_reward_delta": -0.041698212398358546,
+      "worst_violation_delta": 0.0
+    },
+    {
+      "conditions_with_violation_growth": 0,
+      "conditions_with_zero_violation_growth": 12,
+      "domain": "robotics",
+      "highest_intervention_rate": 0.034833333333333334,
+      "median_reward_delta": -0.0030220078878264722,
+      "median_violation_delta": 0.0,
+      "method": "lyapunov",
+      "number_of_conditions": 12,
+      "worst_reward_delta": -0.04170089928830234,
+      "worst_violation_delta": 0.0
+    }
+  ],
+  "supported_statement": "Structured-state robustness is compared using domain-local degradation summaries rather than direct feature equivalence. This preserves the distinct safety semantics of driving and robotics."
+}

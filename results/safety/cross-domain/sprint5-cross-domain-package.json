@@ -1,0 +1,400 @@
+{
+  "analysis_only": true,
+  "architecture_reuse": {
+    "analysis_only": true,
+    "architecture_reuse": {
+      "domain_specific_clipping": true,
+      "domain_specific_constraints": true,
+      "domain_specific_lyapunov": true,
+      "domain_specific_predictor": true,
+      "same_policy_weights": false,
+      "shared_action_dim": 3,
+      "shared_action_dimension": true,
+      "shared_decision_contract": true,
+      "shared_metric_schema": true,
+      "shared_robustness_harness": true,
+      "shared_safety_interface": true,
+      "shared_seed_protocol": true,
+      "transfer_tested": false,
+      "universal_controller_supported": false
+    },
+    "artifact": "cross-domain-safety-architecture-reuse",
+    "blocked_interpretations": [
+      "same safety function",
+      "same Lyapunov function",
+      "same safety thresholds",
+      "same trained policy",
+      "zero-shot safety transfer",
+      "universal safety controller",
+      "formal cross-domain safety guarantee",
+      "production generalization"
+    ],
+    "domain_specific_components": {
+      "autonomous_driving": {
+        "clipping_rules": "driving-specific clipping",
+        "constraint_evaluator": "driving constraint evaluator",
+        "lyapunov": "V_drive",
+        "predictor": "driving one-step predictor",
+        "state_dimension": 4,
+        "state_semantics": [
+          "speed",
+          "lane_offset",
+          "heading_error",
+          "obstacle_distance"
+        ]
+      },
+      "robotics": {
+        "additional_context": [
+          "object_grasped",
+          "gripper semantics"
+        ],
+        "clipping_rules": "robotics-specific clipping",
+        "constraint_evaluator": "robotics constraint evaluator",
+        "lyapunov": "V_robotics",
+        "predictor": "robotics one-step predictor",
+        "state_dimension": 6,
+        "state_semantics": [
+          "robot_x",
+          "robot_y",
+          "object_x",
+          "object_y",
+          "target_x",
+          "target_y"
+        ]
+      }
+    },
+    "new_principal_runs": false,
+    "new_training": false,
+    "shared_components": [
+      {
+        "component": "policy_interface",
+        "driving": "PPO",
+        "robotics": "PPO",
+        "shared": true,
+        "sharing_level": "interface"
+      },
+      {
+        "component": "action_dimension",
+        "driving": 3,
+        "robotics": 3,
+        "shared": true,
+        "sharing_level": "interface"
+      },
+      {
+        "component": "safety_decision_contract",
+        "driving": "SafetyDecision",
+        "robotics": "SafetyDecision",
+        "shared": true,
+        "sharing_level": "contract"
+      },
+      {
+        "component": "none_method",
+        "driving": "shared interface",
+        "robotics": "shared interface",
+        "shared": true,
+        "sharing_level": "framework"
+      },
+      {
+        "component": "clipping_method",
+        "driving": "domain rules",
+        "robotics": "domain rules",
+        "shared": true,
+        "sharing_level": "framework_only"
+      },
+      {
+        "component": "lyapunov_method",
+        "driving": "V_drive",
+        "robotics": "V_robotics",
+        "shared": true,
+        "sharing_level": "framework_only"
+      },
+      {
+        "component": "constraint_semantics",
+        "driving": "driving constraints",
+        "robotics": "robotics constraints",
+        "shared": false,
+        "sharing_level": "domain_specific"
+      },
+      {
+        "component": "predictor",
+        "driving": "driving one-step predictor",
+        "robotics": "robotics one-step predictor",
+        "shared": true,
+        "sharing_level": "framework_only"
+      },
+      {
+        "component": "perturbation_harness",
+        "driving": "shared harness",
+        "robotics": "shared harness",
+        "shared": true,
+        "sharing_level": "framework"
+      },
+      {
+        "component": "metric_schema",
+        "driving": "shared metrics",
+        "robotics": "shared metrics",
+        "shared": true,
+        "sharing_level": "schema"
+      },
+      {
+        "component": "principal_seeds",
+        "driving": [
+          42,
+          123,
+          456
+        ],
+        "robotics": [
+          42,
+          123,
+          456
+        ],
+        "shared": true,
+        "sharing_level": "protocol"
+      },
+      {
+        "component": "trained_policy_weights",
+        "driving": "driving-specific",
+        "robotics": "robotics-specific",
+        "shared": false,
+        "sharing_level": "domain_specific"
+      }
+    ],
+    "sprint": "5.14B",
+    "supported_statement": "A common safety-filter interface, intervention protocol, robustness harness, metric schema, and seed protocol were reused across autonomous-driving and robotics proxy environments while retaining domain-specific constraints, predictors, clipping semantics, and Lyapunov potentials."
+  },
+  "artifact": "consolidated-cross-domain-safety-package",
+  "claim_summary": {
+    "blocked_claim_ids": [
+      "S5-CD06",
+      "S5-CD08",
+      "S5-CD09",
+      "S5-CD10",
+      "S5-CD11",
+      "S5-CD12"
+    ],
+    "claim_count": 12,
+    "not_supported": 6,
+    "supported": 5,
+    "supported_with_limitation": 1
+  },
+  "domain_specific_findings": [
+    "Driving and robotics retain different safety constraints and threshold semantics.",
+    "Driving and robotics use separate trained PPO policy weights.",
+    "Driving and robotics use different Lyapunov potentials and domain predictors.",
+    "Lyapunov-specific action-perturbation activation was observed only in autonomous driving."
+  ],
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "evidence_summary": {
+    "action_recovery": {
+      "all_consistent": true,
+      "comparisons": 3,
+      "consistent": 3,
+      "different": 0
+    },
+    "clean": {
+      "all_consistent": true,
+      "comparisons": 2,
+      "consistent": 2,
+      "different": 0
+    },
+    "gaussian": {
+      "all_consistent": false,
+      "comparisons": 9,
+      "consistent": 7,
+      "different": 2
+    },
+    "lyapunov_activation": {
+      "cross_domain_consistent": false,
+      "driving_activation_observed": true,
+      "robotics_activation_observed": false
+    },
+    "structured_state": {
+      "all_consistent": true,
+      "comparisons": 3,
+      "consistent": 3,
+      "different": 0
+    }
+  },
+  "figure_summary": {
+    "figure_count": 6,
+    "figures": [
+      {
+        "figure_id": "S5-CD-F01",
+        "path": "figures/safety/cross-domain/cross_domain_clean_violation_reduction.png",
+        "source_artifacts": [
+          "results/safety/cross-domain/sprint5-cross-domain-clean.json"
+        ],
+        "supports": [
+          "S5-CD02",
+          "S5-CD07"
+        ],
+        "title": "Clean Safety Improvement by Domain and Method"
+      },
+      {
+        "figure_id": "S5-CD-F02",
+        "path": "figures/safety/cross-domain/cross_domain_gaussian_consistency.png",
+        "source_artifacts": [
+          "results/safety/cross-domain/sprint5-cross-domain-gaussian.json"
+        ],
+        "supports": [
+          "S5-CD03"
+        ],
+        "title": "Gaussian Robustness Direction Consistency"
+      },
+      {
+        "figure_id": "S5-CD-F03",
+        "path": "figures/safety/cross-domain/cross_domain_structured_state_sensitivity.png",
+        "source_artifacts": [
+          "results/safety/cross-domain/sprint5-cross-domain-structured-state.json"
+        ],
+        "supports": [
+          "S5-CD04"
+        ],
+        "title": "Structured-State Robustness Sensitivity"
+      },
+      {
+        "figure_id": "S5-CD-F04",
+        "path": "figures/safety/cross-domain/cross_domain_action_recovery.png",
+        "source_artifacts": [
+          "results/safety/cross-domain/sprint5-cross-domain-action.json"
+        ],
+        "supports": [
+          "S5-CD05"
+        ],
+        "title": "Action-Perturbation Recovery by Domain and Method"
+      },
+      {
+        "figure_id": "S5-CD-F05",
+        "path": "figures/safety/cross-domain/cross_domain_lyapunov_mechanism.png",
+        "source_artifacts": [
+          "results/safety/cross-domain/sprint5-cross-domain-lyapunov-mechanism.json"
+        ],
+        "supports": [
+          "S5-CD06"
+        ],
+        "title": "Domain Split of Lyapunov-Specific Activation"
+      },
+      {
+        "figure_id": "S5-CD-F06",
+        "path": "figures/safety/cross-domain/cross_domain_claim_status.png",
+        "source_artifacts": [
+          "results/safety/cross-domain/sprint5-cross-domain-claim-matrix.json"
+        ],
+        "supports": [
+          "S5-CD01",
+          "S5-CD02",
+          "S5-CD03",
+          "S5-CD04",
+          "S5-CD05",
+          "S5-CD06",
+          "S5-CD07",
+          "S5-CD08",
+          "S5-CD09",
+          "S5-CD10",
+          "S5-CD11",
+          "S5-CD12"
+        ],
+        "title": "Cross-Domain Safety Claim Status"
+      }
+    ]
+  },
+  "frozen_sections": [
+    "5.14B",
+    "5.14C",
+    "5.14D",
+    "5.14E",
+    "5.14F",
+    "5.14G",
+    "5.14H",
+    "5.14I",
+    "5.14J"
+  ],
+  "limitations": [
+    "Synthetic proxy environments.",
+    "Three principal policy seeds.",
+    "Different domain-specific state contracts.",
+    "Different domain-specific reward scales.",
+    "No direct raw reward ranking across domains.",
+    "No direct raw violation-rate ranking across domains.",
+    "Gaussian and structured-state robustness use noisy or perturbed policy observations while the safety layer retains true simulator state.",
+    "No cross-domain policy-weight transfer experiment.",
+    "No physical vehicle evaluation.",
+    "No physical robot evaluation.",
+    "No formal closed-loop stability proof.",
+    "No formal worst-case robustness proof.",
+    "No certification claim.",
+    "No production generalization claim.",
+    "No quantum safety advantage claim."
+  ],
+  "mechanism_summary": {
+    "emergency_fallback_steps": 0,
+    "lyapunov_decrease_interventions": 1584,
+    "selected_lower_than_perturbed_steps": 4887,
+    "strict_lyapunov_decrease_steps": 70
+  },
+  "new_principal_runs": false,
+  "new_safety_episodes": false,
+  "new_training": false,
+  "proposal_safe_conclusions": [
+    "A common safety architecture, intervention protocol, robustness harness, and evaluation schema were reused across autonomous driving and robotics.",
+    "Clean explicit safety filtering was effective under both domain-specific pilot safety contracts.",
+    "Structured-state robustness direction was consistent across the two domains for the tested methods.",
+    "Positive action recovery was observed in both domains for clipping and Lyapunov filtering.",
+    "Gaussian robustness was mostly but not universally directionally consistent, with seven of nine cross-domain comparisons aligned.",
+    "Lyapunov-specific candidate-selection activation occurred in driving but not robotics under the tested action perturbations.",
+    "The evidence supports reuse of the safety framework, not a universal controller, direct policy transfer, formal guarantee, or production deployment claim."
+  ],
+  "research_question": "Which parts of the Q-VLA Forge safety architecture and empirical behavior generalize across autonomous driving and robotics, and which findings remain domain-specific?",
+  "source_artifact_count": 9,
+  "source_manifest": [
+    {
+      "path": "results/safety/cross-domain/sprint5-cross-domain-architecture.json",
+      "sha256": "75a086532fedfdc401b13f4a7d1b6ed62d9fff800a073d407cf51f13f0620df8",
+      "size_bytes": 4644
+    },
+    {
+      "path": "results/safety/cross-domain/sprint5-cross-domain-clean.json",
+      "sha256": "c9ce01c2c54e98f5521582f1c8a12fe33c6be0ac6e53bcd28709cb9e2db3ef5a",
+      "size_bytes": 9887
+    },
+    {
+      "path": "results/safety/cross-domain/sprint5-cross-domain-gaussian.json",
+      "sha256": "b59dd94960d1eece050851945e983972183848cf4c62ef8518c81f3237b56ad3",
+      "size_bytes": 34289
+    },
+    {
+      "path": "results/safety/cross-domain/sprint5-cross-domain-structured-state.json",
+      "sha256": "0d38d712b47d2adf000bc341811cac5a487544f87afdd0d622a7bd7c89f0641e",
+      "size_bytes": 4840
+    },
+    {
+      "path": "results/safety/cross-domain/sprint5-cross-domain-action.json",
+      "sha256": "86df69e91e4990e91cb8400d5b9aef96cdff394ebb6434e6290aeb0e8fc2d14f",
+      "size_bytes": 5082
+    },
+    {
+      "path": "results/safety/cross-domain/sprint5-cross-domain-lyapunov-mechanism.json",
+      "sha256": "bf7e48716f633d1173390ce05bb0106a80afcec0b348c7d72bf6d78ef9ec7d76",
+      "size_bytes": 11333
+    },
+    {
+      "path": "results/safety/cross-domain/sprint5-cross-domain-consistency.json",
+      "sha256": "4f53803896775842c251fc06bab6a114f813de8fb3955a3343b1c1306ff2536b",
+      "size_bytes": 3547
+    },
+    {
+      "path": "results/safety/cross-domain/sprint5-cross-domain-claim-matrix.json",
+      "sha256": "a0f277236fc63fcea31dc711959fa336bece781637b1492871d0f51b73e05668",
+      "size_bytes": 7427
+    },
+    {
+      "path": "results/safety/cross-domain/sprint5-cross-domain-figure-index.json",
+      "sha256": "f2ae8cbdee39bd3bca20411d11f3070639c871f3b4f74cf6dade8e7e9b72d1ec",
+      "size_bytes": 3312
+    }
+  ],
+  "sprint": "5.14K"
+}

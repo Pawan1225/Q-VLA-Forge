@@ -1,0 +1,105 @@
+{
+  "action_recovery_consistency": {
+    "all_consistent": true,
+    "count": 3,
+    "false": 0,
+    "true": 3
+  },
+  "analysis_only": true,
+  "artifact": "cross-domain-safety-consistency",
+  "clean_consistency": {
+    "all_consistent": true,
+    "count": 2,
+    "false": 0,
+    "true": 2
+  },
+  "cross_domain_conclusions": [
+    {
+      "conclusion_id": "architecture_reuse",
+      "limitation": "The framework is shared, while constraints, predictors, Lyapunov potentials, and trained policy weights remain domain-specific.",
+      "status": "supported",
+      "supported": true
+    },
+    {
+      "conclusion_id": "clean_safety_consistency",
+      "limitation": "Raw safety rates are not used to rank the domains because the contracts differ.",
+      "status": "supported",
+      "supported": true
+    },
+    {
+      "conclusion_id": "gaussian_robustness_consistency",
+      "limitation": "Two Gaussian comparisons show cross-domain direction differences, and the safety layer uses privileged true state.",
+      "status": "supported_with_limitation",
+      "supported": false
+    },
+    {
+      "conclusion_id": "structured_state_consistency",
+      "limitation": "Driving and robotics perturbation features are not semantically equivalent.",
+      "status": "supported",
+      "supported": true
+    },
+    {
+      "conclusion_id": "action_recovery_consistency",
+      "limitation": "Positive recovery is observed in both domains for explicit filters, but recovery magnitudes are not required to match.",
+      "status": "supported",
+      "supported": true
+    },
+    {
+      "conclusion_id": "lyapunov_activation_consistency",
+      "limitation": "Lyapunov-specific action-perturbation activation was observed in driving but not robotics.",
+      "status": "not_supported",
+      "supported": false
+    }
+  ],
+  "gaussian_consistency": {
+    "all_consistent": false,
+    "count": 9,
+    "false": 2,
+    "true": 7
+  },
+  "interpretation": {
+    "direction_reversals_preserved": true,
+    "equal_magnitude_required": false,
+    "universal_behavior_claim_supported": false,
+    "universal_controller_claim_supported": false
+  },
+  "lyapunov_activation_consistency": {
+    "consistent": false,
+    "driving_activation_observed": true,
+    "robotics_activation_observed": false
+  },
+  "new_principal_runs": false,
+  "new_training": false,
+  "source_artifacts": [
+    "results/safety/cross-domain/sprint5-cross-domain-clean.json",
+    "results/safety/cross-domain/sprint5-cross-domain-gaussian.json",
+    "results/safety/cross-domain/sprint5-cross-domain-structured-state.json",
+    "results/safety/cross-domain/sprint5-cross-domain-action.json",
+    "results/safety/cross-domain/sprint5-cross-domain-lyapunov-mechanism.json"
+  ],
+  "sprint": "5.14H",
+  "structured_state_consistency": {
+    "all_consistent": true,
+    "count": 3,
+    "false": 0,
+    "true": 3
+  },
+  "task_preservation": [
+    {
+      "driving_reward_delta": 3.9876706942133104,
+      "driving_success_delta": 0.2833333333333333,
+      "method": "clipping",
+      "robotics_reward_delta": 0.045054006865109,
+      "robotics_success_delta": 0.0,
+      "task_preservation_consistent": true
+    },
+    {
+      "driving_reward_delta": 3.9876706942133104,
+      "driving_success_delta": 0.2833333333333333,
+      "method": "lyapunov",
+      "robotics_reward_delta": 0.0450566937550528,
+      "robotics_success_delta": 0.0,
+      "task_preservation_consistent": true
+    }
+  ]
+}

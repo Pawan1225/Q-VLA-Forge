@@ -1,0 +1,103 @@
+{
+  "analysis_only": true,
+  "artifact": "cross-domain-figure-provenance-index",
+  "claim_controls": {
+    "formal_safety_guarantee": false,
+    "production_generalization": false,
+    "raw_cross_domain_reward_ranking": false,
+    "raw_cross_domain_violation_ranking": false,
+    "universal_controller": false
+  },
+  "figure_count": 6,
+  "figures": [
+    {
+      "figure_id": "S5-CD-F01",
+      "path": "figures/safety/cross-domain/cross_domain_clean_violation_reduction.png",
+      "source_artifacts": [
+        "results/safety/cross-domain/sprint5-cross-domain-clean.json"
+      ],
+      "supports": [
+        "S5-CD02",
+        "S5-CD07"
+      ],
+      "title": "Clean Safety Improvement by Domain and Method"
+    },
+    {
+      "figure_id": "S5-CD-F02",
+      "path": "figures/safety/cross-domain/cross_domain_gaussian_consistency.png",
+      "source_artifacts": [
+        "results/safety/cross-domain/sprint5-cross-domain-gaussian.json"
+      ],
+      "supports": [
+        "S5-CD03"
+      ],
+      "title": "Gaussian Robustness Direction Consistency"
+    },
+    {
+      "figure_id": "S5-CD-F03",
+      "path": "figures/safety/cross-domain/cross_domain_structured_state_sensitivity.png",
+      "source_artifacts": [
+        "results/safety/cross-domain/sprint5-cross-domain-structured-state.json"
+      ],
+      "supports": [
+        "S5-CD04"
+      ],
+      "title": "Structured-State Robustness Sensitivity"
+    },
+    {
+      "figure_id": "S5-CD-F04",
+      "path": "figures/safety/cross-domain/cross_domain_action_recovery.png",
+      "source_artifacts": [
+        "results/safety/cross-domain/sprint5-cross-domain-action.json"
+      ],
+      "supports": [
+        "S5-CD05"
+      ],
+      "title": "Action-Perturbation Recovery by Domain and Method"
+    },
+    {
+      "figure_id": "S5-CD-F05",
+      "path": "figures/safety/cross-domain/cross_domain_lyapunov_mechanism.png",
+      "source_artifacts": [
+        "results/safety/cross-domain/sprint5-cross-domain-lyapunov-mechanism.json"
+      ],
+      "supports": [
+        "S5-CD06"
+      ],
+      "title": "Domain Split of Lyapunov-Specific Activation"
+    },
+    {
+      "figure_id": "S5-CD-F06",
+      "path": "figures/safety/cross-domain/cross_domain_claim_status.png",
+      "source_artifacts": [
+        "results/safety/cross-domain/sprint5-cross-domain-claim-matrix.json"
+      ],
+      "supports": [
+        "S5-CD01",
+        "S5-CD02",
+        "S5-CD03",
+        "S5-CD04",
+        "S5-CD05",
+        "S5-CD06",
+        "S5-CD07",
+        "S5-CD08",
+        "S5-CD09",
+        "S5-CD10",
+        "S5-CD11",
+        "S5-CD12"
+      ],
+      "title": "Cross-Domain Safety Claim Status"
+    }
+  ],
+  "new_principal_runs": false,
+  "new_training": false,
+  "source_artifacts": [
+    "results/safety/cross-domain/sprint5-cross-domain-clean.json",
+    "results/safety/cross-domain/sprint5-cross-domain-gaussian.json",
+    "results/safety/cross-domain/sprint5-cross-domain-structured-state.json",
+    "results/safety/cross-domain/sprint5-cross-domain-action.json",
+    "results/safety/cross-domain/sprint5-cross-domain-lyapunov-mechanism.json",
+    "results/safety/cross-domain/sprint5-cross-domain-claim-matrix.json"
+  ],
+  "sprint": "5.14J"
+}

@@ -1,0 +1,162 @@
+{
+  "analysis_only": true,
+  "architecture_reuse": {
+    "domain_specific_clipping": true,
+    "domain_specific_constraints": true,
+    "domain_specific_lyapunov": true,
+    "domain_specific_predictor": true,
+    "same_policy_weights": false,
+    "shared_action_dim": 3,
+    "shared_action_dimension": true,
+    "shared_decision_contract": true,
+    "shared_metric_schema": true,
+    "shared_robustness_harness": true,
+    "shared_safety_interface": true,
+    "shared_seed_protocol": true,
+    "transfer_tested": false,
+    "universal_controller_supported": false
+  },
+  "artifact": "cross-domain-safety-architecture-reuse",
+  "blocked_interpretations": [
+    "same safety function",
+    "same Lyapunov function",
+    "same safety thresholds",
+    "same trained policy",
+    "zero-shot safety transfer",
+    "universal safety controller",
+    "formal cross-domain safety guarantee",
+    "production generalization"
+  ],
+  "domain_specific_components": {
+    "autonomous_driving": {
+      "clipping_rules": "driving-specific clipping",
+      "constraint_evaluator": "driving constraint evaluator",
+      "lyapunov": "V_drive",
+      "predictor": "driving one-step predictor",
+      "state_dimension": 4,
+      "state_semantics": [
+        "speed",
+        "lane_offset",
+        "heading_error",
+        "obstacle_distance"
+      ]
+    },
+    "robotics": {
+      "additional_context": [
+        "object_grasped",
+        "gripper semantics"
+      ],
+      "clipping_rules": "robotics-specific clipping",
+      "constraint_evaluator": "robotics constraint evaluator",
+      "lyapunov": "V_robotics",
+      "predictor": "robotics one-step predictor",
+      "state_dimension": 6,
+      "state_semantics": [
+        "robot_x",
+        "robot_y",
+        "object_x",
+        "object_y",
+        "target_x",
+        "target_y"
+      ]
+    }
+  },
+  "new_principal_runs": false,
+  "new_training": false,
+  "shared_components": [
+    {
+      "component": "policy_interface",
+      "driving": "PPO",
+      "robotics": "PPO",
+      "shared": true,
+      "sharing_level": "interface"
+    },
+    {
+      "component": "action_dimension",
+      "driving": 3,
+      "robotics": 3,
+      "shared": true,
+      "sharing_level": "interface"
+    },
+    {
+      "component": "safety_decision_contract",
+      "driving": "SafetyDecision",
+      "robotics": "SafetyDecision",
+      "shared": true,
+      "sharing_level": "contract"
+    },
+    {
+      "component": "none_method",
+      "driving": "shared interface",
+      "robotics": "shared interface",
+      "shared": true,
+      "sharing_level": "framework"
+    },
+    {
+      "component": "clipping_method",
+      "driving": "domain rules",
+      "robotics": "domain rules",
+      "shared": true,
+      "sharing_level": "framework_only"
+    },
+    {
+      "component": "lyapunov_method",
+      "driving": "V_drive",
+      "robotics": "V_robotics",
+      "shared": true,
+      "sharing_level": "framework_only"
+    },
+    {
+      "component": "constraint_semantics",
+      "driving": "driving constraints",
+      "robotics": "robotics constraints",
+      "shared": false,
+      "sharing_level": "domain_specific"
+    },
+    {
+      "component": "predictor",
+      "driving": "driving one-step predictor",
+      "robotics": "robotics one-step predictor",
+      "shared": true,
+      "sharing_level": "framework_only"
+    },
+    {
+      "component": "perturbation_harness",
+      "driving": "shared harness",
+      "robotics": "shared harness",
+      "shared": true,
+      "sharing_level": "framework"
+    },
+    {
+      "component": "metric_schema",
+      "driving": "shared metrics",
+      "robotics": "shared metrics",
+      "shared": true,
+      "sharing_level": "schema"
+    },
+    {
+      "component": "principal_seeds",
+      "driving": [
+        42,
+        123,
+        456
+      ],
+      "robotics": [
+        42,
+        123,
+        456
+      ],
+      "shared": true,
+      "sharing_level": "protocol"
+    },
+    {
+      "component": "trained_policy_weights",
+      "driving": "driving-specific",
+      "robotics": "robotics-specific",
+      "shared": false,
+      "sharing_level": "domain_specific"
+    }
+  ],
+  "sprint": "5.14B",
+  "supported_statement": "A common safety-filter interface, intervention protocol, robustness harness, metric schema, and seed protocol were reused across autonomous-driving and robotics proxy environments while retaining domain-specific constraints, predictors, clipping semantics, and Lyapunov potentials."
+}
