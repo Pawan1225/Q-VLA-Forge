@@ -1,0 +1,105 @@
+{
+  "sprint": "4",
+  "freeze_sprint": "4.15",
+  "scientific_state": "frozen",
+  "final_acceptance": "pending",
+  "primary_metric": "frozen paired-target reach under the Sprint 4 protocol",
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "principal_runs": {
+    "full_ppo": 6,
+    "matched_classical": 6,
+    "hybrid_qml": 6
+  },
+  "reproduction_runs": {
+    "hybrid_qml": 2,
+    "matched_classical": 2,
+    "total": 4
+  },
+  "target_reach": {
+    "full_ppo": {
+      "driving": 3,
+      "robotics": 3,
+      "total": 6,
+      "out_of": 6
+    },
+    "matched_classical": {
+      "driving": 0,
+      "robotics": 1,
+      "total": 1,
+      "out_of": 6
+    },
+    "hybrid_qml": {
+      "driving": 0,
+      "robotics": 0,
+      "total": 0,
+      "out_of": 6
+    }
+  },
+  "actor_compactness": {
+    "autonomous_driving": {
+      "full_ppo_actor_parameters": 1318,
+      "compact_actor_parameters": 54,
+      "reduction_percent": 95.90288315629742
+    },
+    "robotics": {
+      "full_ppo_actor_parameters": 1382,
+      "compact_actor_parameters": 62,
+      "reduction_percent": 95.51374819102749
+    }
+  },
+  "matched_budget_representation": {
+    "autonomous_driving": {
+      "direction": "hybrid_qml"
+    },
+    "robotics": {
+      "direction": "matched_classical"
+    },
+    "direction_consistent_across_domains": false
+  },
+  "cross_domain": {
+    "architecture_reused": true,
+    "shared_trained_weights": false,
+    "robust_cross_domain_qml_advantage": false,
+    "robust_cross_domain_matched_classical_advantage": false
+  },
+  "claim_boundaries": {
+    "qml_sample_efficiency_advantage": false,
+    "robust_cross_domain_qml_advantage": false,
+    "quantum_speedup": false,
+    "quantum_hardware_advantage": false,
+    "universal_policy": false,
+    "transfer_learning": false,
+    "zero_shot_transfer": false,
+    "shared_trained_weights": false
+  },
+  "claim_matrix_status": {
+    "qml_sample_efficiency": "NOT_SUPPORTED",
+    "quantum_speedup": "NOT_SUPPORTED",
+    "quantum_hardware_advantage": "NOT_SUPPORTED"
+  },
+  "scientific_boundary": {
+    "transfer_learning_performed": false,
+    "zero_shot_transfer_performed": false,
+    "universal_policy_claimed": false,
+    "quantum_speedup_claimed": false
+  },
+  "safety": {
+    "sprint4_safety_status": "NOT_YET_TESTED_IN_SPRINT_4",
+    "safety_guarantee_established": false,
+    "interpretation": "Sprint 4 does not test formal safety filtering or safety guarantees. Safety is handed off to Sprint 5."
+  },
+  "manifest": {
+    "path": "results/rl/final/sprint4-final-manifest.json",
+    "sha256": "11CF81BDE76F6E010E0CC4AFCFC2BEB488E04DE79C851B0DF72E10E43E8C9C89",
+    "artifact_count": 51,
+    "group_count": 17
+  },
+  "quality_gate": {
+    "full_test_count": null,
+    "final_verifier_state": "pending"
+  }
+}

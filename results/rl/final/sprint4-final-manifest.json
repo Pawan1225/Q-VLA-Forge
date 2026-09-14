@@ -1,0 +1,560 @@
+{
+  "sprint": "4",
+  "freeze_sprint": "4.15",
+  "status": "frozen",
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "artifact_count": 51,
+  "group_count": 17,
+  "groups": {
+    "ablation": [
+      "results/rl/ablation/matched-classical-autonomous_driving-seed-123.json",
+      "results/rl/ablation/matched-classical-autonomous_driving-seed-42-repro.json",
+      "results/rl/ablation/matched-classical-autonomous_driving-seed-42.json",
+      "results/rl/ablation/matched-classical-autonomous_driving-seed-456.json",
+      "results/rl/ablation/matched-classical-robotics-seed-123.json",
+      "results/rl/ablation/matched-classical-robotics-seed-42-repro.json",
+      "results/rl/ablation/matched-classical-robotics-seed-42.json",
+      "results/rl/ablation/matched-classical-robotics-seed-456.json",
+      "results/rl/ablation/sprint4-classical-vs-qml-ablation.json"
+    ],
+    "claims": [
+      "results/pilot-readiness/claim-registry.json",
+      "results/rl/evidence/sprint4-claim-matrix.json"
+    ],
+    "cross_domain": [
+      "results/rl/cross-domain/sprint4-cross-domain.json"
+    ],
+    "dashboard": [
+      "dashboard/data_loader.py",
+      "dashboard/pages/4_RL_Hybrid_QML.py"
+    ],
+    "driving_qml": [
+      "results/rl/qml/autonomous_driving-seed-123.json",
+      "results/rl/qml/autonomous_driving-seed-42-repro.json",
+      "results/rl/qml/autonomous_driving-seed-42.json",
+      "results/rl/qml/autonomous_driving-seed-456.json",
+      "results/rl/qml/sprint4-driving-qml-summary.json"
+    ],
+    "environment_audit": [
+      "results/rl/environment-audit/sprint4-environment-audit.json"
+    ],
+    "environments": [
+      "src/q_vla_forge/rl/driving_env.py",
+      "src/q_vla_forge/rl/robotics_env.py"
+    ],
+    "figures": [
+      "figures/rl/cross-domain-matched-delta.png",
+      "figures/rl/cross-domain-parameter-compactness.png",
+      "figures/rl/driving-matched-ablation.png",
+      "figures/rl/driving-normalized-progress.png",
+      "figures/rl/robotics-matched-ablation.png",
+      "figures/rl/robotics-normalized-progress.png",
+      "results/rl/evidence/sprint4-figure-index.json"
+    ],
+    "hybrid_policy": [
+      "results/rl/hybrid-policy/sprint4-hybrid-qml-policy.json"
+    ],
+    "ppo": [
+      "results/rl/ppo/autonomous_driving-seed-123.json",
+      "results/rl/ppo/autonomous_driving-seed-42.json",
+      "results/rl/ppo/autonomous_driving-seed-456.json",
+      "results/rl/ppo/robotics-seed-123.json",
+      "results/rl/ppo/robotics-seed-42.json",
+      "results/rl/ppo/robotics-seed-456.json",
+      "results/rl/ppo/sprint4-ppo-summary.json"
+    ],
+    "proposal_evidence": [
+      "results/rl/evidence/sprint4-manifest.json",
+      "results/rl/evidence/sprint4-rl-evidence.csv",
+      "results/rl/evidence/sprint4-rl-evidence.json",
+      "results/rl/evidence/sprint4-rl-evidence.md"
+    ],
+    "protocol": [
+      "results/rl/sprint4-rl-protocol.json"
+    ],
+    "qml_foundation": [
+      "results/rl/qml-foundation/sprint4-qml-foundation.json"
+    ],
+    "robotics_qml": [
+      "results/rl/qml/robotics-seed-123.json",
+      "results/rl/qml/robotics-seed-42-repro.json",
+      "results/rl/qml/robotics-seed-42.json",
+      "results/rl/qml/robotics-seed-456.json",
+      "results/rl/qml/sprint4-robotics-qml-summary.json"
+    ],
+    "sample_efficiency": [
+      "results/rl/analysis/sprint4-sample-efficiency.json"
+    ],
+    "targets": [
+      "results/rl/ppo/sprint4-ppo-targets.json"
+    ],
+    "validation": [
+      "results/rl/validation/sprint4-three-seed-validation.json"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "results/rl/sprint4-rl-protocol.json",
+      "sprint": "4.1",
+      "role": "rl_protocol",
+      "required": true,
+      "frozen": true,
+      "sha256": "37FBC8983BA3F31489680FEEA597B99D1CF842FC29BCF8C61F758CFEBBF2E10F",
+      "size_bytes": 5735
+    },
+    {
+      "path": "src/q_vla_forge/rl/driving_env.py",
+      "sprint": "4.2",
+      "role": "driving_environment",
+      "required": true,
+      "frozen": true,
+      "sha256": "71AF53D1D424F026C0135DD5B83040D60F5DFCF20A5B19B7AFDC7FF2F7962BCC",
+      "size_bytes": 9849
+    },
+    {
+      "path": "src/q_vla_forge/rl/robotics_env.py",
+      "sprint": "4.3",
+      "role": "robotics_environment",
+      "required": true,
+      "frozen": true,
+      "sha256": "4DA799584500DC841B98169C8D27D5F81A0EB5DAA750659647090D0206F70AE5",
+      "size_bytes": 11627
+    },
+    {
+      "path": "results/rl/environment-audit/sprint4-environment-audit.json",
+      "sprint": "4.4",
+      "role": "environment_audit",
+      "required": true,
+      "frozen": true,
+      "sha256": "B4CE5867227D4E12C094CA20C6B286DD1D217893CC8D638EC1D57340D68B75A3",
+      "size_bytes": 167436
+    },
+    {
+      "path": "results/rl/ppo/sprint4-ppo-summary.json",
+      "sprint": "4.5",
+      "role": "ppo_summary",
+      "required": true,
+      "frozen": true,
+      "sha256": "CA090235E3ED490F7B03C33D7B4D750BFBA34872495F6E5C67BC87365960F559",
+      "size_bytes": 5088
+    },
+    {
+      "path": "results/rl/ppo/sprint4-ppo-targets.json",
+      "sprint": "4.5",
+      "role": "frozen_paired_targets",
+      "required": true,
+      "frozen": true,
+      "sha256": "F78C5CFBB30CE20AA2DE53E75CB3C033A5A1AC846E71810D6C06006424DDA5B1",
+      "size_bytes": 3156
+    },
+    {
+      "path": "results/rl/qml-foundation/sprint4-qml-foundation.json",
+      "sprint": "4.6",
+      "role": "pqc_foundation",
+      "required": true,
+      "frozen": true,
+      "sha256": "8918828F518B1B6C1E8B3E660CA5659EDCFB6CF657C0C98689FCAFABE82C975E",
+      "size_bytes": 1571
+    },
+    {
+      "path": "results/rl/hybrid-policy/sprint4-hybrid-qml-policy.json",
+      "sprint": "4.7",
+      "role": "hybrid_qml_policy",
+      "required": true,
+      "frozen": true,
+      "sha256": "BD8BFAE340B512E146C077A9FB683BFC298EC4554627C71EC33DD216110EFF50",
+      "size_bytes": 3584
+    },
+    {
+      "path": "results/rl/qml/sprint4-driving-qml-summary.json",
+      "sprint": "4.8",
+      "role": "driving_qml_summary",
+      "required": true,
+      "frozen": true,
+      "sha256": "BD335CA270A895989A93A7A39D3BEE09CE99FF74543E63AF2D47CD78F08E2D01",
+      "size_bytes": 4155
+    },
+    {
+      "path": "results/rl/qml/sprint4-robotics-qml-summary.json",
+      "sprint": "4.9",
+      "role": "robotics_qml_summary",
+      "required": true,
+      "frozen": true,
+      "sha256": "03699C26B702E2F99D3816F1FE709FC92111BAE180EABA6ABD2014A5177E6150",
+      "size_bytes": 1129
+    },
+    {
+      "path": "results/rl/validation/sprint4-three-seed-validation.json",
+      "sprint": "4.10",
+      "role": "three_seed_validation",
+      "required": true,
+      "frozen": true,
+      "sha256": "E86B5789AC2AF3FAA6B16D45878FDD4FF5BA227E666379CD0E1896CE9ED792E7",
+      "size_bytes": 6873
+    },
+    {
+      "path": "results/rl/analysis/sprint4-sample-efficiency.json",
+      "sprint": "4.11",
+      "role": "sample_efficiency_analysis",
+      "required": true,
+      "frozen": true,
+      "sha256": "AAF07556E81996E4AF1C72495599F9913B15BACA9C1514E51491C136F1E50D58",
+      "size_bytes": 52965
+    },
+    {
+      "path": "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+      "sprint": "4.12",
+      "role": "matched_budget_ablation",
+      "required": true,
+      "frozen": true,
+      "sha256": "2358601D94B55AF197177F8A1D573A468DFF86A79D36D0440CB1F00330D244A3",
+      "size_bytes": 11183
+    },
+    {
+      "path": "results/rl/cross-domain/sprint4-cross-domain.json",
+      "sprint": "4.13",
+      "role": "cross_domain_analysis",
+      "required": true,
+      "frozen": true,
+      "sha256": "8B2ACF6A1B3B9AD17A5023F3F371032DE2CC53CCF8BBFD34666ACEAE0BE749C7",
+      "size_bytes": 12753
+    },
+    {
+      "path": "results/rl/evidence/sprint4-rl-evidence.json",
+      "sprint": "4.14",
+      "role": "consolidated_evidence_json",
+      "required": true,
+      "frozen": true,
+      "sha256": "F126117144621462C3383712F14B76FCBCB89A97D7583325B0EF61C912C3EAD7",
+      "size_bytes": 31512
+    },
+    {
+      "path": "results/rl/evidence/sprint4-rl-evidence.csv",
+      "sprint": "4.14",
+      "role": "consolidated_evidence_csv",
+      "required": true,
+      "frozen": true,
+      "sha256": "B41E5F215197441690FB7528BA5580F09E7F2E29166647C0D643847909D121CC",
+      "size_bytes": 1235
+    },
+    {
+      "path": "results/rl/evidence/sprint4-rl-evidence.md",
+      "sprint": "4.14",
+      "role": "proposal_evidence_markdown",
+      "required": true,
+      "frozen": true,
+      "sha256": "159B793AE0B7D199B3656CDDF3474A4F0673E23BD7DFCCFA470FE26E66231438",
+      "size_bytes": 6526
+    },
+    {
+      "path": "results/rl/evidence/sprint4-figure-index.json",
+      "sprint": "4.14",
+      "role": "figure_index",
+      "required": true,
+      "frozen": true,
+      "sha256": "18A814CFF91BAEB2025CAE77835D90724EE591B11F442E5951D89F1D785CB5E4",
+      "size_bytes": 2379
+    },
+    {
+      "path": "results/rl/evidence/sprint4-claim-matrix.json",
+      "sprint": "4.14",
+      "role": "claim_matrix",
+      "required": true,
+      "frozen": true,
+      "sha256": "5AB61EA2CD799F8862C3FA1C65FE7BCDB2B91AF9B9428726188BD7A6F9CC28C0",
+      "size_bytes": 7737
+    },
+    {
+      "path": "results/rl/evidence/sprint4-manifest.json",
+      "sprint": "4.14",
+      "role": "proposal_manifest",
+      "required": true,
+      "frozen": true,
+      "sha256": "194A1E40B2CE57BCE6C6091B3F9145B5E5567A959FFA6FAE0F9F1B874D445541",
+      "size_bytes": 4541
+    },
+    {
+      "path": "results/pilot-readiness/claim-registry.json",
+      "sprint": "4.14",
+      "role": "claim_registry",
+      "required": true,
+      "frozen": true,
+      "sha256": "D325A5CDBB5CB03F4913AB9B46BC32B1895468F61BAB957FCBCC49876B6D8DFC",
+      "size_bytes": 13489
+    },
+    {
+      "path": "dashboard/data_loader.py",
+      "sprint": "4.14",
+      "role": "dashboard_loader",
+      "required": true,
+      "frozen": true,
+      "sha256": "B41247D54FE24D6C65DFD66377DCC2F83A848CE54A27BC31D4A08A4A4D5B9481",
+      "size_bytes": 2566
+    },
+    {
+      "path": "dashboard/pages/4_RL_Hybrid_QML.py",
+      "sprint": "4.14",
+      "role": "dashboard_page",
+      "required": true,
+      "frozen": true,
+      "sha256": "FD86B6462EE5D8DDB5488A632FF763992AA2733216D328F3BCD5666506EBF509",
+      "size_bytes": 8099
+    },
+    {
+      "path": "results/rl/ppo/autonomous_driving-seed-42.json",
+      "sprint": "4.5",
+      "role": "driving_ppo_seed_42",
+      "required": true,
+      "frozen": true,
+      "sha256": "555AADED626B27BF939BEA94130C76B32F971318C1DD27A5698FBA6C7C120D80",
+      "size_bytes": 4837
+    },
+    {
+      "path": "results/rl/ppo/robotics-seed-42.json",
+      "sprint": "4.5",
+      "role": "robotics_ppo_seed_42",
+      "required": true,
+      "frozen": true,
+      "sha256": "7B8EBB47ECC24F61D5E4494B8E97B1EE76A4DCECA090B7C21D952CB863B51165",
+      "size_bytes": 4832
+    },
+    {
+      "path": "results/rl/qml/autonomous_driving-seed-42.json",
+      "sprint": "4.8",
+      "role": "driving_qml_seed_42",
+      "required": true,
+      "frozen": true,
+      "sha256": "7581CCF2E71457A6666E92CEA5DC1D678E0B90E70B87E1B740886E0E78189A19",
+      "size_bytes": 5315
+    },
+    {
+      "path": "results/rl/qml/robotics-seed-42.json",
+      "sprint": "4.9",
+      "role": "robotics_qml_seed_42",
+      "required": true,
+      "frozen": true,
+      "sha256": "7F3570B46D7660F0381E8BBF9D7B8C559D1293144F974109BEA6EBAA33EE1B3D",
+      "size_bytes": 5520
+    },
+    {
+      "path": "results/rl/ablation/matched-classical-autonomous_driving-seed-42.json",
+      "sprint": "4.12",
+      "role": "driving_matched_classical_seed_42",
+      "required": true,
+      "frozen": true,
+      "sha256": "160AAD19B0709CE0C68FC3ABED66C4E9F0589C75D0F803E34561754285DCAC55",
+      "size_bytes": 6669
+    },
+    {
+      "path": "results/rl/ablation/matched-classical-robotics-seed-42.json",
+      "sprint": "4.12",
+      "role": "robotics_matched_classical_seed_42",
+      "required": true,
+      "frozen": true,
+      "sha256": "A68D8C401937B2B692146C27D945ED0E2AB6CE7F66C55A6664F19A24959A2156",
+      "size_bytes": 6689
+    },
+    {
+      "path": "results/rl/ppo/autonomous_driving-seed-123.json",
+      "sprint": "4.5",
+      "role": "driving_ppo_seed_123",
+      "required": true,
+      "frozen": true,
+      "sha256": "61AE9D62992A4C9B57800406220C4F0AAF41C7C5513634F58EC71B152F06332C",
+      "size_bytes": 4833
+    },
+    {
+      "path": "results/rl/ppo/robotics-seed-123.json",
+      "sprint": "4.5",
+      "role": "robotics_ppo_seed_123",
+      "required": true,
+      "frozen": true,
+      "sha256": "3971D6E0A0EB532D6FC9724B3E660870E73602775194AC7BE122F6F29F4325CA",
+      "size_bytes": 4831
+    },
+    {
+      "path": "results/rl/qml/autonomous_driving-seed-123.json",
+      "sprint": "4.8",
+      "role": "driving_qml_seed_123",
+      "required": true,
+      "frozen": true,
+      "sha256": "667A68B0B582E17DE4C97CCB60323AED8DE8B27942D1BBED62EA21018866ACCA",
+      "size_bytes": 5311
+    },
+    {
+      "path": "results/rl/qml/robotics-seed-123.json",
+      "sprint": "4.9",
+      "role": "robotics_qml_seed_123",
+      "required": true,
+      "frozen": true,
+      "sha256": "3EB8D03F6F27A0ABBF0DFE77153C0E75058C6CA4A48D35D0AE1793947EB74165",
+      "size_bytes": 5535
+    },
+    {
+      "path": "results/rl/ablation/matched-classical-autonomous_driving-seed-123.json",
+      "sprint": "4.12",
+      "role": "driving_matched_classical_seed_123",
+      "required": true,
+      "frozen": true,
+      "sha256": "BA4081EB11833AF6DF6054C2A3029C7FFA54381FB6FE87DEC6988545B0B310D3",
+      "size_bytes": 6670
+    },
+    {
+      "path": "results/rl/ablation/matched-classical-robotics-seed-123.json",
+      "sprint": "4.12",
+      "role": "robotics_matched_classical_seed_123",
+      "required": true,
+      "frozen": true,
+      "sha256": "C28804FA6001A1075713286B182054BE77616FB1E5140C3D4512FF8B4FA88B7E",
+      "size_bytes": 6680
+    },
+    {
+      "path": "results/rl/ppo/autonomous_driving-seed-456.json",
+      "sprint": "4.5",
+      "role": "driving_ppo_seed_456",
+      "required": true,
+      "frozen": true,
+      "sha256": "738C6CE788D444FD70BF5A081F206D4B07A401A2AEB6FE8015530C8CE9B0C675",
+      "size_bytes": 4836
+    },
+    {
+      "path": "results/rl/ppo/robotics-seed-456.json",
+      "sprint": "4.5",
+      "role": "robotics_ppo_seed_456",
+      "required": true,
+      "frozen": true,
+      "sha256": "8DAB3D6CEFDC48F15C3CAECF6A9C943BDD5B3566E43880BCA26DCEB27A00EEC0",
+      "size_bytes": 4828
+    },
+    {
+      "path": "results/rl/qml/autonomous_driving-seed-456.json",
+      "sprint": "4.8",
+      "role": "driving_qml_seed_456",
+      "required": true,
+      "frozen": true,
+      "sha256": "D916A23FC6BC1AAC3C93E453A53CF5454BC35693409C09AE694B33C9E764C3E8",
+      "size_bytes": 5310
+    },
+    {
+      "path": "results/rl/qml/robotics-seed-456.json",
+      "sprint": "4.9",
+      "role": "robotics_qml_seed_456",
+      "required": true,
+      "frozen": true,
+      "sha256": "A9A234F7F92728B288CF74651148043447C32D33C6F2E8873D209861155E3DD5",
+      "size_bytes": 5540
+    },
+    {
+      "path": "results/rl/ablation/matched-classical-autonomous_driving-seed-456.json",
+      "sprint": "4.12",
+      "role": "driving_matched_classical_seed_456",
+      "required": true,
+      "frozen": true,
+      "sha256": "7BC39FC3D9D244C1CAEECDD540A6BF74B1F84A8484C80F05465A82095CB03CD4",
+      "size_bytes": 6660
+    },
+    {
+      "path": "results/rl/ablation/matched-classical-robotics-seed-456.json",
+      "sprint": "4.12",
+      "role": "robotics_matched_classical_seed_456",
+      "required": true,
+      "frozen": true,
+      "sha256": "754F884CC1F85B2A8B2F4EDE2EE9C9415E4A3CDC52DD8A68EAFCDA72D46ED478",
+      "size_bytes": 6672
+    },
+    {
+      "path": "results/rl/qml/autonomous_driving-seed-42-repro.json",
+      "sprint": "4.8",
+      "role": "driving_qml_seed_42_reproduction",
+      "required": true,
+      "frozen": true,
+      "sha256": "52866AB720ABE1A92CB86C75F3986BA6E367BD0CE046839AD1324FC789929E53",
+      "size_bytes": 5374
+    },
+    {
+      "path": "results/rl/qml/robotics-seed-42-repro.json",
+      "sprint": "4.9",
+      "role": "robotics_qml_seed_42_reproduction",
+      "required": true,
+      "frozen": true,
+      "sha256": "17D99EB663285D89F63BAF4ED0F3C4AE172D7C77C971B4024C2AAC2F56924F45",
+      "size_bytes": 5577
+    },
+    {
+      "path": "results/rl/ablation/matched-classical-autonomous_driving-seed-42-repro.json",
+      "sprint": "4.12",
+      "role": "driving_matched_seed_42_reproduction",
+      "required": true,
+      "frozen": true,
+      "sha256": "AAC5584A8467EF71DB93CB1F63298AD9A943B4AF257BB7879C64AB35CC02AC36",
+      "size_bytes": 6766
+    },
+    {
+      "path": "results/rl/ablation/matched-classical-robotics-seed-42-repro.json",
+      "sprint": "4.12",
+      "role": "robotics_matched_seed_42_reproduction",
+      "required": true,
+      "frozen": true,
+      "sha256": "1902393FE2219B6791CC76D2974DD2CF955DF95157A807D4CFC2E9AD4E2414CE",
+      "size_bytes": 6786
+    },
+    {
+      "path": "figures/rl/driving-normalized-progress.png",
+      "sprint": "4.11",
+      "role": "driving_normalized_progress",
+      "required": true,
+      "frozen": true,
+      "sha256": "1398220ADFF61B3A0BA9EE83048C47079A0A0EEF6B5D543E71103D8517571629",
+      "size_bytes": 198894
+    },
+    {
+      "path": "figures/rl/robotics-normalized-progress.png",
+      "sprint": "4.11",
+      "role": "robotics_normalized_progress",
+      "required": true,
+      "frozen": true,
+      "sha256": "BFFB8973811433C8CAA5823C92A799266EE5393116C832F7FBF5842FA69BA31C",
+      "size_bytes": 137499
+    },
+    {
+      "path": "figures/rl/driving-matched-ablation.png",
+      "sprint": "4.12",
+      "role": "driving_matched_ablation",
+      "required": true,
+      "frozen": true,
+      "sha256": "833E6B2AA5AD61BB8BD08AB826D1D1A777BEC344DE1F31716ED053EC3C3FAF35",
+      "size_bytes": 236047
+    },
+    {
+      "path": "figures/rl/robotics-matched-ablation.png",
+      "sprint": "4.12",
+      "role": "robotics_matched_ablation",
+      "required": true,
+      "frozen": true,
+      "sha256": "DAA7A37BF468798B72654B0C7477981B5D2D0156342DE612015DD830263CA3AF",
+      "size_bytes": 157387
+    },
+    {
+      "path": "figures/rl/cross-domain-matched-delta.png",
+      "sprint": "4.13",
+      "role": "cross_domain_matched_delta",
+      "required": true,
+      "frozen": true,
+      "sha256": "4FAA7F2924073BA517FB27AB6A4D303374989C94CF52A1636054FCF0A2753944",
+      "size_bytes": 44978
+    },
+    {
+      "path": "figures/rl/cross-domain-parameter-compactness.png",
+      "sprint": "4.13",
+      "role": "cross_domain_parameter_compactness",
+      "required": true,
+      "frozen": true,
+      "sha256": "8D2F1E1DA35FF4D3CE33EFAF1728EDF9562E530E623CCF0D6090504248094DC1",
+      "size_bytes": 54097
+    }
+  ]
+}

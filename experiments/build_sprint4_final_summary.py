@@ -1,0 +1,202 @@
+﻿"""Build the final Sprint 4 scientific summary."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+FREEZE_PATH = Path("results/rl/final/sprint4-freeze-record.json")
+
+HANDOFF_PATH = Path("results/rl/final/sprint4-handoff.json")
+
+OUTPUT_PATH = Path("results/rl/final/sprint4-final-summary.md")
+
+
+def load_json(
+    path: Path,
+) -> dict[str, object]:
+    return json.loads(
+        path.read_text(
+            encoding="utf-8",
+        )
+    )
+
+
+def build_summary() -> str:
+    """Build the reviewer-facing Sprint 4 freeze summary."""
+
+    freeze = load_json(FREEZE_PATH)
+
+    handoff = load_json(HANDOFF_PATH)
+
+    driving = freeze["actor_compactness"]["autonomous_driving"]
+
+    robotics = freeze["actor_compactness"]["robotics"]
+
+    lines = [
+        "# Sprint 4 - Final Scientific Freeze",
+        "",
+        "## Scope",
+        "",
+        (
+            "Sprint 4 covers the RL and Hybrid QML pilot across "
+            "autonomous-driving and robotics proxy environments."
+        ),
+        "",
+        "## Protocol",
+        "",
+        "- Principal seeds: 42, 123, 456",
+        "- Principal interaction budget: 20,000 steps",
+        "- Frozen paired-target evaluation protocol",
+        "",
+        "## Methods",
+        "",
+        "- Classical PPO",
+        "- Hybrid QML policy",
+        "- Parameter-matched classical control",
+        "",
+        "## Primary Results",
+        "",
+        "- Classical PPO target reach: 6/6",
+        "- Matched Classical target reach: 1/6",
+        "- Hybrid QML target reach: 0/6",
+        "",
+        "## Compactness",
+        "",
+        ("- Driving actor reduction: " f"{driving['reduction_percent']:.6f}%"),
+        ("- Robotics actor reduction: " f"{robotics['reduction_percent']:.6f}%"),
+        "",
+        "## Sample Efficiency",
+        "",
+        (
+            "The frozen Sprint 4 evidence does not establish a "
+            "robust Hybrid QML sample-efficiency advantage."
+        ),
+        "",
+        "## Matched-Budget Ablation",
+        "",
+        ("- Driving mean-AUC direction: Hybrid QML"),
+        ("- Robotics mean-AUC direction: Matched Classical"),
+        ("- Cross-domain representation direction: " "not consistent"),
+        "",
+        "## Cross-Domain Result",
+        "",
+        (
+            "Common hybrid architecture reuse is supported. "
+            "Shared trained weights, transfer learning, "
+            "zero-shot transfer, and universal-policy "
+            "generalization were not demonstrated."
+        ),
+        "",
+        "## Reproducibility",
+        "",
+        (f"- Frozen artifact count: " f"{freeze['manifest']['artifact_count']}"),
+        (f"- Frozen manifest groups: " f"{freeze['manifest']['group_count']}"),
+        "- SHA256 scientific freeze manifest generated",
+        "",
+        "## Evidence Inventory",
+        "",
+        "- PPO baseline and frozen targets",
+        "- PQC foundation and hybrid policy",
+        "- Driving and robotics QML results",
+        "- Three-seed validation",
+        "- Sample-efficiency analysis",
+        "- Matched-budget ablation",
+        "- Cross-domain analysis",
+        "- Proposal evidence and dashboard package",
+        "",
+        "## Supported Claims",
+        "",
+        "- Classical PPO reached all 6 frozen targets.",
+        (
+            "- Compact hybrid actors reduced trainable actor "
+            "parameters by about 95.9% in driving and 95.5% "
+            "in robotics."
+        ),
+        "- Common hybrid architecture reuse is supported.",
+        "",
+        "## Unsupported Claims",
+        "",
+        "- Robust QML sample-efficiency advantage",
+        "- Quantum computational speedup",
+        "- Quantum-hardware advantage",
+        "- Universal-policy generalization",
+        "- Transfer learning",
+        "- Shared trained-weight generalization",
+        "",
+        "## Limitations",
+        "",
+        "- Synthetic proxy environments",
+        "- Three principal seeds",
+        "- Simulated four-qubit, two-layer PQC",
+        "- No quantum hardware",
+        "- No formal statistical-significance claim",
+        "- No Sprint 4 safety guarantee",
+        "",
+        "## Final Sprint 4 Conclusion",
+        "",
+        (
+            "Sprint 4 established a reproducible classical PPO "
+            "baseline, a four-qubit hybrid PQC actor, a "
+            "parameter-matched classical control, three-seed "
+            "evaluation, sample-efficiency analysis, matched "
+            "representation ablation, and cross-domain comparison "
+            "across autonomous-driving and robotics proxy "
+            "environments."
+        ),
+        "",
+        (
+            "Classical PPO reached all six frozen targets, while "
+            "the Hybrid QML policy reached none and the matched "
+            "classical control reached one. The hybrid actors "
+            "nevertheless reduced actor parameters by approximately "
+            "95.9% in driving and 95.5% in robotics."
+        ),
+        "",
+        (
+            "Matched-budget analysis showed domain-dependent "
+            "representation behavior rather than a consistent "
+            "QML or classical compact-policy advantage. Sprint 4 "
+            "therefore supports hybrid actor compactness and "
+            "cross-domain architecture reuse, but not robust QML "
+            "sample-efficiency advantage, quantum speedup, hardware "
+            "advantage, or universal-policy generalization."
+        ),
+        "",
+        "## Sprint 5 Handoff",
+        "",
+        (f"Handoff status: " f"{handoff['handoff_status']}"),
+        "",
+        (
+            "Sprint 5 will evaluate explicit safety filtering and "
+            "robustness under clean and perturbed conditions."
+        ),
+        "",
+        ("Core question: " f"{handoff['core_scientific_question']}"),
+        "",
+    ]
+
+    return "\n".join(lines)
+
+
+def main() -> None:
+    summary = build_summary()
+
+    OUTPUT_PATH.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    OUTPUT_PATH.write_text(
+        summary,
+        encoding="utf-8",
+    )
+
+    print(
+        "Final Sprint 4 summary:",
+        OUTPUT_PATH.as_posix(),
+    )
+
+
+if __name__ == "__main__":
+    main()
