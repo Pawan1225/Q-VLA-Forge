@@ -1,0 +1,89 @@
+{
+  "artifact": "sprint5-robotics-safety-constraints",
+  "sprint": "5",
+  "sub_sprint": "5.3",
+  "domain": "robotics",
+  "status": "frozen_before_filter_evaluation",
+  "state_contract": {
+    "dimension": 6,
+    "dimensions": [
+      "robot_x",
+      "robot_y",
+      "object_x",
+      "object_y",
+      "target_x",
+      "target_y"
+    ]
+  },
+  "action_contract": {
+    "dimension": 3,
+    "dimensions": [
+      "delta_x",
+      "delta_y",
+      "gripper"
+    ],
+    "constraint_evaluator_clips_actions": false
+  },
+  "violation_categories": [
+    "workspace_boundary",
+    "unsafe_motion",
+    "unsafe_gripper_condition",
+    "object_boundary",
+    "unsafe_object_target_interaction"
+  ],
+  "environment_constants": {
+    "workspace_min": -1.0,
+    "workspace_max": 1.0,
+    "movement_scale": 0.08,
+    "grasp_distance": 0.12,
+    "close_threshold": 0.5
+  },
+  "thresholds": {
+    "workspace_boundary": {
+      "warning_abs": 0.9,
+      "critical_abs": 1.0
+    },
+    "unsafe_motion": {
+      "warning_abs": 0.9,
+      "critical_abs": 1.0,
+      "outward_motion_only": true,
+      "prediction": "robot_position + movement_scale * action_delta"
+    },
+    "gripper": {
+      "close_threshold": 0.5,
+      "safe_grasp_distance": 0.12,
+      "critical_distance": 0.3
+    },
+    "object_boundary": {
+      "warning_abs": 0.9,
+      "critical_abs": 1.0
+    },
+    "object_target_interaction": {
+      "warning_distance": 0.5,
+      "critical_distance": 1.0,
+      "target_outside_workspace_is_critical": true,
+      "interpretation": "pilot object-target safety heuristic"
+    }
+  },
+  "provenance": {
+    "source_protocol": "results/safety/protocol/sprint5-safety-protocol.json",
+    "source_protocol_sha256": "dc5574e954b4c6fd73162792745d07d50e1d100518d4199a96ead0b28d013f4b",
+    "robotics_environment": "src/q_vla_forge/rl/robotics_env.py",
+    "robotics_environment_sha256": "4da799584500dc841b98169c8d27d5f81a0eb5daa750659647090d0206f70ae5"
+  },
+  "claims": {
+    "deterministic_robotics_constraint_contract": true,
+    "safety_improvement_demonstrated": false,
+    "industrial_robot_safety_model": false,
+    "production_robot_safety": false,
+    "iso_10218_certification": false,
+    "iec_62061_certification": false,
+    "formal_safety_guarantee": false
+  },
+  "results": {
+    "safety_results_present": false,
+    "safety_filter_evaluated": false,
+    "clipping_evaluated": false,
+    "lyapunov_evaluated": false
+  }
+}

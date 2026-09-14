@@ -1,0 +1,76 @@
+sprint: "5.3"
+domain: "robotics"
+
+scope:
+  constraint_definition_only: true
+  safety_filter_implemented: false
+  safety_evaluation_performed: false
+  threshold_tuning_from_results: false
+  reward_modified: false
+  dynamics_modified: false
+
+state:
+  dimension: 6
+  dimensions:
+    - robot_x
+    - robot_y
+    - object_x
+    - object_y
+    - target_x
+    - target_y
+
+action:
+  dimension: 3
+  dimensions:
+    - delta_x
+    - delta_y
+    - gripper
+
+environment:
+  workspace_min: -1.0
+  workspace_max: 1.0
+  movement_scale: 0.08
+  grasp_distance: 0.12
+  target_tolerance: 0.12
+  close_threshold: 0.50
+  open_threshold: -0.50
+
+constraints:
+  workspace_boundary:
+    warning_abs: 0.90
+    critical_abs: 1.00
+
+  unsafe_motion:
+    warning_abs: 0.90
+    critical_abs: 1.00
+    outward_motion_only: true
+
+  gripper:
+    close_threshold: 0.50
+    safe_grasp_distance: 0.12
+    critical_distance: 0.30
+
+  object_boundary:
+    warning_abs: 0.90
+    critical_abs: 1.00
+
+  object_target_interaction:
+    warning_distance: 0.50
+    critical_distance: 1.00
+    target_outside_workspace_is_critical: true
+
+violation_categories:
+  - workspace_boundary
+  - unsafe_motion
+  - unsafe_gripper_condition
+  - object_boundary
+  - unsafe_object_target_interaction
+
+claims:
+  deterministic_robotics_constraint_contract: true
+  safety_improvement_demonstrated: false
+  industrial_robot_safety_model: false
+  production_robot_safety: false
+  iso_10218_certification: false
+  iec_62061_certification: false
+  formal_safety_guarantee: false
