@@ -1,0 +1,106 @@
+sprint: "5.6"
+
+method: "lyapunov_foundation"
+
+scope:
+  candidate_definition_only: true
+  safety_filter_implemented: false
+  action_modification_performed: false
+  candidate_action_selection: false
+  policy_loading: false
+  principal_policy_evaluation: false
+  robustness_evaluation: false
+  formal_stability_proof: false
+
+shared:
+  component_weights: "equal"
+  weight_value: 1.0
+  epsilon: 1.0e-12
+  tuning_from_empirical_results: false
+  clipping_results_used_for_parameter_selection: false
+
+driving:
+  state_order:
+    - speed
+    - lane_offset
+    - heading_error
+    - obstacle_distance
+
+  components:
+    - lane
+    - heading
+    - obstacle
+
+  lane:
+    warning_threshold: 0.75
+    critical_reference: 0.95
+    normalization_scale: 0.20
+
+  heading:
+    warning_threshold: 0.50
+    critical_reference: 0.75
+    normalization_scale: 0.25
+
+  obstacle:
+    fixed_warning_distance: 0.30
+    fixed_critical_reference: 0.15
+    fixed_normalization_scale: 0.15
+
+    safe_distance_base: 0.15
+    safe_distance_speed_coefficient: 0.35
+    combine_rule: "maximum"
+
+robotics:
+  state_order:
+    - robot_x
+    - robot_y
+    - object_x
+    - object_y
+    - target_x
+    - target_y
+
+  components:
+    - robot_workspace
+    - object_workspace
+    - target_workspace
+    - object_target_interaction
+
+  robot_workspace:
+    warning_threshold: 0.90
+    critical_reference: 1.00
+    normalization_scale: 0.10
+
+  object_workspace:
+    warning_threshold: 0.90
+    critical_reference: 1.00
+    normalization_scale: 0.10
+
+  target_workspace:
+    zero_until_outside: 1.00
+    normalization_scale: 0.10
+
+  object_target_interaction:
+    boundary_activation: 0.90
+    warning_distance: 0.50
+    critical_reference: 1.00
+    normalization_scale: 0.50
+
+excluded_action_only_constraints:
+  driving:
+    - steering_risk_action_component
+    - acceleration_braking_conflict
+
+  robotics:
+    - unsafe_motion
+    - unsafe_gripper_condition
+
+claims:
+  control_lyapunov_function_proven: false
+  asymptotic_stability_proven: false
+  invariant_safe_set_proven: false
+  formal_safety_guarantee: false
+  production_certification: false
+  lyapunov_filter_effectiveness_tested: false
+  lyapunov_vs_clipping_tested: false
+  robustness_improvement_tested: false
+  quantum_safety_claim: false

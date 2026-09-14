@@ -1,0 +1,532 @@
+{
+  "sprint": "5.6",
+  "artifact": "lyapunov-function-foundation",
+  "method": "classical_lyapunov_safety_candidate",
+  "scope": {
+    "candidate_definition_only": true,
+    "policy_loading": false,
+    "checkpoint_loading": false,
+    "action_modification_performed": false,
+    "candidate_action_selection": false,
+    "principal_policy_evaluation": false,
+    "robustness_evaluation": false,
+    "formal_stability_proof": false
+  },
+  "provenance": {
+    "sprint5_protocol": {
+      "path": "results/safety/protocol/sprint5-safety-protocol.json",
+      "sha256": "dc5574e954b4c6fd73162792745d07d50e1d100518d4199a96ead0b28d013f4b"
+    },
+    "driving_safety_contract": {
+      "path": "results/safety/driving/sprint5-driving-safety-constraints.json",
+      "sha256": "4ba98e6955b413108d4f85460a3c310bd049ed6bdab8aa6147cccb3bc9e32f77"
+    },
+    "robotics_safety_contract": {
+      "path": "results/safety/robotics/sprint5-robotics-safety-constraints.json",
+      "sha256": "f03c004a314432caae37f704fc4c86214604fbd09bb2e13db6d13b8e83683c5c"
+    }
+  },
+  "shared_design": {
+    "component_weights": "equal",
+    "weight_value": 1.0,
+    "epsilon": 1e-12,
+    "empirical_weight_tuning": false,
+    "clipping_results_used_for_parameter_selection": false
+  },
+  "driving": {
+    "state_order": [
+      "speed",
+      "lane_offset",
+      "heading_error",
+      "obstacle_distance"
+    ],
+    "components": [
+      "lane",
+      "heading",
+      "obstacle"
+    ],
+    "formula": {
+      "lane_excess": "max(0, abs(lane_offset)-0.75) / 0.20",
+      "heading_excess": "max(0, abs(heading_error)-0.50) / 0.25",
+      "fixed_obstacle_excess": "max(0, 0.30-obstacle_distance) / 0.15",
+      "safe_distance": "0.15 + 0.35*max(speed,0)",
+      "speed_obstacle_excess": "max(0, safe_distance-obstacle_distance) / max(safe_distance,1e-12)",
+      "obstacle_excess": "max(fixed_obstacle_excess, speed_obstacle_excess)",
+      "total": "lane_excess^2 + heading_excess^2 + obstacle_excess^2"
+    },
+    "probes": {
+      "nominal": {
+        "domain": "autonomous_driving",
+        "total": 0.0,
+        "components": {
+          "lane": 0.0,
+          "heading": 0.0,
+          "obstacle": 0.0
+        },
+        "zero_risk_region": true
+      },
+      "lane_warning_probe": {
+        "domain": "autonomous_driving",
+        "total": 0.25,
+        "components": {
+          "lane": 0.25,
+          "heading": 0.0,
+          "obstacle": 0.0
+        },
+        "zero_risk_region": false
+      },
+      "lane_critical_reference": {
+        "domain": "autonomous_driving",
+        "total": 1.0,
+        "components": {
+          "lane": 1.0,
+          "heading": 0.0,
+          "obstacle": 0.0
+        },
+        "zero_risk_region": false
+      },
+      "heading_warning_probe": {
+        "domain": "autonomous_driving",
+        "total": 0.15999999999999992,
+        "components": {
+          "lane": 0.0,
+          "heading": 0.15999999999999992,
+          "obstacle": 0.0
+        },
+        "zero_risk_region": false
+      },
+      "heading_critical_reference": {
+        "domain": "autonomous_driving",
+        "total": 1.0,
+        "components": {
+          "lane": 0.0,
+          "heading": 1.0,
+          "obstacle": 0.0
+        },
+        "zero_risk_region": false
+      },
+      "obstacle_distance_probe": [
+        {
+          "distance": 0.6,
+          "evaluation": {
+            "domain": "autonomous_driving",
+            "total": 0.0,
+            "components": {
+              "lane": 0.0,
+              "heading": 0.0,
+              "obstacle": 0.0
+            },
+            "zero_risk_region": true
+          }
+        },
+        {
+          "distance": 0.5,
+          "evaluation": {
+            "domain": "autonomous_driving",
+            "total": 0.0,
+            "components": {
+              "lane": 0.0,
+              "heading": 0.0,
+              "obstacle": 0.0
+            },
+            "zero_risk_region": true
+          }
+        },
+        {
+          "distance": 0.4,
+          "evaluation": {
+            "domain": "autonomous_driving",
+            "total": 0.03999999999999998,
+            "components": {
+              "lane": 0.0,
+              "heading": 0.0,
+              "obstacle": 0.03999999999999998
+            },
+            "zero_risk_region": false
+          }
+        },
+        {
+          "distance": 0.3,
+          "evaluation": {
+            "domain": "autonomous_driving",
+            "total": 0.16000000000000003,
+            "components": {
+              "lane": 0.0,
+              "heading": 0.0,
+              "obstacle": 0.16000000000000003
+            },
+            "zero_risk_region": false
+          }
+        },
+        {
+          "distance": 0.2,
+          "evaluation": {
+            "domain": "autonomous_driving",
+            "total": 0.44444444444444425,
+            "components": {
+              "lane": 0.0,
+              "heading": 0.0,
+              "obstacle": 0.44444444444444425
+            },
+            "zero_risk_region": false
+          }
+        },
+        {
+          "distance": 0.1,
+          "evaluation": {
+            "domain": "autonomous_driving",
+            "total": 1.7777777777777777,
+            "components": {
+              "lane": 0.0,
+              "heading": 0.0,
+              "obstacle": 1.7777777777777777
+            },
+            "zero_risk_region": false
+          }
+        }
+      ],
+      "speed_sensitivity_probe": [
+        {
+          "speed": 0.0,
+          "safe_distance": 0.15,
+          "evaluation": {
+            "domain": "autonomous_driving",
+            "total": 0.0,
+            "components": {
+              "lane": 0.0,
+              "heading": 0.0,
+              "obstacle": 0.0
+            },
+            "zero_risk_region": true
+          }
+        },
+        {
+          "speed": 0.5,
+          "safe_distance": 0.32499999999999996,
+          "evaluation": {
+            "domain": "autonomous_driving",
+            "total": 0.0,
+            "components": {
+              "lane": 0.0,
+              "heading": 0.0,
+              "obstacle": 0.0
+            },
+            "zero_risk_region": true
+          }
+        },
+        {
+          "speed": 1.0,
+          "safe_distance": 0.5,
+          "evaluation": {
+            "domain": "autonomous_driving",
+            "total": 0.03999999999999998,
+            "components": {
+              "lane": 0.0,
+              "heading": 0.0,
+              "obstacle": 0.03999999999999998
+            },
+            "zero_risk_region": false
+          }
+        }
+      ],
+      "safer_transition_delta": {
+        "current_value": 1.0,
+        "next_value": 0.06250000000000014,
+        "delta": -0.9374999999999999
+      },
+      "worsening_transition_delta": {
+        "current_value": 0.06250000000000014,
+        "next_value": 1.0,
+        "delta": 0.9374999999999999
+      }
+    }
+  },
+  "robotics": {
+    "state_order": [
+      "robot_x",
+      "robot_y",
+      "object_x",
+      "object_y",
+      "target_x",
+      "target_y"
+    ],
+    "components": [
+      "robot_workspace",
+      "object_workspace",
+      "target_workspace",
+      "object_target_interaction"
+    ],
+    "formula": {
+      "robot_extent": "max(abs(robot_x),abs(robot_y))",
+      "robot_excess": "max(0, robot_extent-0.90) / 0.10",
+      "object_extent": "max(abs(object_x),abs(object_y))",
+      "object_excess": "max(0, object_extent-0.90) / 0.10",
+      "target_extent": "max(abs(target_x),abs(target_y))",
+      "target_excess": "max(0, target_extent-1.00) / 0.10",
+      "interaction_excess": "0 if object_extent<=0.90 else max(0, object_target_distance-0.50)/0.50",
+      "total": "robot_excess^2 + object_excess^2 + target_excess^2 + interaction_excess^2"
+    },
+    "probes": {
+      "nominal": {
+        "domain": "robotics",
+        "total": 0.0,
+        "components": {
+          "robot_workspace": 0.0,
+          "object_workspace": 0.0,
+          "target_workspace": 0.0,
+          "object_target_interaction": 0.0
+        },
+        "zero_risk_region": true
+      },
+      "robot_boundary_probe": [
+        {
+          "robot_x": 0.8,
+          "evaluation": {
+            "domain": "robotics",
+            "total": 0.0,
+            "components": {
+              "robot_workspace": 0.0,
+              "object_workspace": 0.0,
+              "target_workspace": 0.0,
+              "object_target_interaction": 0.0
+            },
+            "zero_risk_region": true
+          }
+        },
+        {
+          "robot_x": 0.9,
+          "evaluation": {
+            "domain": "robotics",
+            "total": 0.0,
+            "components": {
+              "robot_workspace": 0.0,
+              "object_workspace": 0.0,
+              "target_workspace": 0.0,
+              "object_target_interaction": 0.0
+            },
+            "zero_risk_region": true
+          }
+        },
+        {
+          "robot_x": 0.95,
+          "evaluation": {
+            "domain": "robotics",
+            "total": 0.24999999999999944,
+            "components": {
+              "robot_workspace": 0.24999999999999944,
+              "object_workspace": 0.0,
+              "target_workspace": 0.0,
+              "object_target_interaction": 0.0
+            },
+            "zero_risk_region": false
+          }
+        },
+        {
+          "robot_x": 1.0,
+          "evaluation": {
+            "domain": "robotics",
+            "total": 1.0,
+            "components": {
+              "robot_workspace": 1.0,
+              "object_workspace": 0.0,
+              "target_workspace": 0.0,
+              "object_target_interaction": 0.0
+            },
+            "zero_risk_region": false
+          }
+        },
+        {
+          "robot_x": 1.05,
+          "evaluation": {
+            "domain": "robotics",
+            "total": 2.2500000000000018,
+            "components": {
+              "robot_workspace": 2.2500000000000018,
+              "object_workspace": 0.0,
+              "target_workspace": 0.0,
+              "object_target_interaction": 0.0
+            },
+            "zero_risk_region": false
+          }
+        }
+      ],
+      "object_boundary_probe": [
+        {
+          "object_x": 0.9,
+          "evaluation": {
+            "domain": "robotics",
+            "total": 0.0,
+            "components": {
+              "robot_workspace": 0.0,
+              "object_workspace": 0.0,
+              "target_workspace": 0.0,
+              "object_target_interaction": 0.0
+            },
+            "zero_risk_region": true
+          }
+        },
+        {
+          "object_x": 0.95,
+          "evaluation": {
+            "domain": "robotics",
+            "total": 0.24999999999999944,
+            "components": {
+              "robot_workspace": 0.0,
+              "object_workspace": 0.24999999999999944,
+              "target_workspace": 0.0,
+              "object_target_interaction": 0.0
+            },
+            "zero_risk_region": false
+          }
+        },
+        {
+          "object_x": 1.0,
+          "evaluation": {
+            "domain": "robotics",
+            "total": 1.0,
+            "components": {
+              "robot_workspace": 0.0,
+              "object_workspace": 1.0,
+              "target_workspace": 0.0,
+              "object_target_interaction": 0.0
+            },
+            "zero_risk_region": false
+          }
+        },
+        {
+          "object_x": 1.05,
+          "evaluation": {
+            "domain": "robotics",
+            "total": 2.500000000000002,
+            "components": {
+              "robot_workspace": 0.0,
+              "object_workspace": 2.2500000000000018,
+              "target_workspace": 0.25000000000000056,
+              "object_target_interaction": 0.0
+            },
+            "zero_risk_region": false
+          }
+        }
+      ],
+      "target_inside_probe": {
+        "domain": "robotics",
+        "total": 0.0,
+        "components": {
+          "robot_workspace": 0.0,
+          "object_workspace": 0.0,
+          "target_workspace": 0.0,
+          "object_target_interaction": 0.0
+        },
+        "zero_risk_region": true
+      },
+      "target_boundary_probe": {
+        "domain": "robotics",
+        "total": 0.0,
+        "components": {
+          "robot_workspace": 0.0,
+          "object_workspace": 0.0,
+          "target_workspace": 0.0,
+          "object_target_interaction": 0.0
+        },
+        "zero_risk_region": true
+      },
+      "target_outside_probe": {
+        "domain": "robotics",
+        "total": 0.25000000000000056,
+        "components": {
+          "robot_workspace": 0.0,
+          "object_workspace": 0.0,
+          "target_workspace": 0.25000000000000056,
+          "object_target_interaction": 0.0
+        },
+        "zero_risk_region": false
+      },
+      "task_safety_separation_probe": {
+        "domain": "robotics",
+        "total": 0.0,
+        "components": {
+          "robot_workspace": 0.0,
+          "object_workspace": 0.0,
+          "target_workspace": 0.0,
+          "object_target_interaction": 0.0
+        },
+        "zero_risk_region": true
+      },
+      "interaction_central_probe": {
+        "domain": "robotics",
+        "total": 0.0,
+        "components": {
+          "robot_workspace": 0.0,
+          "object_workspace": 0.0,
+          "target_workspace": 0.0,
+          "object_target_interaction": 0.0
+        },
+        "zero_risk_region": true
+      },
+      "interaction_boundary_probe": {
+        "domain": "robotics",
+        "total": 1.0599999999999992,
+        "components": {
+          "robot_workspace": 0.0,
+          "object_workspace": 0.24999999999999944,
+          "target_workspace": 0.0,
+          "object_target_interaction": 0.8099999999999998
+        },
+        "zero_risk_region": false
+      },
+      "safer_transition_delta": {
+        "current_value": 0.6399999999999997,
+        "next_value": 0.0,
+        "delta": -0.6399999999999997
+      },
+      "worsening_transition_delta": {
+        "current_value": 0.0,
+        "next_value": 0.6399999999999997,
+        "delta": 0.6399999999999997
+      }
+    }
+  },
+  "excluded_action_only_constraints": {
+    "driving": [
+      "steering_risk_action_component",
+      "acceleration_braking_conflict"
+    ],
+    "robotics": [
+      "unsafe_motion",
+      "unsafe_gripper_condition"
+    ]
+  },
+  "property_checks": {
+    "driving_nominal_zero": true,
+    "driving_lane_critical_normalized": true,
+    "driving_heading_critical_normalized": true,
+    "driving_obstacle_monotonic": true,
+    "driving_speed_sensitivity": true,
+    "driving_safer_delta_negative": true,
+    "driving_worsening_delta_positive": true,
+    "robotics_nominal_zero": true,
+    "robot_workspace_monotonic": true,
+    "object_workspace_monotonic": true,
+    "target_inside_zero": true,
+    "target_boundary_zero": true,
+    "target_outside_positive": true,
+    "task_safety_separation": true,
+    "interaction_central_zero": true,
+    "interaction_boundary_positive": true,
+    "robotics_safer_delta_negative": true,
+    "robotics_worsening_delta_positive": true
+  },
+  "claims": {
+    "deterministic_candidate_supported": true,
+    "nonnegative_candidate_supported": true,
+    "synthetic_probe_monotonicity_supported": true,
+    "lyapunov_filter_effectiveness": "NOT_YET_TESTED",
+    "lyapunov_violation_reduction": "NOT_YET_TESTED",
+    "lyapunov_vs_clipping": "NOT_YET_TESTED",
+    "robustness_improvement": "NOT_YET_TESTED",
+    "formal_stability_proof": false,
+    "formal_safety_guarantee": false,
+    "production_certification": false,
+    "quantum_safety_claim": false
+  }
+}
