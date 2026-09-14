@@ -1,0 +1,82 @@
+﻿sprint: "5.10"
+condition: "gaussian_state_perturbation"
+
+domains:
+  - autonomous_driving
+  - robotics
+
+methods:
+  - none
+  - clipping
+  - lyapunov
+
+principal_seeds:
+  - 42
+  - 123
+  - 456
+
+evaluation_seeds:
+  start: 20000
+  end: 20019
+
+episodes_per_cell: 20
+
+gaussian_noise:
+  mean: 0.0
+  std_levels:
+    - 0.00
+    - 0.01
+    - 0.05
+    - 0.10
+
+  principal_noisy_std_levels:
+    - 0.01
+    - 0.05
+    - 0.10
+
+  perturb_observation_only: true
+  perturb_true_state: false
+  clip_observation_after_noise: false
+  independent_dimensions: true
+
+fairness:
+  paired_noise_across_methods: true
+  noise_seed_independent_of_method: true
+  safety_filter_uses_true_state: true
+  same_evaluation_seeds_across_methods: true
+  same_policy_checkpoint_across_methods: true
+
+matrix:
+  conceptual_cells: 72
+  conceptual_episodes: 1440
+  new_noisy_cells: 54
+  new_noisy_episodes: 1080
+  clean_sigma_zero_from_frozen_evidence: true
+
+scope:
+  new_training: false
+  policy_fine_tuning: false
+  qml_training: false
+  safety_parameter_tuning: false
+  clipping_rule_changes: false
+  lyapunov_function_changes: false
+  lyapunov_candidate_changes: false
+  action_perturbation: false
+  structured_state_perturbation: false
+  environment_dynamics_noise: false
+  reward_changes: false
+  success_definition_changes: false
+
+robotics:
+  policy_observation_dimension: 6
+  object_grasped_perturbed: false
+  object_grasped_added_to_policy_observation: false
+  object_grasped_used_as_predictor_context: true
+
+claims:
+  formal_robustness_guarantee: false
+  production_sensor_noise_model: false
+  real_sensor_robustness_claim: false
+  certified_safety: false
+  production_safety_claim: false
+  quantum_robustness_advantage_claim: false
