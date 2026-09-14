@@ -1,0 +1,65 @@
+﻿sprint: "5.13A"
+
+title: "Safety Consolidation Protocol & Source Freeze"
+
+scope:
+  analysis_only: true
+  new_training: false
+  new_ppo_runs: false
+  new_principal_safety_runs: false
+  new_robustness_runs: false
+  filter_changes: false
+  threshold_changes: false
+  lyapunov_changes: false
+  environment_changes: false
+
+principal_seeds:
+  - 42
+  - 123
+  - 456
+
+reporting:
+  experimental_unit: principal_policy_seed
+  aggregation: mean_plus_sample_sd
+  paired_seed_deltas: true
+  pool_episodes_as_independent_samples: false
+  hypothesis_tests: false
+  p_values: false
+  significance_claims: false
+
+robustness_regimes:
+  - gaussian_observation_noise
+  - structured_state_perturbation
+  - structured_action_perturbation
+
+regime_pooling:
+  combined_robustness_score: false
+  average_regimes_together: false
+
+claim_boundaries:
+  formal_lyapunov_stability: false
+  certified_safety: false
+  iso_compliance: false
+  production_robustness: false
+  real_world_robustness: false
+  global_lyapunov_superiority: false
+  quantum_safety_advantage: false
+
+safety_layer_classification:
+  classical: true
+  quantum: false
+
+source_groups:
+  - protocol
+  - driving_constraints
+  - robotics_constraints
+  - ppo_checkpoints
+  - no_filter_clean
+  - clipping_clean
+  - lyapunov_foundation
+  - lyapunov_filter
+  - driving_lyapunov_clean
+  - robotics_lyapunov_clean
+  - gaussian_robustness
+  - structured_state_robustness
+  - action_robustness

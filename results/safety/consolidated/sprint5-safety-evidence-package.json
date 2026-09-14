@@ -1,0 +1,131 @@
+{
+  "analysis_only": true,
+  "artifact": "sprint5-safety-evidence-package",
+  "claim_controls": {
+    "blocked_claim_ids": [
+      "S5-C10",
+      "S5-C11",
+      "S5-C12",
+      "S5-C13",
+      "S5-C14"
+    ],
+    "claim_count": 16,
+    "supported": 8,
+    "supported_with_limitations": 3,
+    "unsupported": 5
+  },
+  "clean_evidence": {
+    "autonomous_driving": {
+      "clipping": {
+        "reward": -5.212558982989345,
+        "success_rate": 0.3333333333333333,
+        "violation_step_rate": 0.0
+      },
+      "lyapunov": {
+        "reward": -5.212558982989345,
+        "success_rate": 0.3333333333333333,
+        "violation_step_rate": 0.0
+      },
+      "none": {
+        "reward": -9.200229677202655,
+        "success_rate": 0.049999999999999996,
+        "violation_step_rate": 0.39084090909090907
+      }
+    },
+    "robotics": {
+      "clipping": {
+        "reward": 0.6778999451491963,
+        "success_rate": 0.0,
+        "violation_step_rate": 0.0
+      },
+      "lyapunov": {
+        "reward": 0.6779026320391401,
+        "success_rate": 0.0,
+        "violation_step_rate": 0.0
+      },
+      "none": {
+        "reward": 0.6328459382840873,
+        "success_rate": 0.0,
+        "violation_step_rate": 0.014666666666666666
+      }
+    }
+  },
+  "global_limitations": [
+    "All Sprint 5 evidence is from synthetic pilot environments and finite evaluation corpora.",
+    "The statistical unit is the trained policy seed; only three principal seeds are available.",
+    "No statistical significance testing is claimed.",
+    "The safety layer retains true simulator state in the observation-perturbation evaluations.",
+    "Action perturbations are synthetic and are not validated physical actuator-fault models.",
+    "No formal Lyapunov stability theorem, formal worst-case robustness guarantee, production certification, ISO compliance, or quantum safety advantage is established."
+  ],
+  "headline_findings": [
+    "Clean explicit safety filtering reduced observed violation-step rate to zero in both pilot domains across the three principal policy seeds.",
+    "Gaussian and structured-state evaluations tested policy robustness to observation perturbations while the safety layer retained true simulator state.",
+    "Under direct action perturbation, explicit safety filtering recovered 69367 of 111341 unsafe perturbed steps, corresponding to an aggregate recovery fraction of approximately 0.623.",
+    "The explicit Lyapunov-decrease pathway activated under direct action perturbation, with 1584 Lyapunov-decrease intervention reasons and 70 strict Lyapunov-decrease steps.",
+    "No formal stability, worst-case robustness, production certification, global Lyapunov superiority, ISO compliance, or quantum safety advantage claim is supported."
+  ],
+  "lyapunov_mechanism": {
+    "action_lyapunov_decrease_reasons": 1584,
+    "active_regimes": [
+      "action_perturbation"
+    ],
+    "emergency_fallback_steps": 0,
+    "inactive_regimes": [
+      "clean",
+      "gaussian_state_perturbation",
+      "structured_state_perturbation"
+    ],
+    "selected_lower_steps": 4887,
+    "strict_decrease_steps": 70
+  },
+  "new_principal_runs": false,
+  "new_training": false,
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "proposal_safe_wording": [
+    "Explicit safety filtering reduced observed violation-step rates under the tested pilot conditions.",
+    "The Lyapunov-specific candidate-selection pathway activated under direct action perturbation in the tested synthetic evaluation.",
+    "Results provide empirical mechanism evidence and robustness characterization, not formal safety certification."
+  ],
+  "robustness_corpus": {
+    "action": {
+      "aggregates": 72,
+      "environment_interface_adjustments": 1579,
+      "episodes": 4320,
+      "perturbations": 24,
+      "recovered_unsafe_steps": 69367,
+      "recovery_fraction": 0.6230139840669654,
+      "seed_cells": 216,
+      "unresolved_unsafe_steps": 41974,
+      "unsafe_perturbed_steps": 111341
+    },
+    "gaussian": {
+      "aggregates": 24,
+      "new_noisy_episodes": 1080,
+      "policy_uses_noisy_observation": true,
+      "safety_layer_uses_true_state": true,
+      "seed_cells": 72
+    },
+    "structured_state": {
+      "aggregates": 66,
+      "episodes": 3960,
+      "perturbations": 22,
+      "policy_uses_perturbed_observation": true,
+      "safety_layer_uses_true_state": true,
+      "seed_cells": 198
+    }
+  },
+  "source_artifacts": [
+    "results/safety/consolidated/sprint5-clean-three-seed-summary.json",
+    "results/safety/consolidated/sprint5-gaussian-three-seed-summary.json",
+    "results/safety/consolidated/sprint5-structured-state-three-seed-summary.json",
+    "results/safety/consolidated/sprint5-action-three-seed-summary.json",
+    "results/safety/consolidated/sprint5-lyapunov-mechanism-attribution.json",
+    "results/safety/consolidated/sprint5-safety-claim-matrix.json"
+  ],
+  "sprint": "5.13H"
+}

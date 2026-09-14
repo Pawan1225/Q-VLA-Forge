@@ -1,0 +1,505 @@
+{
+  "aggregate_only_metrics": {
+    "autonomous_driving": {
+      "none": {
+        "critical_violation_step_rate": 0.0
+      }
+    },
+    "note": "Critical and constraint violation rates are not available per seed for every clean method in the frozen summary artifacts and therefore are not fabricated in the three-seed table."
+  },
+  "analysis_only": true,
+  "artifact": "clean-three-seed-safety-reconstruction",
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "effectiveness": {
+    "autonomous_driving": {
+      "clipping": {
+        "domain_mean_violation_reduction": 1.0,
+        "domain_mean_violation_reduction_pass": true,
+        "overall_pass": true,
+        "reward_degradation_fraction": 0.0,
+        "reward_requirement_pass": true,
+        "seed_safety_requirements_pass": true,
+        "seed_safety_results": {
+          "42": true,
+          "123": true,
+          "456": true
+        },
+        "success_rate_drop": 0.0,
+        "success_requirement_pass": true
+      },
+      "lyapunov": {
+        "domain_mean_violation_reduction": 1.0,
+        "domain_mean_violation_reduction_pass": true,
+        "overall_pass": true,
+        "reward_degradation_fraction": 0.0,
+        "reward_requirement_pass": true,
+        "seed_safety_requirements_pass": true,
+        "seed_safety_results": {
+          "42": true,
+          "123": true,
+          "456": true
+        },
+        "success_rate_drop": 0.0,
+        "success_requirement_pass": true
+      }
+    },
+    "robotics": {
+      "clipping": {
+        "domain_mean_violation_reduction": 1.0,
+        "domain_mean_violation_reduction_pass": true,
+        "overall_pass": true,
+        "reward_degradation_fraction": 0.0,
+        "reward_requirement_pass": true,
+        "seed_safety_requirements_pass": true,
+        "seed_safety_results": {
+          "42": true,
+          "123": true,
+          "456": true
+        },
+        "success_rate_drop": 0.0,
+        "success_requirement_pass": true
+      },
+      "lyapunov": {
+        "domain_mean_violation_reduction": 1.0,
+        "domain_mean_violation_reduction_pass": true,
+        "overall_pass": true,
+        "reward_degradation_fraction": 0.0,
+        "reward_requirement_pass": true,
+        "seed_safety_requirements_pass": true,
+        "seed_safety_results": {
+          "42": true,
+          "123": true,
+          "456": true
+        },
+        "success_rate_drop": 0.0,
+        "success_requirement_pass": true
+      }
+    }
+  },
+  "methods": [
+    "none",
+    "clipping",
+    "lyapunov"
+  ],
+  "new_principal_runs": false,
+  "new_training": false,
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "seed_rows": [
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "none",
+      "principal_seed": 42,
+      "reward": -11.330714319001789,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "none",
+      "principal_seed": 123,
+      "reward": -8.72040274432206,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.839
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "none",
+      "principal_seed": 456,
+      "reward": -7.549571968284115,
+      "success_rate": 0.15,
+      "violation_step_rate": 0.33352272727272725
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "clipping",
+      "principal_seed": 42,
+      "reward": -11.330714319001789,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate": 0.839,
+      "mean_correction_l2": 0.2459494072794914,
+      "method": "clipping",
+      "principal_seed": 123,
+      "reward": -8.588031328756164,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate": 0.4135,
+      "mean_correction_l2": 0.19892772370576858,
+      "method": "clipping",
+      "principal_seed": 456,
+      "reward": 4.2810686987899205,
+      "success_rate": 1.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "lyapunov",
+      "principal_seed": 42,
+      "reward": -11.330714319001789,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate": 0.839,
+      "mean_correction_l2": 0.2459494072794914,
+      "method": "lyapunov",
+      "principal_seed": 123,
+      "reward": -8.588031328756164,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate": 0.4135,
+      "mean_correction_l2": 0.19892772370576858,
+      "method": "lyapunov",
+      "principal_seed": 456,
+      "reward": 4.2810686987899205,
+      "success_rate": 1.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "none",
+      "principal_seed": 42,
+      "reward": 0.602262889181277,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0355
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "none",
+      "principal_seed": 123,
+      "reward": 0.6594945290536206,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0085
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "none",
+      "principal_seed": 456,
+      "reward": 0.6367803966173643,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate": 0.0355,
+      "mean_correction_l2": 0.009699669793248171,
+      "method": "clipping",
+      "principal_seed": 42,
+      "reward": 0.694924909776604,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate": 0.0085,
+      "mean_correction_l2": 0.004427627563476562,
+      "method": "clipping",
+      "principal_seed": 123,
+      "reward": 0.7019945290536206,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "clipping",
+      "principal_seed": 456,
+      "reward": 0.6367803966173643,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate": 0.0355,
+      "mean_correction_l2": 0.009701833069324494,
+      "method": "lyapunov",
+      "principal_seed": 42,
+      "reward": 0.6949329704464354,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate": 0.0085,
+      "mean_correction_l2": 0.004427627563476562,
+      "method": "lyapunov",
+      "principal_seed": 123,
+      "reward": 0.7019945290536206,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate": 0.0,
+      "mean_correction_l2": 0.0,
+      "method": "lyapunov",
+      "principal_seed": 456,
+      "reward": 0.6367803966173643,
+      "success_rate": 0.0,
+      "violation_step_rate": 0.0
+    }
+  ],
+  "sprint": "5.13B",
+  "three_seed_summary": {
+    "autonomous_driving": {
+      "clipping": {
+        "intervention_rate": {
+          "mean": 0.4175,
+          "sample_sd": 0.41951430249754296,
+          "seed123": 0.839,
+          "seed42": 0.0,
+          "seed456": 0.4135
+        },
+        "mean_correction_l2": {
+          "mean": 0.14829237699508666,
+          "sample_sd": 0.13055930257038947,
+          "seed123": 0.2459494072794914,
+          "seed42": 0.0,
+          "seed456": 0.19892772370576858
+        },
+        "reward": {
+          "mean": -5.212558982989345,
+          "sample_sd": 8.335304578504005,
+          "seed123": -8.588031328756164,
+          "seed42": -11.330714319001789,
+          "seed456": 4.2810686987899205
+        },
+        "success_rate": {
+          "mean": 0.3333333333333333,
+          "sample_sd": 0.5773502691896257,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 1.0
+        },
+        "violation_step_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        }
+      },
+      "lyapunov": {
+        "intervention_rate": {
+          "mean": 0.4175,
+          "sample_sd": 0.41951430249754296,
+          "seed123": 0.839,
+          "seed42": 0.0,
+          "seed456": 0.4135
+        },
+        "mean_correction_l2": {
+          "mean": 0.14829237699508666,
+          "sample_sd": 0.13055930257038947,
+          "seed123": 0.2459494072794914,
+          "seed42": 0.0,
+          "seed456": 0.19892772370576858
+        },
+        "reward": {
+          "mean": -5.212558982989345,
+          "sample_sd": 8.335304578504005,
+          "seed123": -8.588031328756164,
+          "seed42": -11.330714319001789,
+          "seed456": 4.2810686987899205
+        },
+        "success_rate": {
+          "mean": 0.3333333333333333,
+          "sample_sd": 0.5773502691896257,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 1.0
+        },
+        "violation_step_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        }
+      },
+      "none": {
+        "intervention_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        },
+        "mean_correction_l2": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        },
+        "reward": {
+          "mean": -9.200229677202655,
+          "sample_sd": 1.935700075744146,
+          "seed123": -8.72040274432206,
+          "seed42": -11.330714319001789,
+          "seed456": -7.549571968284115
+        },
+        "success_rate": {
+          "mean": 0.049999999999999996,
+          "sample_sd": 0.08660254037844387,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.15
+        },
+        "violation_step_rate": {
+          "mean": 0.39084090909090907,
+          "sample_sd": 0.42242665691834197,
+          "seed123": 0.839,
+          "seed42": 0.0,
+          "seed456": 0.33352272727272725
+        }
+      }
+    },
+    "robotics": {
+      "clipping": {
+        "intervention_rate": {
+          "mean": 0.014666666666666666,
+          "sample_sd": 0.018536001007049316,
+          "seed123": 0.0085,
+          "seed42": 0.0355,
+          "seed456": 0.0
+        },
+        "mean_correction_l2": {
+          "mean": 0.004709099118908245,
+          "sample_sd": 0.004855956981059511,
+          "seed123": 0.004427627563476562,
+          "seed42": 0.009699669793248171,
+          "seed456": 0.0
+        },
+        "reward": {
+          "mean": 0.6778999451491963,
+          "sample_sd": 0.03578558135306393,
+          "seed123": 0.7019945290536206,
+          "seed42": 0.694924909776604,
+          "seed456": 0.6367803966173643
+        },
+        "success_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        },
+        "violation_step_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        }
+      },
+      "lyapunov": {
+        "intervention_rate": {
+          "mean": 0.014666666666666666,
+          "sample_sd": 0.018536001007049316,
+          "seed123": 0.0085,
+          "seed42": 0.0355,
+          "seed456": 0.0
+        },
+        "mean_correction_l2": {
+          "mean": 0.004709820210933685,
+          "sample_sd": 0.00485706863694232,
+          "seed123": 0.004427627563476562,
+          "seed42": 0.009701833069324494,
+          "seed456": 0.0
+        },
+        "reward": {
+          "mean": 0.6779026320391401,
+          "sample_sd": 0.035787499033232854,
+          "seed123": 0.7019945290536206,
+          "seed42": 0.6949329704464354,
+          "seed456": 0.6367803966173643
+        },
+        "success_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        },
+        "violation_step_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        }
+      },
+      "none": {
+        "intervention_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        },
+        "mean_correction_l2": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        },
+        "reward": {
+          "mean": 0.6328459382840873,
+          "sample_sd": 0.02881796527171248,
+          "seed123": 0.6594945290536206,
+          "seed42": 0.602262889181277,
+          "seed456": 0.6367803966173643
+        },
+        "success_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0,
+          "seed123": 0.0,
+          "seed42": 0.0,
+          "seed456": 0.0
+        },
+        "violation_step_rate": {
+          "mean": 0.014666666666666666,
+          "sample_sd": 0.018536001007049316,
+          "seed123": 0.0085,
+          "seed42": 0.0355,
+          "seed456": 0.0
+        }
+      }
+    }
+  }
+}

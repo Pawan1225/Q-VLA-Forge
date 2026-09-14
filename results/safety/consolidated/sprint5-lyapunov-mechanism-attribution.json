@@ -1,0 +1,66 @@
+{
+  "active_regimes": [
+    "action_perturbation"
+  ],
+  "analysis_only": true,
+  "artifact": "lyapunov-mechanism-attribution",
+  "claim": "Within the Sprint 5 pilot evidence, explicit Lyapunov-decrease intervention was not observed under clean, Gaussian observation-noise, or structured state-perturbation evaluation, but was observed under direct action perturbation. This supports a mechanism-attribution statement for the tested synthetic pilot conditions only; it does not establish formal stability or global method superiority.",
+  "clean_sources": [
+    "results/safety/lyapunov-driving/sprint5-driving-lyapunov-summary.json",
+    "results/safety/lyapunov-robotics/sprint5-robotics-lyapunov-summary.json"
+  ],
+  "consolidated_sources": [
+    "results/safety/consolidated/sprint5-gaussian-three-seed-summary.json",
+    "results/safety/consolidated/sprint5-structured-state-three-seed-summary.json",
+    "results/safety/consolidated/sprint5-action-three-seed-summary.json"
+  ],
+  "inactive_regimes": [
+    "clean",
+    "gaussian_state_perturbation",
+    "structured_state_perturbation"
+  ],
+  "interpretation": {
+    "action_perturbation_activation": true,
+    "formal_stability_claim": false,
+    "global_superiority_claim": false,
+    "mechanism_evidence_only": true,
+    "observation_perturbation_activation": false
+  },
+  "new_principal_runs": false,
+  "new_training": false,
+  "regimes": [
+    {
+      "emergency_fallback_steps": 0,
+      "lyapunov_decrease_reasons": 0,
+      "mechanism_active": false,
+      "regime": "clean",
+      "selected_lower_steps": null,
+      "strict_decrease_steps": 0
+    },
+    {
+      "emergency_fallback_steps": null,
+      "lyapunov_decrease_reasons": 0,
+      "mechanism_active": false,
+      "regime": "gaussian_state_perturbation",
+      "selected_lower_steps": null,
+      "strict_decrease_steps": 0
+    },
+    {
+      "emergency_fallback_steps": null,
+      "lyapunov_decrease_reasons": 0,
+      "mechanism_active": false,
+      "regime": "structured_state_perturbation",
+      "selected_lower_steps": null,
+      "strict_decrease_steps": 0
+    },
+    {
+      "emergency_fallback_steps": 0,
+      "lyapunov_decrease_reasons": 1584,
+      "mechanism_active": true,
+      "regime": "action_perturbation",
+      "selected_lower_steps": 4887,
+      "strict_decrease_steps": 70
+    }
+  ],
+  "sprint": "5.13F"
+}

@@ -1,0 +1,248 @@
+{
+  "analysis_only": true,
+  "artifact": "safety-claim-matrix",
+  "claim_count": 16,
+  "claims": [
+    {
+      "claim_id": "S5-C01",
+      "evidence": [
+        "5.13B clean three-seed consolidation",
+        "driving clipping and Lyapunov violation rate = 0",
+        "robotics clipping and Lyapunov violation rate = 0"
+      ],
+      "limitations": [
+        "Synthetic pilot environments only.",
+        "Three principal policy seeds."
+      ],
+      "statement": "The explicit safety filters reduced clean executed violation-step rate to zero in both pilot domains across all three principal seeds.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-C02",
+      "evidence": [
+        "5.13B clean three-seed consolidation",
+        "driving NONE reward about -9.2002",
+        "driving filtered reward about -5.2126",
+        "driving NONE success 0.05",
+        "driving filtered success about 0.3333"
+      ],
+      "limitations": [
+        "Synthetic driving environment.",
+        "This does not imply general task-performance improvement."
+      ],
+      "statement": "On the clean driving evaluation, clipping and Lyapunov filtering improved mean reward and success relative to the no-filter baseline.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-C03",
+      "evidence": [
+        "5.13B clean three-seed consolidation",
+        "robotics NONE violation about 0.01467",
+        "robotics filtered violation = 0",
+        "robotics NONE reward about 0.63285",
+        "robotics filtered reward about 0.67790"
+      ],
+      "limitations": [
+        "Robotics success remained zero in the clean evaluation.",
+        "No object grasp occurred in the clean Lyapunov runs."
+      ],
+      "statement": "On the clean robotics evaluation, clipping and Lyapunov filtering reduced violation-step rate to zero without reducing mean reward relative to the no-filter baseline.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-C04",
+      "evidence": [
+        "5.13C Gaussian consolidation",
+        "policy uses noisy observation = true",
+        "safety layer uses true state = true"
+      ],
+      "limitations": [
+        "This is not equivalent to deploying a safety layer with noisy or uncertain state estimation."
+      ],
+      "statement": "The safety layer was evaluated under Gaussian observation noise while retaining access to the true simulator state.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-C05",
+      "evidence": [
+        "5.13D structured-state consolidation",
+        "policy uses perturbed observation = true",
+        "safety layer uses true state = true",
+        "environment uses true state = true"
+      ],
+      "limitations": [
+        "Perturbations are synthetic semantic biases.",
+        "They are not calibrated physical sensor-fault models."
+      ],
+      "statement": "The safety layer was evaluated under structured state perturbations while retaining access to the true simulator state.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-C06",
+      "evidence": [
+        "5.13E action robustness consolidation",
+        "111341 unsafe perturbed steps",
+        "69367 recovered unsafe steps",
+        "41974 unresolved unsafe steps",
+        "overall explicit-filter recovery fraction about 0.623014"
+      ],
+      "limitations": [
+        "The recovery fraction is an aggregate pilot statistic.",
+        "A substantial unresolved unsafe-step count remains.",
+        "Action perturbations are synthetic and not calibrated actuator-fault models."
+      ],
+      "statement": "Direct action perturbation produced explicit filter-recovery behavior across the tested pilot conditions.",
+      "status": "supported_with_limitations"
+    },
+    {
+      "claim_id": "S5-C07",
+      "evidence": [
+        "5.13E action robustness consolidation",
+        "1584 LYAPUNOV_DECREASE intervention reasons",
+        "70 strict Lyapunov decrease steps",
+        "4887 selected-lower-than-perturbed steps"
+      ],
+      "limitations": [
+        "Mechanism evidence only.",
+        "Does not establish formal Lyapunov stability.",
+        "Does not establish global superiority over clipping."
+      ],
+      "statement": "The explicit Lyapunov-decrease intervention pathway activated under direct action perturbation.",
+      "status": "supported_with_limitations"
+    },
+    {
+      "claim_id": "S5-C08",
+      "evidence": [
+        "5.13F Lyapunov mechanism attribution",
+        "clean: 0 Lyapunov-decrease reasons",
+        "Gaussian: 0 Lyapunov-decrease reasons",
+        "structured state: 0 Lyapunov-decrease reasons",
+        "action perturbation: 1584 reasons and 70 strict decreases"
+      ],
+      "limitations": [
+        "This is conditional on the tested pilot regimes.",
+        "Absence of activation does not prove the mechanism would never activate under other disturbances."
+      ],
+      "statement": "Within this pilot, the explicit Lyapunov-decrease pathway was observed under action perturbation but not under clean, Gaussian-noise, or structured-state evaluation.",
+      "status": "supported_with_limitations"
+    },
+    {
+      "claim_id": "S5-C09",
+      "evidence": [
+        "5.13E action robustness consolidation",
+        "emergency fallback steps = 0"
+      ],
+      "limitations": [
+        "Applies only to the tested synthetic evaluation corpus."
+      ],
+      "statement": "No emergency fallback was required in the action-perturbation Lyapunov evaluation.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-C10",
+      "evidence": [],
+      "limitations": [
+        "No formal control-Lyapunov proof was established.",
+        "The implemented quantity is a pilot safety potential."
+      ],
+      "statement": "The evaluated Lyapunov filter formally guarantees closed-loop stability.",
+      "status": "unsupported"
+    },
+    {
+      "claim_id": "S5-C11",
+      "evidence": [],
+      "limitations": [
+        "No exhaustive or adversarial worst-case proof exists.",
+        "The robustness evaluations use finite synthetic perturbations."
+      ],
+      "statement": "The evaluated safety system provides formal worst-case robustness guarantees.",
+      "status": "unsupported"
+    },
+    {
+      "claim_id": "S5-C12",
+      "evidence": [],
+      "limitations": [
+        "No production validation or safety certification was performed.",
+        "No ISO compliance claim is supported."
+      ],
+      "statement": "The evaluated safety system is certified for production autonomous-driving or robotics deployment.",
+      "status": "unsupported"
+    },
+    {
+      "claim_id": "S5-C13",
+      "evidence": [],
+      "limitations": [
+        "Clean driving and robotics results are often identical or nearly identical between clipping and Lyapunov filtering.",
+        "Action-perturbation worst cases do not support a universal superiority statement."
+      ],
+      "statement": "Lyapunov filtering is globally superior to clipping.",
+      "status": "unsupported"
+    },
+    {
+      "claim_id": "S5-C14",
+      "evidence": [],
+      "limitations": [
+        "Sprint 5 safety experiments do not establish a quantum advantage in safety performance."
+      ],
+      "statement": "The safety experiments demonstrate a quantum safety advantage.",
+      "status": "unsupported"
+    },
+    {
+      "claim_id": "S5-C15",
+      "evidence": [
+        "5.13E action robustness consolidation",
+        "1579 environment-interface adjustment steps",
+        "separate explicit filter intervention accounting"
+      ],
+      "limitations": [
+        "The environment may still apply its own action-interface semantics after the explicit safety layer."
+      ],
+      "statement": "The action-robustness evaluation distinguishes explicit safety-filter corrections from environment-interface action adjustments.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-C16",
+      "evidence": [
+        "5.13B clean consolidation",
+        "5.13C Gaussian consolidation",
+        "5.13D structured-state consolidation",
+        "5.13E action consolidation",
+        "principal seeds 42, 123, 456"
+      ],
+      "limitations": [
+        "n = 3 is small.",
+        "No significance testing is claimed."
+      ],
+      "statement": "The reported three-seed statistics use the principal policy seeds as experimental units rather than treating episodes as independent policy replicates.",
+      "status": "supported"
+    }
+  ],
+  "global_limitations": [
+    "All Sprint 5 evidence is from synthetic pilot environments and finite evaluation corpora.",
+    "The statistical unit is the trained policy seed; only three principal seeds are available.",
+    "No statistical significance testing is claimed.",
+    "The safety layer retains true simulator state in the observation-perturbation evaluations.",
+    "Action perturbations are synthetic and are not validated physical actuator-fault models.",
+    "No formal Lyapunov stability theorem, formal worst-case robustness guarantee, production certification, ISO compliance, or quantum safety advantage is established."
+  ],
+  "new_principal_runs": false,
+  "new_training": false,
+  "proposal_safe_wording": [
+    "Explicit safety filtering reduced observed violation-step rates under the tested pilot conditions.",
+    "The Lyapunov-specific candidate-selection pathway activated under direct action perturbation in the tested synthetic evaluation.",
+    "Results provide empirical mechanism evidence and robustness characterization, not formal safety certification."
+  ],
+  "sprint": "5.13G",
+  "status_counts": {
+    "supported": 8,
+    "supported_with_limitations": 3,
+    "unsupported": 5
+  },
+  "unsupported_claim_ids": [
+    "S5-C10",
+    "S5-C11",
+    "S5-C12",
+    "S5-C13",
+    "S5-C14"
+  ]
+}
