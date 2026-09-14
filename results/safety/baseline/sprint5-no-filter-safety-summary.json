@@ -1,0 +1,154 @@
+{
+  "sprint": "5.4",
+  "artifact": "no-filter-safety-baseline-summary",
+  "method": "none",
+  "condition": "clean",
+  "new_training_performed": false,
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "evaluation_seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009,
+    20010,
+    20011,
+    20012,
+    20013,
+    20014,
+    20015,
+    20016,
+    20017,
+    20018,
+    20019
+  ],
+  "domains": {
+    "autonomous_driving": {
+      "principal_seed_count": 3,
+      "episode_count_per_seed": 20,
+      "total_episode_count": 60,
+      "violation_step_rate": {
+        "mean": 0.39084090909090907,
+        "sample_sd": 0.42242665691834197
+      },
+      "constraint_violation_rate": {
+        "mean": 0.44273484848484845,
+        "sample_sd": 0.42142594195462335
+      },
+      "critical_violation_step_rate": {
+        "mean": 0.019886363636363636,
+        "sample_sd": 0.034444192195971994
+      },
+      "reward": {
+        "mean_of_seed_means": -9.200229677202655,
+        "sample_sd_of_seed_means": 1.935700075744146
+      },
+      "success": {
+        "mean_of_seed_rates": 0.049999999999999996,
+        "sample_sd_of_seed_rates": 0.08660254037844387
+      },
+      "baseline_has_observed_violations": true,
+      "category_breakdown": {
+        "acceleration_braking_conflict": {
+          "counts_by_seed": {
+            "42": 0,
+            "123": 1678,
+            "456": 496
+          },
+          "rate_mean": 0.3736060606060606,
+          "rate_sample_sd": 0.426964882653461
+        },
+        "unsafe_obstacle_distance": {
+          "counts_by_seed": {
+            "42": 0,
+            "123": 0,
+            "456": 143
+          },
+          "rate_mean": 0.027083333333333334,
+          "rate_sample_sd": 0.046909709371657095
+        },
+        "unsafe_speed_condition": {
+          "counts_by_seed": {
+            "42": 0,
+            "123": 0,
+            "456": 222
+          },
+          "rate_mean": 0.042045454545454546,
+          "rate_sample_sd": 0.07282486350005507
+        }
+      }
+    },
+    "robotics": {
+      "principal_seed_count": 3,
+      "episode_count_per_seed": 20,
+      "total_episode_count": 60,
+      "violation_step_rate": {
+        "mean": 0.014666666666666666,
+        "sample_sd": 0.018536001007049316
+      },
+      "constraint_violation_rate": {
+        "mean": 0.020166666666666666,
+        "sample_sd": 0.02789414514433689
+      },
+      "critical_violation_step_rate": {
+        "mean": 0.009,
+        "sample_sd": 0.009260129588726067
+      },
+      "reward": {
+        "mean_of_seed_means": 0.6328459382840873,
+        "sample_sd_of_seed_means": 0.02881796527171248
+      },
+      "success": {
+        "mean_of_seed_rates": 0.0,
+        "sample_sd_of_seed_rates": 0.0
+      },
+      "baseline_has_observed_violations": true,
+      "category_breakdown": {
+        "unsafe_gripper_condition": {
+          "counts_by_seed": {
+            "42": 37,
+            "123": 17,
+            "456": 0
+          },
+          "rate_mean": 0.009,
+          "rate_sample_sd": 0.009260129588726067
+        },
+        "unsafe_motion": {
+          "counts_by_seed": {
+            "42": 34,
+            "123": 0,
+            "456": 0
+          },
+          "rate_mean": 0.005666666666666667,
+          "rate_sample_sd": 0.009814954576223639
+        },
+        "workspace_boundary": {
+          "counts_by_seed": {
+            "42": 33,
+            "123": 0,
+            "456": 0
+          },
+          "rate_mean": 0.0055000000000000005,
+          "rate_sample_sd": 0.009526279441628826
+        }
+      }
+    }
+  },
+  "claims": {
+    "baseline_measurement_supported": true,
+    "clipping_improvement": "NOT_YET_TESTED",
+    "lyapunov_improvement": "NOT_YET_TESTED",
+    "robustness_improvement": "NOT_YET_TESTED",
+    "formal_safety_guarantee": false,
+    "production_safety_claim": false
+  }
+}
