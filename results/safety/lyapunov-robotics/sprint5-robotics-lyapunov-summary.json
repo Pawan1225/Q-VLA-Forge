@@ -1,0 +1,395 @@
+{
+  "artifact": "robotics-lyapunov-safety-summary",
+  "category_comparison": {
+    "object_boundary": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.0
+    },
+    "unsafe_gripper_condition": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.009
+    },
+    "unsafe_motion": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.005666666666666667
+    },
+    "unsafe_object_target_interaction": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.0
+    },
+    "workspace_boundary": {
+      "clipping_rate_mean": 0.0,
+      "lyapunov_rate_mean": 0.0,
+      "none_rate_mean": 0.0055000000000000005
+    }
+  },
+  "claims": {
+    "formal_robot_safety_guarantee": false,
+    "formal_stability_proven": false,
+    "grasped_state_branch_empirically_validated": false,
+    "iec_62061_claim": false,
+    "iso_10218_claim": false,
+    "lyapunov_superior_to_clipping_claim": false,
+    "production_manipulation_safety_claim": false,
+    "quantum_safety_advantage_claim": false
+  },
+  "clipping_comparison_scope": "descriptive_only_no_superiority_threshold",
+  "condition": "clean",
+  "criterion_definition": {
+    "maximum_reward_degradation_fraction": 0.1,
+    "maximum_success_rate_drop": 0.1,
+    "minimum_domain_mean_violation_reduction": 0.2,
+    "positive_baseline_seed": "lyapunov_rate < none_rate",
+    "reward_degradation_definition": "max(0, none_reward - lyapunov_reward) / abs(none_reward)",
+    "zero_baseline_seed": "lyapunov_rate <= none_rate"
+  },
+  "domain": "robotics",
+  "effectiveness": {
+    "domain_mean_violation_reduction": 1.0,
+    "domain_mean_violation_reduction_pass": true,
+    "reward_degradation_fraction": 0.0,
+    "reward_requirement_pass": true,
+    "robotics_lyapunov_empirical_effectiveness_supported": true,
+    "seed_safety_requirements_pass": true,
+    "seed_safety_results": {
+      "123": true,
+      "42": true,
+      "456": true
+    },
+    "success_rate_drop": 0.0,
+    "success_requirement_pass": true
+  },
+  "evaluation_seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009,
+    20010,
+    20011,
+    20012,
+    20013,
+    20014,
+    20015,
+    20016,
+    20017,
+    20018,
+    20019
+  ],
+  "grasp_context": {
+    "grasped_branch_exercised": false,
+    "limitation": "The clean robotics principal evaluation did not enter the object_grasped=True regime. The grasp-aware predictor path is implemented and provenance-controlled, but its grasped-state branch was not empirically exercised by the Sprint 5.9 principal trajectories.",
+    "object_grasped_false_steps": 6000,
+    "object_grasped_true_steps": 0,
+    "policy_observation_dimension": 6,
+    "policy_observation_modified": false,
+    "prediction_context_field": "object_grasped",
+    "prediction_context_source": "environment_internal_state",
+    "principal_empirical_validation_of_grasped_branch": false,
+    "total_environment_steps": 6000
+  },
+  "mechanism_accounting": {
+    "domain_constraint_interventions": 88,
+    "emergency_fallbacks": 0,
+    "lyapunov_decrease_interventions": 0,
+    "lyapunov_nonincrease_steps": 6000,
+    "selected_hard_guard_failures": 0,
+    "selected_lower_than_proposed_steps": 34,
+    "strict_lyapunov_decrease_steps": 0,
+    "total_environment_steps": 6000,
+    "total_interventions": 88
+  },
+  "mechanism_interpretation": {
+    "all_selected_lyapunov_transitions_nonincreasing": true,
+    "emergency_fallback_observed": false,
+    "interpretation": "Under the frozen clean robotics protocol, the complete Lyapunov-guided safety filter eliminated all measured executed constraint violations. All observed principal interventions were triggered by frozen robotics domain hard guards. No LYAPUNOV_DECREASE intervention was observed in the principal runs.",
+    "principal_lyapunov_decrease_interventions_observed": false,
+    "selected_hard_guard_failure_observed": false
+  },
+  "new_training_performed": false,
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "seed_level_comparisons": [
+    {
+      "checkpoint_sha256": "ce4703c3080b4485d8788ed7e7225a61f821cfdbd8d473a3f99c33511df1cd63",
+      "clipping_intervention_rate": 0.0355,
+      "clipping_mean_correction_l2": 0.009699669793248171,
+      "clipping_reward": 0.694924909776604,
+      "clipping_success_rate": 0.0,
+      "clipping_violation_rate": 0.0,
+      "emergency_fallback_rate": 0.0,
+      "intervened_candidate_source_counts": {
+        "bounded_proposed": 0,
+        "full_stop": 0,
+        "hold_gripper": 37,
+        "inward_motion": 0,
+        "inward_motion_hold_gripper": 0,
+        "inward_x_hold_gripper": 0,
+        "stop_preserve_gripper": 0,
+        "x_only": 0,
+        "y_only": 34
+      },
+      "intervention_reason_counts": {
+        "action_bound": 0,
+        "domain_constraint": 71,
+        "emergency_fallback": 0,
+        "lyapunov_decrease": 0,
+        "none": 1929
+      },
+      "interventions_while_grasped": 0,
+      "interventions_while_not_grasped": 71,
+      "lyapunov_intervention_rate": 0.0355,
+      "lyapunov_mean_correction_l2": 0.009701833069324494,
+      "lyapunov_nonincrease_rate": 1.0,
+      "lyapunov_relative_reduction_vs_none": 1.0,
+      "lyapunov_reward": 0.6949329704464354,
+      "lyapunov_seed_safety_requirement_pass": true,
+      "lyapunov_success_rate": 0.0,
+      "lyapunov_violation_rate": 0.0,
+      "mean_filter_latency_ms": 1.92217725,
+      "none_reward": 0.602262889181277,
+      "none_success_rate": 0.0,
+      "none_violation_rate": 0.0355,
+      "p95_filter_latency_ms": 2.6666649999999996,
+      "principal_seed": 42,
+      "proposed_hard_guard_failure_rate": 0.0355,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 1929,
+        "full_stop": 0,
+        "hold_gripper": 37,
+        "inward_motion": 0,
+        "inward_motion_hold_gripper": 0,
+        "inward_x_hold_gripper": 0,
+        "stop_preserve_gripper": 0,
+        "x_only": 0,
+        "y_only": 34
+      },
+      "selected_hard_guard_failure_rate": 0.0,
+      "selected_lower_than_proposed_rate": 0.017,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 2000,
+      "strict_lyapunov_decrease_rate": 0.0
+    },
+    {
+      "checkpoint_sha256": "54694c3691fe8cd255b4c85b1433ceef65dfd04aca9b28c3f466a7a9447fdb13",
+      "clipping_intervention_rate": 0.0085,
+      "clipping_mean_correction_l2": 0.004427627563476562,
+      "clipping_reward": 0.7019945290536206,
+      "clipping_success_rate": 0.0,
+      "clipping_violation_rate": 0.0,
+      "emergency_fallback_rate": 0.0,
+      "intervened_candidate_source_counts": {
+        "bounded_proposed": 0,
+        "full_stop": 0,
+        "hold_gripper": 17,
+        "inward_motion": 0,
+        "inward_motion_hold_gripper": 0,
+        "inward_x_hold_gripper": 0,
+        "stop_preserve_gripper": 0,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "intervention_reason_counts": {
+        "action_bound": 0,
+        "domain_constraint": 17,
+        "emergency_fallback": 0,
+        "lyapunov_decrease": 0,
+        "none": 1983
+      },
+      "interventions_while_grasped": 0,
+      "interventions_while_not_grasped": 17,
+      "lyapunov_intervention_rate": 0.0085,
+      "lyapunov_mean_correction_l2": 0.004427627563476562,
+      "lyapunov_nonincrease_rate": 1.0,
+      "lyapunov_relative_reduction_vs_none": 1.0,
+      "lyapunov_reward": 0.7019945290536206,
+      "lyapunov_seed_safety_requirement_pass": true,
+      "lyapunov_success_rate": 0.0,
+      "lyapunov_violation_rate": 0.0,
+      "mean_filter_latency_ms": 2.2596999,
+      "none_reward": 0.6594945290536206,
+      "none_success_rate": 0.0,
+      "none_violation_rate": 0.0085,
+      "p95_filter_latency_ms": 3.94867,
+      "principal_seed": 123,
+      "proposed_hard_guard_failure_rate": 0.0085,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 1983,
+        "full_stop": 0,
+        "hold_gripper": 17,
+        "inward_motion": 0,
+        "inward_motion_hold_gripper": 0,
+        "inward_x_hold_gripper": 0,
+        "stop_preserve_gripper": 0,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "selected_hard_guard_failure_rate": 0.0,
+      "selected_lower_than_proposed_rate": 0.0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 2000,
+      "strict_lyapunov_decrease_rate": 0.0
+    },
+    {
+      "checkpoint_sha256": "ae48eebf0b3e0dae09414d2fd895ab644178296800c13ffd293b3b812087ab13",
+      "clipping_intervention_rate": 0.0,
+      "clipping_mean_correction_l2": 0.0,
+      "clipping_reward": 0.6367803966173643,
+      "clipping_success_rate": 0.0,
+      "clipping_violation_rate": 0.0,
+      "emergency_fallback_rate": 0.0,
+      "intervened_candidate_source_counts": {
+        "bounded_proposed": 0,
+        "full_stop": 0,
+        "hold_gripper": 0,
+        "inward_motion": 0,
+        "inward_motion_hold_gripper": 0,
+        "inward_x_hold_gripper": 0,
+        "stop_preserve_gripper": 0,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "intervention_reason_counts": {
+        "action_bound": 0,
+        "domain_constraint": 0,
+        "emergency_fallback": 0,
+        "lyapunov_decrease": 0,
+        "none": 2000
+      },
+      "interventions_while_grasped": 0,
+      "interventions_while_not_grasped": 0,
+      "lyapunov_intervention_rate": 0.0,
+      "lyapunov_mean_correction_l2": 0.0,
+      "lyapunov_nonincrease_rate": 1.0,
+      "lyapunov_relative_reduction_vs_none": 0.0,
+      "lyapunov_reward": 0.6367803966173643,
+      "lyapunov_seed_safety_requirement_pass": true,
+      "lyapunov_success_rate": 0.0,
+      "lyapunov_violation_rate": 0.0,
+      "mean_filter_latency_ms": 2.07143355,
+      "none_reward": 0.6367803966173643,
+      "none_success_rate": 0.0,
+      "none_violation_rate": 0.0,
+      "p95_filter_latency_ms": 3.188594999999999,
+      "principal_seed": 456,
+      "proposed_hard_guard_failure_rate": 0.0,
+      "selected_candidate_source_counts": {
+        "bounded_proposed": 2000,
+        "full_stop": 0,
+        "hold_gripper": 0,
+        "inward_motion": 0,
+        "inward_motion_hold_gripper": 0,
+        "inward_x_hold_gripper": 0,
+        "stop_preserve_gripper": 0,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "selected_hard_guard_failure_rate": 0.0,
+      "selected_lower_than_proposed_rate": 0.0,
+      "steps_object_grasped": 0,
+      "steps_object_not_grasped": 2000,
+      "strict_lyapunov_decrease_rate": 0.0
+    }
+  ],
+  "sprint": "5.9",
+  "three_method_summary": {
+    "clipping": {
+      "intervention_rate": {
+        "mean": 0.014666666666666666,
+        "sample_sd": 0.018536001007049316
+      },
+      "mean_action_correction_l2": {
+        "mean": 0.004709099118908245,
+        "sample_sd": 0.004855956981059511
+      },
+      "reward": {
+        "mean_of_seed_means": 0.6778999451491963,
+        "sample_sd_of_seed_means": 0.03578558135306393
+      },
+      "success": {
+        "mean_of_seed_rates": 0.0,
+        "sample_sd_of_seed_rates": 0.0
+      },
+      "violation_step_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    "lyapunov": {
+      "emergency_fallback_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "intervention_rate": {
+        "mean": 0.014666666666666666,
+        "sample_sd": 0.018536001007049316
+      },
+      "lyapunov_nonincrease_rate": {
+        "mean": 1.0,
+        "sample_sd": 0.0
+      },
+      "mean_action_correction_l2": {
+        "mean": 0.004709820210933685,
+        "sample_sd": 0.00485706863694232
+      },
+      "mean_filter_latency_ms": {
+        "mean": 2.0844369,
+        "sample_sd": 0.16913663160052742
+      },
+      "p95_filter_latency_ms": {
+        "mean": 3.2679766666666663,
+        "sample_sd": 0.6446784405875022
+      },
+      "reward": {
+        "mean_of_seed_means": 0.6779026320391401,
+        "sample_sd_of_seed_means": 0.035787499033232854
+      },
+      "selected_lower_than_proposed_rate": {
+        "mean": 0.005666666666666667,
+        "sample_sd": 0.009814954576223639
+      },
+      "strict_lyapunov_decrease_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "success": {
+        "mean_of_seed_rates": 0.0,
+        "sample_sd_of_seed_rates": 0.0
+      },
+      "violation_step_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    "none": {
+      "intervention_rate": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "reward": {
+        "mean_of_seed_means": 0.6328459382840873,
+        "sample_sd_of_seed_means": 0.02881796527171248
+      },
+      "success": {
+        "mean_of_seed_rates": 0.0,
+        "sample_sd_of_seed_rates": 0.0
+      },
+      "violation_step_rate": {
+        "mean": 0.014666666666666666,
+        "sample_sd": 0.018536001007049316
+      }
+    }
+  }
+}
