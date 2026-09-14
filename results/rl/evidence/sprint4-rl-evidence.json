@@ -1,0 +1,601 @@
+{
+  "metadata": {
+    "sprint": "4.14",
+    "title": "Sprint 4 RL and Hybrid QML Evidence",
+    "principal_seeds": [
+      42,
+      123,
+      456
+    ],
+    "new_training_performed": false,
+    "new_metrics_introduced": false,
+    "evidence_packaging_only": true
+  },
+  "sprint": "4.14",
+  "title": "Sprint 4 RL and Hybrid QML Evidence",
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "new_training_performed": false,
+  "new_metrics_introduced": false,
+  "protocol": {
+    "interaction_budget_environment_steps": 20000,
+    "principal_seed_count_per_domain": 3,
+    "principal_seeds": [
+      42,
+      123,
+      456
+    ],
+    "primary_metric": {
+      "name": "environment_steps_to_frozen_target",
+      "classical_target_reaches": 6,
+      "classical_targets_available": 6,
+      "qml_target_reaches": 0,
+      "qml_targets_available": 6,
+      "qml_mean_steps_to_target": null,
+      "failed_qml_targets_censored_to_budget": false
+    },
+    "evidence_packaging_only": true
+  },
+  "domains": {
+    "autonomous_driving": {
+      "methods": {
+        "full_ppo": {
+          "domain": "autonomous_driving",
+          "method": "full_ppo",
+          "actor_parameters": 1318,
+          "target_reach_count": 3,
+          "target_total": 3,
+          "normalized_auc_mean": 0.5548114402144297,
+          "normalized_auc_sd": 0.2646057407662727,
+          "best_progress_mean": 1.0526315789473686,
+          "best_progress_sd": 1.2819751242557092e-16,
+          "final_progress_mean": 0.9952824582742731,
+          "final_progress_sd": 0.05359814404275625
+        },
+        "matched_classical": {
+          "domain": "autonomous_driving",
+          "method": "matched_classical",
+          "actor_parameters": 54,
+          "target_reach_count": 0,
+          "target_total": 3,
+          "normalized_auc_mean": -0.17455507295540038,
+          "normalized_auc_sd": 0.20916746468168282,
+          "best_progress_mean": 0.7002180251303894,
+          "best_progress_sd": 0.2484199051239047,
+          "final_progress_mean": -0.04840735351602071,
+          "final_progress_sd": 0.5893515673194776
+        },
+        "hybrid_qml": {
+          "domain": "autonomous_driving",
+          "method": "hybrid_qml",
+          "actor_parameters": 54,
+          "target_reach_count": 0,
+          "target_total": 3,
+          "normalized_auc_mean": 0.15991195170764086,
+          "normalized_auc_sd": 0.4341965431725851,
+          "best_progress_mean": 0.44182728158311746,
+          "best_progress_sd": 0.4728741308073594,
+          "final_progress_mean": 0.3272891488880778,
+          "final_progress_sd": 0.42098348389390194
+        }
+      },
+      "compactness": {
+        "domain": "autonomous_driving",
+        "full_actor_parameters": 1318,
+        "compact_actor_parameters": 54,
+        "parameter_reduction_percent": 95.90288315629742
+      },
+      "matched_budget_representation": {
+        "domain": "autonomous_driving",
+        "matched_actor_parameters": 54,
+        "qml_actor_parameters": 54,
+        "matched_auc_mean": -0.17455507295540038,
+        "qml_auc_mean": 0.15991195170764086,
+        "matched_minus_qml_auc": -0.33446702466304123,
+        "direction": "hybrid_qml"
+      }
+    },
+    "robotics": {
+      "methods": {
+        "full_ppo": {
+          "domain": "robotics",
+          "method": "full_ppo",
+          "actor_parameters": 1382,
+          "target_reach_count": 3,
+          "target_total": 3,
+          "normalized_auc_mean": 0.9229137368698397,
+          "normalized_auc_sd": 0.03220700626307124,
+          "best_progress_mean": 1.0526315789473686,
+          "best_progress_sd": 0.0,
+          "final_progress_mean": 1.0159038656954695,
+          "final_progress_sd": 0.013049764495390644
+        },
+        "matched_classical": {
+          "domain": "robotics",
+          "method": "matched_classical",
+          "actor_parameters": 62,
+          "target_reach_count": 1,
+          "target_total": 3,
+          "normalized_auc_mean": 0.653060017016295,
+          "normalized_auc_sd": 0.06408073551424327,
+          "best_progress_mean": 0.9016516073636347,
+          "best_progress_sd": 0.08765489483404237,
+          "final_progress_mean": 0.8978076611459537,
+          "final_progress_sd": 0.09093812823438237
+        },
+        "hybrid_qml": {
+          "domain": "robotics",
+          "method": "hybrid_qml",
+          "actor_parameters": 62,
+          "target_reach_count": 0,
+          "target_total": 3,
+          "normalized_auc_mean": 0.5739091206532141,
+          "normalized_auc_sd": 0.19344567630901505,
+          "best_progress_mean": 0.7585449886834624,
+          "best_progress_sd": 0.23855667877731326,
+          "final_progress_mean": 0.7585449886834624,
+          "final_progress_sd": 0.23855667877731326
+        }
+      },
+      "compactness": {
+        "domain": "robotics",
+        "full_actor_parameters": 1382,
+        "compact_actor_parameters": 62,
+        "parameter_reduction_percent": 95.5137481910275
+      },
+      "matched_budget_representation": {
+        "domain": "robotics",
+        "matched_actor_parameters": 62,
+        "qml_actor_parameters": 62,
+        "matched_auc_mean": 0.653060017016295,
+        "qml_auc_mean": 0.5739091206532141,
+        "matched_minus_qml_auc": 0.07915089636308092,
+        "direction": "matched_classical"
+      }
+    }
+  },
+  "methods": [
+    "full_ppo",
+    "matched_classical",
+    "hybrid_qml"
+  ],
+  "target_reach": {
+    "full_ppo": {
+      "reached": 6,
+      "total": 6
+    },
+    "matched_classical": {
+      "reached": 1,
+      "total": 6
+    },
+    "hybrid_qml": {
+      "reached": 0,
+      "total": 6
+    }
+  },
+  "global_results": {
+    "full_ppo_target_reach_count": 6,
+    "full_ppo_target_total": 6,
+    "matched_classical_target_reach_count": 1,
+    "matched_classical_target_total": 6,
+    "hybrid_qml_target_reach_count": 0,
+    "hybrid_qml_target_total": 6,
+    "robust_qml_sample_efficiency_advantage": false,
+    "cross_domain_architecture_reuse": true,
+    "cross_domain_representation_direction_consistent": false
+  },
+  "compactness": {
+    "autonomous_driving": {
+      "full_ppo_actor_parameters": 1318,
+      "matched_classical_actor_parameters": 54,
+      "hybrid_qml_actor_parameters": 54,
+      "compact_actor_reduction_percent": 95.90288315629742
+    },
+    "robotics": {
+      "full_ppo_actor_parameters": 1382,
+      "matched_classical_actor_parameters": 62,
+      "hybrid_qml_actor_parameters": 62,
+      "compact_actor_reduction_percent": 95.5137481910275
+    },
+    "cross_domain": {
+      "absolute_reduction_difference_percentage_points": 0.38913496526991764,
+      "compactness_consistent": true,
+      "compactness_consistency_basis": "descriptive_similarity_only",
+      "compactness_described_as_highly_similar": true,
+      "formal_consistency_test_performed": false
+    }
+  },
+  "sample_efficiency": {
+    "source_sprint": "4.11",
+    "source_title": "Sample-Efficiency Analysis",
+    "primary_metric": {
+      "name": "environment_steps_to_frozen_target",
+      "classical_target_reaches": 6,
+      "classical_targets_available": 6,
+      "qml_target_reaches": 0,
+      "qml_targets_available": 6,
+      "qml_mean_steps_to_target": null,
+      "failed_qml_targets_censored_to_budget": false
+    }
+  },
+  "matched_budget_ablation": {
+    "source_sprint": "4.12",
+    "source_title": "Classical vs QML Matched-Budget Ablation",
+    "driving_direction": "hybrid_qml",
+    "robotics_direction": "matched_classical",
+    "direction_consistent_across_domains": false
+  },
+  "cross_domain": {
+    "source_sprint": "4.13",
+    "source_title": "Cross-Domain RL Comparison",
+    "architecture_reuse": true,
+    "robust_cross_domain_qml_advantage": false,
+    "robust_cross_domain_matched_classical_advantage": false,
+    "matched_auc_direction_consistent_across_domains": false
+  },
+  "reproducibility": {
+    "principal_seeds": [
+      42,
+      123,
+      456
+    ],
+    "three_seed_validation_source": "4.10",
+    "claim_registry_overall_passed": true,
+    "driving_qml_seed42_reproduction": true,
+    "robotics_qml_seed42_reproduction": true,
+    "driving_matched_classical_seed42_reproduction": true,
+    "robotics_matched_classical_seed42_reproduction": true,
+    "matched_classical_reproduction_verified_by": "experiments/verify_rl_ablation.py",
+    "ppo_targets_sha256": "F78C5CFBB30CE20AA2DE53E75CB3C033A5A1AC846E71810D6C06006424DDA5B1",
+    "ppo_summary_sha256": "CA090235E3ED490F7B03C33D7B4D750BFBA34872495F6E5C67BC87365960F559",
+    "ppo_target_hash_unchanged": true,
+    "ppo_summary_hash_unchanged": true
+  },
+  "claims": [
+    {
+      "claim_id": "ppo-sample-efficiency",
+      "status": "SUPPORTED",
+      "statement": "Classical PPO sample efficiency was evaluated under the frozen Sprint 4 protocol.",
+      "evidence_basis": "Sprint 4.5 established the PPO baseline and Sprint 4.11 measured target reach and normalized learning-curve progress. Classical PPO reached all six paired frozen targets."
+    },
+    {
+      "claim_id": "pqc-vqc-sample-efficiency",
+      "status": "SUPPORTED_WITH_LIMITATION",
+      "statement": "Hybrid PQC/VQC policy sample efficiency was evaluated under the frozen Sprint 4 protocol.",
+      "evidence_basis": "Sprints 4.8-4.11 evaluated six principal hybrid-QML runs. The hybrid policy reached 0/6 paired frozen PPO targets, so evaluation is supported but an efficiency advantage is not."
+    },
+    {
+      "claim_id": "hybrid-qml-policy-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a robust hybrid-QML policy advantage over classical controls.",
+      "evidence_basis": "Sprint 4.10 found 0/6 QML target reaches versus 6/6 for full PPO, and Sprint 4.12-4.13 found domain-dependent matched-budget representation effects."
+    },
+    {
+      "claim_id": "cross-domain-rl-consistency",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish directionally consistent matched-budget RL representation behavior across the autonomous-driving and robotics proxy domains.",
+      "evidence_basis": "Sprint 4.13 cross-domain comparison: at exactly matched compact actor budgets, hybrid QML achieved higher mean normalized AUC in autonomous driving, while matched classical achieved higher mean normalized AUC in robotics. The representation-effect direction therefore reversed across domains."
+    },
+    {
+      "claim_id": "sprint4-classical-ppo-baseline",
+      "status": "SUPPORTED",
+      "statement": "Classical PPO baselines were established for autonomous-driving and robotics proxy domains using principal seeds 42, 123, and 456.",
+      "evidence_basis": "Sprint 4.5 classical PPO evidence; all six domain-seed runs completed the frozen 20,000-step protocol and all six paired PPO-derived targets were reached."
+    },
+    {
+      "claim_id": "sprint4-hybrid-pqc-ppo-implementation",
+      "status": "SUPPORTED",
+      "statement": "A hybrid quantum-classical PPO policy with a variational quantum actor and classical value critic was implemented and evaluated in both proxy domains.",
+      "evidence_basis": "Sprints 4.6-4.10: four-qubit PennyLane PQC, hybrid policy integration, six principal QML runs, and independent three-seed validation."
+    },
+    {
+      "claim_id": "sprint4-hybrid-actor-compactness",
+      "status": "SUPPORTED",
+      "statement": "The hybrid PQC actor substantially reduced actor parameter count relative to the classical PPO actor in both proxy domains.",
+      "evidence_basis": "Driving actor parameters reduced from 1318 to 54 (approximately 95.90%); robotics reduced from 1382 to 62 (approximately 95.51%). Counts were identical across seeds 42, 123, and 456."
+    },
+    {
+      "claim_id": "sprint4-driving-qml-sample-efficiency-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a hybrid-QML sample-efficiency advantage for autonomous driving.",
+      "evidence_basis": "Sprint 4.8 and Sprint 4.10 validation: the hybrid QML policy reached 0/3 paired frozen driving PPO reward targets within 20,000 environment steps."
+    },
+    {
+      "claim_id": "sprint4-robotics-qml-sample-efficiency-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a hybrid-QML sample-efficiency advantage for robotics.",
+      "evidence_basis": "Sprint 4.9 and Sprint 4.10 validation: the hybrid QML policy reached 0/3 paired frozen robotics PPO reward targets within 20,000 environment steps."
+    },
+    {
+      "claim_id": "sprint4-robust-qml-sample-efficiency-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a robust hybrid-QML sample-efficiency advantage across the six principal domain-seed comparisons.",
+      "evidence_basis": "Sprint 4.10 three-seed validation reconstructed 0/6 QML target reaches versus 6/6 classical PPO target reaches. The pre-specified requirement of all three seeds reaching target with mean >=10% sample-efficiency improvement was not satisfied in either domain."
+    },
+    {
+      "claim_id": "sprint4-quantum-computational-speedup",
+      "status": "NOT_SUPPORTED",
+      "statement": "Sprint 4 does not establish quantum computational speedup.",
+      "evidence_basis": "Hybrid QML experiments used PennyLane default.qubit with shots=None. Wall-clock runtime was treated as diagnostic only and was not used for a speedup claim."
+    },
+    {
+      "claim_id": "sprint4-quantum-hardware-advantage",
+      "status": "NOT_SUPPORTED",
+      "statement": "Sprint 4 does not establish quantum hardware advantage.",
+      "evidence_basis": "No quantum hardware execution or hardware-vs-classical comparison was performed; all QML experiments used simulation."
+    },
+    {
+      "claim_id": "sprint4-cross-domain-architecture-reuse",
+      "status": "SUPPORTED",
+      "statement": "A common hybrid QML policy architecture and PPO evaluation framework was reused across both autonomous-driving and robotics proxy domains.",
+      "evidence_basis": "Sprint 4.13 cross-domain analysis verified reuse of the same four-qubit, two-layer, 16-parameter PQC core, three-dimensional action interface, PPO protocol, 20,000-step budget, principal seed set, and evaluation methodology. Observation dimensions and trained weights remained domain-specific."
+    },
+    {
+      "claim_id": "sprint4-cross-domain-representation-consistency",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a directionally consistent matched-budget representation advantage across both proxy domains.",
+      "evidence_basis": "Sprint 4.13 reconstructed a matched-classical minus hybrid-QML mean normalized-AUC difference of approximately -0.334467 in autonomous driving and +0.079151 in robotics. The sign reversal means neither hybrid QML nor matched classical was the consistent AUC winner across both domains."
+    }
+  ],
+  "figures": [
+    {
+      "proposal_priority": 1,
+      "category": "primary_result",
+      "path": "figures/rl/driving-normalized-progress.png",
+      "purpose": "Driving normalized learning progress across Full PPO, Matched Classical, and Hybrid QML."
+    },
+    {
+      "proposal_priority": 2,
+      "category": "primary_result",
+      "path": "figures/rl/robotics-normalized-progress.png",
+      "purpose": "Robotics normalized learning progress across Full PPO, Matched Classical, and Hybrid QML."
+    },
+    {
+      "proposal_priority": 3,
+      "category": "ablation",
+      "path": "figures/rl/driving-matched-ablation.png",
+      "purpose": "Driving matched-budget classical versus Hybrid QML representation comparison."
+    },
+    {
+      "proposal_priority": 4,
+      "category": "ablation",
+      "path": "figures/rl/robotics-matched-ablation.png",
+      "purpose": "Robotics matched-budget classical versus Hybrid QML representation comparison."
+    },
+    {
+      "proposal_priority": 5,
+      "category": "cross_domain",
+      "path": "figures/rl/cross-domain-matched-delta.png",
+      "purpose": "Cross-domain matched-minus-QML normalized AUC comparison."
+    },
+    {
+      "proposal_priority": 6,
+      "category": "compactness",
+      "path": "figures/rl/cross-domain-parameter-compactness.png",
+      "purpose": "Cross-domain actor-parameter compactness comparison."
+    }
+  ],
+  "figure_index": {
+    "sprint": "4.14",
+    "figure_count": 6,
+    "figures": [
+      {
+        "proposal_priority": 1,
+        "category": "primary_result",
+        "path": "figures/rl/driving-normalized-progress.png",
+        "purpose": "Driving normalized learning progress across Full PPO, Matched Classical, and Hybrid QML."
+      },
+      {
+        "proposal_priority": 2,
+        "category": "primary_result",
+        "path": "figures/rl/robotics-normalized-progress.png",
+        "purpose": "Robotics normalized learning progress across Full PPO, Matched Classical, and Hybrid QML."
+      },
+      {
+        "proposal_priority": 3,
+        "category": "ablation",
+        "path": "figures/rl/driving-matched-ablation.png",
+        "purpose": "Driving matched-budget classical versus Hybrid QML representation comparison."
+      },
+      {
+        "proposal_priority": 4,
+        "category": "ablation",
+        "path": "figures/rl/robotics-matched-ablation.png",
+        "purpose": "Robotics matched-budget classical versus Hybrid QML representation comparison."
+      },
+      {
+        "proposal_priority": 5,
+        "category": "cross_domain",
+        "path": "figures/rl/cross-domain-matched-delta.png",
+        "purpose": "Cross-domain matched-minus-QML normalized AUC comparison."
+      },
+      {
+        "proposal_priority": 6,
+        "category": "compactness",
+        "path": "figures/rl/cross-domain-parameter-compactness.png",
+        "purpose": "Cross-domain actor-parameter compactness comparison."
+      }
+    ],
+    "proposal_recommendation": {
+      "recommended_group_count": 3,
+      "recommended_figure_groups": [
+        {
+          "group": "normalized_learning_curves",
+          "source_figures": [
+            "figures/rl/driving-normalized-progress.png",
+            "figures/rl/robotics-normalized-progress.png"
+          ]
+        },
+        {
+          "group": "matched_budget_ablation",
+          "source_figures": [
+            "figures/rl/driving-matched-ablation.png",
+            "figures/rl/robotics-matched-ablation.png"
+          ]
+        },
+        {
+          "group": "cross_domain_compactness_and_representation",
+          "source_figures": [
+            "figures/rl/cross-domain-matched-delta.png",
+            "figures/rl/cross-domain-parameter-compactness.png"
+          ]
+        }
+      ],
+      "combined_panels_deferred_to_final_report": true,
+      "new_scientific_analysis_required": false
+    }
+  },
+  "limitations": [
+    "Synthetic proxy environments rather than production autonomous-driving or robotics benchmarks.",
+    "Compact state vectors were used instead of a full production-scale VLA latent input.",
+    "No CARLA, RLBench, or LIBERO deployment was performed in Sprint 4.",
+    "No quantum hardware was used.",
+    "PennyLane default.qubit analytic simulation was used for the PQC.",
+    "The PQC used four qubits.",
+    "The PQC used two variational layers.",
+    "Three principal seeds were evaluated.",
+    "The principal interaction budget was 20,000 environment steps per run.",
+    "No formal statistical significance test was used for the three-seed comparison.",
+    "No transfer learning was evaluated.",
+    "The same trained weights were not reused across both domains.",
+    "No wall-clock quantum computational advantage is claimed.",
+    "Safety filtering is outside Sprint 4 and is evaluated separately in Sprint 5."
+  ],
+  "proposal_ready_statements": [
+    "Classical PPO reached all six paired frozen reward targets across three seeds in both proxy domains, whereas the tested hybrid QML policies reached none within the 20,000-step interaction budget.",
+    "The hybrid PQC actors reduced trainable actor parameters from 1,318 to 54 in autonomous driving and from 1,382 to 62 in robotics, corresponding to reductions of approximately 95.9% and 95.5%.",
+    "Parameter-matched ablation showed domain-dependent representation behavior: hybrid QML achieved higher mean normalized learning-curve AUC than the matched classical control in driving, while the matched classical control achieved higher mean AUC in robotics.",
+    "The same four-qubit, two-layer hybrid QML policy architecture was reused across both proxy domains under a common PPO and evaluation protocol.",
+    "These pilot results support compact cross-domain architectural reuse, but do not demonstrate robust QML sample-efficiency advantage, quantum computational speedup, or quantum-hardware advantage."
+  ],
+  "proposal_ready_paragraph": "Across the Sprint 4 pilot, the classical PPO baseline reached the predefined performance target in all 6 of 6 principal runs, while the parameter-matched classical policy reached the target in 1 of 6 runs and the tested hybrid QML policy in 0 of 6. The hybrid policy architecture reduced trainable actor parameters by approximately 95.9% in autonomous driving and 95.5% in robotics, while reusing the same 4-qubit, 2-layer PQC architecture across both domains. Under the matched-budget comparison, Hybrid QML achieved the higher mean normalized AUC in driving, whereas the matched classical representation achieved the higher mean normalized AUC in robotics, indicating a domain-dependent representation effect rather than a consistent cross-domain advantage. These results support compact hybrid policy construction and cross-domain architecture reuse, but do not establish robust QML sample-efficiency advantage, quantum computational speedup, quantum-hardware advantage, transfer learning, or shared trained-weight generalization.",
+  "proposal_ready_bullets": [
+    "Classical PPO reached the predefined target in 6/6 principal runs across driving and robotics.",
+    "The parameter-matched classical policy reached the target in 1/6 runs, while the tested Hybrid QML policy reached it in 0/6.",
+    "The compact hybrid actor reduced trainable actor parameters by approximately 95.9% in driving and 95.5% in robotics.",
+    "Under matched-budget comparison, Hybrid QML had the higher mean normalized AUC in driving, while matched classical had the higher mean normalized AUC in robotics, indicating a domain-dependent representation effect.",
+    "Sprint 4 supports hybrid architecture reuse and actor compactness, but does not establish robust QML sample-efficiency advantage, quantum speedup, quantum-hardware advantage, transfer learning, or shared-weight cross-domain generalization."
+  ],
+  "blacklisted_wording": [
+    "Quantum advantage demonstrated",
+    "Quantum speedup demonstrated",
+    "QML outperforms PPO",
+    "QML is more sample efficient",
+    "QML generalizes across domains",
+    "One universal policy",
+    "Production autonomous driving",
+    "Production robotics",
+    "Safety certified",
+    "ISO 26262 compliant",
+    "ISO 10218 certified"
+  ],
+  "claim_matrix": {
+    "sprint": "4.14",
+    "claim_count": 10,
+    "claims": [
+      {
+        "claim_id": "classical-ppo-baseline",
+        "registry_claim_id": "sprint4-classical-ppo-baseline",
+        "claim": "Classical PPO baselines were established for autonomous-driving and robotics proxy domains using principal seeds 42, 123, and 456.",
+        "status": "SUPPORTED",
+        "evidence_basis": "Sprint 4.5 classical PPO evidence; all six domain-seed runs completed the frozen 20,000-step protocol and all six paired PPO-derived targets were reached.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "The classical PPO baseline reached the defined target in all six principal runs.",
+        "limitation": "Result is limited to the tested synthetic proxy environments and protocol."
+      },
+      {
+        "claim_id": "hybrid-pqc-implementation",
+        "registry_claim_id": "sprint4-hybrid-pqc-ppo-implementation",
+        "claim": "A hybrid quantum-classical PPO policy with a variational quantum actor and classical value critic was implemented and evaluated in both proxy domains.",
+        "status": "SUPPORTED",
+        "evidence_basis": "Sprints 4.6-4.10: four-qubit PennyLane PQC, hybrid policy integration, six principal QML runs, and independent three-seed validation.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "A hybrid PPO policy using a simulated parameterized quantum circuit was implemented and evaluated.",
+        "limitation": "The PQC used simulation rather than quantum hardware."
+      },
+      {
+        "claim_id": "hybrid-actor-compactness",
+        "registry_claim_id": "sprint4-hybrid-actor-compactness",
+        "claim": "The hybrid PQC actor substantially reduced actor parameter count relative to the classical PPO actor in both proxy domains.",
+        "status": "SUPPORTED",
+        "evidence_basis": "Driving actor parameters reduced from 1318 to 54 (approximately 95.90%); robotics reduced from 1382 to 62 (approximately 95.51%). Counts were identical across seeds 42, 123, and 456.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "The tested compact actors reduced actor parameter count by approximately 95.9% in driving and 95.5% in robotics.",
+        "limitation": "Parameter compactness is descriptive and does not establish computational speedup."
+      },
+      {
+        "claim_id": "qml-sample-efficiency",
+        "registry_claim_id": "sprint4-robust-qml-sample-efficiency-advantage",
+        "claim": "The pilot does not establish a robust hybrid-QML sample-efficiency advantage across the six principal domain-seed comparisons.",
+        "status": "NOT_SUPPORTED",
+        "evidence_basis": "Sprint 4.10 three-seed validation reconstructed 0/6 QML target reaches versus 6/6 classical PPO target reaches. The pre-specified requirement of all three seeds reaching target with mean >=10% sample-efficiency improvement was not satisfied in either domain.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "A robust Hybrid QML sample-efficiency advantage was not demonstrated.",
+        "limitation": "Three principal seeds and a 20,000-step interaction budget were evaluated."
+      },
+      {
+        "claim_id": "matched-budget-driving",
+        "registry_claim_id": "sprint4-driving-qml-sample-efficiency-advantage",
+        "claim": "The pilot does not establish a hybrid-QML sample-efficiency advantage for autonomous driving.",
+        "status": "NOT_SUPPORTED",
+        "evidence_basis": "Sprint 4.8 and Sprint 4.10 validation: the hybrid QML policy reached 0/3 paired frozen driving PPO reward targets within 20,000 environment steps.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "Under the tested matched-budget driving comparison, Hybrid QML had the higher mean normalized AUC, but no robust advantage is claimed.",
+        "limitation": "The direction is domain dependent and no formal statistical significance test was performed."
+      },
+      {
+        "claim_id": "matched-budget-robotics",
+        "registry_claim_id": "sprint4-robotics-qml-sample-efficiency-advantage",
+        "claim": "The pilot does not establish a hybrid-QML sample-efficiency advantage for robotics.",
+        "status": "NOT_SUPPORTED",
+        "evidence_basis": "Sprint 4.9 and Sprint 4.10 validation: the hybrid QML policy reached 0/3 paired frozen robotics PPO reward targets within 20,000 environment steps.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "Under the tested matched-budget robotics comparison, matched classical had the higher mean normalized AUC.",
+        "limitation": "The direction is domain dependent and no formal statistical significance test was performed."
+      },
+      {
+        "claim_id": "cross-domain-architecture-reuse",
+        "registry_claim_id": "sprint4-cross-domain-architecture-reuse",
+        "claim": "A common hybrid QML policy architecture and PPO evaluation framework was reused across both autonomous-driving and robotics proxy domains.",
+        "status": "SUPPORTED",
+        "evidence_basis": "Sprint 4.13 cross-domain analysis verified reuse of the same four-qubit, two-layer, 16-parameter PQC core, three-dimensional action interface, PPO protocol, 20,000-step budget, principal seed set, and evaluation methodology. Observation dimensions and trained weights remained domain-specific.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "The same hybrid policy architecture was reused across driving and robotics.",
+        "limitation": "Architecture reuse does not mean the same trained weights were reused."
+      },
+      {
+        "claim_id": "cross-domain-performance-consistency",
+        "registry_claim_id": "sprint4-cross-domain-representation-consistency",
+        "claim": "The pilot does not establish a directionally consistent matched-budget representation advantage across both proxy domains.",
+        "status": "NOT_SUPPORTED",
+        "evidence_basis": "Sprint 4.13 reconstructed a matched-classical minus hybrid-QML mean normalized-AUC difference of approximately -0.334467 in autonomous driving and +0.079151 in robotics. The sign reversal means neither hybrid QML nor matched classical was the consistent AUC winner across both domains.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "The matched-budget representation result was not directionally consistent across the two domains.",
+        "limitation": "The tested evidence does not support a universal cross-domain representation advantage."
+      },
+      {
+        "claim_id": "quantum-speedup",
+        "registry_claim_id": "sprint4-quantum-computational-speedup",
+        "claim": "Sprint 4 does not establish quantum computational speedup.",
+        "status": "NOT_SUPPORTED",
+        "evidence_basis": "Hybrid QML experiments used PennyLane default.qubit with shots=None. Wall-clock runtime was treated as diagnostic only and was not used for a speedup claim.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "No quantum computational speedup is claimed from Sprint 4.",
+        "limitation": "The experiment used simulated PQCs and did not establish quantum runtime advantage."
+      },
+      {
+        "claim_id": "quantum-hardware-advantage",
+        "registry_claim_id": "sprint4-quantum-hardware-advantage",
+        "claim": "Sprint 4 does not establish quantum hardware advantage.",
+        "status": "NOT_SUPPORTED",
+        "evidence_basis": "No quantum hardware execution or hardware-vs-classical comparison was performed; all QML experiments used simulation.",
+        "evidence_artifacts": [],
+        "proposal_safe_wording": "No quantum-hardware advantage is claimed.",
+        "limitation": "No quantum hardware was used in the Sprint 4 experiments."
+      }
+    ]
+  }
+}

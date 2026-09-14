@@ -1,0 +1,70 @@
+{
+  "sprint": "4.14",
+  "figure_count": 6,
+  "figures": [
+    {
+      "proposal_priority": 1,
+      "category": "primary_result",
+      "path": "figures/rl/driving-normalized-progress.png",
+      "purpose": "Driving normalized learning progress across Full PPO, Matched Classical, and Hybrid QML."
+    },
+    {
+      "proposal_priority": 2,
+      "category": "primary_result",
+      "path": "figures/rl/robotics-normalized-progress.png",
+      "purpose": "Robotics normalized learning progress across Full PPO, Matched Classical, and Hybrid QML."
+    },
+    {
+      "proposal_priority": 3,
+      "category": "ablation",
+      "path": "figures/rl/driving-matched-ablation.png",
+      "purpose": "Driving matched-budget classical versus Hybrid QML representation comparison."
+    },
+    {
+      "proposal_priority": 4,
+      "category": "ablation",
+      "path": "figures/rl/robotics-matched-ablation.png",
+      "purpose": "Robotics matched-budget classical versus Hybrid QML representation comparison."
+    },
+    {
+      "proposal_priority": 5,
+      "category": "cross_domain",
+      "path": "figures/rl/cross-domain-matched-delta.png",
+      "purpose": "Cross-domain matched-minus-QML normalized AUC comparison."
+    },
+    {
+      "proposal_priority": 6,
+      "category": "compactness",
+      "path": "figures/rl/cross-domain-parameter-compactness.png",
+      "purpose": "Cross-domain actor-parameter compactness comparison."
+    }
+  ],
+  "proposal_recommendation": {
+    "recommended_group_count": 3,
+    "recommended_figure_groups": [
+      {
+        "group": "normalized_learning_curves",
+        "source_figures": [
+          "figures/rl/driving-normalized-progress.png",
+          "figures/rl/robotics-normalized-progress.png"
+        ]
+      },
+      {
+        "group": "matched_budget_ablation",
+        "source_figures": [
+          "figures/rl/driving-matched-ablation.png",
+          "figures/rl/robotics-matched-ablation.png"
+        ]
+      },
+      {
+        "group": "cross_domain_compactness_and_representation",
+        "source_figures": [
+          "figures/rl/cross-domain-matched-delta.png",
+          "figures/rl/cross-domain-parameter-compactness.png"
+        ]
+      }
+    ],
+    "combined_panels_deferred_to_final_report": true,
+    "new_scientific_analysis_required": false
+  }
+}

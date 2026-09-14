@@ -7,6 +7,7 @@ from dashboard.data_loader import (
     experiments_dataframe,
     flatten_experiment_record,
     load_result_files,
+    load_sprint4_rl_evidence,
 )
 
 
@@ -101,3 +102,118 @@ def test_empty_dataframe() -> None:
     dataframe = experiments_dataframe([])
 
     assert dataframe.empty
+
+
+def test_load_sprint4_rl_evidence(
+    tmp_path: Path,
+) -> None:
+    evidence_path = tmp_path / "sprint4-rl-evidence.json"
+
+    payload = {
+        "sprint": "4.14",
+        "target_reach": {
+            "full_ppo": {
+                "reached": 6,
+                "total": 6,
+            },
+            "matched_classical": {
+                "reached": 1,
+                "total": 6,
+            },
+            "hybrid_qml": {
+                "reached": 0,
+                "total": 6,
+            },
+        },
+        "domains": {
+            "autonomous_driving": {
+                "methods": {
+                    "full_ppo": {},
+                    "matched_classical": {},
+                    "hybrid_qml": {},
+                },
+                "compactness": {
+                    "parameter_reduction_percent": 95.9,
+                },
+                "matched_budget_representation": {
+                    "direction": "hybrid_qml",
+                },
+            },
+            "robotics": {
+                "methods": {
+                    "full_ppo": {},
+                    "matched_classical": {},
+                    "hybrid_qml": {},
+                },
+                "compactness": {
+                    "parameter_reduction_percent": 95.5,
+                },
+                "matched_budget_representation": {
+                    "direction": "matched_classical",
+                },
+            },
+        },
+        "claims": [],
+        "figure_index": [],
+    }
+
+    evidence_path.write_text(
+        json.dumps(payload),
+        encoding="utf-8",
+    )
+
+    data = load_sprint4_rl_evidence(evidence_path)
+
+    assert data["sprint"] == "4.14"
+
+    assert data["target_reach"]["full_ppo"]["reached"] == 6
+
+    assert data["target_reach"]["matched_classical"]["reached"] == 1
+
+    assert data["target_reach"]["hybrid_qml"]["reached"] == 0
+
+    assert set(data["domains"]) == {
+        "autonomous_driving",
+        "robotics",
+    }
+
+    for domain in (
+        "autonomous_driving",
+        "robotics",
+    ):
+        methods = data["domains"][domain]["methods"]
+
+        assert set(methods) == {
+            "full_ppo",
+            "matched_classical",
+            "hybrid_qml",
+        }
+
+        assert "parameter_reduction_percent" in data["domains"][domain]["compactness"]
+
+        assert "direction" in data["domains"][domain]["matched_budget_representation"]
+
+
+def test_missing_sprint4_rl_evidence(
+    tmp_path: Path,
+) -> None:
+    missing = tmp_path / "missing-sprint4.json"
+
+    data = load_sprint4_rl_evidence(missing)
+
+    assert data == {}
+
+
+def test_invalid_sprint4_rl_evidence(
+    tmp_path: Path,
+) -> None:
+    invalid = tmp_path / "broken-sprint4.json"
+
+    invalid.write_text(
+        "{broken-json",
+        encoding="utf-8",
+    )
+
+    data = load_sprint4_rl_evidence(invalid)
+
+    assert data == {}

@@ -414,6 +414,8 @@ def verify_claim_boundary() -> None:
 
     control_artifacts = []
 
+    post_freeze_claim_artifacts = []
+
     result_like_claim_artifacts = []
 
     for path in claim_files:
@@ -421,8 +423,20 @@ def verify_claim_boundary() -> None:
 
         lowered_path = str(path).lower()
 
+        lowered_parts = {part.lower() for part in path.parts}
+
         if "registry" in lowered_name or "readiness" in lowered_path:
             control_artifacts.append(path)
+
+        elif "evidence" in lowered_parts:
+            # Sprint 4.14 proposal evidence is intentionally
+            # generated after the historical Sprint 4.5 freeze.
+            #
+            # Its wording may describe later QML findings and
+            # limitations, so it must not be interpreted as a
+            # claim that existed when the PPO targets were frozen.
+            post_freeze_claim_artifacts.append(path)
+
         else:
             result_like_claim_artifacts.append(path)
 
@@ -450,6 +464,17 @@ def verify_claim_boundary() -> None:
     for path in control_artifacts:
         print(
             " controlled:",
+            path,
+        )
+
+    print(
+        "Post-freeze claim artifacts:",
+        len(post_freeze_claim_artifacts),
+    )
+
+    for path in post_freeze_claim_artifacts:
+        print(
+            " post-freeze:",
             path,
         )
 

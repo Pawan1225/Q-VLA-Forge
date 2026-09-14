@@ -67,3 +67,34 @@ def experiments_dataframe(
     flattened = [flatten_experiment_record(record) for record in records]
 
     return pd.DataFrame(flattened)
+
+
+def load_sprint4_rl_evidence(
+    evidence_path: str | Path = ("results/rl/evidence/" "sprint4-rl-evidence.json"),
+) -> dict[str, Any]:
+    """Load the verified Sprint 4 RL evidence package."""
+    path = Path(evidence_path)
+
+    if not path.exists():
+        return {}
+
+    try:
+        with path.open(
+            "r",
+            encoding="utf-8",
+        ) as file:
+            data = json.load(file)
+
+    except (
+        json.JSONDecodeError,
+        OSError,
+    ):
+        return {}
+
+    if not isinstance(
+        data,
+        dict,
+    ):
+        return {}
+
+    return data
