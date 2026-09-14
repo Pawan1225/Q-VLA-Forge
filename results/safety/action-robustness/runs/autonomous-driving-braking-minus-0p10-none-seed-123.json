@@ -1,0 +1,7129 @@
+{
+  "action_config_sha256": "10036a5e55374e18b6211b9c7f77a64d9b88376b954c2241250b1e91525269b3",
+  "action_perturbation_after_policy": true,
+  "action_perturbation_before_safety_filter": true,
+  "artifact_type": "principal",
+  "checkpoint_sha256": "af8b7ea9efe3eab81c45589f04a706d7c8b473382ccda3c0f110c6b7a93d4563",
+  "clean_reference_path": "results\\safety\\baseline\\sprint5-no-filter-safety-summary.json",
+  "clean_reference_sha256": "cd0375bc7e525080395529340c7f5243b8e27dc0abee4c981eb87890c01f4d80",
+  "condition": "action_perturbation",
+  "domain": "autonomous_driving",
+  "environment_handling_sha256": "d4219868682a1df447261be3795280ca5ad952c36a3fc3a2e769552f1c73c6a0",
+  "environment_interface_adjustment_not_filter_recovery": true,
+  "environment_internal_action_clipping": true,
+  "episode_count": 20,
+  "episodes": [
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.0704389214515686,
+            0.3184812068939209,
+            0.48470261693000793
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.0704389214515686,
+            0.3184812068939209,
+            0.48470261693000793
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.0704389214515686,
+            0.3184812068939209,
+            0.48470261693000793
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.0704389214515686,
+            0.3184812068939209,
+            0.5847026109695435
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.25535789132118225,
+            0.20099927484989166,
+            -0.14290174841880798,
+            4.216041564941406
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.06059068441390991,
+            0.3129611015319824,
+            0.4858768880367279
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.06059068441390991,
+            0.3129611015319824,
+            0.4858768880367279
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.06059068441390991,
+            0.3129611015319824,
+            0.4858768880367279
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.06059068441390991,
+            0.3129611015319824,
+            0.5858768820762634
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.22267207503318787,
+            0.18700703978538513,
+            -0.13992227613925934,
+            4.2049078941345215
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.05153858661651611,
+            0.30779361724853516,
+            0.4870093762874603
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.05153858661651611,
+            0.30779361724853516,
+            0.4870093762874603
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.05153858661651611,
+            0.30779361724853516,
+            0.4870093762874603
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.05153858661651611,
+            0.30779361724853516,
+            0.5870093703269958
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.1894037425518036,
+            0.17340710759162903,
+            -0.1359993815422058,
+            4.195437908172607
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.04319620132446289,
+            0.30293869972229004,
+            0.48809054493904114
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.04319620132446289,
+            0.30293869972229004,
+            0.48809054493904114
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.04319620132446289,
+            0.30293869972229004,
+            0.48809054493904114
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.04319620132446289,
+            0.30293869972229004,
+            0.5880905389785767
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.1555861085653305,
+            0.16027669608592987,
+            -0.1313040554523468,
+            4.187658786773682
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.035485029220581055,
+            0.2983599901199341,
+            0.48911252617836
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.035485029220581055,
+            0.2983599901199341,
+            0.48911252617836
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.035485029220581055,
+            0.2983599901199341,
+            0.48911252617836
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.035485029220581055,
+            0.2983599901199341,
+            0.5891125202178955
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.12125033885240555,
+            0.14767837524414062,
+            -0.12598326802253723,
+            4.181596279144287
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20000,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -7.770420788183031,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.00000187754631,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.24113106727600098,
+            0.4394643306732178,
+            0.4946536719799042
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.24113106727600098,
+            0.4394643306732178,
+            0.4946536719799042
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.24113106727600098,
+            0.4394643306732178,
+            0.4946536719799042
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.24113106727600098,
+            0.4394643306732178,
+            0.5946536660194397
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.1638377159833908,
+            0.14733675122261047,
+            0.13808637857437134,
+            3.5370049476623535
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.212643563747406,
+            0.42510688304901123,
+            0.49220648407936096
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.212643563747406,
+            0.42510688304901123,
+            0.49220648407936096
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.212643563747406,
+            0.42510688304901123,
+            0.49220648407936096
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.212643563747406,
+            0.42510688304901123,
+            0.5922064781188965
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.13963642716407776,
+            0.1571471244096756,
+            0.09810373932123184,
+            3.5300230979919434
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.1867973804473877,
+            0.4119032621383667,
+            0.4902566969394684
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.1867973804473877,
+            0.4119032621383667,
+            0.4902566969394684
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.1867973804473877,
+            0.4119032621383667,
+            0.4902566969394684
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.1867973804473877,
+            0.4119032621383667,
+            0.5902566909790039
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.1145801991224289,
+            0.1636209487915039,
+            0.0647382140159607,
+            3.524294137954712
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.1634598970413208,
+            0.3997892141342163,
+            0.48872795701026917
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.1634598970413208,
+            0.3997892141342163,
+            0.48872795701026917
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.1634598970413208,
+            0.3997892141342163,
+            0.48872795701026917
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.1634598970413208,
+            0.3997892141342163,
+            0.5887279510498047
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.08870165795087814,
+            0.16733530163764954,
+            0.03714347258210182,
+            3.5198590755462646
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.14245635271072388,
+            0.3886866569519043,
+            0.48755213618278503
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.14245635271072388,
+            0.3886866569519043,
+            0.48755213618278503
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.14245635271072388,
+            0.3886866569519043,
+            0.48755213618278503
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.14245635271072388,
+            0.3886866569519043,
+            0.5875521302223206
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.06203744187951088,
+            0.16879098117351532,
+            0.014556807465851307,
+            3.5167572498321533
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20001,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -7.577307109507878,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000001519918442,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.0026513338088989258,
+            0.33487987518310547,
+            0.5463317632675171
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.0026513338088989258,
+            0.33487987518310547,
+            0.5463317632675171
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.0026513338088989258,
+            0.33487987518310547,
+            0.5463317632675171
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.0026513338088989258,
+            0.33487987518310547,
+            0.646331787109375
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.30683231353759766,
+            -0.2391004115343094,
+            0.08530201762914658,
+            2.7194812297821045
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.00808727741241455,
+            0.33167386054992676,
+            0.5445008873939514
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.00808727741241455,
+            0.33167386054992676,
+            0.5445008873939514
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.00808727741241455,
+            0.33167386054992676,
+            0.5445008873939514
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.00808727741241455,
+            0.33167386054992676,
+            0.6445009112358093
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.26806288957595825,
+            -0.2312208116054535,
+            0.07879601418972015,
+            2.706078052520752
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.01288902759552002,
+            0.3286736011505127,
+            0.5427106618881226
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.01288902759552002,
+            0.3286736011505127,
+            0.5427106618881226
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.01288902759552002,
+            0.3286736011505127,
+            0.5427106618881226
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.01288902759552002,
+            0.3286736011505127,
+            0.6427106857299805
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.22925668954849243,
+            -0.2238745242357254,
+            0.07346280664205551,
+            2.694615125656128
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.017142891883850098,
+            0.3258408308029175,
+            0.5409501194953918
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.017142891883850098,
+            0.3258408308029175,
+            0.5409501194953918
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.017142891883850098,
+            0.3258408308029175,
+            0.5409501194953918
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.017142891883850098,
+            0.3258408308029175,
+            0.6409501433372498
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.19042529165744781,
+            -0.21696127951145172,
+            0.06913246214389801,
+            2.685093879699707
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.02092564105987549,
+            0.32314229011535645,
+            0.53920978307724
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.02092564105987549,
+            0.32314229011535645,
+            0.53920978307724
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.02092564105987549,
+            0.32314229011535645,
+            0.53920978307724
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.02092564105987549,
+            0.32314229011535645,
+            0.6392098069190979
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.15157854557037354,
+            -0.21039538085460663,
+            0.06565900892019272,
+            2.6775150299072266
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20002,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -10.242116057944783,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.13100945949554443,
+            0.3563547134399414,
+            0.514508843421936
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.13100945949554443,
+            0.3563547134399414,
+            0.514508843421936
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.13100945949554443,
+            0.3563547134399414,
+            0.514508843421936
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.13100945949554443,
+            0.3563547134399414,
+            0.614508867263794
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.21950972080230713,
+            -0.0434446819126606,
+            0.109359510242939,
+            3.9947590827941895
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.11159336566925049,
+            0.3461228609085083,
+            0.5129717588424683
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.11159336566925049,
+            0.3461228609085083,
+            0.5129717588424683
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.11159336566925049,
+            0.3461228609085083,
+            0.5129717588424683
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.11159336566925049,
+            0.3461228609085083,
+            0.6129717826843262
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.18627703189849854,
+            -0.034955721348524094,
+            0.08488961309194565,
+            3.985445261001587
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.094204843044281,
+            0.3368346691131592,
+            0.5116567015647888
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.094204843044281,
+            0.3368346691131592,
+            0.5116567015647888
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.094204843044281,
+            0.3368346691131592,
+            0.5116567015647888
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.094204843044281,
+            0.3368346691131592,
+            0.6116567254066467
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.15241025388240814,
+            -0.028484996408224106,
+            0.06470724195241928,
+            3.9778246879577637
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.07863742113113403,
+            0.32838988304138184,
+            0.5105252265930176
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.07863742113113403,
+            0.32838988304138184,
+            0.5105252265930176
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.07863742113113403,
+            0.32838988304138184,
+            0.5105252265930176
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.07863742113113403,
+            0.32838988304138184,
+            0.6105252504348755
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.11795822530984879,
+            -0.02366238832473755,
+            0.04822608083486557,
+            3.971926689147949
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.06469303369522095,
+            0.3206934928894043,
+            0.5095437169075012
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.06469303369522095,
+            0.3206934928894043,
+            0.5095437169075012
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.06469303369522095,
+            0.3206934928894043,
+            0.5095437169075012
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.06469303369522095,
+            0.3206934928894043,
+            0.6095437407493591
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0829663872718811,
+            -0.02016923762857914,
+            0.03493150323629379,
+            3.967778444290161
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20003,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -5.824851917112656,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.0010516643524169922,
+            0.28348100185394287,
+            0.4995613992214203
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.0010516643524169922,
+            0.28348100185394287,
+            0.4995613992214203
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.0010516643524169922,
+            0.28348100185394287,
+            0.4995613992214203
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.0010516643524169922,
+            0.28348100185394287,
+            0.5995613932609558
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.2806167006492615,
+            0.07049895823001862,
+            -0.14496763050556183,
+            4.060772895812988
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.0040853023529052734,
+            0.2815828323364258,
+            0.5006990432739258
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.0040853023529052734,
+            0.2815828323364258,
+            0.5006990432739258
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.0040853023529052734,
+            0.2815828323364258,
+            0.5006990432739258
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.0040853023529052734,
+            0.2815828323364258,
+            0.6006990671157837
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.24334780871868134,
+            0.05717455595731735,
+            -0.13324402272701263,
+            4.048605442047119
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.007075071334838867,
+            0.27965426445007324,
+            0.5017036199569702
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.007075071334838867,
+            0.27965426445007324,
+            0.5017036199569702
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.007075071334838867,
+            0.27965426445007324,
+            0.5017036199569702
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.007075071334838867,
+            0.27965426445007324,
+            0.6017036437988281
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.20579054951667786,
+            0.04496512934565544,
+            -0.12209426611661911,
+            4.038315773010254
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.010021805763244629,
+            0.27769553661346436,
+            0.5025797486305237
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.010021805763244629,
+            0.27769553661346436,
+            0.5025797486305237
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.010021805763244629,
+            0.27769553661346436,
+            0.5025797486305237
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.010021805763244629,
+            0.27769553661346436,
+            0.6025797724723816
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.16795845329761505,
+            0.033817358314991,
+            -0.11147771775722504,
+            4.0299177169799805
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.01292729377746582,
+            0.2757070064544678,
+            0.50333172082901
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.01292729377746582,
+            0.2757070064544678,
+            0.50333172082901
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.01292729377746582,
+            0.2757070064544678,
+            0.50333172082901
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.01292729377746582,
+            0.2757070064544678,
+            0.6033317446708679
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.12986452877521515,
+            0.023681670427322388,
+            -0.1013568863272667,
+            4.0234246253967285
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20004,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -6.8998839033632935,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002354383469,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.11562585830688477,
+            0.33517467975616455,
+            0.5194044709205627
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.11562585830688477,
+            0.33517467975616455,
+            0.5194044709205627
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.11562585830688477,
+            0.33517467975616455,
+            0.5194044709205627
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.11562585830688477,
+            0.33517467975616455,
+            0.6194044947624207
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.22679980099201202,
+            -0.10430994629859924,
+            0.12457896769046783,
+            4.228276252746582
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.0971798300743103,
+            0.325339674949646,
+            0.5179116725921631
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.0971798300743103,
+            0.325339674949646,
+            0.5179116725921631
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.0971798300743103,
+            0.325339674949646,
+            0.5179116725921631
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.0971798300743103,
+            0.325339674949646,
+            0.617911696434021
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.19128523766994476,
+            -0.09423619508743286,
+            0.1007375493645668,
+            4.218711853027344
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.08066403865814209,
+            0.3164360523223877,
+            0.5166093111038208
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.08066403865814209,
+            0.3164360523223877,
+            0.5166093111038208
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.08066403865814209,
+            0.3164360523223877,
+            0.5166093111038208
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.08066403865814209,
+            0.3164360523223877,
+            0.6166093349456787
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.1551630049943924,
+            -0.08613450080156326,
+            0.08101696521043777,
+            4.210953712463379
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.06587398052215576,
+            0.3083604574203491,
+            0.5154637694358826
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.06587398052215576,
+            0.3083604574203491,
+            0.5154637694358826
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.06587398052215576,
+            0.3083604574203491,
+            0.5154637694358826
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.06587398052215576,
+            0.3083604574203491,
+            0.6154637932777405
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.11848477274179459,
+            -0.07964891195297241,
+            0.06485592573881149,
+            4.205029487609863
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.0526159405708313,
+            0.30101704597473145,
+            0.5144456028938293
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.0526159405708313,
+            0.30101704597473145,
+            0.5144456028938293
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.0526159405708313,
+            0.30101704597473145,
+            0.5144456028938293
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.0526159405708313,
+            0.30101704597473145,
+            0.6144456267356873
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.08129795640707016,
+            -0.07447265088558197,
+            0.051762573421001434,
+            4.200964450836182
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20005,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -7.683943535538505,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20006,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {},
+      "perturbed_constraint_violation_count": 0,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 0,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -15.560655964085232,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 0
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.1293027400970459,
+            0.32543087005615234,
+            0.5210135579109192
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.1293027400970459,
+            0.32543087005615234,
+            0.5210135579109192
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.1293027400970459,
+            0.32543087005615234,
+            0.5210135579109192
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.1293027400970459,
+            0.32543087005615234,
+            0.6210135817527771
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.31351014971733093,
+            -0.1441614329814911,
+            0.1457112729549408,
+            4.570796012878418
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.10938423871994019,
+            0.3148372173309326,
+            0.5196712017059326
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.10938423871994019,
+            0.3148372173309326,
+            0.5196712017059326
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.10938423871994019,
+            0.3148372173309326,
+            0.5196712017059326
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.10938423871994019,
+            0.3148372173309326,
+            0.6196712255477905
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.27702298760414124,
+            -0.13230763375759125,
+            0.11853804439306259,
+            4.556944847106934
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.09150135517120361,
+            0.30527234077453613,
+            0.5185158252716064
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.09150135517120361,
+            0.30527234077453613,
+            0.5185158252716064
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.09150135517120361,
+            0.30527234077453613,
+            0.5185158252716064
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.09150135517120361,
+            0.30527234077453613,
+            0.6185158491134644
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.23984941840171814,
+            -0.12271474301815033,
+            0.09592889249324799,
+            4.544952392578125
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.07545173168182373,
+            0.29662656784057617,
+            0.5175135135650635
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.07545173168182373,
+            0.29662656784057617,
+            0.5175135135650635
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.07545173168182373,
+            0.29662656784057617,
+            0.5175135135650635
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.07545173168182373,
+            0.29662656784057617,
+            0.6175135374069214
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.20204930007457733,
+            -0.11498729884624481,
+            0.07727441936731339,
+            4.534850120544434
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.06103998422622681,
+            0.28879761695861816,
+            0.5166349411010742
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.06103998422622681,
+            0.28879761695861816,
+            0.5166349411010742
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.06103998422622681,
+            0.28879761695861816,
+            0.5166349411010742
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.06103998422622681,
+            0.28879761695861816,
+            0.6166349649429321
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.16367779672145844,
+            -0.10878347605466843,
+            0.06203825771808624,
+            4.526666164398193
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20007,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -9.380786414468878,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.19174271821975708,
+            0.4148038625717163,
+            0.5040608048439026
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.19174271821975708,
+            0.4148038625717163,
+            0.5040608048439026
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.19174271821975708,
+            0.4148038625717163,
+            0.5040608048439026
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.19174271821975708,
+            0.4148038625717163,
+            0.6040608286857605
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.33484742045402527,
+            0.08345992863178253,
+            0.08975496143102646,
+            3.521907329559326
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.16790372133255005,
+            0.4030313491821289,
+            0.5023834109306335
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.16790372133255005,
+            0.4030313491821289,
+            0.5023834109306335
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.16790372133255005,
+            0.4030313491821289,
+            0.5023834109306335
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.16790372133255005,
+            0.4030313491821289,
+            0.6023834347724915
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.30754444003105164,
+            0.08941647410392761,
+            0.05956543982028961,
+            3.5065300464630127
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.14643961191177368,
+            0.3922804594039917,
+            0.5010465383529663
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.14643961191177368,
+            0.3922804594039917,
+            0.5010465383529663
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.14643961191177368,
+            0.3922804594039917,
+            0.5010465383529663
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.14643961191177368,
+            0.3922804594039917,
+            0.6010465621948242
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.27950093150138855,
+            0.09288164973258972,
+            0.034651756286621094,
+            3.4925549030303955
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.1271674633026123,
+            0.38246798515319824,
+            0.4999947249889374
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.1271674633026123,
+            0.38246798515319824,
+            0.4999947249889374
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.1271674633026123,
+            0.38246798515319824,
+            0.4999947249889374
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.1271674633026123,
+            0.38246798515319824,
+            0.5999947190284729
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.25075778365135193,
+            0.09431233257055283,
+            0.014306861907243729,
+            3.4800169467926025
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.10989230871200562,
+            0.3735072612762451,
+            0.4991784989833832
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.10989230871200562,
+            0.3735072612762451,
+            0.4991784989833832
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.10989230871200562,
+            0.3735072612762451,
+            0.4991784989833832
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.10989230871200562,
+            0.3735072612762451,
+            0.5991784930229187
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.2213558554649353,
+            0.09410255402326584,
+            -0.002097782678902149,
+            3.46894907951355
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20008,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -5.444450031631166,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000001966953278,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.019440412521362305,
+            0.3409862518310547,
+            0.5184858441352844
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.019440412521362305,
+            0.3409862518310547,
+            0.5184858441352844
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.019440412521362305,
+            0.3409862518310547,
+            0.5184858441352844
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.019440412521362305,
+            0.3409862518310547,
+            0.6184858679771423
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.2199569195508957,
+            -0.05669664591550827,
+            -0.0025928195100277662,
+            2.994253396987915
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.013000190258026123,
+            0.3370790481567383,
+            0.5177639126777649
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.013000190258026123,
+            0.3370790481567383,
+            0.5177639126777649
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.013000190258026123,
+            0.3370790481567383,
+            0.5177639126777649
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.013000190258026123,
+            0.3370790481567383,
+            0.6177639365196228
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.18501751124858856,
+            -0.057168468832969666,
+            -0.004718243610113859,
+            2.9850025177001953
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.007208287715911865,
+            0.3334031105041504,
+            0.5170565247535706
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.007208287715911865,
+            0.3334031105041504,
+            0.5170565247535706
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.007208287715911865,
+            0.3334031105041504,
+            0.5170565247535706
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.007208287715911865,
+            0.3334031105041504,
+            0.6170565485954285
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.14985217154026031,
+            -0.057758551090955734,
+            -0.005900806747376919,
+            2.9775099754333496
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.001980006694793701,
+            0.3299216032028198,
+            0.5163521766662598
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.001980006694793701,
+            0.3299216032028198,
+            0.5163521766662598
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.001980006694793701,
+            0.3299216032028198,
+            0.5163521766662598
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.001980006694793701,
+            0.3299216032028198,
+            0.6163522005081177
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.11447763442993164,
+            -0.05838792398571968,
+            -0.0062937368638813496,
+            2.9717860221862793
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.002759575843811035,
+            0.3266024589538574,
+            0.5156415104866028
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.002759575843811035,
+            0.3266024589538574,
+            0.5156415104866028
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.002759575843811035,
+            0.3266024589538574,
+            0.5156415104866028
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.002759575843811035,
+            0.3266024589538574,
+            0.6156415343284607
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.07890909910202026,
+            -0.058990709483623505,
+            -0.006027838680893183,
+            2.9678406715393066
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20009,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -5.768220535157222,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.07509368658065796,
+            0.3021109104156494,
+            0.5286368727684021
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.07509368658065796,
+            0.3021109104156494,
+            0.5286368727684021
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.07509368658065796,
+            0.3021109104156494,
+            0.5286368727684021
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.07509368658065796,
+            0.3021109104156494,
+            0.62863689661026
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.28708502650260925,
+            -0.2063320130109787,
+            0.125945582985878,
+            4.399590492248535
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.06013864278793335,
+            0.29413938522338867,
+            0.5272999405860901
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.06013864278793335,
+            0.29413938522338867,
+            0.5272999405860901
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.06013864278793335,
+            0.29413938522338867,
+            0.5272999405860901
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.06013864278793335,
+            0.29413938522338867,
+            0.627299964427948
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.24781747162342072,
+            -0.19564613699913025,
+            0.10685869306325912,
+            4.387199401855469
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.04677021503448486,
+            0.286945104598999,
+            0.5260877013206482
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.04677021503448486,
+            0.286945104598999,
+            0.5260877013206482
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.04677021503448486,
+            0.286945104598999,
+            0.5260877013206482
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.04677021503448486,
+            0.286945104598999,
+            0.6260877251625061
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.20807263255119324,
+            -0.18653680384159088,
+            0.09109336137771606,
+            4.376795768737793
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.03480374813079834,
+            0.28043293952941895,
+            0.5249757170677185
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.03480374813079834,
+            0.28043293952941895,
+            0.5249757170677185
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.03480374813079834,
+            0.28043293952941895,
+            0.5249757170677185
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.03480374813079834,
+            0.28043293952941895,
+            0.6249757409095764
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.16789771616458893,
+            -0.1787174642086029,
+            0.07819346338510513,
+            4.368401050567627
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.02407008409500122,
+            0.2745171785354614,
+            0.5239429473876953
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.02407008409500122,
+            0.2745171785354614,
+            0.5239429473876953
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.02407008409500122,
+            0.2745171785354614,
+            0.5239429473876953
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.02407008409500122,
+            0.2745171785354614,
+            0.6239429712295532
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.12733526527881622,
+            -0.17194131016731262,
+            0.06776153296232224,
+            4.362034320831299
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20010,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -11.145608954768932,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.06383633613586426,
+            0.2544361352920532,
+            0.5229610800743103
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.06383633613586426,
+            0.2544361352920532,
+            0.5229610800743103
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.06383633613586426,
+            0.2544361352920532,
+            0.5229610800743103
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.06383633613586426,
+            0.2544361352920532,
+            0.6229611039161682
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 7,
+          "true_state": [
+            0.0,
+            -0.1523459106683731,
+            -0.016475427895784378,
+            3.7375402450561523
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.0569765567779541,
+            0.25840795040130615,
+            0.5232175588607788
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.0569765567779541,
+            0.25840795040130615,
+            0.5232175588607788
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.0569765567779541,
+            0.25840795040130615,
+            0.5232175588607788
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.0569765567779541,
+            0.25840795040130615,
+            0.6232175827026367
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 8,
+          "true_state": [
+            0.0,
+            -0.15309561789035797,
+            -0.007497033104300499,
+            3.7375402450561523
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.050958871841430664,
+            0.2619013786315918,
+            0.5233623385429382
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.050958871841430664,
+            0.2619013786315918,
+            0.5233623385429382
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.050958871841430664,
+            0.2619013786315918,
+            0.5233623385429382
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.050958871841430664,
+            0.2619013786315918,
+            0.6233623623847961
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 9,
+          "true_state": [
+            0.0,
+            -0.1531016230583191,
+            -6.008364289300516e-05,
+            3.7375402450561523
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.04567456245422363,
+            0.26497864723205566,
+            0.5234144330024719
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.04567456245422363,
+            0.26497864723205566,
+            0.5234144330024719
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.04567456245422363,
+            0.26497864723205566,
+            0.5234144330024719
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.04567456245422363,
+            0.26497864723205566,
+            0.6234144568443298
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 10,
+          "true_state": [
+            0.0,
+            -0.1524956375360489,
+            0.006059787701815367,
+            3.7375402450561523
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.04102945327758789,
+            0.2676941156387329,
+            0.5233899354934692
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.04102945327758789,
+            0.2676941156387329,
+            0.5233899354934692
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.04102945327758789,
+            0.2676941156387329,
+            0.5233899354934692
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.04102945327758789,
+            0.2676941156387329,
+            0.6233899593353271
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 11,
+          "true_state": [
+            0.0,
+            -0.15139004588127136,
+            0.011055951938033104,
+            3.7375402450561523
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20011,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 93
+      },
+      "executed_constraint_violation_count": 93,
+      "executed_violation_step_count": 93,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 93
+      },
+      "perturbed_constraint_violation_count": 93,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 93,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -10.453523386356828,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 93,
+      "unsafe_perturbed_steps": 93
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.03255194425582886,
+            0.25162696838378906,
+            0.5107990503311157
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.03255194425582886,
+            0.25162696838378906,
+            0.5107990503311157
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.03255194425582886,
+            0.25162696838378906,
+            0.5107990503311157
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.03255194425582886,
+            0.25162696838378906,
+            0.6107990741729736
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.15617503225803375,
+            -0.07809802889823914,
+            -0.004747902974486351,
+            4.933547496795654
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20012,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 1
+      },
+      "executed_constraint_violation_count": 1,
+      "executed_violation_step_count": 1,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 1
+      },
+      "perturbed_constraint_violation_count": 1,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 1,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -10.214958555768632,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 1,
+      "unsafe_perturbed_steps": 1
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.033827781677246094,
+            0.3475034236907959,
+            0.49087825417518616
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.033827781677246094,
+            0.3475034236907959,
+            0.49087825417518616
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.033827781677246094,
+            0.3475034236907959,
+            0.49087825417518616
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.033827781677246094,
+            0.3475034236907959,
+            0.5908782482147217
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.31105369329452515,
+            0.1482975333929062,
+            -0.14055196940898895,
+            3.235774278640747
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.028303802013397217,
+            0.34411072731018066,
+            0.4920518696308136
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.028303802013397217,
+            0.34411072731018066,
+            0.4920518696308136
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.028303802013397217,
+            0.34411072731018066,
+            0.4920518696308136
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.028303802013397217,
+            0.34411072731018066,
+            0.5920518636703491
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.27994856238365173,
+            0.1349608153104782,
+            -0.1333671510219574,
+            3.2217769622802734
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.023182690143585205,
+            0.3408524990081787,
+            0.49313250184059143
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.023182690143585205,
+            0.3408524990081787,
+            0.49313250184059143
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.023182690143585205,
+            0.3408524990081787,
+            0.49313250184059143
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.023182690143585205,
+            0.3408524990081787,
+            0.593132495880127
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.24843119084835052,
+            0.12235139310359955,
+            -0.12609423696994781,
+            3.209355354309082
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.018420696258544922,
+            0.3377082347869873,
+            0.4941175878047943
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.018420696258544922,
+            0.3377082347869873,
+            0.4941175878047943
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.018420696258544922,
+            0.3377082347869873,
+            0.4941175878047943
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.018420696258544922,
+            0.3377082347869873,
+            0.5941175818443298
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.21652348339557648,
+            0.11047253012657166,
+            -0.11878862231969833,
+            3.1985292434692383
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.013978421688079834,
+            0.3346598148345947,
+            0.49500516057014465
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.013978421688079834,
+            0.3346598148345947,
+            0.49500516057014465
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.013978421688079834,
+            0.3346598148345947,
+            0.49500516057014465
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.013978421688079834,
+            0.3346598148345947,
+            0.5950051546096802
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.1842460334300995,
+            0.09932292997837067,
+            -0.11149601638317108,
+            3.189316987991333
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20013,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -5.4859403704123855,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002026557922,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.0016814470291137695,
+            0.26226842403411865,
+            0.5119331479072571
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.0016814470291137695,
+            0.26226842403411865,
+            0.5119331479072571
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.0016814470291137695,
+            0.26226842403411865,
+            0.5119331479072571
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.0016814470291137695,
+            0.26226842403411865,
+            0.611933171749115
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.3143927752971649,
+            -0.05071845278143883,
+            -0.07700582593679428,
+            4.4183878898620605
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.0031697750091552734,
+            0.25970470905303955,
+            0.5124207139015198
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.0031697750091552734,
+            0.25970470905303955,
+            0.5124207139015198
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.0031697750091552734,
+            0.25970470905303955,
+            0.5124207139015198
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.0031697750091552734,
+            0.25970470905303955,
+            0.6124207377433777
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.2739422619342804,
+            -0.057823166251182556,
+            -0.07104713469743729,
+            4.404690742492676
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.0077277421951293945,
+            0.2572363615036011,
+            0.5128290057182312
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.0077277421951293945,
+            0.2572363615036011,
+            0.5128290057182312
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.0077277421951293945,
+            0.2572363615036011,
+            0.5128290057182312
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.0077277421951293945,
+            0.2572363615036011,
+            0.6128290295600891
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.2332281470298767,
+            -0.06432146579027176,
+            -0.06498298794031143,
+            4.39302921295166
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.012027502059936523,
+            0.2548474073410034,
+            0.5131572484970093
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.012027502059936523,
+            0.2548474073410034,
+            0.5131572484970093
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.012027502059936523,
+            0.2548474073410034,
+            0.5131572484970093
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.012027502059936523,
+            0.2548474073410034,
+            0.6131572723388672
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.19226758182048798,
+            -0.07020717114210129,
+            -0.0588570199906826,
+            4.383415699005127
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.01610100269317627,
+            0.25252413749694824,
+            0.5134052634239197
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.01610100269317627,
+            0.25252413749694824,
+            0.5134052634239197
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.01610100269317627,
+            0.25252413749694824,
+            0.5134052634239197
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.01610100269317627,
+            0.25252413749694824,
+            0.6134052872657776
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.1510765105485916,
+            -0.07547768950462341,
+            -0.05270515754818916,
+            4.375861644744873
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20014,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 95
+      },
+      "executed_constraint_violation_count": 95,
+      "executed_violation_step_count": 95,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 95
+      },
+      "perturbed_constraint_violation_count": 95,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 95,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -9.420002965816272,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 95,
+      "unsafe_perturbed_steps": 95
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.06896114349365234,
+            0.3671095371246338,
+            0.48887690901756287
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.06896114349365234,
+            0.3671095371246338,
+            0.48887690901756287
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.06896114349365234,
+            0.3671095371246338,
+            0.48887690901756287
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.06896114349365234,
+            0.3671095371246338,
+            0.5888769030570984
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.27127185463905334,
+            0.16422851383686066,
+            -0.10339300334453583,
+            3.199920415878296
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.059326112270355225,
+            0.3616793155670166,
+            0.4895317852497101
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.059326112270355225,
+            0.3616793155670166,
+            0.4895317852497101
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.059326112270355225,
+            0.3616793155670166,
+            0.4895317852497101
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.059326112270355225,
+            0.3616793155670166,
+            0.5895317792892456
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.24197538197040558,
+            0.15388882160186768,
+            -0.10339689999818802,
+            3.187821626663208
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.050605714321136475,
+            0.356614351272583,
+            0.4901905357837677
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.050605714321136475,
+            0.356614351272583,
+            0.4901905357837677
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.050605714321136475,
+            0.356614351272583,
+            0.4901905357837677
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.050605714321136475,
+            0.356614351272583,
+            0.5901905298233032
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.21216590702533722,
+            0.1436643898487091,
+            -0.10224428027868271,
+            3.177213430404663
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.042694032192230225,
+            0.3518693447113037,
+            0.49083712697029114
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.042694032192230225,
+            0.3518693447113037,
+            0.49083712697029114
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.042694032192230225,
+            0.3518693447113037,
+            0.49083712697029114
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.042694032192230225,
+            0.3518693447113037,
+            0.5908371210098267
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.1818721890449524,
+            0.13365064561367035,
+            -0.10013741999864578,
+            3.1681199073791504
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.0354958176612854,
+            0.34740233421325684,
+            0.4914579689502716
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.0354958176612854,
+            0.34740233421325684,
+            0.4914579689502716
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.0354958176612854,
+            0.34740233421325684,
+            0.4914579689502716
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.0354958176612854,
+            0.34740233421325684,
+            0.5914579629898071
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.15112128853797913,
+            0.12392567098140717,
+            -0.09724970906972885,
+            3.1605639457702637
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20015,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -5.781598876968964,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000001907348633,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.03601735830307007,
+            0.2598918676376343,
+            0.5269812941551208
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.03601735830307007,
+            0.2598918676376343,
+            0.5269812941551208
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.03601735830307007,
+            0.2598918676376343,
+            0.5269812941551208
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.03601735830307007,
+            0.2598918676376343,
+            0.6269813179969788
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.23804669082164764,
+            -0.2311689704656601,
+            0.09027067571878433,
+            4.766014575958252
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.024721860885620117,
+            0.2538027763366699,
+            0.5261106491088867
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.024721860885620117,
+            0.2538027763366699,
+            0.5261106491088867
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.024721860885620117,
+            0.2538027763366699,
+            0.5261106491088867
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.024721860885620117,
+            0.2538027763366699,
+            0.6261106729507446
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.19560028612613678,
+            -0.22329626977443695,
+            0.07872693985700607,
+            4.756234645843506
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20016,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 2
+      },
+      "executed_constraint_violation_count": 2,
+      "executed_violation_step_count": 2,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 2
+      },
+      "perturbed_constraint_violation_count": 2,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 2,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -13.266100701889762,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 2,
+      "unsafe_perturbed_steps": 2
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.15091490745544434,
+            0.39101314544677734,
+            0.5006948709487915
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.15091490745544434,
+            0.39101314544677734,
+            0.5006948709487915
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.15091490745544434,
+            0.39101314544677734,
+            0.5006948709487915
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.15091490745544434,
+            0.39101314544677734,
+            0.6006948947906494
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.24250546097755432,
+            0.09113180637359619,
+            0.04641848802566528,
+            3.5608890056610107
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.13100171089172363,
+            0.3807864189147949,
+            0.49952229857444763
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.13100171089172363,
+            0.3807864189147949,
+            0.49952229857444763
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.13100171089172363,
+            0.3807864189147949,
+            0.49952229857444763
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.13100171089172363,
+            0.3807864189147949,
+            0.5995222926139832
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.21370312571525574,
+            0.09359132498502731,
+            0.024595219641923904,
+            3.550203800201416
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.11314380168914795,
+            0.3714473247528076,
+            0.4985998570919037
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.11314380168914795,
+            0.3714473247528076,
+            0.4985998570919037
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.11314380168914795,
+            0.3714473247528076,
+            0.4985998570919037
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.11314380168914795,
+            0.3714473247528076,
+            0.5985998511314392
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.18422336876392365,
+            0.09428206831216812,
+            0.006907396949827671,
+            3.5409927368164062
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.09714233875274658,
+            0.36290836334228516,
+            0.4978823959827423
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.09714233875274658,
+            0.36290836334228516,
+            0.4978823959827423
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.09714233875274658,
+            0.36290836334228516,
+            0.4978823959827423
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.09714233875274658,
+            0.36290836334228516,
+            0.5978823900222778
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.15410716831684113,
+            0.09355982393026352,
+            -0.00722245080396533,
+            3.533287286758423
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.08280396461486816,
+            0.3550851345062256,
+            0.49733033776283264
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.08280396461486816,
+            0.3550851345062256,
+            0.49733033776283264
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.08280396461486816,
+            0.3550851345062256,
+            0.49733033776283264
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.08280396461486816,
+            0.3550851345062256,
+            0.5973303318023682
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.1233939528465271,
+            0.09172964841127396,
+            -0.01830173470079899,
+            3.5271174907684326
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20017,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -5.543347527936135,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000001937150955,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.06781750917434692,
+            0.32624077796936035,
+            0.5120282173156738
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.06781750917434692,
+            0.32624077796936035,
+            0.5120282173156738
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.06781750917434692,
+            0.32624077796936035,
+            0.5120282173156738
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.06781750917434692,
+            0.32624077796936035,
+            0.6120282411575317
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 0,
+          "true_state": [
+            0.22863918542861938,
+            -0.02597992680966854,
+            0.017968347296118736,
+            3.913214921951294
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.05560487508773804,
+            0.31964111328125,
+            0.5114037990570068
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.05560487508773804,
+            0.31964111328125,
+            0.5114037990570068
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.05560487508773804,
+            0.31964111328125,
+            0.5114037990570068
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.05560487508773804,
+            0.31964111328125,
+            0.6114038228988647
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 1,
+          "true_state": [
+            0.19329506158828735,
+            -0.02514064870774746,
+            0.008392778225243092,
+            3.903550148010254
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.04463690519332886,
+            0.313592791557312,
+            0.510856568813324
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.04463690519332886,
+            0.313592791557312,
+            0.510856568813324
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.04463690519332886,
+            0.313592791557312,
+            0.510856568813324
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.04463690519332886,
+            0.313592791557312,
+            0.6108565926551819
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 2,
+          "true_state": [
+            0.15749789774417877,
+            -0.02503577247262001,
+            0.0010487709660083055,
+            3.8956751823425293
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.03476518392562866,
+            0.30802643299102783,
+            0.5103660821914673
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.03476518392562866,
+            0.30802643299102783,
+            0.5103660821914673
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.03476518392562866,
+            0.30802643299102783,
+            0.5103660821914673
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.03476518392562866,
+            0.30802643299102783,
+            0.6103661060333252
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 3,
+          "true_state": [
+            0.12128253281116486,
+            -0.025474928319454193,
+            -0.004391559399664402,
+            3.889611005783081
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            -0.025855839252471924,
+            0.30288004875183105,
+            0.5099146366119385
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.025855839252471924,
+            0.30288004875183105,
+            0.5099146366119385
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.025855839252471924,
+            0.30288004875183105,
+            0.5099146366119385
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            -0.025855839252471924,
+            0.30288004875183105,
+            0.6099146604537964
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 4,
+          "true_state": [
+            0.0846807211637497,
+            -0.026296133175492287,
+            -0.008212056942284107,
+            3.8853769302368164
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20018,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "executed_constraint_violation_count": 100,
+      "executed_violation_step_count": 100,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -6.1542646553602935,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 100,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 10.000000149011612,
+      "action_perturbation_linf_max": 0.10000000149011612,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.024052977561950684,
+            0.2505389451980591,
+            0.5168704390525818
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.024052977561950684,
+            0.2505389451980591,
+            0.5168704390525818
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.024052977561950684,
+            0.2505389451980591,
+            0.5168704390525818
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.024052977561950684,
+            0.2505389451980591,
+            0.6168704628944397
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 12,
+          "true_state": [
+            0.0,
+            -0.1158452257514,
+            -0.004434472881257534,
+            4.297308921813965
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.021582365036010742,
+            0.25199437141418457,
+            0.5169145464897156
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.021582365036010742,
+            0.25199437141418457,
+            0.5169145464897156
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.021582365036010742,
+            0.25199437141418457,
+            0.5169145464897156
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.021582365036010742,
+            0.25199437141418457,
+            0.6169145703315735
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 13,
+          "true_state": [
+            0.0,
+            -0.11596456170082092,
+            -0.0011933577479794621,
+            4.297308921813965
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.01940619945526123,
+            0.25328123569488525,
+            0.5169256329536438
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.01940619945526123,
+            0.25328123569488525,
+            0.5169256329536438
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.01940619945526123,
+            0.25328123569488525,
+            0.5169256329536438
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.01940619945526123,
+            0.25328123569488525,
+            0.6169256567955017
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 14,
+          "true_state": [
+            0.0,
+            -0.11581536382436752,
+            0.0014919947134330869,
+            4.297308921813965
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.017487049102783203,
+            0.2544208765029907,
+            0.5169094204902649
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.017487049102783203,
+            0.2544208765029907,
+            0.5169094204902649
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.017487049102783203,
+            0.2544208765029907,
+            0.5169094204902649
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.017487049102783203,
+            0.2544208765029907,
+            0.6169094443321228
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 15,
+          "true_state": [
+            0.0,
+            -0.11544522643089294,
+            0.003701379057019949,
+            4.297308921813965
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            -0.10000000149011612
+          ],
+          "environment_effective_action": [
+            0.015792250633239746,
+            0.2554318904876709,
+            0.5168707370758057
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.015792250633239746,
+            0.2554318904876709,
+            0.5168707370758057
+          ],
+          "executed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "intervened": false,
+          "intervention_reason": "none",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.015792250633239746,
+            0.2554318904876709,
+            0.5168707370758057
+          ],
+          "perturbed_violation_categories": [
+            "acceleration_braking_conflict"
+          ],
+          "proposed_action": [
+            0.015792250633239746,
+            0.2554318904876709,
+            0.6168707609176636
+          ],
+          "safety_correction_l2": 0.0,
+          "step": 16,
+          "true_state": [
+            0.0,
+            -0.11489485204219818,
+            0.0055037145502865314,
+            4.297308921813965
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "autonomous_driving",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20019,
+      "executed_category_violation_counts": {
+        "acceleration_braking_conflict": 88
+      },
+      "executed_constraint_violation_count": 88,
+      "executed_violation_step_count": 88,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "none",
+      "perturbation_family": "braking",
+      "perturbation_name": "braking_minus_0p10",
+      "perturbed_category_violation_counts": {
+        "acceleration_braking_conflict": 88
+      },
+      "perturbed_constraint_violation_count": 88,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 88,
+      "principal_seed": 123,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -10.147680196221698,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 10.000002384185791,
+      "unresolved_unsafe_steps": 88,
+      "unsafe_perturbed_steps": 88
+    }
+  ],
+  "evaluation_seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009,
+    20010,
+    20011,
+    20012,
+    20013,
+    20014,
+    20015,
+    20016,
+    20017,
+    20018,
+    20019
+  ],
+  "filter_tuning_performed": false,
+  "gaussian_state_noise_applied": false,
+  "method": "none",
+  "new_training_performed": false,
+  "none_executed_action_equals_perturbed_action": true,
+  "object_grasped_added_to_policy_observation": false,
+  "object_grasped_perturbed": false,
+  "observation_perturbation_applied": false,
+  "perturbation_family": "braking",
+  "perturbation_name": "braking_minus_0p10",
+  "perturbation_updates": [
+    {
+      "delta": -0.1,
+      "index": 2
+    }
+  ],
+  "policy_fine_tuning_performed": false,
+  "pre_filter_action_clipping": false,
+  "principal_seed": 123,
+  "seed_summary": {
+    "critical_violation_step_rate": 0.0,
+    "domain": "autonomous_driving",
+    "emergency_fallback_rate": 0.0,
+    "environment_interface_adjustment_rate": 0.0,
+    "episode_count": 20,
+    "episodes_with_object_grasped": 0,
+    "executed_category_violation_rates": {
+      "acceleration_braking_conflict": 0.8395
+    },
+    "executed_constraint_violation_rate": 0.8395,
+    "executed_violation_step_rate": 0.8395,
+    "intervention_rate": 0.0,
+    "intervention_reason_rates": {
+      "none": 1.0
+    },
+    "interventions_while_grasped": 0,
+    "lyapunov_nonincrease_rate": 0.0,
+    "max_action_perturbation_linf": 0.10000000149011612,
+    "max_environment_interface_adjustment_l2": 0.0,
+    "max_safety_correction_l2": 0.0,
+    "mean_action_perturbation_l2": 0.10000000149011612,
+    "mean_environment_interface_adjustment_l2": 0.0,
+    "mean_episode_length": 100.0,
+    "mean_reward": -8.488283122424628,
+    "mean_safety_correction_l2": 0.0,
+    "mean_total_action_displacement_l2": 0.10000002229213714,
+    "method": "none",
+    "p95_safety_correction_l2": 0.0,
+    "perturbation_family": "braking",
+    "perturbation_name": "braking_minus_0p10",
+    "perturbed_category_violation_rates": {
+      "acceleration_braking_conflict": 0.8395
+    },
+    "perturbed_constraint_violation_rate": 0.8395,
+    "perturbed_to_executed_gripper_semantic_change_rate": 0.0,
+    "perturbed_unsafe_steps_while_grasped": 0,
+    "perturbed_violation_step_rate": 0.8395,
+    "principal_seed": 123,
+    "proposed_to_perturbed_gripper_semantic_change_rate": 0.0,
+    "recovered_category_rates": {},
+    "recovered_unsafe_steps": 0,
+    "recovery_rate": 0.0,
+    "reward_sample_sd": 2.837515058702216,
+    "selected_candidate_source_rates": {},
+    "selected_lower_than_perturbed_rate": 0.0,
+    "steps_object_grasped": 0,
+    "strict_lyapunov_decrease_rate": 0.0,
+    "success_rate": 0.0,
+    "total_environment_steps": 2000,
+    "unresolved_unsafe_steps": 1679,
+    "unsafe_perturbed_steps": 1679,
+    "within_filter_violation_reduction": 0.0
+  },
+  "sprint": "5.12",
+  "structured_state_perturbation_applied": false
+}

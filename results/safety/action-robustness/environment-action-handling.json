@@ -1,0 +1,28 @@
+﻿{
+  "sprint": "5.12",
+  "artifact": "environment-action-handling-audit",
+  "autonomous_driving": {
+    "accepts_out_of_range_input": true,
+    "internal_bound_handling": "np.clip",
+    "nominal_lower_bounds": [-1.0, -1.0, 0.0],
+    "nominal_upper_bounds": [1.0, 1.0, 1.0],
+    "explicit_safety_layer": false,
+    "count_as_filter_intervention": false,
+    "count_as_filter_recovery": false
+  },
+  "robotics": {
+    "accepts_out_of_range_input": true,
+    "internal_bound_handling": "np.clip",
+    "nominal_lower_bounds": [-1.0, -1.0, -1.0],
+    "nominal_upper_bounds": [1.0, 1.0, 1.0],
+    "explicit_safety_layer": false,
+    "count_as_filter_intervention": false,
+    "count_as_filter_recovery": false
+  },
+  "protocol": {
+    "none_executed_action_equals_perturbed_action": true,
+    "filter_recovery_measured_before_environment_internal_clipping": true,
+    "environment_effective_action_recorded_separately": true,
+    "environment_interface_adjustment_not_attributed_to_safety_filter": true
+  }
+}

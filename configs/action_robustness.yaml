@@ -1,0 +1,262 @@
+﻿sprint: "5.12"
+condition: "action_perturbation"
+
+methods:
+  - none
+  - clipping
+  - lyapunov
+
+principal_seeds:
+  - 42
+  - 123
+  - 456
+
+evaluation_seeds:
+  start: 20000
+  end: 20019
+
+episodes_per_cell: 20
+
+domains:
+
+  autonomous_driving:
+    action_dimension: 3
+
+    action_layout:
+      steering: 0
+      acceleration: 1
+      braking: 2
+
+    nominal_lower_bounds:
+      - -1.0
+      - -1.0
+      - 0.0
+
+    nominal_upper_bounds:
+      - 1.0
+      - 1.0
+      - 1.0
+
+    perturbations:
+
+      - name: steering_plus_0p10
+        family: steering
+        updates:
+          - index: 0
+            delta: 0.10
+
+      - name: steering_minus_0p10
+        family: steering
+        updates:
+          - index: 0
+            delta: -0.10
+
+      - name: steering_plus_0p25
+        family: steering
+        updates:
+          - index: 0
+            delta: 0.25
+
+      - name: steering_minus_0p25
+        family: steering
+        updates:
+          - index: 0
+            delta: -0.25
+
+      - name: acceleration_plus_0p10
+        family: acceleration
+        updates:
+          - index: 1
+            delta: 0.10
+
+      - name: acceleration_minus_0p10
+        family: acceleration
+        updates:
+          - index: 1
+            delta: -0.10
+
+      - name: acceleration_plus_0p25
+        family: acceleration
+        updates:
+          - index: 1
+            delta: 0.25
+
+      - name: acceleration_minus_0p25
+        family: acceleration
+        updates:
+          - index: 1
+            delta: -0.25
+
+      - name: braking_plus_0p10
+        family: braking
+        updates:
+          - index: 2
+            delta: 0.10
+
+      - name: braking_minus_0p10
+        family: braking
+        updates:
+          - index: 2
+            delta: -0.10
+
+      - name: braking_plus_0p25
+        family: braking
+        updates:
+          - index: 2
+            delta: 0.25
+
+      - name: braking_minus_0p25
+        family: braking
+        updates:
+          - index: 2
+            delta: -0.25
+
+  robotics:
+    action_dimension: 3
+
+    action_layout:
+      delta_x: 0
+      delta_y: 1
+      gripper: 2
+
+    nominal_lower_bounds:
+      - -1.0
+      - -1.0
+      - -1.0
+
+    nominal_upper_bounds:
+      - 1.0
+      - 1.0
+      - 1.0
+
+    perturbations:
+
+      - name: delta_x_plus_0p10
+        family: delta_x
+        updates:
+          - index: 0
+            delta: 0.10
+
+      - name: delta_x_minus_0p10
+        family: delta_x
+        updates:
+          - index: 0
+            delta: -0.10
+
+      - name: delta_x_plus_0p25
+        family: delta_x
+        updates:
+          - index: 0
+            delta: 0.25
+
+      - name: delta_x_minus_0p25
+        family: delta_x
+        updates:
+          - index: 0
+            delta: -0.25
+
+      - name: delta_y_plus_0p10
+        family: delta_y
+        updates:
+          - index: 1
+            delta: 0.10
+
+      - name: delta_y_minus_0p10
+        family: delta_y
+        updates:
+          - index: 1
+            delta: -0.10
+
+      - name: delta_y_plus_0p25
+        family: delta_y
+        updates:
+          - index: 1
+            delta: 0.25
+
+      - name: delta_y_minus_0p25
+        family: delta_y
+        updates:
+          - index: 1
+            delta: -0.25
+
+      - name: gripper_plus_0p25
+        family: gripper
+        updates:
+          - index: 2
+            delta: 0.25
+
+      - name: gripper_minus_0p25
+        family: gripper
+        updates:
+          - index: 2
+            delta: -0.25
+
+      - name: gripper_plus_0p50
+        family: gripper
+        updates:
+          - index: 2
+            delta: 0.50
+
+      - name: gripper_minus_0p50
+        family: gripper
+        updates:
+          - index: 2
+            delta: -0.50
+
+matrix:
+  driving_conditions: 12
+  robotics_conditions: 12
+  total_conditions: 24
+  expected_principal_cells: 216
+  expected_principal_episodes: 4320
+
+ordering:
+  observation: true_state
+  perturbation_after_policy: true
+  perturbation_before_safety_filter: true
+  safety_filter_before_environment: true
+
+action_handling:
+  pre_filter_clipping: false
+  preserve_out_of_bounds_perturbed_action: true
+  audit_environment_interface: true
+
+robotics:
+  object_grasped_added_to_policy_observation: false
+  object_grasped_perturbed: false
+  predictor_context_uses_true_simulator_state: true
+
+reproduction:
+  principal_seed: 42
+
+  autonomous_driving:
+    perturbation: steering_plus_0p25
+
+  robotics:
+    perturbation: gripper_plus_0p50
+
+  methods:
+    - none
+    - clipping
+    - lyapunov
+
+  episodes_per_cell: 20
+  expected_episodes: 120
+
+scope:
+  new_training: false
+  policy_fine_tuning: false
+  qml_training: false
+  reward_modification: false
+  environment_modification: false
+  safety_parameter_tuning: false
+  gaussian_state_noise: false
+  structured_state_perturbation: false
+
+claims:
+  actuator_fault_certification: false
+  production_robustness: false
+  formal_lyapunov_stability: false
+  lyapunov_superiority: false
+  iso_safety_compliance: false
+  quantum_safety_advantage: false

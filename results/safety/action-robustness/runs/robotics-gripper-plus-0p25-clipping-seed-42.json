@@ -1,0 +1,6683 @@
+{
+  "action_config_sha256": "10036a5e55374e18b6211b9c7f77a64d9b88376b954c2241250b1e91525269b3",
+  "action_perturbation_after_policy": true,
+  "action_perturbation_before_safety_filter": true,
+  "artifact_type": "principal",
+  "checkpoint_sha256": "ce4703c3080b4485d8788ed7e7225a61f821cfdbd8d473a3f99c33511df1cd63",
+  "clean_reference_path": "results\\safety\\clipping\\sprint5-clipping-safety-summary.json",
+  "clean_reference_sha256": "0d4f51ec03d7e75ee9a0d099b9d8238263a2ddcf764335a868d83a734cc666c3",
+  "condition": "action_perturbation",
+  "domain": "robotics",
+  "environment_handling_sha256": "d4219868682a1df447261be3795280ca5ad952c36a3fc3a2e769552f1c73c6a0",
+  "environment_interface_adjustment_not_filter_recovery": true,
+  "environment_internal_action_clipping": true,
+  "episode_count": 20,
+  "episodes": [
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.6295479536056519,
+            -0.6554507613182068,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.6295479536056519,
+            -0.6554507613182068,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.6295479536056519,
+            -0.6554507613182068,
+            0.7347321510314941
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.6295479536056519,
+            -0.6554507613182068,
+            0.48473215103149414
+          ],
+          "safety_correction_l2": 0.7347321510314941,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.04286308214068413,
+            0.6431976556777954,
+            -0.7621426582336426,
+            0.2982664704322815,
+            0.2949172556400299,
+            -0.5484806299209595
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.6081982254981995,
+            -0.6112022995948792,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.6081982254981995,
+            -0.6112022995948792,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.6081982254981995,
+            -0.6112022995948792,
+            0.7355029582977295
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.6081982254981995,
+            -0.6112022995948792,
+            0.4855029582977295
+          ],
+          "safety_correction_l2": 0.7355029582977295,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.007500752806663513,
+            0.5907616019248962,
+            -0.7621426582336426,
+            0.2982664704322815,
+            0.2949172556400299,
+            -0.5484806299209595
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.5855170488357544,
+            -0.5648970603942871,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.5855170488357544,
+            -0.5648970603942871,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.5855170488357544,
+            -0.5648970603942871,
+            0.7356762886047363
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.5855170488357544,
+            -0.5648970603942871,
+            0.48567628860473633
+          ],
+          "safety_correction_l2": 0.7356762886047363,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.05615660920739174,
+            0.5418654084205627,
+            -0.7621426582336426,
+            0.2982664704322815,
+            0.2949172556400299,
+            -0.5484806299209595
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.5616075992584229,
+            -0.5174940228462219,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.5616075992584229,
+            -0.5174940228462219,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.5616075992584229,
+            -0.5174940228462219,
+            0.7352931499481201
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.5616075992584229,
+            -0.5174940228462219,
+            0.4852931499481201
+          ],
+          "safety_correction_l2": 0.7352931499481201,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.10299797356128693,
+            0.4966736435890198,
+            -0.7621426582336426,
+            0.2982664704322815,
+            0.2949172556400299,
+            -0.5484806299209595
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.5366183519363403,
+            -0.47001218795776367,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.5366183519363403,
+            -0.47001218795776367,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.5366183519363403,
+            -0.47001218795776367,
+            0.7344093322753906
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.5366183519363403,
+            -0.47001218795776367,
+            0.4844093322753906
+          ],
+          "safety_correction_l2": 0.7344093322753906,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.14792658388614655,
+            0.45527413487434387,
+            -0.7621426582336426,
+            0.2982664704322815,
+            0.2949172556400299,
+            -0.5484806299209595
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20000,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 100,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 100,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 100
+      },
+      "recovered_unsafe_steps": 100,
+      "reward": 0.41252226969271105,
+      "safety_correction_l2_max": 0.7356762886047363,
+      "safety_correction_l2_sum": 69.16485452651978,
+      "safety_correction_l2_values": [
+        0.7347321510314941,
+        0.7355029582977295,
+        0.7356762886047363,
+        0.7352931499481201,
+        0.7344093322753906,
+        0.7330917119979858,
+        0.7314122915267944,
+        0.729445219039917,
+        0.7272619009017944,
+        0.7249284982681274,
+        0.7225037813186646,
+        0.720038652420044,
+        0.7175750732421875,
+        0.7151477336883545,
+        0.7127830982208252,
+        0.7105014324188232,
+        0.7083173990249634,
+        0.7062407732009888,
+        0.704277515411377,
+        0.7024307250976562,
+        0.7007005214691162,
+        0.6990857124328613,
+        0.6975831985473633,
+        0.696189284324646,
+        0.694899320602417,
+        0.693708062171936,
+        0.6926102638244629,
+        0.6916003227233887,
+        0.690672755241394,
+        0.6898221969604492,
+        0.6890432834625244,
+        0.688330888748169,
+        0.6876800060272217,
+        0.6870861053466797,
+        0.6865447759628296,
+        0.6860518455505371,
+        0.6856033802032471,
+        0.6851956844329834,
+        0.6848254203796387,
+        0.6844894886016846,
+        0.6841849088668823,
+        0.6839089393615723,
+        0.6836590766906738,
+        0.6834330558776855,
+        0.6832287311553955,
+        0.6830441951751709,
+        0.6828774213790894,
+        0.6827270984649658,
+        0.6825915575027466,
+        0.682469367980957,
+        0.6823594570159912,
+        0.6822603940963745,
+        0.6821713447570801,
+        0.6820913553237915,
+        0.6820194721221924,
+        0.6819548606872559,
+        0.6818970441818237,
+        0.6818450689315796,
+        0.6817985773086548,
+        0.681756854057312,
+        0.6817195415496826,
+        0.6816861629486084,
+        0.6816563606262207,
+        0.6816296577453613,
+        0.6816058158874512,
+        0.6815844774246216,
+        0.681565523147583,
+        0.6815485954284668,
+        0.6815334558486938,
+        0.6815201044082642,
+        0.6815080642700195,
+        0.6814974546432495,
+        0.681488037109375,
+        0.6814795732498169,
+        0.6814720630645752,
+        0.6814655065536499,
+        0.6814596652984619,
+        0.6814544200897217,
+        0.6814498901367188,
+        0.6814457178115845,
+        0.681442141532898,
+        0.6814389228820801,
+        0.6814360618591309,
+        0.6814336776733398,
+        0.6814314126968384,
+        0.6814295053482056,
+        0.6814277172088623,
+        0.6814262866973877,
+        0.6814249753952026,
+        0.6814237833023071,
+        0.6814228296279907,
+        0.6814218759536743,
+        0.681421160697937,
+        0.6814204454421997,
+        0.681419849395752,
+        0.6814193725585938,
+        0.6814188957214355,
+        0.6814185380935669,
+        0.6814181804656982,
+        0.6814178228378296
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 44.164854526519775,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20001,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {},
+      "perturbed_constraint_violation_count": 0,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 0,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": 1.746359865060451,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 25.0,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 0
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8989191651344299,
+            0.6856210231781006,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8989191651344299,
+            0.6856210231781006,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8989191651344299,
+            0.6856210231781006,
+            0.7621381282806396
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8989191651344299,
+            0.6856210231781006,
+            0.5121381282806396
+          ],
+          "safety_correction_l2": 0.7621381282806396,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.4546584486961365,
+            -0.7651212811470032,
+            -0.6159440875053406,
+            -0.03200796619057655,
+            0.3116891384124756,
+            0.40578362345695496
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8851593732833862,
+            0.6559327840805054,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8851593732833862,
+            0.6559327840805054,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8851593732833862,
+            0.6559327840805054,
+            0.7581701278686523
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8851593732833862,
+            0.6559327840805054,
+            0.5081701278686523
+          ],
+          "safety_correction_l2": 0.7581701278686523,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.3827449083328247,
+            -0.7102715969085693,
+            -0.6159440875053406,
+            -0.03200796619057655,
+            0.3116891384124756,
+            0.40578362345695496
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8689479231834412,
+            0.6246762275695801,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8689479231834412,
+            0.6246762275695801,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8689479231834412,
+            0.6246762275695801,
+            0.7537128925323486
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8689479231834412,
+            0.6246762275695801,
+            0.5037128925323486
+          ],
+          "safety_correction_l2": 0.7537128925323486,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.31193214654922485,
+            -0.6577969789505005,
+            -0.6159440875053406,
+            -0.03200796619057655,
+            0.3116891384124756,
+            0.40578362345695496
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8499453663825989,
+            0.5921840667724609,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8499453663825989,
+            0.5921840667724609,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8499453663825989,
+            0.5921840667724609,
+            0.748769998550415
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8499453663825989,
+            0.5921840667724609,
+            0.49876999855041504
+          ],
+          "safety_correction_l2": 0.748769998550415,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.24241632223129272,
+            -0.6078228950500488,
+            -0.6159440875053406,
+            -0.03200796619057655,
+            0.3116891384124756,
+            0.40578362345695496
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8278307318687439,
+            0.5588445663452148,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8278307318687439,
+            0.5588445663452148,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8278307318687439,
+            0.5588445663452148,
+            0.7433621883392334
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8278307318687439,
+            0.5588445663452148,
+            0.4933621883392334
+          ],
+          "safety_correction_l2": 0.7433621883392334,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.17442068457603455,
+            -0.560448169708252,
+            -0.6159440875053406,
+            -0.03200796619057655,
+            0.3116891384124756,
+            0.40578362345695496
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20002,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 57,
+      "intervention_reason_counts": {
+        "domain_constraint": 57,
+        "none": 43
+      },
+      "interventions_while_grasped": 36,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 21,
+        "unsafe_motion": 36
+      },
+      "perturbed_constraint_violation_count": 57,
+      "perturbed_to_executed_gripper_semantic_changes": 21,
+      "perturbed_unsafe_steps_while_grasped": 36,
+      "perturbed_violation_step_count": 57,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 97,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 21,
+        "unsafe_motion": 36
+      },
+      "recovered_unsafe_steps": 57,
+      "reward": 1.7493934067241323,
+      "safety_correction_l2_max": 0.7621381282806396,
+      "safety_correction_l2_sum": 18.229355454444885,
+      "safety_correction_l2_values": [
+        0.7621381282806396,
+        0.7581701278686523,
+        0.7537128925323486,
+        0.748769998550415,
+        0.7433621883392334,
+        0.7375282049179077,
+        0.7313245534896851,
+        0.7248237133026123,
+        0.7181106805801392,
+        0.7112791538238525,
+        0.7044262886047363,
+        0.6976470947265625,
+        0.69102942943573,
+        0.6846499443054199,
+        0.6785706281661987,
+        0.6728379726409912,
+        0.6674826145172119,
+        0.6625213623046875,
+        0.6579580307006836,
+        0.6537868976593018,
+        0.6499947309494019,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.029103577136993408,
+        0.09989243745803833,
+        0.0996965765953064,
+        0.09950238466262817,
+        0.09930986166000366,
+        0.09911906719207764,
+        0.09892982244491577,
+        0.09874230623245239,
+        0.09855633974075317,
+        0.09837210178375244,
+        0.09818941354751587,
+        0.09800821542739868,
+        0.09782874584197998,
+        0.09765076637268066,
+        0.09747439622879028,
+        0.09729951620101929,
+        0.09712624549865723,
+        0.09695446491241455,
+        0.09678417444229126,
+        0.0966154932975769,
+        0.09644812345504761,
+        0.09628230333328247,
+        0.0961180329322815,
+        0.09595513343811035,
+        0.09579366445541382,
+        0.09563368558883667,
+        0.09547507762908936,
+        0.09531795978546143,
+        0.09516215324401855,
+        0.09500783681869507,
+        0.09485477209091187,
+        0.09470313787460327,
+        0.09455281496047974,
+        0.09440392255783081,
+        0.09425634145736694,
+        0.09410995244979858
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 78,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 29.945767551660538,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 57
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.20694053173065186,
+            0.011589527130126953,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.20694053173065186,
+            0.011589527130126953,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.20694053173065186,
+            0.011589527130126953,
+            0.5013196468353271
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.20694053173065186,
+            0.011589527130126953,
+            0.25131964683532715
+          ],
+          "safety_correction_l2": 0.5013196468353271,
+          "step": 18,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.42288878560066223,
+            0.13181746006011963,
+            0.5832507014274597,
+            0.15664584934711456,
+            0.16646306216716766,
+            0.2566339671611786
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.18795108795166016,
+            0.006508469581604004,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.18795108795166016,
+            0.006508469581604004,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.18795108795166016,
+            0.006508469581604004,
+            0.5035990476608276
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.18795108795166016,
+            0.006508469581604004,
+            0.25359904766082764
+          ],
+          "safety_correction_l2": 0.5035990476608276,
+          "step": 19,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.43944403529167175,
+            0.13274462521076202,
+            0.5832507014274597,
+            0.15664584934711456,
+            0.16646306216716766,
+            0.2566339671611786
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.17045223712921143,
+            0.0023697614669799805,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.17045223712921143,
+            0.0023697614669799805,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.17045223712921143,
+            0.0023697614669799805,
+            0.5056865215301514
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.17045223712921143,
+            0.0023697614669799805,
+            0.25568652153015137
+          ],
+          "safety_correction_l2": 0.5056865215301514,
+          "step": 20,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.4544801115989685,
+            0.13326530158519745,
+            0.5832507014274597,
+            0.15664584934711456,
+            0.16646306216716766,
+            0.2566339671611786
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20003,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 3,
+      "intervention_reason_counts": {
+        "domain_constraint": 3,
+        "none": 97
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 3
+      },
+      "perturbed_constraint_violation_count": 3,
+      "perturbed_to_executed_gripper_semantic_changes": 3,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 3,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 30,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 3
+      },
+      "recovered_unsafe_steps": 3,
+      "reward": 1.11689132892121,
+      "safety_correction_l2_max": 0.5056865215301514,
+      "safety_correction_l2_sum": 1.5106052160263062,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.5013196468353271,
+        0.5035990476608276,
+        0.5056865215301514,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 78,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 25.010605216026306,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 3
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8430591225624084,
+            -0.30595672130584717,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8430591225624084,
+            -0.30595672130584717,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8430591225624084,
+            -0.30595672130584717,
+            0.7925364971160889
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8430591225624084,
+            -0.30595672130584717,
+            0.5425364971160889
+          ],
+          "safety_correction_l2": 0.7925364971160889,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.24493366479873657,
+            0.22559665143489838,
+            -0.7731606960296631,
+            0.19889476895332336,
+            0.05733930692076683,
+            -0.1486339271068573
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8244819045066833,
+            -0.26324737071990967,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8244819045066833,
+            -0.26324737071990967,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8244819045066833,
+            -0.26324737071990967,
+            0.7886781692504883
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8244819045066833,
+            -0.26324737071990967,
+            0.5386781692504883
+          ],
+          "safety_correction_l2": 0.7886781692504883,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.17748893797397614,
+            0.20112010836601257,
+            -0.7731606960296631,
+            0.19889476895332336,
+            0.05733930692076683,
+            -0.1486339271068573
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8033335208892822,
+            -0.22370421886444092,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8033335208892822,
+            -0.22370421886444092,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8033335208892822,
+            -0.22370421886444092,
+            0.7843315601348877
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8033335208892822,
+            -0.22370421886444092,
+            0.5343315601348877
+          ],
+          "safety_correction_l2": 0.7843315601348877,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.11153038591146469,
+            0.18006032705307007,
+            -0.7731606960296631,
+            0.19889476895332336,
+            0.05733930692076683,
+            -0.1486339271068573
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.7794762253761292,
+            -0.18757426738739014,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.7794762253761292,
+            -0.18757426738739014,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.7794762253761292,
+            -0.18757426738739014,
+            0.7795727252960205
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.7794762253761292,
+            -0.18757426738739014,
+            0.5295727252960205
+          ],
+          "safety_correction_l2": 0.7795727252960205,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.04726370424032211,
+            0.16216398775577545,
+            -0.7731606960296631,
+            0.19889476895332336,
+            0.05733930692076683,
+            -0.1486339271068573
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.7528459429740906,
+            -0.1549546718597412,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.7528459429740906,
+            -0.1549546718597412,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.7528459429740906,
+            -0.1549546718597412,
+            0.7744793891906738
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.7528459429740906,
+            -0.1549546718597412,
+            0.5244793891906738
+          ],
+          "safety_correction_l2": 0.7744793891906738,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.015094392001628876,
+            0.14715804159641266,
+            -0.7731606960296631,
+            0.19889476895332336,
+            0.05733930692076683,
+            -0.1486339271068573
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20004,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 44,
+      "intervention_reason_counts": {
+        "domain_constraint": 44,
+        "none": 56
+      },
+      "interventions_while_grasped": 21,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 23,
+        "unsafe_motion": 21
+      },
+      "perturbed_constraint_violation_count": 44,
+      "perturbed_to_executed_gripper_semantic_changes": 23,
+      "perturbed_unsafe_steps_while_grasped": 21,
+      "perturbed_violation_step_count": 44,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 91,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 23,
+        "unsafe_motion": 21
+      },
+      "recovered_unsafe_steps": 44,
+      "reward": 1.41396957332416,
+      "safety_correction_l2_max": 0.7925364971160889,
+      "safety_correction_l2_sum": 18.460304468870163,
+      "safety_correction_l2_values": [
+        0.7925364971160889,
+        0.7886781692504883,
+        0.7843315601348877,
+        0.7795727252960205,
+        0.7744793891906738,
+        0.7691304683685303,
+        0.7636052370071411,
+        0.7579810619354248,
+        0.752332329750061,
+        0.746728777885437,
+        0.741233229637146,
+        0.7359001636505127,
+        0.7307746410369873,
+        0.7258918285369873,
+        0.7212769985198975,
+        0.7169458866119385,
+        0.7129063606262207,
+        0.7091594934463501,
+        0.7057003974914551,
+        0.7025198936462402,
+        0.69960618019104,
+        0.6969449520111084,
+        0.6945207118988037,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.02265605330467224,
+        0.06728076934814453,
+        0.06777238845825195,
+        0.06826025247573853,
+        0.0687444806098938,
+        0.06922507286071777,
+        0.06970202922821045,
+        0.07017534971237183,
+        0.0706450343132019,
+        0.07111114263534546,
+        0.07157367467880249,
+        0.072032630443573,
+        0.07248806953430176,
+        0.07293999195098877,
+        0.07338839769363403,
+        0.07383328676223755,
+        0.07427471876144409,
+        0.07471269369125366,
+        0.07514721155166626,
+        0.07557827234268188,
+        0.07600599527359009
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 76,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 30.705848932266235,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 44
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.320792555809021,
+            0.15472841262817383,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.320792555809021,
+            0.15472841262817383,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.320792555809021,
+            0.15472841262817383,
+            0.500809907913208
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.320792555809021,
+            0.15472841262817383,
+            0.250809907913208
+          ],
+          "safety_correction_l2": 0.500809907913208,
+          "step": 14,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.3829043507575989,
+            0.17889980971813202,
+            0.6644211411476135,
+            0.3060968220233917,
+            -0.5958099365234375,
+            -0.056597355753183365
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.2967325448989868,
+            0.13094472885131836,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.2967325448989868,
+            0.13094472885131836,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.2967325448989868,
+            0.13094472885131836,
+            0.503502368927002
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.2967325448989868,
+            0.13094472885131836,
+            0.25350236892700195
+          ],
+          "safety_correction_l2": 0.503502368927002,
+          "step": 15,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.40856775641441345,
+            0.19127808511257172,
+            0.6644211411476135,
+            0.3060968220233917,
+            -0.5958099365234375,
+            -0.056597355753183365
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.2736865282058716,
+            0.11024558544158936,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.2736865282058716,
+            0.11024558544158936,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.2736865282058716,
+            0.11024558544158936,
+            0.5060892105102539
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.2736865282058716,
+            0.11024558544158936,
+            0.2560892105102539
+          ],
+          "safety_correction_l2": 0.5060892105102539,
+          "step": 16,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.43230634927749634,
+            0.2017536610364914,
+            0.6644211411476135,
+            0.3060968220233917,
+            -0.5958099365234375,
+            -0.056597355753183365
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.2517620325088501,
+            0.09232401847839355,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.2517620325088501,
+            0.09232401847839355,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.2517620325088501,
+            0.09232401847839355,
+            0.5085580348968506
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.2517620325088501,
+            0.09232401847839355,
+            0.2585580348968506
+          ],
+          "safety_correction_l2": 0.5085580348968506,
+          "step": 17,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.45420128107070923,
+            0.21057330071926117,
+            0.6644211411476135,
+            0.3060968220233917,
+            -0.5958099365234375,
+            -0.056597355753183365
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.23103249073028564,
+            0.07687795162200928,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.23103249073028564,
+            0.07687795162200928,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.23103249073028564,
+            0.07687795162200928,
+            0.5109004974365234
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.23103249073028564,
+            0.07687795162200928,
+            0.26090049743652344
+          ],
+          "safety_correction_l2": 0.5109004974365234,
+          "step": 18,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.4743422567844391,
+            0.2179592251777649,
+            0.6644211411476135,
+            0.3060968220233917,
+            -0.5958099365234375,
+            -0.056597355753183365
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20005,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 10,
+      "intervention_reason_counts": {
+        "domain_constraint": 10,
+        "none": 90
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 10
+      },
+      "perturbed_constraint_violation_count": 10,
+      "perturbed_to_executed_gripper_semantic_changes": 10,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 10,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 28,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 10
+      },
+      "recovered_unsafe_steps": 10,
+      "reward": 2.012890532175439,
+      "safety_correction_l2_max": 0.5206294059753418,
+      "safety_correction_l2_sum": 5.114867806434631,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.500809907913208,
+        0.503502368927002,
+        0.5060892105102539,
+        0.5085580348968506,
+        0.5109004974365234,
+        0.5131115913391113,
+        0.5151889324188232,
+        0.5171327590942383,
+        0.5189450979232788,
+        0.5206294059753418,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 75,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 25.11486780643463,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 10
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.5256050229072571,
+            0.9203822612762451,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.5256050229072571,
+            0.9203822612762451,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.5256050229072571,
+            0.9203822612762451,
+            0.7767460346221924
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.5256050229072571,
+            0.9203822612762451,
+            0.5267460346221924
+          ],
+          "safety_correction_l2": 0.7767460346221924,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.48860234022140503,
+            -0.6868312954902649,
+            -0.5762835741043091,
+            0.6333185434341431,
+            -0.5969066023826599,
+            -0.23257823288440704
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.4776429533958435,
+            0.9093228578567505,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.4776429533958435,
+            0.9093228578567505,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.4776429533958435,
+            0.9093228578567505,
+            0.7755839824676514
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.4776429533958435,
+            0.9093228578567505,
+            0.5255839824676514
+          ],
+          "safety_correction_l2": 0.7755839824676514,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.5306507349014282,
+            -0.6132007241249084,
+            -0.5762835741043091,
+            0.6333185434341431,
+            -0.5969066023826599,
+            -0.23257823288440704
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.4283429980278015,
+            0.8963344097137451,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.4283429980278015,
+            0.8963344097137451,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.4283429980278015,
+            0.8963344097137451,
+            0.7741873264312744
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.4283429980278015,
+            0.8963344097137451,
+            0.5241873264312744
+          ],
+          "safety_correction_l2": 0.7741873264312744,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.5688621997833252,
+            -0.5404548645019531,
+            -0.5762835741043091,
+            0.6333185434341431,
+            -0.5969066023826599,
+            -0.23257823288440704
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.3786125183105469,
+            0.8811361789703369,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.3786125183105469,
+            0.8811361789703369,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.3786125183105469,
+            0.8811361789703369,
+            0.7725687026977539
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.3786125183105469,
+            0.8811361789703369,
+            0.5225687026977539
+          ],
+          "safety_correction_l2": 0.7725687026977539,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.6031296253204346,
+            -0.4687481224536896,
+            -0.5762835741043091,
+            0.6333185434341431,
+            -0.5969066023826599,
+            -0.23257823288440704
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.32937222719192505,
+            0.8634419441223145,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.32937222719192505,
+            0.8634419441223145,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.32937222719192505,
+            0.8634419441223145,
+            0.7707443237304688
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.32937222719192505,
+            0.8634419441223145,
+            0.5207443237304688
+          ],
+          "safety_correction_l2": 0.7707443237304688,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.633418619632721,
+            -0.39825722575187683,
+            -0.5762835741043091,
+            0.6333185434341431,
+            -0.5969066023826599,
+            -0.23257823288440704
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20006,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 38,
+      "intervention_reason_counts": {
+        "domain_constraint": 38,
+        "none": 62
+      },
+      "interventions_while_grasped": 6,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 32,
+        "unsafe_motion": 6
+      },
+      "perturbed_constraint_violation_count": 38,
+      "perturbed_to_executed_gripper_semantic_changes": 32,
+      "perturbed_unsafe_steps_while_grasped": 6,
+      "perturbed_violation_step_count": 38,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 87,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 32,
+        "unsafe_motion": 6
+      },
+      "recovered_unsafe_steps": 38,
+      "reward": 2.5634716742261405,
+      "safety_correction_l2_max": 0.7767460346221924,
+      "safety_correction_l2_sum": 24.275553554296494,
+      "safety_correction_l2_values": [
+        0.7767460346221924,
+        0.7755839824676514,
+        0.7741873264312744,
+        0.7725687026977539,
+        0.7707443237304688,
+        0.768733024597168,
+        0.7665550708770752,
+        0.7642326354980469,
+        0.7617900371551514,
+        0.7592551708221436,
+        0.7566587924957275,
+        0.7540357112884521,
+        0.7514228820800781,
+        0.7488579750061035,
+        0.7463780641555786,
+        0.7440166473388672,
+        0.7418022155761719,
+        0.7397570610046387,
+        0.737896203994751,
+        0.7362277507781982,
+        0.7347536087036133,
+        0.7334697246551514,
+        0.7323682308197021,
+        0.7314379215240479,
+        0.7306653261184692,
+        0.7300361394882202,
+        0.7295353412628174,
+        0.7291479110717773,
+        0.7288597822189331,
+        0.7286573648452759,
+        0.7285283803939819,
+        0.7284612655639648,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.005076617002487183,
+        0.07080936431884766,
+        0.07111579179763794,
+        0.07142174243927002,
+        0.0717272162437439,
+        0.07203221321105957
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 67,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 32.963433355093,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 38
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.044880032539367676,
+            0.8708758354187012,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.044880032539367676,
+            0.8708758354187012,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.044880032539367676,
+            0.8708758354187012,
+            0.6090630292892456
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.044880032539367676,
+            0.8708758354187012,
+            0.3590630292892456
+          ],
+          "safety_correction_l2": 0.6090630292892456,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.5080811381340027,
+            -0.4613165855407715,
+            0.7771267890930176,
+            0.5253095626831055,
+            -0.2959887385368347,
+            0.28957346081733704
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.0106087327003479,
+            0.849724531173706,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.0106087327003479,
+            0.849724531173706,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.0106087327003479,
+            0.849724531173706,
+            0.6042975187301636
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.0106087327003479,
+            0.849724531173706,
+            0.3542975187301636
+          ],
+          "safety_correction_l2": 0.6042975187301636,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.5044907331466675,
+            -0.39164650440216064,
+            0.7771267890930176,
+            0.5253095626831055,
+            -0.2959887385368347,
+            0.28957346081733704
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.019955754280090332,
+            0.8250216245651245,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.019955754280090332,
+            0.8250216245651245,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.019955754280090332,
+            0.8250216245651245,
+            0.5998885631561279
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.019955754280090332,
+            0.8250216245651245,
+            0.34988856315612793
+          ],
+          "safety_correction_l2": 0.5998885631561279,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.5036420226097107,
+            -0.32366853952407837,
+            0.7771267890930176,
+            0.5253095626831055,
+            -0.2959887385368347,
+            0.28957346081733704
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.04685103893280029,
+            0.79648756980896,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.04685103893280029,
+            0.79648756980896,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.04685103893280029,
+            0.79648756980896,
+            0.5958352088928223
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.04685103893280029,
+            0.79648756980896,
+            0.34583520889282227
+          ],
+          "safety_correction_l2": 0.5958352088928223,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.5052384734153748,
+            -0.25766682624816895,
+            0.7771267890930176,
+            0.5253095626831055,
+            -0.2959887385368347,
+            0.28957346081733704
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.0701674222946167,
+            0.7639741897583008,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.0701674222946167,
+            0.7639741897583008,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.0701674222946167,
+            0.7639741897583008,
+            0.5921347141265869
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.0701674222946167,
+            0.7639741897583008,
+            0.3421347141265869
+          ],
+          "safety_correction_l2": 0.5921347141265869,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.5089865326881409,
+            -0.19394782185554504,
+            0.7771267890930176,
+            0.5253095626831055,
+            -0.2959887385368347,
+            0.28957346081733704
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20007,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 25,
+      "intervention_reason_counts": {
+        "domain_constraint": 25,
+        "none": 75
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 25
+      },
+      "perturbed_constraint_violation_count": 25,
+      "perturbed_to_executed_gripper_semantic_changes": 25,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 25,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 70,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 25
+      },
+      "recovered_unsafe_steps": 25,
+      "reward": 1.5951775961498262,
+      "safety_correction_l2_max": 0.6090630292892456,
+      "safety_correction_l2_sum": 14.51997196674347,
+      "safety_correction_l2_values": [
+        0.6090630292892456,
+        0.6042975187301636,
+        0.5998885631561279,
+        0.5958352088928223,
+        0.5921347141265869,
+        0.588782787322998,
+        0.5857750177383423,
+        0.5831053256988525,
+        0.5807666778564453,
+        0.5787501335144043,
+        0.5770440101623535,
+        0.5756330490112305,
+        0.5744988918304443,
+        0.5736203193664551,
+        0.5729737281799316,
+        0.5725336074829102,
+        0.5722748041152954,
+        0.5721718072891235,
+        0.5722006559371948,
+        0.5723389387130737,
+        0.572566032409668,
+        0.5728638172149658,
+        0.5732158422470093,
+        0.5736083984375,
+        0.5740290880203247,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 74,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 27.01997196674347,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 25
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20008,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {},
+      "perturbed_constraint_violation_count": 0,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 0,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -0.17926349737237382,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 25.0,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 0
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20009,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {},
+      "perturbed_constraint_violation_count": 0,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 0,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -0.4253470180244428,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 25.0,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 0
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.03793942928314209,
+            0.8958418369293213,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.03793942928314209,
+            0.8958418369293213,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.03793942928314209,
+            0.8958418369293213,
+            0.5876449346542358
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.03793942928314209,
+            0.8958418369293213,
+            0.33764493465423584
+          ],
+          "safety_correction_l2": 0.5876449346542358,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.29668015241622925,
+            -0.6602624654769897,
+            0.6717098355293274,
+            0.41573798656463623,
+            -0.5791770815849304,
+            -0.13287873566150665
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.06659853458404541,
+            0.8784511089324951,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.06659853458404541,
+            0.8784511089324951,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.06659853458404541,
+            0.8784511089324951,
+            0.5833015441894531
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.06659853458404541,
+            0.8784511089324951,
+            0.3333015441894531
+          ],
+          "safety_correction_l2": 0.5833015441894531,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.2997153103351593,
+            -0.5885951519012451,
+            0.6717098355293274,
+            0.41573798656463623,
+            -0.5791770815849304,
+            -0.13287873566150665
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.09211134910583496,
+            0.8578552007675171,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.09211134910583496,
+            0.8578552007675171,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.09211134910583496,
+            0.8578552007675171,
+            0.5792088508605957
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.09211134910583496,
+            0.8578552007675171,
+            0.3292088508605957
+          ],
+          "safety_correction_l2": 0.5792088508605957,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.30504319071769714,
+            -0.5183190703392029,
+            0.6717098355293274,
+            0.41573798656463623,
+            -0.5791770815849304,
+            -0.13287873566150665
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.11453628540039062,
+            0.8336546421051025,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.11453628540039062,
+            0.8336546421051025,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.11453628540039062,
+            0.8336546421051025,
+            0.5753693580627441
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.11453628540039062,
+            0.8336546421051025,
+            0.32536935806274414
+          ],
+          "safety_correction_l2": 0.5753693580627441,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.3124121129512787,
+            -0.44969063997268677,
+            0.6717098355293274,
+            0.41573798656463623,
+            -0.5791770815849304,
+            -0.13287873566150665
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.13394761085510254,
+            0.8055154085159302,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.13394761085510254,
+            0.8055154085159302,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.13394761085510254,
+            0.8055154085159302,
+            0.5717871189117432
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.13394761085510254,
+            0.8055154085159302,
+            0.32178711891174316
+          ],
+          "safety_correction_l2": 0.5717871189117432,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.32157501578330994,
+            -0.3829982876777649,
+            0.6717098355293274,
+            0.41573798656463623,
+            -0.5791770815849304,
+            -0.13287873566150665
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20010,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 28,
+      "intervention_reason_counts": {
+        "domain_constraint": 28,
+        "none": 72
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 28
+      },
+      "perturbed_constraint_violation_count": 28,
+      "perturbed_to_executed_gripper_semantic_changes": 28,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 28,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 45,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 28
+      },
+      "recovered_unsafe_steps": 28,
+      "reward": 1.9245649048905054,
+      "safety_correction_l2_max": 0.5876449346542358,
+      "safety_correction_l2_sum": 15.660170793533325,
+      "safety_correction_l2_values": [
+        0.5876449346542358,
+        0.5833015441894531,
+        0.5792088508605957,
+        0.5753693580627441,
+        0.5717871189117432,
+        0.5684683322906494,
+        0.5654205083847046,
+        0.5626530647277832,
+        0.5601751804351807,
+        0.557995080947876,
+        0.5561175346374512,
+        0.5545426607131958,
+        0.5532646179199219,
+        0.5522717237472534,
+        0.5515462160110474,
+        0.5510656833648682,
+        0.5508044958114624,
+        0.5507349967956543,
+        0.5508295297622681,
+        0.5510609149932861,
+        0.5514036417007446,
+        0.5518343448638916,
+        0.5523321628570557,
+        0.5528789758682251,
+        0.5534588098526001,
+        0.5540585517883301,
+        0.5546669960021973,
+        0.5552749633789062,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 71,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 26.660170793533325,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 28
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.38708287477493286,
+            0.4855194091796875,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.38708287477493286,
+            0.4855194091796875,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.38708287477493286,
+            0.4855194091796875,
+            0.684533953666687
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.38708287477493286,
+            0.4855194091796875,
+            0.434533953666687
+          ],
+          "safety_correction_l2": 0.684533953666687,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.6584759950637817,
+            -0.35310354828834534,
+            -0.7493547797203064,
+            -0.000331551069393754,
+            -0.2822917699813843,
+            0.22630652785301208
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.340955913066864,
+            0.44626712799072266,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.340955913066864,
+            0.44626712799072266,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.340955913066864,
+            0.44626712799072266,
+            0.6787829399108887
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.340955913066864,
+            0.44626712799072266,
+            0.42878293991088867
+          ],
+          "safety_correction_l2": 0.6787829399108887,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.6894426345825195,
+            -0.3142620027065277,
+            -0.7493547797203064,
+            -0.000331551069393754,
+            -0.2822917699813843,
+            0.22630652785301208
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.29779958724975586,
+            0.4080991744995117,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.29779958724975586,
+            0.4080991744995117,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.29779958724975586,
+            0.4080991744995117,
+            0.6733448505401611
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.29779958724975586,
+            0.4080991744995117,
+            0.42334485054016113
+          ],
+          "safety_correction_l2": 0.6733448505401611,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.7167190909385681,
+            -0.2785606384277344,
+            -0.7493547797203064,
+            -0.000331551069393754,
+            -0.2822917699813843,
+            0.22630652785301208
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.25809139013290405,
+            0.37146925926208496,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.25809139013290405,
+            0.37146925926208496,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.25809139013290405,
+            0.37146925926208496,
+            0.6682686805725098
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.25809139013290405,
+            0.37146925926208496,
+            0.41826868057250977
+          ],
+          "safety_correction_l2": 0.6682686805725098,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.7405430674552917,
+            -0.24591270089149475,
+            -0.7493547797203064,
+            -0.000331551069393754,
+            -0.2822917699813843,
+            0.22630652785301208
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.22207629680633545,
+            0.3367265462875366,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.22207629680633545,
+            0.3367265462875366,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.22207629680633545,
+            0.3367265462875366,
+            0.6635841131210327
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.22207629680633545,
+            0.3367265462875366,
+            0.4135841131210327
+          ],
+          "safety_correction_l2": 0.6635841131210327,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.7611903548240662,
+            -0.21619516611099243,
+            -0.7493547797203064,
+            -0.000331551069393754,
+            -0.2822917699813843,
+            0.22630652785301208
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20011,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 95,
+      "intervention_reason_counts": {
+        "domain_constraint": 95,
+        "none": 5
+      },
+      "interventions_while_grasped": 84,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 11,
+        "unsafe_motion": 84
+      },
+      "perturbed_constraint_violation_count": 95,
+      "perturbed_to_executed_gripper_semantic_changes": 11,
+      "perturbed_unsafe_steps_while_grasped": 84,
+      "perturbed_violation_step_count": 95,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 100,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 11,
+        "unsafe_motion": 84
+      },
+      "recovered_unsafe_steps": 95,
+      "reward": 0.4937485534585718,
+      "safety_correction_l2_max": 0.684533953666687,
+      "safety_correction_l2_sum": 19.577125370502472,
+      "safety_correction_l2_values": [
+        0.684533953666687,
+        0.6787829399108887,
+        0.6733448505401611,
+        0.6682686805725098,
+        0.6635841131210327,
+        0.6593036651611328,
+        0.6554262638092041,
+        0.6519404649734497,
+        0.6488275527954102,
+        0.646064043045044,
+        0.6436233520507812,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1253066062927246,
+        0.16040295362472534,
+        0.1600162386894226,
+        0.15963172912597656,
+        0.15924936532974243,
+        0.15886908769607544,
+        0.15849101543426514,
+        0.1581149697303772,
+        0.15774106979370117,
+        0.1573691964149475,
+        0.15699952840805054,
+        0.15663182735443115,
+        0.15626627206802368,
+        0.15590274333953857,
+        0.1555413007736206,
+        0.15518182516098022,
+        0.15482449531555176,
+        0.15446913242340088,
+        0.1541156768798828,
+        0.15376436710357666,
+        0.15341496467590332,
+        0.15306764841079712,
+        0.15272217988967896,
+        0.15237873792648315,
+        0.15203720331192017,
+        0.15169763565063477,
+        0.15136009454727173,
+        0.15102434158325195,
+        0.15069055557250977,
+        0.15035873651504517,
+        0.1500287652015686,
+        0.14970070123672485,
+        0.14937448501586914,
+        0.14905017614364624,
+        0.14872771501541138,
+        0.14840704202651978,
+        0.14808833599090576,
+        0.147771418094635,
+        0.1474563479423523,
+        0.1471429467201233,
+        0.1468314528465271,
+        0.14652180671691895,
+        0.14621388912200928,
+        0.14590775966644287,
+        0.14560335874557495,
+        0.1453007459640503,
+        0.1449999213218689,
+        0.144700825214386,
+        0.1444033980369568,
+        0.14410769939422607,
+        0.14381378889083862,
+        0.1435214877128601,
+        0.14323097467422485,
+        0.1429421305656433,
+        0.1426548957824707,
+        0.14236938953399658,
+        0.1420854926109314,
+        0.1418033242225647,
+        0.14152270555496216,
+        0.14124375581741333,
+        0.14096641540527344,
+        0.14069074392318726,
+        0.14041668176651,
+        0.14014416933059692,
+        0.139873206615448,
+        0.139603853225708,
+        0.13933616876602173,
+        0.13906991481781006,
+        0.13880527019500732,
+        0.13854211568832397,
+        0.13828057050704956,
+        0.13802051544189453,
+        0.13776201009750366,
+        0.13750499486923218,
+        0.13724946975708008,
+        0.13699549436569214,
+        0.13674288988113403,
+        0.13649189472198486,
+        0.1362423300743103,
+        0.13599413633346558,
+        0.135747492313385,
+        0.13550227880477905,
+        0.1352584958076477,
+        0.13501614332199097
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 88,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 30.118875294923782,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 95
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.5275201797485352,
+            0.8067134618759155,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.5275201797485352,
+            0.8067134618759155,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.5275201797485352,
+            0.8067134618759155,
+            0.6293715238571167
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.5275201797485352,
+            0.8067134618759155,
+            0.3793715238571167
+          ],
+          "safety_correction_l2": 0.6293715238571167,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.75059974193573,
+            -0.24991369247436523,
+            -0.025322148576378822,
+            0.757470428943634,
+            0.7773178219795227,
+            -0.5625432729721069
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.5136818885803223,
+            0.7771118879318237,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.5136818885803223,
+            0.7771118879318237,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.5136818885803223,
+            0.7771118879318237,
+            0.6340289115905762
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.5136818885803223,
+            0.7771118879318237,
+            0.38402891159057617
+          ],
+          "safety_correction_l2": 0.6340289115905762,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.7083981037139893,
+            -0.1853766143321991,
+            -0.025322148576378822,
+            0.757470428943634,
+            0.7773178219795227,
+            -0.5625432729721069
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.4994175434112549,
+            0.7439718246459961,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.4994175434112549,
+            0.7439718246459961,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.4994175434112549,
+            0.7439718246459961,
+            0.6384795904159546
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.4994175434112549,
+            0.7439718246459961,
+            0.3884795904159546
+          ],
+          "safety_correction_l2": 0.6384795904159546,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.6673035621643066,
+            -0.12320766597986221,
+            -0.025322148576378822,
+            0.757470428943634,
+            0.7773178219795227,
+            -0.5625432729721069
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.4847097396850586,
+            0.7074631452560425,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.4847097396850586,
+            0.7074631452560425,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.4847097396850586,
+            0.7074631452560425,
+            0.6427106857299805
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.4847097396850586,
+            0.7074631452560425,
+            0.39271068572998047
+          ],
+          "safety_correction_l2": 0.6427106857299805,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.6273501515388489,
+            -0.06368991732597351,
+            -0.025322148576378822,
+            0.757470428943634,
+            0.7773178219795227,
+            -0.5625432729721069
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.469546914100647,
+            0.667954683303833,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.469546914100647,
+            0.667954683303833,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.469546914100647,
+            0.667954683303833,
+            0.6467165946960449
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.469546914100647,
+            0.667954683303833,
+            0.3967165946960449
+          ],
+          "safety_correction_l2": 0.6467165946960449,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.5885733962059021,
+            -0.00709286704659462,
+            -0.025322148576378822,
+            0.757470428943634,
+            0.7773178219795227,
+            -0.5625432729721069
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20012,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 100,
+      "intervention_reason_counts": {
+        "domain_constraint": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 100
+      },
+      "perturbed_constraint_violation_count": 100,
+      "perturbed_to_executed_gripper_semantic_changes": 100,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 100,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 100,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 100
+      },
+      "recovered_unsafe_steps": 100,
+      "reward": 0.9255560461613589,
+      "safety_correction_l2_max": 0.7109811305999756,
+      "safety_correction_l2_sum": 69.83686101436615,
+      "safety_correction_l2_values": [
+        0.6293715238571167,
+        0.6340289115905762,
+        0.6384795904159546,
+        0.6427106857299805,
+        0.6467165946960449,
+        0.6504982709884644,
+        0.6540632247924805,
+        0.6574231386184692,
+        0.6605931520462036,
+        0.6635891199111938,
+        0.666426420211792,
+        0.669119119644165,
+        0.6716787815093994,
+        0.6741149425506592,
+        0.6764349937438965,
+        0.6786444187164307,
+        0.6807471513748169,
+        0.682746410369873,
+        0.6846449375152588,
+        0.6864447593688965,
+        0.6881483793258667,
+        0.6897577047348022,
+        0.6912753582000732,
+        0.6927040815353394,
+        0.6940466165542603,
+        0.6953059434890747,
+        0.6964854001998901,
+        0.6975882053375244,
+        0.6986180543899536,
+        0.6995781660079956,
+        0.7004721164703369,
+        0.7013034820556641,
+        0.702075719833374,
+        0.7027921676635742,
+        0.7034561634063721,
+        0.7040709257125854,
+        0.7046395540237427,
+        0.7051650285720825,
+        0.7056502103805542,
+        0.7060978412628174,
+        0.7065104246139526,
+        0.706890344619751,
+        0.707240104675293,
+        0.7075618505477905,
+        0.7078574895858765,
+        0.7081290483474731,
+        0.7083783149719238,
+        0.7086069583892822,
+        0.708816647529602,
+        0.7090086936950684,
+        0.7091846466064453,
+        0.7093455791473389,
+        0.7094929218292236,
+        0.709627628326416,
+        0.7097506523132324,
+        0.7098630666732788,
+        0.709965705871582,
+        0.710059404373169,
+        0.7101447582244873,
+        0.7102227210998535,
+        0.7102937698364258,
+        0.7103585004806519,
+        0.7104173898696899,
+        0.7104709148406982,
+        0.7105197906494141,
+        0.710564136505127,
+        0.7106045484542847,
+        0.7106411457061768,
+        0.710674524307251,
+        0.7107048034667969,
+        0.7107322216033936,
+        0.7107572555541992,
+        0.7107799053192139,
+        0.710800290107727,
+        0.7108190059661865,
+        0.7108358144760132,
+        0.7108510732650757,
+        0.7108650207519531,
+        0.7108774185180664,
+        0.7108888626098633,
+        0.7108991146087646,
+        0.7109084129333496,
+        0.7109167575836182,
+        0.7109243869781494,
+        0.7109311819076538,
+        0.7109375,
+        0.7109429836273193,
+        0.71094810962677,
+        0.710952639579773,
+        0.7109568119049072,
+        0.7109605073928833,
+        0.7109638452529907,
+        0.7109668254852295,
+        0.7109695672988892,
+        0.7109720706939697,
+        0.7109743356704712,
+        0.7109763622283936,
+        0.7109781503677368,
+        0.710979700088501,
+        0.7109811305999756
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 44.83686101436615,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 100
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8249011039733887,
+            -0.8629922270774841,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8249011039733887,
+            -0.8629922270774841,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8249011039733887,
+            -0.8629922270774841,
+            0.6099636554718018
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8249011039733887,
+            -0.8629922270774841,
+            0.35996365547180176
+          ],
+          "safety_correction_l2": 0.6099636554718018,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.48842963576316833,
+            0.47455212473869324,
+            -0.7496105432510376,
+            -0.3291045129299164,
+            -0.5950794816017151,
+            0.0029640784487128258
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8160849213600159,
+            -0.8385331034660339,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8160849213600159,
+            -0.8385331034660339,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8160849213600159,
+            -0.8385331034660339,
+            0.6139304637908936
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8160849213600159,
+            -0.8385331034660339,
+            0.36393046379089355
+          ],
+          "safety_correction_l2": 0.6139304637908936,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.42243754863739014,
+            0.4055127501487732,
+            -0.7496105432510376,
+            -0.3291045129299164,
+            -0.5950794816017151,
+            0.0029640784487128258
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8061733841896057,
+            -0.8096069693565369,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8061733841896057,
+            -0.8096069693565369,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8061733841896057,
+            -0.8096069693565369,
+            0.6173663139343262
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8061733841896057,
+            -0.8096069693565369,
+            0.36736631393432617
+          ],
+          "safety_correction_l2": 0.6173663139343262,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.35715076327323914,
+            0.33843010663986206,
+            -0.7496105432510376,
+            -0.3291045129299164,
+            -0.5950794816017151,
+            0.0029640784487128258
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.795028567314148,
+            -0.7758544087409973,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.795028567314148,
+            -0.7758544087409973,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.795028567314148,
+            -0.7758544087409973,
+            0.6201953887939453
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.795028567314148,
+            -0.7758544087409973,
+            0.3701953887939453
+          ],
+          "safety_correction_l2": 0.6201953887939453,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.29265689849853516,
+            0.2736615538597107,
+            -0.7496105432510376,
+            -0.3291045129299164,
+            -0.5950794816017151,
+            0.0029640784487128258
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.7825078964233398,
+            -0.73713219165802,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.7825078964233398,
+            -0.73713219165802,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.7825078964233398,
+            -0.73713219165802,
+            0.6223580837249756
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.7825078964233398,
+            -0.73713219165802,
+            0.3723580837249756
+          ],
+          "safety_correction_l2": 0.6223580837249756,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.22905461490154266,
+            0.21159321069717407,
+            -0.7496105432510376,
+            -0.3291045129299164,
+            -0.5950794816017151,
+            0.0029640784487128258
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20013,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 85,
+      "intervention_reason_counts": {
+        "domain_constraint": 85,
+        "none": 15
+      },
+      "interventions_while_grasped": 62,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 23,
+        "unsafe_motion": 62
+      },
+      "perturbed_constraint_violation_count": 85,
+      "perturbed_to_executed_gripper_semantic_changes": 23,
+      "perturbed_unsafe_steps_while_grasped": 62,
+      "perturbed_violation_step_count": 85,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 100,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 23,
+        "unsafe_motion": 62
+      },
+      "recovered_unsafe_steps": 85,
+      "reward": 2.5600208764724597,
+      "safety_correction_l2_max": 0.624579906463623,
+      "safety_correction_l2_sum": 25.735943228006363,
+      "safety_correction_l2_values": [
+        0.6099636554718018,
+        0.6139304637908936,
+        0.6173663139343262,
+        0.6201953887939453,
+        0.6223580837249756,
+        0.6238155364990234,
+        0.6245527267456055,
+        0.624579906463623,
+        0.6239312887191772,
+        0.6226623058319092,
+        0.6208446025848389,
+        0.6185600757598877,
+        0.6158952713012695,
+        0.6129360198974609,
+        0.6097643375396729,
+        0.606454610824585,
+        0.6030727624893188,
+        0.5996754169464111,
+        0.5963097810745239,
+        0.5930142402648926,
+        0.5898189544677734,
+        0.5867468118667603,
+        0.5838140249252319,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.07841458916664124,
+        0.20269715785980225,
+        0.20225101709365845,
+        0.20180708169937134,
+        0.20136505365371704,
+        0.20092511177062988,
+        0.20048725605010986,
+        0.20005130767822266,
+        0.1996174454689026,
+        0.19918549060821533,
+        0.19875556230545044,
+        0.19832760095596313,
+        0.1979016661643982,
+        0.19747763872146606,
+        0.19705551862716675,
+        0.1966354250907898,
+        0.19621723890304565,
+        0.19580090045928955,
+        0.1953865885734558,
+        0.1949741244316101,
+        0.19456356763839722,
+        0.19415485858917236,
+        0.19374805688858032,
+        0.19334310293197632,
+        0.19294005632400513,
+        0.1925387978553772,
+        0.19213944673538208,
+        0.19174182415008545,
+        0.19134610891342163,
+        0.19095218181610107,
+        0.19056004285812378,
+        0.1901698112487793,
+        0.18978124856948853,
+        0.1893945336341858,
+        0.18900948762893677,
+        0.18862628936767578,
+        0.18824487924575806,
+        0.18786507844924927,
+        0.18748706579208374,
+        0.18711084127426147,
+        0.18673628568649292,
+        0.18636345863342285,
+        0.18599236011505127,
+        0.18562287092208862,
+        0.18525511026382446,
+        0.184889018535614,
+        0.18452459573745728,
+        0.18416184186935425,
+        0.18380075693130493,
+        0.18344122171401978,
+        0.18308335542678833,
+        0.1827271580696106,
+        0.18237262964248657,
+        0.1820196509361267,
+        0.18166816234588623,
+        0.18131840229034424,
+        0.1809701919555664,
+        0.18062353134155273,
+        0.180278480052948,
+        0.17993497848510742,
+        0.17959296703338623,
+        0.17925256490707397
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 76,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 31.47607046365738,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 85
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8518810868263245,
+            0.48986101150512695,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8518810868263245,
+            0.48986101150512695,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8518810868263245,
+            0.48986101150512695,
+            0.8162872791290283
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8518810868263245,
+            0.48986101150512695,
+            0.5662872791290283
+          ],
+          "safety_correction_l2": 0.8162872791290283,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.5151421427726746,
+            -0.1622990518808365,
+            -0.41069772839546204,
+            0.42776817083358765,
+            0.1274116039276123,
+            -0.24437366425991058
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.8290027976036072,
+            0.459466814994812,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.8290027976036072,
+            0.459466814994812,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.8290027976036072,
+            0.459466814994812,
+            0.8108043670654297
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.8290027976036072,
+            0.459466814994812,
+            0.5608043670654297
+          ],
+          "safety_correction_l2": 0.8108043670654297,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.4469916522502899,
+            -0.12311017513275146,
+            -0.41069772839546204,
+            0.42776817083358765,
+            0.1274116039276123,
+            -0.24437366425991058
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.802622377872467,
+            0.429667592048645,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.802622377872467,
+            0.429667592048645,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.802622377872467,
+            0.429667592048645,
+            0.80491042137146
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.802622377872467,
+            0.429667592048645,
+            0.55491042137146
+          ],
+          "safety_correction_l2": 0.80491042137146,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.3806714415550232,
+            -0.08635283261537552,
+            -0.41069772839546204,
+            0.42776817083358765,
+            0.1274116039276123,
+            -0.24437366425991058
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.7725899815559387,
+            0.4006938934326172,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.7725899815559387,
+            0.4006938934326172,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.7725899815559387,
+            0.4006938934326172,
+            0.7986750602722168
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.7725899815559387,
+            0.4006938934326172,
+            0.5486750602722168
+          ],
+          "safety_correction_l2": 0.7986750602722168,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.3164616525173187,
+            -0.0519794262945652,
+            -0.41069772839546204,
+            0.42776817083358765,
+            0.1274116039276123,
+            -0.24437366425991058
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.7389125823974609,
+            0.3727301359176636,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.7389125823974609,
+            0.3727301359176636,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.7389125823974609,
+            0.3727301359176636,
+            0.7921802997589111
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.7389125823974609,
+            0.3727301359176636,
+            0.5421802997589111
+          ],
+          "safety_correction_l2": 0.7921802997589111,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.2546544671058655,
+            -0.019923914223909378,
+            -0.41069772839546204,
+            0.42776817083358765,
+            0.1274116039276123,
+            -0.24437366425991058
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20014,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 32,
+      "intervention_reason_counts": {
+        "domain_constraint": 32,
+        "none": 68
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 32
+      },
+      "perturbed_constraint_violation_count": 32,
+      "perturbed_to_executed_gripper_semantic_changes": 32,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 32,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 89,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 32
+      },
+      "recovered_unsafe_steps": 32,
+      "reward": 2.447864009722672,
+      "safety_correction_l2_max": 0.8162872791290283,
+      "safety_correction_l2_sum": 23.620185017585754,
+      "safety_correction_l2_values": [
+        0.8162872791290283,
+        0.8108043670654297,
+        0.80491042137146,
+        0.7986750602722168,
+        0.7921802997589111,
+        0.7855165004730225,
+        0.7787793874740601,
+        0.7720645666122437,
+        0.76546311378479,
+        0.7590563297271729,
+        0.752913236618042,
+        0.7470872402191162,
+        0.7416172027587891,
+        0.7365257740020752,
+        0.7318234443664551,
+        0.7275091409683228,
+        0.7235733270645142,
+        0.7200000286102295,
+        0.7167694568634033,
+        0.7138587236404419,
+        0.7112441062927246,
+        0.7089014053344727,
+        0.706807017326355,
+        0.7049381732940674,
+        0.7032734155654907,
+        0.7017925977706909,
+        0.7004773616790771,
+        0.6993104219436646,
+        0.6982764005661011,
+        0.6973611116409302,
+        0.6965515613555908,
+        0.6958365440368652,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 67,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 32.620185017585754,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 32
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.41593098640441895,
+            -0.8998420238494873,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.41593098640441895,
+            -0.8998420238494873,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.41593098640441895,
+            -0.8998420238494873,
+            0.5225973129272461
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.41593098640441895,
+            -0.8998420238494873,
+            0.2725973129272461
+          ],
+          "safety_correction_l2": 0.5225973129272461,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.17017480731010437,
+            0.5255312323570251,
+            -0.5514293313026428,
+            -0.35205093026161194,
+            0.41048017144203186,
+            -0.540754497051239
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.4119189977645874,
+            -0.8821467161178589,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.4119189977645874,
+            -0.8821467161178589,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.4119189977645874,
+            -0.8821467161178589,
+            0.5278493165969849
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.4119189977645874,
+            -0.8821467161178589,
+            0.27784931659698486
+          ],
+          "safety_correction_l2": 0.5278493165969849,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.13690033555030823,
+            0.45354387164115906,
+            -0.5514293313026428,
+            -0.35205093026161194,
+            0.41048017144203186,
+            -0.540754497051239
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.407224178314209,
+            -0.8610307574272156,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.407224178314209,
+            -0.8610307574272156,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.407224178314209,
+            -0.8610307574272156,
+            0.5327296257019043
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.407224178314209,
+            -0.8610307574272156,
+            0.2827296257019043
+          ],
+          "safety_correction_l2": 0.5327296257019043,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.10394681990146637,
+            0.3829721212387085,
+            -0.5514293313026428,
+            -0.35205093026161194,
+            0.41048017144203186,
+            -0.540754497051239
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.40180182456970215,
+            -0.8360417485237122,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.40180182456970215,
+            -0.8360417485237122,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.40180182456970215,
+            -0.8360417485237122,
+            0.537187933921814
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.40180182456970215,
+            -0.8360417485237122,
+            0.28718793392181396
+          ],
+          "safety_correction_l2": 0.537187933921814,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.07136888802051544,
+            0.31408965587615967,
+            -0.5514293313026428,
+            -0.35205093026161194,
+            0.41048017144203186,
+            -0.540754497051239
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.3956029415130615,
+            -0.8068013787269592,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.3956029415130615,
+            -0.8068013787269592,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.3956029415130615,
+            -0.8068013787269592,
+            0.5411797761917114
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.3956029415130615,
+            -0.8068013787269592,
+            0.2911797761917114
+          ],
+          "safety_correction_l2": 0.5411797761917114,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            0.03922474384307861,
+            0.24720631539821625,
+            -0.5514293313026428,
+            -0.35205093026161194,
+            0.41048017144203186,
+            -0.540754497051239
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20015,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 41,
+      "intervention_reason_counts": {
+        "domain_constraint": 41,
+        "none": 59
+      },
+      "interventions_while_grasped": 13,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 28,
+        "unsafe_motion": 13
+      },
+      "perturbed_constraint_violation_count": 41,
+      "perturbed_to_executed_gripper_semantic_changes": 28,
+      "perturbed_unsafe_steps_while_grasped": 13,
+      "perturbed_violation_step_count": 41,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 29,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 28,
+        "unsafe_motion": 13
+      },
+      "recovered_unsafe_steps": 41,
+      "reward": 1.6282946057934509,
+      "safety_correction_l2_max": 0.5546964406967163,
+      "safety_correction_l2_sum": 16.128172397613525,
+      "safety_correction_l2_values": [
+        0.5225973129272461,
+        0.5278493165969849,
+        0.5327296257019043,
+        0.537187933921814,
+        0.5411797761917114,
+        0.5446696281433105,
+        0.5476328134536743,
+        0.5500578880310059,
+        0.551948070526123,
+        0.5533206462860107,
+        0.5542067289352417,
+        0.5546486377716064,
+        0.5546964406967163,
+        0.5544054508209229,
+        0.5538312196731567,
+        0.5530284643173218,
+        0.5520474910736084,
+        0.550933837890625,
+        0.5497270822525024,
+        0.5484610795974731,
+        0.547163724899292,
+        0.5458583831787109,
+        0.5445632934570312,
+        0.5432929992675781,
+        0.5420588254928589,
+        0.5408687591552734,
+        0.5397289991378784,
+        0.538643479347229,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.058357834815979004,
+        0.0669546127319336,
+        0.06679326295852661,
+        0.06663042306900024,
+        0.06646621227264404,
+        0.0663003921508789,
+        0.06613314151763916,
+        0.06596428155899048,
+        0.06579393148422241,
+        0.06562197208404541,
+        0.06544846296310425,
+        0.06527334451675415,
+        0.06509661674499512
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 71,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 26.386971175670624,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 41
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.10743439197540283,
+            0.9503710269927979,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.10743439197540283,
+            0.9503710269927979,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.10743439197540283,
+            0.9503710269927979,
+            0.6413060426712036
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.10743439197540283,
+            0.9503710269927979,
+            0.3913060426712036
+          ],
+          "safety_correction_l2": 0.6413060426712036,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.09562648832798004,
+            -0.7397406697273254,
+            0.4814436137676239,
+            0.6502493619918823,
+            -0.6237852573394775,
+            0.2753472328186035
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.1300182342529297,
+            0.9429402351379395,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.1300182342529297,
+            0.9429402351379395,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.1300182342529297,
+            0.9429402351379395,
+            0.6392409801483154
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.1300182342529297,
+            0.9429402351379395,
+            0.38924098014831543
+          ],
+          "safety_correction_l2": 0.6392409801483154,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.08703173696994781,
+            -0.6637110114097595,
+            0.4814436137676239,
+            0.6502493619918823,
+            -0.6237852573394775,
+            0.2753472328186035
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.15039312839508057,
+            0.9340193271636963,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.15039312839508057,
+            0.9340193271636963,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.15039312839508057,
+            0.9340193271636963,
+            0.6373002529144287
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.15039312839508057,
+            0.9340193271636963,
+            0.3873002529144287
+          ],
+          "safety_correction_l2": 0.6373002529144287,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.07663027942180634,
+            -0.5882757902145386,
+            0.4814436137676239,
+            0.6502493619918823,
+            -0.6237852573394775,
+            0.2753472328186035
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.16863930225372314,
+            0.9233013391494751,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.16863930225372314,
+            0.9233013391494751,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.16863930225372314,
+            0.9233013391494751,
+            0.6354671716690063
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.16863930225372314,
+            0.9233013391494751,
+            0.38546717166900635
+          ],
+          "safety_correction_l2": 0.6354671716690063,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.06459882855415344,
+            -0.5135542154312134,
+            0.4814436137676239,
+            0.6502493619918823,
+            -0.6237852573394775,
+            0.2753472328186035
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            0.18483483791351318,
+            0.9104313850402832,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            0.18483483791351318,
+            0.9104313850402832,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            0.18483483791351318,
+            0.9104313850402832,
+            0.6337249279022217
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            0.18483483791351318,
+            0.9104313850402832,
+            0.3837249279022217
+          ],
+          "safety_correction_l2": 0.6337249279022217,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.05110768601298332,
+            -0.43969011306762695,
+            0.4814436137676239,
+            0.6502493619918823,
+            -0.6237852573394775,
+            0.2753472328186035
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20016,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 32,
+      "intervention_reason_counts": {
+        "domain_constraint": 32,
+        "none": 68
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 32
+      },
+      "perturbed_constraint_violation_count": 32,
+      "perturbed_to_executed_gripper_semantic_changes": 32,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 32,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 100,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 32
+      },
+      "recovered_unsafe_steps": 32,
+      "reward": 3.0432774539659544,
+      "safety_correction_l2_max": 0.6413060426712036,
+      "safety_correction_l2_sum": 19.942235708236694,
+      "safety_correction_l2_values": [
+        0.6413060426712036,
+        0.6392409801483154,
+        0.6373002529144287,
+        0.6354671716690063,
+        0.6337249279022217,
+        0.6320575475692749,
+        0.6304508447647095,
+        0.6288937330245972,
+        0.6273788213729858,
+        0.6259044408798218,
+        0.6244744062423706,
+        0.6230990886688232,
+        0.6217942237854004,
+        0.6205801963806152,
+        0.6194791793823242,
+        0.6185125112533569,
+        0.6176985502243042,
+        0.6170499324798584,
+        0.6165726184844971,
+        0.6162656545639038,
+        0.6161220073699951,
+        0.6161291599273682,
+        0.6162713766098022,
+        0.6165311336517334,
+        0.616889476776123,
+        0.6173285245895386,
+        0.6178306341171265,
+        0.618380069732666,
+        0.6189626455307007,
+        0.6195659637451172,
+        0.6201794147491455,
+        0.6207941770553589,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 67,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 28.942235708236694,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 32
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20017,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {},
+      "perturbed_constraint_violation_count": 0,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 0,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": -0.32785637387560257,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 25.0,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 0
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 0,
+      "evaluation_seed": 20018,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 0,
+      "intervention_reason_counts": {
+        "none": 100
+      },
+      "interventions_while_grasped": 0,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {},
+      "perturbed_constraint_violation_count": 0,
+      "perturbed_to_executed_gripper_semantic_changes": 0,
+      "perturbed_unsafe_steps_while_grasped": 0,
+      "perturbed_violation_step_count": 0,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 0,
+      "recovered_category_counts": {},
+      "recovered_unsafe_steps": 0,
+      "reward": 0.05726521654539692,
+      "safety_correction_l2_max": 0.0,
+      "safety_correction_l2_sum": 0.0,
+      "safety_correction_l2_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 0,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 25.0,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 0
+    },
+    {
+      "action_perturbation_l2_sum": 25.0,
+      "action_perturbation_linf_max": 0.25,
+      "audit_snapshots": [
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.30749446153640747,
+            0.6362440586090088,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.30749446153640747,
+            0.6362440586090088,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.30749446153640747,
+            0.6362440586090088,
+            0.7503646612167358
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.30749446153640747,
+            0.6362440586090088,
+            0.5003646612167358
+          ],
+          "safety_correction_l2": 0.7503646612167358,
+          "step": 0,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.6276174187660217,
+            -0.19623161852359772,
+            -0.6885449290275574,
+            0.35843029618263245,
+            0.5621518492698669,
+            0.44083166122436523
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.2635000944137573,
+            0.5944468975067139,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.2635000944137573,
+            0.5944468975067139,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.2635000944137573,
+            0.5944468975067139,
+            0.7459381818771362
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.2635000944137573,
+            0.5944468975067139,
+            0.49593818187713623
+          ],
+          "safety_correction_l2": 0.7459381818771362,
+          "step": 1,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.6522169709205627,
+            -0.14533209800720215,
+            -0.6885449290275574,
+            0.35843029618263245,
+            0.5621518492698669,
+            0.44083166122436523
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.223072350025177,
+            0.5514739751815796,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.223072350025177,
+            0.5514739751815796,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.223072350025177,
+            0.5514739751815796,
+            0.7416629791259766
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.223072350025177,
+            0.5514739751815796,
+            0.49166297912597656
+          ],
+          "safety_correction_l2": 0.7416629791259766,
+          "step": 2,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.6732969880104065,
+            -0.09777634590864182,
+            -0.6885449290275574,
+            0.35843029618263245,
+            0.5621518492698669,
+            0.44083166122436523
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.18650740385055542,
+            0.5081284046173096,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.18650740385055542,
+            0.5081284046173096,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.18650740385055542,
+            0.5081284046173096,
+            0.7375937700271606
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.18650740385055542,
+            0.5081284046173096,
+            0.48759377002716064
+          ],
+          "safety_correction_l2": 0.7375937700271606,
+          "step": 3,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.6911427974700928,
+            -0.05365842953324318,
+            -0.6885449290275574,
+            0.35843029618263245,
+            0.5621518492698669,
+            0.44083166122436523
+          ]
+        },
+        {
+          "action_perturbation_vector": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "environment_effective_action": [
+            -0.15389835834503174,
+            0.4652007818222046,
+            0.0
+          ],
+          "environment_interface_adjustment_l2": 0.0,
+          "executed_action": [
+            -0.15389835834503174,
+            0.4652007818222046,
+            0.0
+          ],
+          "executed_violation_categories": [],
+          "intervened": true,
+          "intervention_reason": "domain_constraint",
+          "object_grasped": false,
+          "perturbed_action": [
+            -0.15389835834503174,
+            0.4652007818222046,
+            0.7337727546691895
+          ],
+          "perturbed_violation_categories": [
+            "unsafe_gripper_condition"
+          ],
+          "proposed_action": [
+            -0.15389835834503174,
+            0.4652007818222046,
+            0.48377275466918945
+          ],
+          "safety_correction_l2": 0.7337727546691895,
+          "step": 4,
+          "triggered_rules": [
+            "unsafe_gripper_close"
+          ],
+          "true_state": [
+            -0.7060633897781372,
+            -0.013008158653974533,
+            -0.6885449290275574,
+            0.35843029618263245,
+            0.5621518492698669,
+            0.44083166122436523
+          ]
+        }
+      ],
+      "critical_violation_step_count": 0,
+      "domain": "robotics",
+      "emergency_fallback_count": 0,
+      "environment_interface_adjustment_count": 0,
+      "environment_interface_adjustment_l2_max": 0.0,
+      "environment_interface_adjustment_l2_sum": 0.0,
+      "episode_length": 100,
+      "episodes_with_object_grasped": 1,
+      "evaluation_seed": 20019,
+      "executed_category_violation_counts": {},
+      "executed_constraint_violation_count": 0,
+      "executed_violation_step_count": 0,
+      "intervention_count": 58,
+      "intervention_reason_counts": {
+        "domain_constraint": 58,
+        "none": 42
+      },
+      "interventions_while_grasped": 41,
+      "lyapunov_nonincrease_count": 0,
+      "method": "clipping",
+      "perturbation_family": "gripper",
+      "perturbation_name": "gripper_plus_0p25",
+      "perturbed_category_violation_counts": {
+        "unsafe_gripper_condition": 17,
+        "unsafe_motion": 41
+      },
+      "perturbed_constraint_violation_count": 58,
+      "perturbed_to_executed_gripper_semantic_changes": 17,
+      "perturbed_unsafe_steps_while_grasped": 41,
+      "perturbed_violation_step_count": 58,
+      "principal_seed": 42,
+      "proposed_to_perturbed_gripper_semantic_changes": 99,
+      "recovered_category_counts": {
+        "unsafe_gripper_condition": 17,
+        "unsafe_motion": 41
+      },
+      "recovered_unsafe_steps": 58,
+      "reward": 0.5231264808125174,
+      "safety_correction_l2_max": 0.7503646612167358,
+      "safety_correction_l2_sum": 14.365843951702118,
+      "safety_correction_l2_values": [
+        0.7503646612167358,
+        0.7459381818771362,
+        0.7416629791259766,
+        0.7375937700271606,
+        0.7337727546691895,
+        0.7302297353744507,
+        0.7269822359085083,
+        0.7240372896194458,
+        0.7213931083679199,
+        0.7190402746200562,
+        0.716964602470398,
+        0.7151477336883545,
+        0.7135694026947021,
+        0.7122080326080322,
+        0.7110425233840942,
+        0.7100515365600586,
+        0.7092154026031494,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.02282881736755371,
+        0.048516690731048584,
+        0.048638880252838135,
+        0.04875975847244263,
+        0.048879265785217285,
+        0.048997461795806885,
+        0.04911428689956665,
+        0.04922980070114136,
+        0.04934406280517578,
+        0.049457013607025146,
+        0.04956871271133423,
+        0.04967916011810303,
+        0.04978841543197632,
+        0.049896419048309326,
+        0.05000317096710205,
+        0.05010879039764404,
+        0.05021321773529053,
+        0.05031651258468628,
+        0.05041855573654175,
+        0.050519585609436035,
+        0.050619423389434814,
+        0.05071812868118286,
+        0.05081576108932495,
+        0.050912320613861084,
+        0.051007747650146484,
+        0.0511021614074707,
+        0.051195502281188965,
+        0.05128788948059082,
+        0.05137914419174194,
+        0.05146944522857666,
+        0.05155867338180542,
+        0.05164700746536255,
+        0.05173426866531372,
+        0.05182063579559326,
+        0.051906049251556396,
+        0.051990509033203125,
+        0.05207395553588867,
+        0.05215656757354736,
+        0.05223816633224487,
+        0.0523189902305603,
+        0.05239880084991455
+      ],
+      "selected_candidate_source_counts": {},
+      "selected_lower_than_perturbed_count": 0,
+      "steps_object_grasped": 82,
+      "strict_lyapunov_decrease_count": 0,
+      "success": false,
+      "total_action_displacement_l2_sum": 29.0230869948864,
+      "unresolved_unsafe_steps": 0,
+      "unsafe_perturbed_steps": 58
+    }
+  ],
+  "evaluation_seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009,
+    20010,
+    20011,
+    20012,
+    20013,
+    20014,
+    20015,
+    20016,
+    20017,
+    20018,
+    20019
+  ],
+  "filter_tuning_performed": false,
+  "gaussian_state_noise_applied": false,
+  "method": "clipping",
+  "new_training_performed": false,
+  "none_executed_action_equals_perturbed_action": true,
+  "object_grasped_added_to_policy_observation": false,
+  "object_grasped_perturbed": false,
+  "observation_perturbation_applied": false,
+  "perturbation_family": "gripper",
+  "perturbation_name": "gripper_plus_0p25",
+  "perturbation_updates": [
+    {
+      "delta": 0.25,
+      "index": 2
+    }
+  ],
+  "policy_fine_tuning_performed": false,
+  "pre_filter_action_clipping": false,
+  "principal_seed": 42,
+  "seed_summary": {
+    "critical_violation_step_rate": 0.0,
+    "domain": "robotics",
+    "emergency_fallback_rate": 0.0,
+    "environment_interface_adjustment_rate": 0.0,
+    "episode_count": 20,
+    "episodes_with_object_grasped": 13,
+    "executed_category_violation_rates": {},
+    "executed_constraint_violation_rate": 0.0,
+    "executed_violation_step_rate": 0.0,
+    "intervention_rate": 0.374,
+    "intervention_reason_rates": {
+      "domain_constraint": 0.374,
+      "none": 0.626
+    },
+    "interventions_while_grasped": 263,
+    "lyapunov_nonincrease_rate": 0.0,
+    "max_action_perturbation_linf": 0.25,
+    "max_environment_interface_adjustment_l2": 0.0,
+    "max_safety_correction_l2": 0.8162872791290283,
+    "mean_action_perturbation_l2": 0.25,
+    "mean_environment_interface_adjustment_l2": 0.0,
+    "mean_episode_length": 100.0,
+    "mean_reward": 1.2640963752412269,
+    "mean_safety_correction_l2": 0.17807102523744106,
+    "mean_total_action_displacement_l2": 0.29499490290880204,
+    "method": "clipping",
+    "p95_safety_correction_l2": 0.7151477336883545,
+    "perturbation_family": "gripper",
+    "perturbation_name": "gripper_plus_0p25",
+    "perturbed_category_violation_rates": {
+      "unsafe_gripper_condition": 0.2425,
+      "unsafe_motion": 0.1315
+    },
+    "perturbed_constraint_violation_rate": 0.374,
+    "perturbed_to_executed_gripper_semantic_change_rate": 0.2425,
+    "perturbed_unsafe_steps_while_grasped": 263,
+    "perturbed_violation_step_rate": 0.374,
+    "principal_seed": 42,
+    "proposed_to_perturbed_gripper_semantic_change_rate": 0.5825,
+    "recovered_category_rates": {
+      "unsafe_gripper_condition": 0.2425,
+      "unsafe_motion": 0.1315
+    },
+    "recovered_unsafe_steps": 748,
+    "recovery_rate": 1.0,
+    "reward_sample_sd": 1.0411658077682011,
+    "selected_candidate_source_rates": {},
+    "selected_lower_than_perturbed_rate": 0.0,
+    "steps_object_grasped": 970,
+    "strict_lyapunov_decrease_rate": 0.0,
+    "success_rate": 0.0,
+    "total_environment_steps": 2000,
+    "unresolved_unsafe_steps": 0,
+    "unsafe_perturbed_steps": 748,
+    "within_filter_violation_reduction": 1.0
+  },
+  "sprint": "5.12",
+  "structured_state_perturbation_applied": false
+}

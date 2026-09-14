@@ -509,3 +509,290 @@ def perturb_structured_observation(
         perturbation_name=perturbation.name,
         perturbation_family=perturbation.family,
     )
+
+
+# ============================================================
+# Sprint 5.12 structured action perturbations
+# ============================================================
+
+
+@dataclass(frozen=True)
+class StructuredActionPerturbation:
+    """Deterministic sparse perturbation of a policy action."""
+
+    name: str
+    family: str
+    updates: tuple[tuple[int, float], ...]
+
+    def __post_init__(self) -> None:
+        if not self.name.strip():
+            raise ValueError("perturbation name must be non-empty")
+
+        if not self.family.strip():
+            raise ValueError("perturbation family must be non-empty")
+
+        if not self.updates:
+            raise ValueError("action perturbation must contain at least one update")
+
+        indices: set[int] = set()
+
+        for index, delta in self.updates:
+            if index < 0:
+                raise ValueError("perturbation index must be nonnegative")
+
+            if index in indices:
+                raise ValueError("duplicate perturbation index")
+
+            indices.add(index)
+
+            if not np.isfinite(delta):
+                raise ValueError("perturbation delta must be finite")
+
+
+@dataclass(frozen=True)
+class StructuredActionPerturbationResult:
+    """Auditable result of deterministic action perturbation."""
+
+    proposed_action: FloatArray
+    perturbed_action: FloatArray
+    perturbation_vector: FloatArray
+    perturbation_name: str
+    perturbation_family: str
+
+
+DRIVING_ACTION_PERTURBATIONS = (
+    StructuredActionPerturbation(
+        name="steering_plus_0p10",
+        family="steering",
+        updates=((0, 0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="steering_minus_0p10",
+        family="steering",
+        updates=((0, -0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="steering_plus_0p25",
+        family="steering",
+        updates=((0, 0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="steering_minus_0p25",
+        family="steering",
+        updates=((0, -0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="acceleration_plus_0p10",
+        family="acceleration",
+        updates=((1, 0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="acceleration_minus_0p10",
+        family="acceleration",
+        updates=((1, -0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="acceleration_plus_0p25",
+        family="acceleration",
+        updates=((1, 0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="acceleration_minus_0p25",
+        family="acceleration",
+        updates=((1, -0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="braking_plus_0p10",
+        family="braking",
+        updates=((2, 0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="braking_minus_0p10",
+        family="braking",
+        updates=((2, -0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="braking_plus_0p25",
+        family="braking",
+        updates=((2, 0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="braking_minus_0p25",
+        family="braking",
+        updates=((2, -0.25),),
+    ),
+)
+
+
+ROBOTICS_ACTION_PERTURBATIONS = (
+    StructuredActionPerturbation(
+        name="delta_x_plus_0p10",
+        family="delta_x",
+        updates=((0, 0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="delta_x_minus_0p10",
+        family="delta_x",
+        updates=((0, -0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="delta_x_plus_0p25",
+        family="delta_x",
+        updates=((0, 0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="delta_x_minus_0p25",
+        family="delta_x",
+        updates=((0, -0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="delta_y_plus_0p10",
+        family="delta_y",
+        updates=((1, 0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="delta_y_minus_0p10",
+        family="delta_y",
+        updates=((1, -0.10),),
+    ),
+    StructuredActionPerturbation(
+        name="delta_y_plus_0p25",
+        family="delta_y",
+        updates=((1, 0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="delta_y_minus_0p25",
+        family="delta_y",
+        updates=((1, -0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="gripper_plus_0p25",
+        family="gripper",
+        updates=((2, 0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="gripper_minus_0p25",
+        family="gripper",
+        updates=((2, -0.25),),
+    ),
+    StructuredActionPerturbation(
+        name="gripper_plus_0p50",
+        family="gripper",
+        updates=((2, 0.50),),
+    ),
+    StructuredActionPerturbation(
+        name="gripper_minus_0p50",
+        family="gripper",
+        updates=((2, -0.50),),
+    ),
+)
+
+
+def action_perturbations_for_domain(
+    domain: str,
+) -> tuple[StructuredActionPerturbation, ...]:
+    """Return the frozen Sprint 5.12 action perturbation set."""
+
+    if domain == "autonomous_driving":
+        return DRIVING_ACTION_PERTURBATIONS
+
+    if domain == "robotics":
+        return ROBOTICS_ACTION_PERTURBATIONS
+
+    raise ValueError(f"unsupported domain: {domain}")
+
+
+def action_perturbation_by_name(
+    *,
+    domain: str,
+    name: str,
+) -> StructuredActionPerturbation:
+    """Resolve one frozen action perturbation by exact name."""
+
+    matches = tuple(
+        perturbation
+        for perturbation in action_perturbations_for_domain(domain)
+        if perturbation.name == name
+    )
+
+    if len(matches) != 1:
+        raise ValueError(f"unknown action perturbation for {domain}: {name}")
+
+    return matches[0]
+
+
+def apply_structured_action_perturbation(
+    *,
+    proposed_action: np.ndarray,
+    perturbation: StructuredActionPerturbation,
+) -> tuple[FloatArray, FloatArray]:
+    """Apply deterministic action disturbance without clipping."""
+
+    action = np.asarray(
+        proposed_action,
+        dtype=np.float32,
+    )
+
+    if action.ndim != 1:
+        raise ValueError("proposed_action must be one-dimensional")
+
+    if action.size == 0:
+        raise ValueError("proposed_action must be non-empty")
+
+    if not np.all(np.isfinite(action)):
+        raise ValueError("proposed_action must contain only finite values")
+
+    proposed_copy = action.copy()
+
+    perturbation_vector = np.zeros_like(
+        proposed_copy,
+        dtype=np.float32,
+    )
+
+    for index, delta in perturbation.updates:
+        if index >= proposed_copy.size:
+            raise ValueError(
+                "perturbation index out of range: "
+                f"{index} for action size {proposed_copy.size}"
+            )
+
+        perturbation_vector[index] = np.float32(delta)
+
+    perturbed_action = proposed_copy + perturbation_vector
+
+    return (
+        perturbed_action.astype(
+            np.float32,
+            copy=False,
+        ),
+        perturbation_vector,
+    )
+
+
+def perturb_structured_action(
+    *,
+    proposed_action: np.ndarray,
+    perturbation: StructuredActionPerturbation,
+) -> StructuredActionPerturbationResult:
+    """Return the full Sprint 5.12 action audit result."""
+
+    (
+        perturbed_action,
+        perturbation_vector,
+    ) = apply_structured_action_perturbation(
+        proposed_action=proposed_action,
+        perturbation=perturbation,
+    )
+
+    proposed_copy = np.asarray(
+        proposed_action,
+        dtype=np.float32,
+    ).copy()
+
+    return StructuredActionPerturbationResult(
+        proposed_action=proposed_copy,
+        perturbed_action=perturbed_action,
+        perturbation_vector=perturbation_vector,
+        perturbation_name=perturbation.name,
+        perturbation_family=perturbation.family,
+    )
