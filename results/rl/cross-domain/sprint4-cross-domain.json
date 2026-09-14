@@ -1,0 +1,357 @@
+{
+  "sprint": "4.13",
+  "title": "Cross-Domain RL Comparison",
+  "new_training_performed": false,
+  "new_ppo_training_performed": false,
+  "new_qml_training_performed": false,
+  "new_matched_classical_training_performed": false,
+  "principal_seeds": [
+    42,
+    123,
+    456
+  ],
+  "domains": {
+    "autonomous_driving": {
+      "methods": {
+        "full_ppo": {
+          "domain": "autonomous_driving",
+          "method": "full_ppo",
+          "actor_parameters": 1318,
+          "target_reach_count": 3,
+          "target_total": 3,
+          "normalized_auc_mean": 0.5548114402144297,
+          "normalized_auc_sd": 0.2646057407662727,
+          "best_progress_mean": 1.0526315789473686,
+          "best_progress_sd": 1.2819751242557092e-16,
+          "final_progress_mean": 0.9952824582742731,
+          "final_progress_sd": 0.05359814404275625
+        },
+        "matched_classical": {
+          "domain": "autonomous_driving",
+          "method": "matched_classical",
+          "actor_parameters": 54,
+          "target_reach_count": 0,
+          "target_total": 3,
+          "normalized_auc_mean": -0.17455507295540038,
+          "normalized_auc_sd": 0.20916746468168282,
+          "best_progress_mean": 0.7002180251303894,
+          "best_progress_sd": 0.2484199051239047,
+          "final_progress_mean": -0.04840735351602071,
+          "final_progress_sd": 0.5893515673194776
+        },
+        "hybrid_qml": {
+          "domain": "autonomous_driving",
+          "method": "hybrid_qml",
+          "actor_parameters": 54,
+          "target_reach_count": 0,
+          "target_total": 3,
+          "normalized_auc_mean": 0.15991195170764086,
+          "normalized_auc_sd": 0.4341965431725851,
+          "best_progress_mean": 0.44182728158311746,
+          "best_progress_sd": 0.4728741308073594,
+          "final_progress_mean": 0.3272891488880778,
+          "final_progress_sd": 0.42098348389390194
+        }
+      }
+    },
+    "robotics": {
+      "methods": {
+        "full_ppo": {
+          "domain": "robotics",
+          "method": "full_ppo",
+          "actor_parameters": 1382,
+          "target_reach_count": 3,
+          "target_total": 3,
+          "normalized_auc_mean": 0.9229137368698397,
+          "normalized_auc_sd": 0.03220700626307124,
+          "best_progress_mean": 1.0526315789473686,
+          "best_progress_sd": 0.0,
+          "final_progress_mean": 1.0159038656954695,
+          "final_progress_sd": 0.013049764495390644
+        },
+        "matched_classical": {
+          "domain": "robotics",
+          "method": "matched_classical",
+          "actor_parameters": 62,
+          "target_reach_count": 1,
+          "target_total": 3,
+          "normalized_auc_mean": 0.653060017016295,
+          "normalized_auc_sd": 0.06408073551424327,
+          "best_progress_mean": 0.9016516073636347,
+          "best_progress_sd": 0.08765489483404237,
+          "final_progress_mean": 0.8978076611459537,
+          "final_progress_sd": 0.09093812823438237
+        },
+        "hybrid_qml": {
+          "domain": "robotics",
+          "method": "hybrid_qml",
+          "actor_parameters": 62,
+          "target_reach_count": 0,
+          "target_total": 3,
+          "normalized_auc_mean": 0.5739091206532141,
+          "normalized_auc_sd": 0.19344567630901505,
+          "best_progress_mean": 0.7585449886834624,
+          "best_progress_sd": 0.23855667877731326,
+          "final_progress_mean": 0.7585449886834624,
+          "final_progress_sd": 0.23855667877731326
+        }
+      }
+    }
+  },
+  "method_records": [
+    {
+      "domain": "autonomous_driving",
+      "method": "full_ppo",
+      "actor_parameters": 1318,
+      "target_reach_count": 3,
+      "target_total": 3,
+      "normalized_auc_mean": 0.5548114402144297,
+      "normalized_auc_sd": 0.2646057407662727,
+      "best_progress_mean": 1.0526315789473686,
+      "best_progress_sd": 1.2819751242557092e-16,
+      "final_progress_mean": 0.9952824582742731,
+      "final_progress_sd": 0.05359814404275625
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "matched_classical",
+      "actor_parameters": 54,
+      "target_reach_count": 0,
+      "target_total": 3,
+      "normalized_auc_mean": -0.17455507295540038,
+      "normalized_auc_sd": 0.20916746468168282,
+      "best_progress_mean": 0.7002180251303894,
+      "best_progress_sd": 0.2484199051239047,
+      "final_progress_mean": -0.04840735351602071,
+      "final_progress_sd": 0.5893515673194776
+    },
+    {
+      "domain": "autonomous_driving",
+      "method": "hybrid_qml",
+      "actor_parameters": 54,
+      "target_reach_count": 0,
+      "target_total": 3,
+      "normalized_auc_mean": 0.15991195170764086,
+      "normalized_auc_sd": 0.4341965431725851,
+      "best_progress_mean": 0.44182728158311746,
+      "best_progress_sd": 0.4728741308073594,
+      "final_progress_mean": 0.3272891488880778,
+      "final_progress_sd": 0.42098348389390194
+    },
+    {
+      "domain": "robotics",
+      "method": "full_ppo",
+      "actor_parameters": 1382,
+      "target_reach_count": 3,
+      "target_total": 3,
+      "normalized_auc_mean": 0.9229137368698397,
+      "normalized_auc_sd": 0.03220700626307124,
+      "best_progress_mean": 1.0526315789473686,
+      "best_progress_sd": 0.0,
+      "final_progress_mean": 1.0159038656954695,
+      "final_progress_sd": 0.013049764495390644
+    },
+    {
+      "domain": "robotics",
+      "method": "matched_classical",
+      "actor_parameters": 62,
+      "target_reach_count": 1,
+      "target_total": 3,
+      "normalized_auc_mean": 0.653060017016295,
+      "normalized_auc_sd": 0.06408073551424327,
+      "best_progress_mean": 0.9016516073636347,
+      "best_progress_sd": 0.08765489483404237,
+      "final_progress_mean": 0.8978076611459537,
+      "final_progress_sd": 0.09093812823438237
+    },
+    {
+      "domain": "robotics",
+      "method": "hybrid_qml",
+      "actor_parameters": 62,
+      "target_reach_count": 0,
+      "target_total": 3,
+      "normalized_auc_mean": 0.5739091206532141,
+      "normalized_auc_sd": 0.19344567630901505,
+      "best_progress_mean": 0.7585449886834624,
+      "best_progress_sd": 0.23855667877731326,
+      "final_progress_mean": 0.7585449886834624,
+      "final_progress_sd": 0.23855667877731326
+    }
+  ],
+  "matched_representation_comparison": [
+    {
+      "domain": "autonomous_driving",
+      "matched_actor_parameters": 54,
+      "qml_actor_parameters": 54,
+      "matched_auc_mean": -0.17455507295540038,
+      "qml_auc_mean": 0.15991195170764086,
+      "matched_minus_qml_auc": -0.33446702466304123,
+      "direction": "hybrid_qml"
+    },
+    {
+      "domain": "robotics",
+      "matched_actor_parameters": 62,
+      "qml_actor_parameters": 62,
+      "matched_auc_mean": 0.653060017016295,
+      "qml_auc_mean": 0.5739091206532141,
+      "matched_minus_qml_auc": 0.07915089636308092,
+      "direction": "matched_classical"
+    }
+  ],
+  "compactness": {
+    "autonomous_driving": {
+      "full_ppo_actor_parameters": 1318,
+      "matched_classical_actor_parameters": 54,
+      "hybrid_qml_actor_parameters": 54,
+      "compact_actor_reduction_percent": 95.90288315629742
+    },
+    "robotics": {
+      "full_ppo_actor_parameters": 1382,
+      "matched_classical_actor_parameters": 62,
+      "hybrid_qml_actor_parameters": 62,
+      "compact_actor_reduction_percent": 95.5137481910275
+    },
+    "cross_domain": {
+      "absolute_reduction_difference_percentage_points": 0.38913496526991764,
+      "compactness_consistent": true,
+      "compactness_consistency_basis": "descriptive_similarity_only",
+      "compactness_described_as_highly_similar": true,
+      "formal_consistency_test_performed": false
+    }
+  },
+  "architecture_reuse": {
+    "scorecard": [
+      {
+        "property": "same_4_qubit_pqc_core",
+        "driving": true,
+        "robotics": true,
+        "cross_domain": "reused"
+      },
+      {
+        "property": "same_2_layer_circuit",
+        "driving": true,
+        "robotics": true,
+        "cross_domain": "reused"
+      },
+      {
+        "property": "same_16_pqc_parameters",
+        "driving": true,
+        "robotics": true,
+        "cross_domain": "reused"
+      },
+      {
+        "property": "same_3d_action_output",
+        "driving": true,
+        "robotics": true,
+        "cross_domain": "reused"
+      },
+      {
+        "property": "same_ppo_protocol",
+        "driving": true,
+        "robotics": true,
+        "cross_domain": "reused"
+      },
+      {
+        "property": "same_20000_step_budget",
+        "driving": true,
+        "robotics": true,
+        "cross_domain": "reused"
+      },
+      {
+        "property": "same_training_seeds",
+        "driving": true,
+        "robotics": true,
+        "cross_domain": "reused"
+      },
+      {
+        "property": "same_evaluation_seed_set",
+        "driving": true,
+        "robotics": true,
+        "cross_domain": "reused"
+      },
+      {
+        "property": "same_trained_weights",
+        "driving": false,
+        "robotics": false,
+        "cross_domain": "not_claimed"
+      },
+      {
+        "property": "same_observation_dimension",
+        "driving": false,
+        "robotics": false,
+        "cross_domain": "domain_specific"
+      },
+      {
+        "property": "robust_qml_target_reach",
+        "driving": false,
+        "robotics": false,
+        "cross_domain": "not_supported"
+      },
+      {
+        "property": "compactness_approximately_95_percent",
+        "driving": true,
+        "robotics": true,
+        "cross_domain": "consistent"
+      }
+    ],
+    "architecture_reused": true,
+    "shared_qml_core": true,
+    "shared_qubit_count": 4,
+    "shared_pqc_layers": 2,
+    "shared_quantum_parameters": 16,
+    "shared_action_dimension": 3,
+    "shared_ppo_protocol": true,
+    "shared_training_seed_set": true,
+    "training_seeds": [
+      42,
+      123,
+      456
+    ],
+    "shared_evaluation_seed_set": true,
+    "shared_environment_step_budget": 20000,
+    "driving_observation_dimension": 4,
+    "robotics_observation_dimension": 6,
+    "same_observation_dimension": false,
+    "same_trained_weights_across_domains": false,
+    "zero_shot_transfer_performed": false,
+    "transfer_learning_performed": false,
+    "universal_policy_claimed": false,
+    "shared_sprint1_latent_used_directly_in_rl": false
+  },
+  "cross_domain_conclusion": {
+    "qml_auc_sd_driving": 0.4341965431725851,
+    "qml_auc_sd_robotics": 0.19344567630901505,
+    "qml_auc_dispersion_larger_in_driving": true,
+    "seed_variability_interpretation_scope": "descriptive_under_tested_protocol_only",
+    "matched_auc_direction_driving": "hybrid_qml",
+    "matched_auc_direction_robotics": "matched_classical",
+    "matched_auc_direction_consistent_across_domains": false,
+    "robust_cross_domain_qml_advantage": false,
+    "robust_cross_domain_matched_classical_advantage": false,
+    "domain_dependent_representation_behavior": true,
+    "domain_dependent_behavior_statement": "At the matched compact actor budget, the representation effect was domain dependent. Hybrid QML achieved higher mean normalized learning-curve AUC than the matched classical control in the autonomous-driving proxy, while the matched classical control achieved higher mean normalized AUC in robotics.",
+    "best_progress_direction_driving": "matched_classical",
+    "best_progress_direction_robotics": "matched_classical",
+    "best_progress_direction_consistent_across_domains": true,
+    "best_progress_cross_domain_interpretation": "matched_classical_in_both_domains",
+    "final_progress_direction_driving": "hybrid_qml",
+    "final_progress_direction_robotics": "matched_classical",
+    "final_progress_direction_consistent_across_domains": false,
+    "final_progress_cross_domain_interpretation": "mixed",
+    "architecture_reused": true,
+    "shared_trained_weights": false
+  },
+  "scientific_boundary": {
+    "raw_rewards_compared_across_domains": false,
+    "normalized_metrics_used_for_cross_domain_comparison": true,
+    "formal_significance_test_performed": false,
+    "seed_variability_analysis_is_descriptive_only": true,
+    "seed_variability_generalized_beyond_tested_protocol": false,
+    "transfer_learning_performed": false,
+    "zero_shot_transfer_performed": false,
+    "universal_policy_claimed": false,
+    "robust_cross_domain_qml_advantage_claimed": false,
+    "quantum_speedup_claimed": false,
+    "quantum_hardware_advantage_claimed": false
+  }
+}

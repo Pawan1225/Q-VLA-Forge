@@ -1,12 +1,12 @@
 {
-  "audit": "Sprint 3.13 Proposal Claim and Limitation Registry",
+  "audit": "Q-VLA Forge Proposal Claim and Limitation Registry",
   "statuses": [
     "NOT_SUPPORTED",
     "NOT_YET_TESTED",
     "SUPPORTED",
     "SUPPORTED_WITH_LIMITATION"
   ],
-  "pilot_scope_statement": "Q-VLA Forge Phase-1 is a pilot-scale controlled experimental framework using synthetic autonomous-driving and robotics proxy tasks. It isolates and compares classical, quantum-inspired, and later hybrid QML components under reproducible conditions. Results must not be interpreted as validation of a production-scale VLA, autonomous-driving stack, robotic system, or functional-safety certification.",
+  "pilot_scope_statement": "Q-VLA Forge Phase-1 is a pilot-scale controlled experimental framework using synthetic autonomous-driving and robotics proxy tasks. It isolates and compares classical, quantum-inspired, and hybrid QML components under reproducible conditions. Results must not be interpreted as validation of a production-scale VLA, autonomous-driving stack, robotic system, or functional-safety certification.",
   "claims": [
     {
       "claim_id": "shared-vla-architecture-both-domains",
@@ -118,21 +118,21 @@
     },
     {
       "claim_id": "ppo-sample-efficiency",
-      "status": "NOT_YET_TESTED",
-      "statement": "Classical PPO sample efficiency has not yet been tested.",
-      "evidence_basis": "Planned for Sprint 4."
+      "status": "SUPPORTED",
+      "statement": "Classical PPO sample efficiency was evaluated under the frozen Sprint 4 protocol.",
+      "evidence_basis": "Sprint 4.5 established the PPO baseline and Sprint 4.11 measured target reach and normalized learning-curve progress. Classical PPO reached all six paired frozen targets."
     },
     {
       "claim_id": "pqc-vqc-sample-efficiency",
-      "status": "NOT_YET_TESTED",
-      "statement": "Hybrid PQC/VQC policy sample efficiency has not yet been tested.",
-      "evidence_basis": "Planned for Sprint 4."
+      "status": "SUPPORTED_WITH_LIMITATION",
+      "statement": "Hybrid PQC/VQC policy sample efficiency was evaluated under the frozen Sprint 4 protocol.",
+      "evidence_basis": "Sprints 4.8-4.11 evaluated six principal hybrid-QML runs. The hybrid policy reached 0/6 paired frozen PPO targets, so evaluation is supported but an efficiency advantage is not."
     },
     {
       "claim_id": "hybrid-qml-policy-advantage",
-      "status": "NOT_YET_TESTED",
-      "statement": "A hybrid QML policy advantage has not yet been tested.",
-      "evidence_basis": "Planned for Sprint 4."
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a robust hybrid-QML policy advantage over classical controls.",
+      "evidence_basis": "Sprint 4.10 found 0/6 QML target reaches versus 6/6 for full PPO, and Sprint 4.12-4.13 found domain-dependent matched-budget representation effects."
     },
     {
       "claim_id": "lyapunov-safety-improvement",
@@ -148,9 +148,9 @@
     },
     {
       "claim_id": "cross-domain-rl-consistency",
-      "status": "NOT_YET_TESTED",
-      "statement": "Cross-domain RL consistency has not yet been tested.",
-      "evidence_basis": "Planned for Sprint 4."
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish directionally consistent matched-budget RL representation behavior across the autonomous-driving and robotics proxy domains.",
+      "evidence_basis": "Sprint 4.13 cross-domain comparison: at exactly matched compact actor budgets, hybrid QML achieved higher mean normalized AUC in autonomous driving, while matched classical achieved higher mean normalized AUC in robotics. The representation-effect direction therefore reversed across domains."
     },
     {
       "claim_id": "sprint4-classical-ppo-baseline",
@@ -199,6 +199,18 @@
       "status": "NOT_SUPPORTED",
       "statement": "Sprint 4 does not establish quantum hardware advantage.",
       "evidence_basis": "No quantum hardware execution or hardware-vs-classical comparison was performed; all QML experiments used simulation."
+    },
+    {
+      "claim_id": "sprint4-cross-domain-architecture-reuse",
+      "status": "SUPPORTED",
+      "statement": "A common hybrid QML policy architecture and PPO evaluation framework was reused across both autonomous-driving and robotics proxy domains.",
+      "evidence_basis": "Sprint 4.13 cross-domain analysis verified reuse of the same four-qubit, two-layer, 16-parameter PQC core, three-dimensional action interface, PPO protocol, 20,000-step budget, principal seed set, and evaluation methodology. Observation dimensions and trained weights remained domain-specific."
+    },
+    {
+      "claim_id": "sprint4-cross-domain-representation-consistency",
+      "status": "NOT_SUPPORTED",
+      "statement": "The pilot does not establish a directionally consistent matched-budget representation advantage across both proxy domains.",
+      "evidence_basis": "Sprint 4.13 reconstructed a matched-classical minus hybrid-QML mean normalized-AUC difference of approximately -0.334467 in autonomous driving and +0.079151 in robotics. The sign reversal means neither hybrid QML nor matched classical was the consistent AUC winner across both domains."
     }
   ],
   "future_validation_pathways": {

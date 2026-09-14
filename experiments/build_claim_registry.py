@@ -1,4 +1,4 @@
-"""Build the Sprint 3.13 proposal claim and limitation registry."""
+"""Build the Q-VLA Forge proposal claim and limitation registry."""
 
 from __future__ import annotations
 
@@ -213,29 +213,48 @@ def main() -> None:
         ),
         claim(
             claim_id="ppo-sample-efficiency",
-            status="NOT_YET_TESTED",
-            statement=("Classical PPO sample efficiency has not yet been tested."),
-            evidence_basis="Planned for Sprint 4.",
+            status="SUPPORTED",
+            statement=(
+                "Classical PPO sample efficiency was evaluated under "
+                "the frozen Sprint 4 protocol."
+            ),
+            evidence_basis=(
+                "Sprint 4.5 established the PPO baseline and Sprint 4.11 "
+                "measured target reach and normalized learning-curve progress. "
+                "Classical PPO reached all six paired frozen targets."
+            ),
         ),
         claim(
             claim_id="pqc-vqc-sample-efficiency",
-            status="NOT_YET_TESTED",
+            status="SUPPORTED_WITH_LIMITATION",
             statement=(
-                "Hybrid PQC/VQC policy sample efficiency has not yet " "been tested."
+                "Hybrid PQC/VQC policy sample efficiency was evaluated "
+                "under the frozen Sprint 4 protocol."
             ),
-            evidence_basis="Planned for Sprint 4.",
+            evidence_basis=(
+                "Sprints 4.8-4.11 evaluated six principal hybrid-QML runs. "
+                "The hybrid policy reached 0/6 paired frozen PPO targets, "
+                "so evaluation is supported but an efficiency advantage is not."
+            ),
         ),
         claim(
             claim_id="hybrid-qml-policy-advantage",
-            status="NOT_YET_TESTED",
-            statement=("A hybrid QML policy advantage has not yet been tested."),
-            evidence_basis="Planned for Sprint 4.",
+            status="NOT_SUPPORTED",
+            statement=(
+                "The pilot does not establish a robust hybrid-QML "
+                "policy advantage over classical controls."
+            ),
+            evidence_basis=(
+                "Sprint 4.10 found 0/6 QML target reaches versus 6/6 "
+                "for full PPO, and Sprint 4.12-4.13 found "
+                "domain-dependent matched-budget representation effects."
+            ),
         ),
         claim(
             claim_id="lyapunov-safety-improvement",
             status="NOT_YET_TESTED",
             statement=("Lyapunov safety-filter improvement has not yet been tested."),
-            evidence_basis="Planned for Sprint 5.",
+            evidence_basis=("Planned for Sprint 5."),
         ),
         claim(
             claim_id="perturbation-robustness",
@@ -244,13 +263,159 @@ def main() -> None:
                 "Robustness under Gaussian, state, and action perturbations "
                 "has not yet been tested."
             ),
-            evidence_basis="Planned for Sprint 5.",
+            evidence_basis=("Planned for Sprint 5."),
         ),
         claim(
             claim_id="cross-domain-rl-consistency",
-            status="NOT_YET_TESTED",
-            statement=("Cross-domain RL consistency has not yet been tested."),
-            evidence_basis="Planned for Sprint 4.",
+            status="NOT_SUPPORTED",
+            statement=(
+                "The pilot does not establish directionally consistent "
+                "matched-budget RL representation behavior across the "
+                "autonomous-driving and robotics proxy domains."
+            ),
+            evidence_basis=(
+                "Sprint 4.13 cross-domain comparison: at exactly matched "
+                "compact actor budgets, hybrid QML achieved higher mean "
+                "normalized AUC in autonomous driving, while matched "
+                "classical achieved higher mean normalized AUC in robotics. "
+                "The representation-effect direction therefore reversed "
+                "across domains."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-classical-ppo-baseline",
+            status="SUPPORTED",
+            statement=(
+                "Classical PPO baselines were established for "
+                "autonomous-driving and robotics proxy domains using "
+                "principal seeds 42, 123, and 456."
+            ),
+            evidence_basis=(
+                "Sprint 4.5 classical PPO evidence; all six domain-seed "
+                "runs completed the frozen 20,000-step protocol and all "
+                "six paired PPO-derived targets were reached."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-hybrid-pqc-ppo-implementation",
+            status="SUPPORTED",
+            statement=(
+                "A hybrid quantum-classical PPO policy with a variational "
+                "quantum actor and classical value critic was implemented "
+                "and evaluated in both proxy domains."
+            ),
+            evidence_basis=(
+                "Sprints 4.6-4.10: four-qubit PennyLane PQC, hybrid policy "
+                "integration, six principal QML runs, and independent "
+                "three-seed validation."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-hybrid-actor-compactness",
+            status="SUPPORTED",
+            statement=(
+                "The hybrid PQC actor substantially reduced actor parameter "
+                "count relative to the classical PPO actor in both proxy domains."
+            ),
+            evidence_basis=(
+                "Driving actor parameters reduced from 1318 to 54 "
+                "(approximately 95.90%); robotics reduced from 1382 to 62 "
+                "(approximately 95.51%). Counts were identical across "
+                "seeds 42, 123, and 456."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-driving-qml-sample-efficiency-advantage",
+            status="NOT_SUPPORTED",
+            statement=(
+                "The pilot does not establish a hybrid-QML "
+                "sample-efficiency advantage for autonomous driving."
+            ),
+            evidence_basis=(
+                "Sprint 4.8 and Sprint 4.10 validation: the hybrid QML "
+                "policy reached 0/3 paired frozen driving PPO reward "
+                "targets within 20,000 environment steps."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-robotics-qml-sample-efficiency-advantage",
+            status="NOT_SUPPORTED",
+            statement=(
+                "The pilot does not establish a hybrid-QML "
+                "sample-efficiency advantage for robotics."
+            ),
+            evidence_basis=(
+                "Sprint 4.9 and Sprint 4.10 validation: the hybrid QML "
+                "policy reached 0/3 paired frozen robotics PPO reward "
+                "targets within 20,000 environment steps."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-robust-qml-sample-efficiency-advantage",
+            status="NOT_SUPPORTED",
+            statement=(
+                "The pilot does not establish a robust hybrid-QML "
+                "sample-efficiency advantage across the six principal "
+                "domain-seed comparisons."
+            ),
+            evidence_basis=(
+                "Sprint 4.10 three-seed validation reconstructed 0/6 QML "
+                "target reaches versus 6/6 classical PPO target reaches. "
+                "The pre-specified requirement of all three seeds reaching "
+                "target with mean >=10% sample-efficiency improvement was "
+                "not satisfied in either domain."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-quantum-computational-speedup",
+            status="NOT_SUPPORTED",
+            statement=("Sprint 4 does not establish quantum computational speedup."),
+            evidence_basis=(
+                "Hybrid QML experiments used PennyLane default.qubit with "
+                "shots=None. Wall-clock runtime was treated as diagnostic "
+                "only and was not used for a speedup claim."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-quantum-hardware-advantage",
+            status="NOT_SUPPORTED",
+            statement=("Sprint 4 does not establish quantum hardware advantage."),
+            evidence_basis=(
+                "No quantum hardware execution or hardware-vs-classical "
+                "comparison was performed; all QML experiments used simulation."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-cross-domain-architecture-reuse",
+            status="SUPPORTED",
+            statement=(
+                "A common hybrid QML policy architecture and PPO evaluation "
+                "framework was reused across both autonomous-driving and "
+                "robotics proxy domains."
+            ),
+            evidence_basis=(
+                "Sprint 4.13 cross-domain analysis verified reuse of the "
+                "same four-qubit, two-layer, 16-parameter PQC core, "
+                "three-dimensional action interface, PPO protocol, "
+                "20,000-step budget, principal seed set, and evaluation "
+                "methodology. Observation dimensions and trained weights "
+                "remained domain-specific."
+            ),
+        ),
+        claim(
+            claim_id="sprint4-cross-domain-representation-consistency",
+            status="NOT_SUPPORTED",
+            statement=(
+                "The pilot does not establish a directionally consistent "
+                "matched-budget representation advantage across both proxy domains."
+            ),
+            evidence_basis=(
+                "Sprint 4.13 reconstructed a matched-classical minus "
+                "hybrid-QML mean normalized-AUC difference of approximately "
+                "-0.334467 in autonomous driving and +0.079151 in robotics. "
+                "The sign reversal means neither hybrid QML nor matched "
+                "classical was the consistent AUC winner across both domains."
+            ),
         ),
     ]
 
@@ -263,20 +428,27 @@ def main() -> None:
 
     for item in claims:
         if item["status"] not in valid_statuses:
-            raise ValueError("Invalid claim registry status")
+            raise ValueError(f"Invalid claim registry status: {item['status']}")
+
+    claim_ids = [item["claim_id"] for item in claims]
+
+    if len(claim_ids) != len(set(claim_ids)):
+        raise ValueError("Duplicate claim registry claim_id detected.")
+
+    if len(claims) != 34:
+        raise ValueError(f"Expected 34 claims, found {len(claims)}.")
 
     payload = {
-        "audit": ("Sprint 3.13 Proposal Claim " "and Limitation Registry"),
+        "audit": ("Q-VLA Forge Proposal Claim and Limitation Registry"),
         "statuses": sorted(valid_statuses),
         "pilot_scope_statement": (
             "Q-VLA Forge Phase-1 is a pilot-scale controlled "
             "experimental framework using synthetic autonomous-driving "
             "and robotics proxy tasks. It isolates and compares "
-            "classical, quantum-inspired, and later hybrid QML "
-            "components under reproducible conditions. Results must "
-            "not be interpreted as validation of a production-scale "
-            "VLA, autonomous-driving stack, robotic system, or "
-            "functional-safety certification."
+            "classical, quantum-inspired, and hybrid QML components "
+            "under reproducible conditions. Results must not be interpreted "
+            "as validation of a production-scale VLA, autonomous-driving "
+            "stack, robotic system, or functional-safety certification."
         ),
         "claims": claims,
         "future_validation_pathways": {
@@ -320,9 +492,9 @@ def main() -> None:
     }
 
     print()
-    print("============================================")
-    print(" SPRINT 3.13 CLAIM REGISTRY")
-    print("============================================")
+    print("==================================================")
+    print(" Q-VLA FORGE CLAIM REGISTRY")
+    print("==================================================")
 
     for status in (
         "SUPPORTED",
