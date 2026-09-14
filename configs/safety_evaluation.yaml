@@ -1,0 +1,122 @@
+sprint: "5"
+sub_sprint: "5.1"
+protocol_version: "1.0"
+
+scope:
+  protocol_only: true
+  safety_results_allowed: false
+  threshold_tuning_after_results_allowed: false
+
+primary_policy:
+  method: "classical_ppo"
+  frozen_from_sprint: "4.15"
+
+safety_methods:
+  - "none"
+  - "clipping"
+  - "lyapunov"
+
+handoff_aliases:
+  heuristic_constraint_clipping: "clipping"
+  lyapunov_safety_filter: "lyapunov"
+  gaussian_noise: "gaussian_state_perturbation"
+  gaussian_state_noise: "gaussian_state_perturbation"
+  structured_state_perturbation: "state_perturbation"
+
+seeds:
+  - 42
+  - 123
+  - 456
+
+evaluation:
+  episode_count: 20
+  evaluation_seed_start: 20000
+  evaluation_seed_count: 20
+
+metrics:
+  primary: "violation_step_rate"
+
+  secondary:
+    - "constraint_violation_rate"
+    - "intervention_rate"
+    - "mean_action_correction_l2"
+    - "p95_action_correction_l2"
+    - "max_action_correction_l2"
+    - "mean_episode_reward"
+    - "success_rate"
+    - "mean_episode_length"
+    - "recovery_rate"
+    - "steps_to_recovery"
+
+pilot_acceptance:
+  minimum_violation_reduction_fraction: 0.20
+  maximum_reward_degradation_fraction: 0.10
+  maximum_success_rate_drop: 0.10
+
+  interpretation: >
+    Internal pilot thresholds only. They are not Volkswagen,
+    ISO, automotive, robotics, or regulatory safety standards.
+
+intervention:
+  tolerance: 1.0e-8
+  metric: "l2_norm"
+
+state_contract:
+  store_true_state: true
+  store_observed_state: true
+  safety_filter_uses_true_state: true
+
+action_contract:
+  store_proposed_action: true
+  store_executed_action: true
+  action_dimension: 3
+
+robustness:
+  conditions:
+    - "clean"
+    - "gaussian_state_perturbation"
+    - "state_perturbation"
+    - "action_perturbation"
+
+  gaussian_state_perturbation_std:
+    - 0.0
+    - 0.01
+    - 0.05
+    - 0.10
+
+perturbation_order:
+  state:
+    - "true_environment_state"
+    - "observation_perturbation"
+    - "policy"
+    - "safety_filter"
+    - "environment"
+
+  action:
+    - "policy"
+    - "proposed_action"
+    - "action_perturbation"
+    - "safety_filter"
+    - "executed_action"
+    - "environment"
+
+recovery:
+  unrecovered_steps_to_recovery: null
+
+statistics:
+  mean: true
+  sample_standard_deviation: true
+  paired_seed_deltas: true
+  significance_testing: false
+
+claims:
+  clipping_safety_improvement: "NOT_YET_TESTED"
+  lyapunov_safety_improvement: "NOT_YET_TESTED"
+  lyapunov_over_clipping: "NOT_YET_TESTED"
+  perturbation_robustness: "NOT_YET_TESTED"
+  cross_domain_safety_reuse: "NOT_YET_TESTED"
+
+  formal_certification: false
+  production_safety_guarantee: false
+  iso_26262_compliance: false
+  iso_10218_certification: false

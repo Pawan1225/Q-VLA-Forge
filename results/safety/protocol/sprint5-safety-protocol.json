@@ -1,0 +1,182 @@
+{
+  "artifact": "sprint5-safety-protocol",
+  "sprint": "5",
+  "sub_sprint": "5.1",
+  "protocol_status": "frozen_before_safety_results",
+  "protocol": {
+    "version": "1.0",
+    "primary_policy": "classical_ppo",
+    "methods": [
+      "none",
+      "clipping",
+      "lyapunov"
+    ],
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "evaluation_seeds": [
+      20000,
+      20001,
+      20002,
+      20003,
+      20004,
+      20005,
+      20006,
+      20007,
+      20008,
+      20009,
+      20010,
+      20011,
+      20012,
+      20013,
+      20014,
+      20015,
+      20016,
+      20017,
+      20018,
+      20019
+    ],
+    "robustness_conditions": [
+      "clean",
+      "gaussian_state_perturbation",
+      "state_perturbation",
+      "action_perturbation"
+    ],
+    "gaussian_noise_stds": [
+      0.0,
+      0.01,
+      0.05,
+      0.1
+    ],
+    "primary_metric": "violation_step_rate",
+    "required_violation_reduction_fraction": 0.2,
+    "maximum_reward_degradation_fraction": 0.1,
+    "maximum_success_rate_drop": 0.1,
+    "intervention_tolerance": 1e-08,
+    "safety_filter_uses_true_state": true,
+    "significance_testing_enabled": false,
+    "formal_certification_claimed": false,
+    "production_safety_guarantee_claimed": false
+  },
+  "experimental_design": {
+    "primary_policy": "classical_ppo",
+    "domains": [
+      "autonomous_driving",
+      "robotics"
+    ],
+    "evaluation_episodes_per_cell": 20,
+    "primary_metric": "violation_step_rate",
+    "secondary_metrics": [
+      "constraint_violation_rate",
+      "intervention_rate",
+      "mean_action_correction_l2",
+      "p95_action_correction_l2",
+      "max_action_correction_l2",
+      "mean_episode_reward",
+      "success_rate",
+      "mean_episode_length",
+      "recovery_rate",
+      "steps_to_recovery"
+    ]
+  },
+  "action_contract": {
+    "proposed_action_preserved": true,
+    "executed_action_preserved": true,
+    "environment_action_dimension": 3,
+    "intervention_definition": "L2(executed_action - proposed_action) > intervention_tolerance"
+  },
+  "state_contract": {
+    "true_state_preserved": true,
+    "observed_state_preserved": true,
+    "safety_filter_uses_true_state": true,
+    "limitation_disclosure_required": true
+  },
+  "perturbation_order": {
+    "state": [
+      "true_environment_state",
+      "observation_perturbation",
+      "policy",
+      "safety_filter",
+      "environment"
+    ],
+    "action": [
+      "policy",
+      "proposed_action",
+      "action_perturbation",
+      "safety_filter",
+      "executed_action",
+      "environment"
+    ]
+  },
+  "pilot_acceptance": {
+    "minimum_violation_reduction_fraction": 0.2,
+    "maximum_reward_degradation_fraction": 0.1,
+    "maximum_success_rate_drop": 0.1,
+    "interpretation": "Internal pilot thresholds only. They are not Volkswagen, ISO, automotive, robotics, or regulatory safety standards.\n"
+  },
+  "statistics": {
+    "mean": true,
+    "sample_standard_deviation": true,
+    "paired_seed_deltas": true,
+    "significance_testing": false
+  },
+  "claims": {
+    "clipping_safety_improvement": "NOT_YET_TESTED",
+    "lyapunov_safety_improvement": "NOT_YET_TESTED",
+    "lyapunov_over_clipping": "NOT_YET_TESTED",
+    "perturbation_robustness": "NOT_YET_TESTED",
+    "cross_domain_safety_reuse": "NOT_YET_TESTED",
+    "formal_certification": false,
+    "production_safety_guarantee": false,
+    "iso_26262_compliance": false,
+    "iso_10218_certification": false
+  },
+  "claim_boundaries": {
+    "formal_certification_claimed": false,
+    "production_safety_guarantee_claimed": false,
+    "iso_compliance_claimed": false,
+    "safety_improvement_claimed_at_5_1": false
+  },
+  "sprint4_provenance": {
+    "handoff_path": "results/rl/final/sprint4-handoff.json",
+    "handoff_sha256": "aab1cf3cfeeec866033402555926942a3879239b4051ca234cbebbc7259337d6",
+    "from_sprint": "4",
+    "to_sprint": "5",
+    "handoff_status": "ready",
+    "principal_seeds": [
+      42,
+      123,
+      456
+    ],
+    "evaluation_seeds": [
+      20000,
+      20001,
+      20002,
+      20003,
+      20004,
+      20005,
+      20006,
+      20007,
+      20008,
+      20009,
+      20010,
+      20011,
+      20012,
+      20013,
+      20014,
+      20015,
+      20016,
+      20017,
+      20018,
+      20019
+    ],
+    "action_dimension": 3
+  },
+  "results": {
+    "safety_results_present": false,
+    "filter_comparison_present": false,
+    "robustness_results_present": false
+  }
+}
