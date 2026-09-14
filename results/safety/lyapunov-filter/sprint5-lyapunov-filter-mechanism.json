@@ -1,0 +1,227 @@
+{
+  "artifact": "lyapunov_safety_filter_mechanism",
+  "claim_controls": {
+    "filter_implementation_verified": true,
+    "formal_safety_guarantee_established": false,
+    "formal_stability_established": false,
+    "lyapunov_vs_clipping_tested": false,
+    "principal_reward_effect_tested": false,
+    "principal_success_effect_tested": false,
+    "principal_violation_reduction_tested": false,
+    "robustness_tested": false
+  },
+  "constants": {
+    "action_deduplication_tolerance": 1e-12,
+    "intervention_tolerance_l2": 1e-08,
+    "lyapunov_improvement_tolerance": 1e-12,
+    "max_driving_candidates": 10,
+    "max_robotics_candidates": 9
+  },
+  "method": "deterministic_one_step_lyapunov_filter",
+  "property_checks": {
+    "driving_candidate_ceiling_respected": true,
+    "driving_hard_guard_intervenes": true,
+    "driving_safe_action_preserved": true,
+    "driving_strict_lyapunov_decrease": true,
+    "method_is_lyapunov": true,
+    "robotics_candidate_ceiling_respected": true,
+    "robotics_hard_guard_intervenes": true,
+    "robotics_safe_action_preserved": true,
+    "robotics_strict_lyapunov_decrease": true
+  },
+  "provenance": {
+    "candidates": {
+      "path": "src/q_vla_forge/safety/lyapunov_candidates.py",
+      "sha256": "7731efcceb5172972199172cbe9ee60d517fd923de23cb7272ad3e4f5507df5b"
+    },
+    "driving_constraints": {
+      "path": "src/q_vla_forge/safety/driving_constraints.py",
+      "sha256": "82aadb7fab7382cd5ebbd9352066b1c3f876f5710013f9bf4d4a04132a604d1f"
+    },
+    "filter": {
+      "path": "src/q_vla_forge/safety/lyapunov_filter.py",
+      "sha256": "4035be445cbb0b67b764f92e8e17b862b4ea141334807155e96a2f214f50e701"
+    },
+    "lyapunov_foundation": {
+      "path": "src/q_vla_forge/safety/lyapunov.py",
+      "sha256": "242dee6f9fc70858344d38792c89016382a3e324d5c92ca585271aa0397b9eb5"
+    },
+    "predictors": {
+      "path": "src/q_vla_forge/safety/predictors.py",
+      "sha256": "29568c29e0feb0974a8603b282bfcea3f7141911835daae9decb5fa8bab5742d"
+    },
+    "robotics_constraints": {
+      "path": "src/q_vla_forge/safety/robotics_constraints.py",
+      "sha256": "ce2d4f2895ab60a4dc29c790216ad29277810aeff9b4bbe05c3cd6364cb465eb"
+    },
+    "sprint5_protocol": {
+      "path": "src/q_vla_forge/safety/protocol.py",
+      "sha256": "7e4319d754a82070916b560cee633d9f222f8f8c5b5160b04ac1a3ff3afbe17a"
+    }
+  },
+  "scope": {
+    "checkpoint_loading": false,
+    "empirical_parameter_tuning": false,
+    "formal_safety_guarantee": false,
+    "formal_stability_proof": false,
+    "policy_fine_tuning": false,
+    "policy_loading": false,
+    "ppo_training": false,
+    "principal_policy_evaluation": false,
+    "robustness_evaluation": false
+  },
+  "selection_order": [
+    "hard_guard_pass",
+    "lower_predicted_next_v",
+    "lower_delta_v",
+    "lower_action_correction_l2",
+    "lower_candidate_index"
+  ],
+  "sprint": "5.7",
+  "synthetic_probes": {
+    "driving_hard_guard": {
+      "candidate_count": 8,
+      "correction_l2": 1.7000000000000002,
+      "current_v": 0.15999999999999992,
+      "eligible_candidate_count": 5,
+      "emergency_fallback": false,
+      "executed_action": [
+        -0.8,
+        0.0,
+        0.0
+      ],
+      "intervened": true,
+      "intervention_reason": "domain_constraint",
+      "method": "lyapunov",
+      "proposed_action": [
+        0.9,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_index": 5,
+      "selected_candidate_source": "inward_steer",
+      "selected_delta_v": -0.15999999999999992,
+      "selected_next_v": 0.0
+    },
+    "driving_lyapunov_decrease": {
+      "candidate_count": 6,
+      "correction_l2": 0.8,
+      "current_v": 0.06250000000000014,
+      "eligible_candidate_count": 6,
+      "emergency_fallback": false,
+      "executed_action": [
+        -0.8,
+        0.0,
+        0.0
+      ],
+      "intervened": true,
+      "intervention_reason": "lyapunov_decrease",
+      "method": "lyapunov",
+      "proposed_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_index": 3,
+      "selected_candidate_source": "inward_steer",
+      "selected_delta_v": -0.02169594297788547,
+      "selected_next_v": 0.04080405702211467
+    },
+    "driving_safe_preservation": {
+      "candidate_count": 8,
+      "correction_l2": 0.0,
+      "current_v": 0.0,
+      "eligible_candidate_count": 8,
+      "emergency_fallback": false,
+      "executed_action": [
+        0.1,
+        0.2,
+        0.0
+      ],
+      "intervened": false,
+      "intervention_reason": "none",
+      "method": "lyapunov",
+      "proposed_action": [
+        0.1,
+        0.2,
+        0.0
+      ],
+      "selected_candidate_index": 0,
+      "selected_candidate_source": "bounded_proposed",
+      "selected_delta_v": 0.0,
+      "selected_next_v": 0.0
+    },
+    "robotics_hard_guard": {
+      "candidate_count": 3,
+      "correction_l2": 1.0,
+      "current_v": 0.0,
+      "eligible_candidate_count": 2,
+      "emergency_fallback": false,
+      "executed_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "intervened": true,
+      "intervention_reason": "domain_constraint",
+      "method": "lyapunov",
+      "proposed_action": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_index": 1,
+      "selected_candidate_source": "y_only",
+      "selected_delta_v": 0.0,
+      "selected_next_v": 0.0
+    },
+    "robotics_lyapunov_decrease": {
+      "candidate_count": 3,
+      "correction_l2": 1.4142135623730951,
+      "current_v": 3.3459884629822376,
+      "eligible_candidate_count": 3,
+      "emergency_fallback": false,
+      "executed_action": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "intervened": true,
+      "intervention_reason": "lyapunov_decrease",
+      "method": "lyapunov",
+      "proposed_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_index": 1,
+      "selected_candidate_source": "inward_motion",
+      "selected_delta_v": -3.3459884629822376,
+      "selected_next_v": 0.0
+    },
+    "robotics_safe_preservation": {
+      "candidate_count": 2,
+      "correction_l2": 0.0,
+      "current_v": 0.0,
+      "eligible_candidate_count": 2,
+      "emergency_fallback": false,
+      "executed_action": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "intervened": false,
+      "intervention_reason": "none",
+      "method": "lyapunov",
+      "proposed_action": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "selected_candidate_index": 0,
+      "selected_candidate_source": "bounded_proposed",
+      "selected_delta_v": 0.0,
+      "selected_next_v": 0.0
+    }
+  }
+}
