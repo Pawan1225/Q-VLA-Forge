@@ -1,0 +1,57 @@
+sprint: "5.5"
+
+method: "clipping"
+
+scope:
+  new_training: false
+  condition: "clean"
+  lyapunov: false
+  perturbations: false
+  threshold_tuning: false
+
+driving:
+  lane:
+    warning_abs: 0.75
+    risky_context_abs: 0.60
+    preserve_inward_recovery: true
+
+  heading:
+    risky_context_abs: 0.50
+
+  steering:
+    risky_context_limit: 0.80
+
+  obstacle:
+    safe_distance_base: 0.15
+    safe_distance_speed_coefficient: 0.35
+    critical_fraction: 0.50
+
+    suppress_positive_acceleration: true
+    warning_minimum_braking: 0.50
+    critical_minimum_braking: 1.00
+
+  acceleration_braking_conflict:
+    threshold: 0.25
+    braking_has_priority: true
+    replacement_acceleration: 0.0
+
+robotics:
+  workspace:
+    warning_abs: 0.90
+    movement_scale: 0.08
+    preserve_inward_recovery: true
+    clip_predicted_position_to_warning_boundary: true
+
+  gripper:
+    close_threshold: 0.50
+    safe_grasp_distance: 0.12
+    unsafe_close_replacement: 0.0
+
+intervention:
+  tolerance_l2: 1.0e-8
+
+claims:
+  formal_safety_guarantee: false
+  optimal_filter: false
+  production_safety: false
+  quantum_method: false
