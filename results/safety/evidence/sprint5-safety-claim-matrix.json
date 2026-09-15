@@ -1,0 +1,319 @@
+{
+  "analysis_only": true,
+  "artifact": "sprint5-safety-claim-matrix",
+  "canonical_evidence": "results/safety/evidence/sprint5-safety-evidence.json",
+  "canonical_evidence_sha256": "8f1246c4f946a89ed9026350b468f7fac8d3d1d541153f21874193cbee2539f4",
+  "explicitly_unsupported": [
+    {
+      "claim_id": "S5-EU01",
+      "statement": "Formal Lyapunov stability guarantee.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-EU02",
+      "statement": "Formal worst-case robustness guarantee.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-EU03",
+      "statement": "ISO 26262 or other safety certification compliance.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-EU04",
+      "statement": "Production safety readiness.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-EU05",
+      "statement": "Real-world sensor fault tolerance.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-EU06",
+      "statement": "Universal safety controller or zero-shot cross-domain transfer.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-EU07",
+      "statement": "Quantum safety advantage.",
+      "status": "NOT_SUPPORTED"
+    }
+  ],
+  "frozen_final_claim_boundary": [
+    {
+      "claim_id": "S5-FINAL-C01",
+      "limitation": "",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "A shared computational framework was instantiated across autonomous-driving and robotics proxy domains.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C02",
+      "limitation": "",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "All four Volkswagen challenge bottlenecks were experimentally addressed in the Phase 1 pilot.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C03",
+      "limitation": "",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "INT8 satisfied the strongest Phase 1 compression criterion under the frozen pilot configuration.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C04",
+      "limitation": "",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "The hybrid PQC policy actor demonstrated substantial parameter compactness in both domains.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C05",
+      "limitation": "",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Explicit clean safety filtering was empirically effective under the frozen driving and robotics proxy contracts.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C06",
+      "limitation": "",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Gaussian observation robustness was evaluated under the frozen Phase 1 protocol.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C07",
+      "limitation": "",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Structured-state robustness was evaluated under domain-specific perturbation contracts.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C08",
+      "limitation": "",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Action perturbation robustness and unsafe-action recovery were quantified.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C09",
+      "limitation": "",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Cross-domain safety-framework reuse was demonstrated at the framework and interface level.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C10",
+      "limitation": "The scale-up itself has not yet been experimentally demonstrated.",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "The Phase 1 architecture provides a modular Phase 2 scale-up pathway.",
+      "status": "SUPPORTED_WITH_LIMITATION"
+    },
+    {
+      "claim_id": "S5-FINAL-C11",
+      "limitation": "Observed interventions were often dominated by hard action/domain guards, and Lyapunov-specific activation was domain-dependent.",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Lyapunov-guided safety was empirically effective under the frozen pilot safety contract.",
+      "status": "SUPPORTED_WITH_LIMITATION"
+    },
+    {
+      "claim_id": "S5-FINAL-C12",
+      "limitation": "The perturbation studies used synthetic proxy environments and do not establish real-world robustness.",
+      "proposal_safe": true,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Robustness was demonstrated under synthetic Gaussian, structured-state, and action perturbations.",
+      "status": "SUPPORTED_WITH_LIMITATION"
+    },
+    {
+      "claim_id": "S5-FINAL-C13",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Quantum advantage was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C14",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Quantum computational speedup was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C15",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Hybrid QML demonstrated sample-efficiency superiority over classical PPO.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C16",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "TT/MPS demonstrated compression superiority over the strongest classical baseline.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C17",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "A robust training-efficiency advantage was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C18",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "A universal trained VLA policy was demonstrated across driving and robotics.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C19",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Zero-shot cross-domain policy transfer was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C20",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Formal Lyapunov closed-loop stability was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C21",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "A formal safety guarantee was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C22",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Production safety or deployment readiness was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C23",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Safety certification or standards compliance was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C24",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Real-world autonomous-driving validation was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "claim_id": "S5-FINAL-C25",
+      "limitation": "",
+      "proposal_safe": false,
+      "source": "results/safety/final/sprint5-final-claim-boundary.json",
+      "statement": "Physical-robot validation was demonstrated.",
+      "status": "NOT_SUPPORTED"
+    }
+  ],
+  "new_principal_execution": false,
+  "new_scientific_experiment": false,
+  "new_training": false,
+  "prohibited_wording": [
+    "certified safe",
+    "safety certified",
+    "proven safe",
+    "formal safety guarantee",
+    "guaranteed stable",
+    "iso 26262 compliant",
+    "production ready safety",
+    "quantum safety advantage",
+    "universal safety controller",
+    "zero-shot safety transfer"
+  ],
+  "proposal_claims": [
+    {
+      "claim_id": "S5-E01",
+      "evidence": [
+        "results/safety/evidence/sprint5-safety-evidence.json"
+      ],
+      "limitation": "Synthetic proxy-domain evidence.",
+      "statement": "Sprint 5 evaluated explicit safety filtering in both autonomous-driving and robotics synthetic proxy domains.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-E02",
+      "evidence": [
+        "results/safety/evidence/sprint5-safety-evidence.json"
+      ],
+      "limitation": "Empirical proxy evidence; not formal certification.",
+      "statement": "Under the frozen proxy safety contracts, CLIPPING and LYAPUNOV reduced measured clean executed violation-step events to zero in both evaluated domains.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-E03",
+      "evidence": [
+        "results/safety/evidence/sprint5-safety-evidence.json"
+      ],
+      "limitation": "Synthetic perturbations; observation-perturbation studies use privileged true state in the explicit safety layer.",
+      "statement": "Gaussian observation, structured-state, and structured-action robustness were evaluated.",
+      "status": "SUPPORTED_WITH_LIMITATION"
+    },
+    {
+      "claim_id": "S5-E04",
+      "evidence": [
+        "results/safety/evidence/sprint5-safety-evidence.json"
+      ],
+      "limitation": "Synthetic action perturbation.",
+      "statement": "Unsafe perturbed-action recovery was quantified separately from environment-interface adjustment.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-E05",
+      "evidence": [
+        "results/safety/evidence/sprint5-safety-evidence.json"
+      ],
+      "limitation": "Domain-dependent mechanism evidence; does not establish formal stability.",
+      "statement": "Lyapunov-specific candidate selection was empirically activated under structured action perturbation in autonomous driving.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim_id": "S5-E06",
+      "evidence": [
+        "results/safety/evidence/sprint5-safety-evidence.json"
+      ],
+      "limitation": "Does not demonstrate a universal controller or shared policy weights.",
+      "statement": "The two proxy domains reuse a shared safety interface, metric schema, seed protocol, and robustness harness while retaining domain-specific safety semantics.",
+      "status": "SUPPORTED"
+    }
+  ],
+  "scientific_scope_frozen": true,
+  "sprint": "5.15",
+  "usage_rule": "Positive proposal wording may not exceed the strength of the frozen final claim boundary."
+}

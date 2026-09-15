@@ -1,0 +1,99 @@
+{
+  "artifact": "sprint5-safety-figure-index",
+  "figure_count": 5,
+  "figures": [
+    {
+      "figure_id": "S5-F01",
+      "frozen": true,
+      "limitation": "Synthetic proxy safety contracts.",
+      "path": "figures/safety/sprint5-clean-safety.png",
+      "sha256": "a3b758cb50e45c23504d90f0e2dc0bef9bbc6b4a63f918bd446beb08a3964648",
+      "size_bytes": 43642,
+      "source_artifacts": [
+        {
+          "path": "results/safety/evidence/sprint5-safety-evidence.json",
+          "sha256": "340b8173eec0f555cd87d1bd8e514ae504875ea39f5e278022abbf2f66c49109"
+        }
+      ],
+      "supports": [
+        "S5-E01",
+        "S5-E02"
+      ],
+      "title": "Clean Safety Evaluation"
+    },
+    {
+      "figure_id": "S5-F02",
+      "frozen": true,
+      "limitation": "Synthetic perturbations; observation studies retain true-state safety access.",
+      "path": "figures/safety/sprint5-robustness.png",
+      "sha256": "98e2ea082fd6ea521b82fac5259df2763282dfe7a2cbcb9fc027ac607aad5207",
+      "size_bytes": 63627,
+      "source_artifacts": [
+        {
+          "path": "results/safety/evidence/sprint5-safety-evidence.json",
+          "sha256": "340b8173eec0f555cd87d1bd8e514ae504875ea39f5e278022abbf2f66c49109"
+        }
+      ],
+      "supports": [
+        "S5-E03"
+      ],
+      "title": "Robustness Stress Tests"
+    },
+    {
+      "figure_id": "S5-F03",
+      "frozen": true,
+      "limitation": "Synthetic action perturbation.",
+      "path": "figures/safety/sprint5-action-recovery.png",
+      "sha256": "304a072306ddee183a0e316c47fd57b17a76873a8e421bfc0e6d46f9332138f0",
+      "size_bytes": 56694,
+      "source_artifacts": [
+        {
+          "path": "results/safety/evidence/sprint5-safety-evidence.json",
+          "sha256": "340b8173eec0f555cd87d1bd8e514ae504875ea39f5e278022abbf2f66c49109"
+        }
+      ],
+      "supports": [
+        "S5-E04"
+      ],
+      "title": "Structured-Action Recovery"
+    },
+    {
+      "figure_id": "S5-F04",
+      "frozen": true,
+      "limitation": "Mechanism evidence only; not formal stability proof.",
+      "path": "figures/safety/sprint5-lyapunov-mechanisms.png",
+      "sha256": "a57aa5dddda7803c5e06c7284d4305a239c63e065e5a9a1a661f88d49c38a2a6",
+      "size_bytes": 55589,
+      "source_artifacts": [
+        {
+          "path": "results/safety/evidence/sprint5-safety-evidence.json",
+          "sha256": "340b8173eec0f555cd87d1bd8e514ae504875ea39f5e278022abbf2f66c49109"
+        }
+      ],
+      "supports": [
+        "S5-E05"
+      ],
+      "title": "Lyapunov Mechanism Attribution"
+    },
+    {
+      "figure_id": "S5-F05",
+      "frozen": true,
+      "limitation": "Shared framework does not imply shared policy weights or a universal controller.",
+      "path": "figures/safety/sprint5-cross-domain.png",
+      "sha256": "038e8b19f78e6c426b0909594b6ff8011d419d7e9147443412afbb0170f30614",
+      "size_bytes": 105839,
+      "source_artifacts": [
+        {
+          "path": "results/safety/evidence/sprint5-safety-evidence.json",
+          "sha256": "340b8173eec0f555cd87d1bd8e514ae504875ea39f5e278022abbf2f66c49109"
+        }
+      ],
+      "supports": [
+        "S5-E06"
+      ],
+      "title": "Cross-Domain Safety Architecture"
+    }
+  ],
+  "new_scientific_experiment": false,
+  "sprint": "5.15"
+}
