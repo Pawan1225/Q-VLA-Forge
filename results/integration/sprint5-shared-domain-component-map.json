@@ -1,0 +1,134 @@
+{
+  "analysis_only": true,
+  "artifact": "shared-vs-domain-specific-component-map",
+  "blocked_statements": [
+    "one_universal_trained_vla",
+    "shared_policy_weights",
+    "zero_shot_cross_domain_transfer",
+    "identical_safety_constraints",
+    "universal_safety_controller"
+  ],
+  "compression_implementation_classes": {
+    "classical": [
+      "int8",
+      "svd"
+    ],
+    "quantum_inspired": [
+      "tensor_train",
+      "mps",
+      "tt_svd"
+    ]
+  },
+  "domain_specific_components": {
+    "autonomous_driving": [
+      "state_semantics",
+      "environment",
+      "reward",
+      "ppo_weights",
+      "safety_constraints",
+      "clipping_rules",
+      "transition_predictor",
+      "lyapunov_potential"
+    ],
+    "robotics": [
+      "state_semantics",
+      "environment",
+      "reward",
+      "ppo_weights",
+      "safety_constraints",
+      "clipping_rules",
+      "transition_predictor",
+      "lyapunov_potential",
+      "object_grasped_context"
+    ]
+  },
+  "new_principal_runs": false,
+  "new_training": false,
+  "policy_implementation_classes": {
+    "classical": [
+      "ppo"
+    ],
+    "quantum_ml": [
+      "angle_encoding",
+      "pqc_vqc",
+      "hybrid_quantum_classical_actor"
+    ]
+  },
+  "project": "Q-VLA Forge",
+  "safety_implementation": {
+    "classification": "classical",
+    "methods": [
+      "none",
+      "clipping",
+      "lyapunov_guided_filter"
+    ]
+  },
+  "shared_boundary": {
+    "cross_domain_weight_transfer_tested": false,
+    "same_environment": false,
+    "same_lyapunov_potential": false,
+    "same_policy_weights": false,
+    "same_reward": false,
+    "same_safety_constraints": false,
+    "same_state_semantics": false,
+    "shared_action_dimension": true,
+    "shared_framework": true,
+    "shared_interfaces": true,
+    "shared_robustness_harness": true,
+    "shared_safety_api": true,
+    "shared_training_protocol": true,
+    "universal_controller_supported": false
+  },
+  "shared_components": {
+    "ai_vla": [
+      "vision_encoder_framework",
+      "language_encoder_framework",
+      "state_encoder_framework",
+      "multimodal_fusion",
+      "shared_latent_representation",
+      "three_dimensional_action_interface"
+    ],
+    "compression": [
+      "compression_interface",
+      "compression_accounting",
+      "accuracy_compression_tradeoff_analysis",
+      "int8_evaluation_framework",
+      "svd_evaluation_framework",
+      "tensor_network_evaluation_framework"
+    ],
+    "evaluation": [
+      "three_seed_protocol",
+      "cross_domain_reporting_schema",
+      "figure_provenance",
+      "claim_matrix"
+    ],
+    "infrastructure": [
+      "data_contract_framework",
+      "configuration_framework",
+      "reproducibility_and_seed_handling",
+      "result_store_schema",
+      "evidence_generation",
+      "dashboard_infrastructure",
+      "claim_control_framework"
+    ],
+    "rl_qml": [
+      "ppo_evaluation_protocol",
+      "hybrid_policy_interface",
+      "pqc_vqc_interface",
+      "three_dimensional_action_output",
+      "sample_efficiency_analysis_framework"
+    ],
+    "safety": [
+      "safety_decision_contract",
+      "none_method",
+      "clipping_method_interface",
+      "lyapunov_guided_filter_interface",
+      "violation_accounting",
+      "intervention_accounting",
+      "robustness_harness"
+    ]
+  },
+  "source_artifact": "results/integration/sprint5-unified-architecture.json",
+  "sprint": "5.14.5C",
+  "supported_statement": "The architecture is shared where computationally useful, while domain-specific semantics, environments, policy weights, dynamics, rewards, and safety constraints remain isolated behind domain adapters and safety contracts."
+}

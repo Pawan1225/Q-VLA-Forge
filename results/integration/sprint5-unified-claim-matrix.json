@@ -1,0 +1,175 @@
+{
+  "analysis_only": true,
+  "artifact": "unified-architecture-claim-matrix",
+  "blocked_claim_ids": [
+    "S5.14.5-C06",
+    "S5.14.5-C07",
+    "S5.14.5-C08",
+    "S5.14.5-C09",
+    "S5.14.5-C10",
+    "S5.14.5-C11",
+    "S5.14.5-C12",
+    "S5.14.5-C13",
+    "S5.14.5-C14"
+  ],
+  "claim_count": 14,
+  "claims": [
+    {
+      "claim_id": "S5.14.5-C01",
+      "evidence": [
+        "results/integration/sprint5-unified-architecture.json",
+        "results/integration/sprint5-shared-domain-component-map.json",
+        "results/safety/cross-domain/sprint5-cross-domain-package.json"
+      ],
+      "limitations": [
+        "The domains retain separate state semantics, environments, rewards, trained policy weights, and safety constraints."
+      ],
+      "statement": "A shared computational framework was instantiated across autonomous-driving and robotics proxy environments.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5.14.5-C02",
+      "evidence": [
+        "results/integration/sprint5-volkswagen-bottleneck-map.json"
+      ],
+      "limitations": [
+        "Experimentally addressed does not imply that every bottleneck achieved an advantage over its strongest classical baseline."
+      ],
+      "statement": "All four Volkswagen challenge bottlenecks were experimentally addressed within the Phase 1 pilot.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5.14.5-C03",
+      "evidence": [
+        "results/integration/sprint5-computational-classification.json",
+        "results/integration/sprint5-evidence-architecture-map.json"
+      ],
+      "limitations": [
+        "No quantum advantage or quantum speedup was demonstrated."
+      ],
+      "statement": "Classical, quantum-inspired, and quantum-machine-learning alternatives were evaluated under controlled pilot protocols.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5.14.5-C04",
+      "evidence": [
+        "results/integration/sprint5-shared-domain-component-map.json"
+      ],
+      "limitations": [
+        "Reuse occurs at the framework and interface level, not as one universal trained model."
+      ],
+      "statement": "Q-VLA Forge reused common experiment, policy-interface, safety-interface, robustness, and evidence infrastructure across both domains.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5.14.5-C05",
+      "evidence": [
+        "results/integration/sprint5-unified-architecture.json",
+        "results/integration/sprint5-phase1-findings.json"
+      ],
+      "limitations": [
+        "The scale-up pathway is architectural and has not yet been experimentally demonstrated."
+      ],
+      "statement": "The Phase 1 architecture provides a modular path for scaling to larger VLA backbones and more realistic environments.",
+      "status": "supported_with_limitation"
+    },
+    {
+      "claim_id": "S5.14.5-C06",
+      "evidence": [],
+      "limitations": [
+        "Driving and robotics use separate policy weights and domain-specific semantics."
+      ],
+      "statement": "One universal trained VLA model was demonstrated across autonomous driving and robotics.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5.14.5-C07",
+      "evidence": [],
+      "limitations": [
+        "No cross-domain policy-weight transfer experiment was performed."
+      ],
+      "statement": "Cross-domain zero-shot policy transfer was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5.14.5-C08",
+      "evidence": [],
+      "limitations": [
+        "Quantum-inspired and QML pathways were evaluated without establishing superiority over classical baselines."
+      ],
+      "statement": "Quantum advantage was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5.14.5-C09",
+      "evidence": [],
+      "limitations": [
+        "The Phase 1 QML experiments used simulation and did not demonstrate computational speedup."
+      ],
+      "statement": "Quantum computational speedup was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5.14.5-C10",
+      "evidence": [],
+      "limitations": [
+        "Classical PPO reached 6/6 frozen targets while the hybrid QML actor reached 0/6."
+      ],
+      "statement": "Hybrid QML demonstrated a sample-efficiency advantage over classical PPO.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5.14.5-C11",
+      "evidence": [],
+      "limitations": [
+        "TT/MPS demonstrated a quantum-inspired pathway but did not establish superiority over INT8."
+      ],
+      "statement": "TT/MPS compression demonstrated superiority over the strongest classical compression baseline.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5.14.5-C12",
+      "evidence": [],
+      "limitations": [
+        "No robust >=10% training-efficiency improvement was established under the frozen protocol."
+      ],
+      "statement": "A robust training-efficiency advantage was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5.14.5-C13",
+      "evidence": [],
+      "limitations": [
+        "Safety evidence is empirical and does not provide a formal closed-loop stability or certification proof."
+      ],
+      "statement": "The Phase 1 results constitute a formal safety guarantee.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5.14.5-C14",
+      "evidence": [],
+      "limitations": [
+        "The pilot uses synthetic proxy environments and does not include physical vehicle or robot deployment."
+      ],
+      "statement": "Production deployment readiness was demonstrated.",
+      "status": "not_supported"
+    }
+  ],
+  "new_principal_runs": false,
+  "new_training": false,
+  "project": "Q-VLA Forge",
+  "proposal_safe_summary": "The Phase 1 pilot supports a modular shared framework covering all four challenge bottlenecks and controlled classical/QI/QML evaluation, while explicitly not claiming quantum advantage, universal transfer, formal safety guarantees, or production readiness.",
+  "source_artifacts": [
+    "results/integration/sprint5-phase1-findings.json",
+    "results/integration/sprint5-unified-architecture.json",
+    "results/integration/sprint5-volkswagen-bottleneck-map.json",
+    "results/integration/sprint5-computational-classification.json",
+    "results/integration/sprint5-evidence-architecture-map.json"
+  ],
+  "sprint": "5.14.5H",
+  "status_counts": {
+    "not_supported": 9,
+    "supported": 4,
+    "supported_with_limitation": 1
+  }
+}

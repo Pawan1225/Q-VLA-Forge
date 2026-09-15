@@ -1,0 +1,72 @@
+{
+  "analysis_only": true,
+  "artifact": "classical-qi-qml-classification",
+  "blocked_statements": [
+    "lyapunov_safety_is_quantum",
+    "clipping_is_quantum",
+    "ppo_is_quantum",
+    "quantum_advantage_demonstrated",
+    "quantum_speedup_demonstrated"
+  ],
+  "classification": {
+    "classical": {
+      "ai_training": [
+        "shared_neural_baseline",
+        "adamw",
+        "cosine_learning_rate_schedule"
+      ],
+      "compression": [
+        "int8",
+        "svd"
+      ],
+      "reinforcement_learning": [
+        "ppo",
+        "matched_classical_actor"
+      ],
+      "safety": [
+        "heuristic_clipping",
+        "lyapunov_function",
+        "lyapunov_guided_filter"
+      ]
+    },
+    "quantum_inspired": {
+      "compression": [
+        "tensor_train",
+        "mps",
+        "tt_svd"
+      ]
+    },
+    "quantum_ml": {
+      "policy": [
+        "angle_encoding",
+        "four_qubit_pqc",
+        "parameterized_quantum_circuit",
+        "variational_quantum_circuit",
+        "ry_rz_rotations",
+        "cnot_entanglement",
+        "hybrid_quantum_classical_actor"
+      ]
+    }
+  },
+  "classification_boundaries": {
+    "clipping_is_quantum": false,
+    "hybrid_actor_is_qml": true,
+    "lyapunov_is_quantum": false,
+    "mps_is_quantum_inspired": true,
+    "ppo_is_quantum": false,
+    "pqc_is_qml": true,
+    "quantum_advantage_demonstrated": false,
+    "quantum_speedup_demonstrated": false,
+    "svd_is_quantum_inspired": false,
+    "tensor_train_is_quantum_inspired": true
+  },
+  "new_principal_runs": false,
+  "new_training": false,
+  "project": "Q-VLA Forge",
+  "source_artifacts": [
+    "results/integration/sprint5-unified-architecture.json",
+    "results/integration/sprint5-volkswagen-bottleneck-map.json"
+  ],
+  "sprint": "5.14.5E",
+  "supported_statement": "Q-VLA Forge evaluates classical, quantum-inspired, and quantum-machine-learning components within one modular pilot framework while preserving their distinct computational classifications."
+}

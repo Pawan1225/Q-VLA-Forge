@@ -1,0 +1,68 @@
+{
+  "all_four_addressed": true,
+  "analysis_only": true,
+  "artifact": "volkswagen-four-bottleneck-map",
+  "bottleneck_count": 4,
+  "bottlenecks": {
+    "model_footprint": {
+      "canonical_evidence": "results/compression/evidence/sprint2-compression-evidence.json",
+      "challenge_area": "compression",
+      "phase1_status": "experimentally_addressed",
+      "primary_sprint": "Sprint 2",
+      "q_vla_forge_methods": [
+        "int8",
+        "svd",
+        "tensor_train",
+        "mps",
+        "tt_svd"
+      ]
+    },
+    "rl_alignment_sample_efficiency": {
+      "canonical_evidence": "results/rl/evidence/sprint4-rl-evidence.json",
+      "challenge_area": "rl_alignment_sample_efficiency",
+      "phase1_status": "experimentally_addressed",
+      "primary_sprint": "Sprint 4",
+      "q_vla_forge_methods": [
+        "ppo",
+        "matched_classical_actor",
+        "hybrid_pqc_actor",
+        "sample_efficiency_analysis",
+        "matched_budget_ablation"
+      ]
+    },
+    "safety": {
+      "canonical_evidence": "results/safety/cross-domain/sprint5-cross-domain-package.json",
+      "challenge_area": "safety",
+      "phase1_status": "experimentally_addressed",
+      "primary_sprint": "Sprint 5",
+      "q_vla_forge_methods": [
+        "none_baseline",
+        "clipping",
+        "lyapunov_guided_filter",
+        "gaussian_robustness",
+        "structured_state_robustness",
+        "action_perturbation_recovery",
+        "cross_domain_safety_analysis"
+      ]
+    },
+    "training_efficiency": {
+      "canonical_evidence": "results/training/evidence/sprint3-training-evidence.json",
+      "challenge_area": "training_efficiency",
+      "phase1_status": "experimentally_addressed",
+      "primary_sprint": "Sprint 3",
+      "q_vla_forge_methods": [
+        "adamw",
+        "cosine_learning_rate",
+        "trainable_svd",
+        "trainable_tt_mps",
+        "paired_target_reach_analysis"
+      ]
+    }
+  },
+  "claim_boundary": "Experimentally addressed does not imply that each bottleneck achieved a positive advantage over its classical baseline.",
+  "new_principal_runs": false,
+  "new_training": false,
+  "project": "Q-VLA Forge",
+  "sprint": "5.14.5D",
+  "supported_statement": "All four Volkswagen challenge bottlenecks were experimentally addressed within the Phase 1 Q-VLA Forge pilot using frozen evidence from Sprints 2\u20135."
+}

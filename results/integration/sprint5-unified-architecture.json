@@ -1,0 +1,99 @@
+{
+  "analysis_only": true,
+  "architecture_claim": "Q-VLA Forge demonstrates a modular cross-domain computational framework in which shared AI, compression, RL/QML, evaluation, and safety interfaces are reused across autonomous-driving and robotics proxy tasks while domain-specific state semantics, policy weights, dynamics, and safety constraints remain isolated.",
+  "artifact": "canonical-unified-architecture",
+  "blocked_architecture_claims": [
+    "universal_vla",
+    "single_trained_policy",
+    "shared_trained_weights",
+    "zero_shot_cross_domain_policy",
+    "universal_safety_controller"
+  ],
+  "canonical_flow": [
+    "domain_input_adapters",
+    "shared_ai_vla_core",
+    "multimodal_fusion",
+    "shared_latent_representation",
+    "compression_and_policy_paths",
+    "proposed_action",
+    "safety_layer",
+    "executed_action",
+    "domain_environment"
+  ],
+  "compression_path": {
+    "classical": [
+      "int8",
+      "svd"
+    ],
+    "quantum_inspired": [
+      "tensor_train",
+      "mps",
+      "tt_svd"
+    ]
+  },
+  "domain_specific": {
+    "autonomous_driving": [
+      "state_semantics",
+      "environment",
+      "reward",
+      "ppo_weights",
+      "safety_constraints",
+      "clipping_rules",
+      "transition_predictor",
+      "lyapunov_potential"
+    ],
+    "robotics": [
+      "state_semantics",
+      "environment",
+      "reward",
+      "ppo_weights",
+      "safety_constraints",
+      "clipping_rules",
+      "transition_predictor",
+      "lyapunov_potential",
+      "object_grasped_context"
+    ]
+  },
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "evidence_sources": {
+    "sprint1": "results/sprint1-baseline-manifest.json",
+    "sprint2": "results/compression/evidence/sprint2-compression-evidence.json",
+    "sprint3": "results/training/evidence/sprint3-training-evidence.json",
+    "sprint4": "results/rl/evidence/sprint4-rl-evidence.json",
+    "sprint5_cross_domain": "results/safety/cross-domain/sprint5-cross-domain-package.json"
+  },
+  "new_metrics": false,
+  "new_principal_runs": false,
+  "new_training": false,
+  "policy_path": {
+    "classical": [
+      "ppo"
+    ],
+    "quantum_ml": [
+      "angle_encoding",
+      "pqc_vqc",
+      "hybrid_quantum_classical_actor"
+    ]
+  },
+  "project": "Q-VLA Forge",
+  "safety_path": {
+    "classification": "classical",
+    "methods": [
+      "none",
+      "clipping",
+      "lyapunov_guided_filter"
+    ]
+  },
+  "shared_ai_vla_core": [
+    "vision_encoder_framework",
+    "language_encoder_framework",
+    "state_encoder_framework",
+    "multimodal_fusion",
+    "shared_latent_representation",
+    "three_dimensional_action_interface"
+  ],
+  "sprint": "5.14.5B"
+}

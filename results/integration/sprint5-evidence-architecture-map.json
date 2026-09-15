@@ -1,0 +1,97 @@
+{
+  "analysis_only": true,
+  "architecture_source": "results/integration/sprint5-unified-architecture.json",
+  "artifact": "evidence-to-architecture-map",
+  "bottleneck_map_source": "results/integration/sprint5-volkswagen-bottleneck-map.json",
+  "claim_boundary": "Evidence mapping records where each architecture block was implemented and evaluated. It does not imply that every quantum or quantum-inspired component achieved performance advantage over classical baselines.",
+  "classification_source": "results/integration/sprint5-computational-classification.json",
+  "component_map_source": "results/integration/sprint5-shared-domain-component-map.json",
+  "evidence_map": {
+    "classical_rl": {
+      "architecture_blocks": [
+        "ppo",
+        "matched_classical_actor"
+      ],
+      "evidence": "results/rl/evidence/sprint4-rl-evidence.json",
+      "primary_sprint": "Sprint 4"
+    },
+    "compression": {
+      "architecture_blocks": [
+        "int8",
+        "svd",
+        "tensor_train",
+        "mps",
+        "tt_svd"
+      ],
+      "evidence": "results/compression/evidence/sprint2-compression-evidence.json",
+      "primary_sprint": "Sprint 2"
+    },
+    "cross_domain_reuse": {
+      "architecture_blocks": [
+        "shared_safety_interface",
+        "shared_robustness_harness",
+        "shared_evidence_schema",
+        "domain_specific_safety_semantics"
+      ],
+      "claim_controls": "results/safety/cross-domain/sprint5-cross-domain-claim-matrix.json",
+      "evidence": "results/safety/cross-domain/sprint5-cross-domain-package.json",
+      "primary_sprint": "Sprint 5.14"
+    },
+    "hybrid_qml": {
+      "architecture_blocks": [
+        "angle_encoding",
+        "four_qubit_pqc",
+        "pqc_vqc",
+        "hybrid_quantum_classical_actor"
+      ],
+      "claim_controls": "results/rl/evidence/sprint4-claim-matrix.json",
+      "evidence": "results/rl/evidence/sprint4-rl-evidence.json",
+      "primary_sprint": "Sprint 4"
+    },
+    "safety": {
+      "architecture_blocks": [
+        "none",
+        "clipping",
+        "lyapunov_guided_filter",
+        "robustness_harness"
+      ],
+      "evidence": "results/safety/consolidated/sprint5-safety-evidence-package.json",
+      "primary_sprint": "Sprint 5"
+    },
+    "shared_vla_baseline": {
+      "architecture_blocks": [
+        "vision_encoder_framework",
+        "language_encoder_framework",
+        "state_encoder_framework",
+        "multimodal_fusion",
+        "shared_latent_representation"
+      ],
+      "evidence": "results/sprint1-baseline-manifest.json",
+      "primary_sprint": "Sprint 1"
+    },
+    "training_efficiency": {
+      "architecture_blocks": [
+        "adamw",
+        "cosine_learning_rate",
+        "trainable_svd",
+        "trainable_tt_mps",
+        "paired_target_reach_analysis"
+      ],
+      "evidence": "results/training/evidence/sprint3-training-evidence.json",
+      "primary_sprint": "Sprint 3"
+    }
+  },
+  "mapped_sections": 7,
+  "new_principal_runs": false,
+  "new_training": false,
+  "project": "Q-VLA Forge",
+  "sprint": "5.14.5F",
+  "sprints_covered": [
+    "Sprint 1",
+    "Sprint 2",
+    "Sprint 3",
+    "Sprint 4",
+    "Sprint 5",
+    "Sprint 5.14"
+  ]
+}

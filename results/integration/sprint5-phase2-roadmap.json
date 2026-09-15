@@ -1,0 +1,131 @@
+{
+  "analysis_only": true,
+  "artifact": "phase2-roadmap",
+  "new_principal_runs": false,
+  "new_training": false,
+  "phase1_status": "frozen",
+  "phase2_claim_boundary": "The roadmap identifies technically plausible Phase 2 extensions. It does not claim that scale-up, hardware advantage, real-world deployment, or production safety has already been demonstrated.",
+  "priorities": [
+    {
+      "candidate_paths": [
+        "OpenVLA-style robotics backbone",
+        "pi0-style robotics pathway",
+        "driving-VLA / multimodal driving backbone"
+      ],
+      "objective": "Replace the compact Phase 1 proxy backbone with a larger pretrained VLA-style representation.",
+      "phase1_gap_addressed": "Phase 1 used a compact synthetic shared VLA proxy.",
+      "priority": 1,
+      "track": "real_vla_integration"
+    },
+    {
+      "candidate_paths": [
+        "shared_latent_to_ppo",
+        "shared_latent_to_hybrid_pqc"
+      ],
+      "objective": "Connect the VLA shared latent representation directly to classical PPO and hybrid PQC policy heads.",
+      "phase1_gap_addressed": "Sprint 4 policies operated on compact environment state rather than the Sprint 1 shared latent.",
+      "priority": 2,
+      "track": "shared_latent_policy_integration"
+    },
+    {
+      "candidate_paths": [
+        "larger_projection_layers",
+        "multimodal_fusion_layers",
+        "attention_related_matrices"
+      ],
+      "objective": "Evaluate TT/MPS compression on larger VLA projection, fusion, and attention-related matrices.",
+      "phase1_gap_addressed": "Phase 1 tensor-network experiments were limited to the compact pilot architecture.",
+      "priority": 3,
+      "track": "tensor_network_scale_up"
+    },
+    {
+      "candidate_paths": {
+        "driving": [
+          "CARLA",
+          "nuScenes-derived evaluation"
+        ],
+        "robotics": [
+          "RLBench",
+          "LIBERO",
+          "Open X-Embodiment"
+        ]
+      },
+      "objective": "Move from synthetic proxy environments to realistic driving and robotics benchmarks.",
+      "phase1_gap_addressed": "Phase 1 validation used synthetic proxy environments.",
+      "priority": 4,
+      "track": "realistic_environment_validation"
+    },
+    {
+      "candidate_paths": [
+        "true_state_safety_reference",
+        "estimated_state_safety",
+        "noisy_state_safety"
+      ],
+      "objective": "Evaluate safety filters when both policy and safety layer receive estimated or noisy state.",
+      "phase1_gap_addressed": "Phase 1 perception-perturbation studies allowed the safety layer access to true simulator state.",
+      "priority": 5,
+      "track": "estimated_state_safety"
+    },
+    {
+      "candidate_paths": [
+        "Jetson-class deployment",
+        "CPU embedded baseline",
+        "accelerator-enabled runtime"
+      ],
+      "objective": "Measure end-to-end latency, memory, and safety-filter overhead on embedded hardware.",
+      "phase1_gap_addressed": "Phase 1 compact CPU latency does not represent full-scale VLA deployment latency.",
+      "priority": 6,
+      "track": "embedded_deployment"
+    },
+    {
+      "candidate_paths": [
+        "larger_qubit_counts",
+        "noise_aware_simulation",
+        "hardware_efficient_ansatz",
+        "quantum_hardware_execution"
+      ],
+      "objective": "Extend PQC studies to larger circuits, noisy simulation, and hardware execution where available.",
+      "phase1_gap_addressed": "Phase 1 used a small simulated PQC and did not demonstrate quantum advantage.",
+      "priority": 7,
+      "track": "quantum_hardware_path"
+    },
+    {
+      "candidate_paths": [
+        "more_principal_seeds",
+        "larger_evaluation_corpus",
+        "formal_statistical_analysis",
+        "systematic_ablation",
+        "hardware_noise",
+        "cross_task_evaluation"
+      ],
+      "objective": "Increase statistical strength and broaden evaluation.",
+      "phase1_gap_addressed": "Phase 1 used three principal seeds and compact evaluation settings.",
+      "priority": 8,
+      "track": "stronger_validation"
+    }
+  ],
+  "project": "Q-VLA Forge",
+  "replacement_or_scale_up": [
+    "compact_shared_vla_backbone",
+    "synthetic_driving_environment",
+    "synthetic_robotics_environment",
+    "compact_raw_state_policy_input",
+    "small_pqc_configuration",
+    "proxy_latency_measurement",
+    "privileged_true_state_safety_input"
+  ],
+  "reusable_modules": [
+    "data_contracts",
+    "configuration_system",
+    "reproducibility_framework",
+    "result_store",
+    "compression_interfaces",
+    "policy_interfaces",
+    "safety_interface",
+    "robustness_harness",
+    "evidence_schema",
+    "claim_controls",
+    "dashboard"
+  ],
+  "sprint": "5.14.5I"
+}

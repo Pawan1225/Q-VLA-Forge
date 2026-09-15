@@ -1,0 +1,140 @@
+{
+  "analysis_only": true,
+  "artifact": "minimal-unified-architecture-phase2-bridge-package",
+  "bottleneck_count": 4,
+  "claim_count": 14,
+  "claim_status_counts": {
+    "not_supported": 9,
+    "supported": 4,
+    "supported_with_limitation": 1
+  },
+  "computational_classification": {
+    "classical": {
+      "ai_training": [
+        "shared_neural_baseline",
+        "adamw",
+        "cosine_learning_rate_schedule"
+      ],
+      "compression": [
+        "int8",
+        "svd"
+      ],
+      "reinforcement_learning": [
+        "ppo",
+        "matched_classical_actor"
+      ],
+      "safety": [
+        "heuristic_clipping",
+        "lyapunov_function",
+        "lyapunov_guided_filter"
+      ]
+    },
+    "quantum_inspired": {
+      "compression": [
+        "tensor_train",
+        "mps",
+        "tt_svd"
+      ]
+    },
+    "quantum_ml": {
+      "policy": [
+        "angle_encoding",
+        "four_qubit_pqc",
+        "parameterized_quantum_circuit",
+        "variational_quantum_circuit",
+        "ry_rz_rotations",
+        "cnot_entanglement",
+        "hybrid_quantum_classical_actor"
+      ]
+    }
+  },
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "evidence_sections": 7,
+  "new_metrics": false,
+  "new_principal_runs": false,
+  "new_training": false,
+  "phase1_findings": {
+    "compression": {
+      "advantage_demonstrated": false,
+      "classical_result": "INT8 was the strongest Phase 1 compression result under the frozen pilot criteria.",
+      "phase1_conclusion": "The quantum-inspired compression pathway was feasible but did not establish superiority over the strongest classical compression result.",
+      "quantum_inspired_result": "Tensor Train / MPS compression was implemented and evaluated as a quantum-inspired pathway."
+    },
+    "cross_domain": {
+      "phase1_conclusion": "Cross-domain reuse is supported at the framework and interface level, not as a universal trained policy.",
+      "shared_framework_supported": true,
+      "universal_safety_controller_supported": false,
+      "universal_trained_model_supported": false,
+      "zero_shot_transfer_supported": false
+    },
+    "rl_qml": {
+      "classical_ppo_target_reaches": 6,
+      "hybrid_actor_parameter_reduction": {
+        "autonomous_driving_approx_percent": 95.9,
+        "robotics_approx_percent": 95.51
+      },
+      "hybrid_qml_target_reaches": 0,
+      "matched_classical_target_reaches": 1,
+      "phase1_conclusion": "The hybrid PQC actor was substantially smaller, but no sample-efficiency advantage was demonstrated under the frozen pilot protocol.",
+      "sample_efficiency_advantage_demonstrated": false
+    },
+    "safety": {
+      "action_recovery_direction_consistency": {
+        "consistent": 3,
+        "total": 3
+      },
+      "clean_explicit_filtering_effective_both_domains": true,
+      "gaussian_direction_consistency": {
+        "consistent": 7,
+        "total": 9
+      },
+      "lyapunov_specific_activation": {
+        "autonomous_driving": true,
+        "robotics": false
+      },
+      "phase1_conclusion": "Strong empirical pilot safety was demonstrated, while Lyapunov-specific mechanism activation remained domain-dependent.",
+      "structured_state_direction_consistency": {
+        "consistent": 3,
+        "total": 3
+      }
+    },
+    "training_efficiency": {
+      "classical_result": "FP32 and trainable SVD controls were evaluated under the paired convergence protocol.",
+      "phase1_conclusion": "No robust >=10% training-efficiency advantage was established under the frozen Phase 1 protocol.",
+      "quantum_inspired_result": "Trainable TT/MPS variants were evaluated under the same training-efficiency framework.",
+      "robust_ten_percent_improvement_demonstrated": false
+    }
+  },
+  "phase2_priority_count": 8,
+  "project": "Q-VLA Forge",
+  "proposal_ready": true,
+  "required_artifacts": [
+    "docs/unified_architecture.md",
+    "results/integration/sprint5-unified-architecture.json",
+    "results/integration/sprint5-phase2-handoff.md"
+  ],
+  "scope_statement": "Sprint 5.14.5 integrates frozen Phase 1 architecture and evidence into a proposal-ready system description and Phase 2 bridge without adding new experiments.",
+  "shared_component_groups": [
+    "ai_vla",
+    "compression",
+    "evaluation",
+    "infrastructure",
+    "rl_qml",
+    "safety"
+  ],
+  "source_artifacts": [
+    "results/integration/sprint5-unified-architecture.json",
+    "results/integration/sprint5-shared-domain-component-map.json",
+    "results/integration/sprint5-volkswagen-bottleneck-map.json",
+    "results/integration/sprint5-computational-classification.json",
+    "results/integration/sprint5-evidence-architecture-map.json",
+    "results/integration/sprint5-phase1-findings.json",
+    "results/integration/sprint5-unified-claim-matrix.json",
+    "results/integration/sprint5-phase2-roadmap.json",
+    "results/integration/sprint5-phase2-handoff.md"
+  ],
+  "sprint": "5.14.5J"
+}
