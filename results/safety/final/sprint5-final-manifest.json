@@ -1,0 +1,183 @@
+{
+  "all_required_present": true,
+  "analysis_only": true,
+  "artifact": "sprint5-final-manifest",
+  "artifact_count": 17,
+  "artifacts": [
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "configs/safety.yaml",
+      "required": true,
+      "role": "safety_protocol",
+      "sha256": "f38e5609dce668f3fb6600ac46051a7895157d5755473ffac6c5becc68372d35",
+      "size_bytes": 363,
+      "sprint": "5.1"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "configs/driving_safety.yaml",
+      "required": true,
+      "role": "driving_safety_constraints",
+      "sha256": "a6fc2041970a254f9cc69556c0cae50a27a9602ff939d02e078b283629f22379",
+      "size_bytes": 1676,
+      "sprint": "5.2"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "configs/robotics_safety.yaml",
+      "required": true,
+      "role": "robotics_safety_constraints",
+      "sha256": "d425c1edcec40d36be65fc56a677dbf80935f5ed97276d2a26743376d78928c9",
+      "size_bytes": 1510,
+      "sprint": "5.3"
+    },
+    {
+      "artifact_type": "directory",
+      "frozen": true,
+      "path": "results/rl/checkpoint-recovery",
+      "required": true,
+      "role": "ppo_checkpoint_recovery",
+      "sha256": "5670b4542ca593feb5c065d923e48adc1ac6d52db215f37995dea9f6b6b93840",
+      "size_bytes": 8094,
+      "sprint": "5.3.5"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "results/safety/baseline/sprint5-no-filter-safety-summary.json",
+      "required": true,
+      "role": "none_baseline",
+      "sha256": "cd0375bc7e525080395529340c7f5243b8e27dc0abee4c981eb87890c01f4d80",
+      "size_bytes": 4046,
+      "sprint": "5.4"
+    },
+    {
+      "artifact_type": "directory",
+      "frozen": true,
+      "path": "results/safety/clipping",
+      "required": true,
+      "role": "clipping",
+      "sha256": "5786624b24ecc8122a20cf7cd9939775bbae015a96c4d38e110f451360d21cc2",
+      "size_bytes": 357118,
+      "sprint": "5.5"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "configs/lyapunov_safety.yaml",
+      "required": true,
+      "role": "lyapunov_foundation",
+      "sha256": "7fb19e22b8fba44b2a12c208b76ab92ce84840fcd0916e36c86aa3441e524159",
+      "size_bytes": 2254,
+      "sprint": "5.6"
+    },
+    {
+      "artifact_type": "directory",
+      "frozen": true,
+      "path": "results/safety/lyapunov-filter",
+      "required": true,
+      "role": "lyapunov_filter",
+      "sha256": "2472b464cfda126d95bccdb6f2cf70526bca8b7a177ec9de4de82df70ce48a33",
+      "size_bytes": 7676,
+      "sprint": "5.7"
+    },
+    {
+      "artifact_type": "directory",
+      "frozen": true,
+      "path": "results/safety/driving",
+      "required": true,
+      "role": "driving_safety_evaluation",
+      "sha256": "643757637aba006ff0937f0e7257a3e0c858007c68311e97e5e4ee86f67cac7e",
+      "size_bytes": 3775,
+      "sprint": "5.8"
+    },
+    {
+      "artifact_type": "directory",
+      "frozen": true,
+      "path": "results/safety/robotics",
+      "required": true,
+      "role": "robotics_safety_evaluation",
+      "sha256": "69a24d4b61f268c890ed6f7d747b21cc30fdc4018d2c846aba9ac9f4f2d7b00b",
+      "size_bytes": 4029,
+      "sprint": "5.9"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "results/safety/gaussian-robustness/sprint5-gaussian-robustness-summary.json",
+      "required": true,
+      "role": "gaussian_robustness",
+      "sha256": "3eb72467a7cf056fe944cae10df85939f299172c4a7308307390241dc3f0b847",
+      "size_bytes": 163303,
+      "sprint": "5.10"
+    },
+    {
+      "artifact_type": "directory",
+      "frozen": true,
+      "path": "results/safety/structured-state-robustness",
+      "required": true,
+      "role": "structured_state_robustness",
+      "sha256": "407b97d67feb33a53096460e7667fd6eb1b8b4ce145c929bb622f6ecab34adfc",
+      "size_bytes": 31636793,
+      "sprint": "5.11"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "results/safety/action-robustness/sprint5-action-robustness-summary.json",
+      "required": true,
+      "role": "action_robustness",
+      "sha256": "a1c6d88f524a72aef6671b2755cdcf1ce6165d615a6ea231faca183827549e9d",
+      "size_bytes": 705183,
+      "sprint": "5.12"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "results/safety/consolidated/sprint5-safety-evidence-package.json",
+      "required": true,
+      "role": "three_seed_consolidation",
+      "sha256": "8afdaa0739aaebb81b6bf1300b0a9d2a88b4304ad3b1b94f7e30b02e5cf60f12",
+      "size_bytes": 5057,
+      "sprint": "5.13"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "results/safety/cross-domain/sprint5-cross-domain-package.json",
+      "required": true,
+      "role": "cross_domain_safety",
+      "sha256": "a34f96737db7e9d867138b4df76b99f7d09ec2befccf0adbeb531630f5d85cf5",
+      "size_bytes": 13526,
+      "sprint": "5.14"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "results/integration/sprint5-unified-bridge-package.json",
+      "required": true,
+      "role": "unified_architecture_bridge",
+      "sha256": "dc4e21f0b80f8b3112f860cf6787a7bc4dd4004ea5edf1f2464641a2e56169e0",
+      "size_bytes": 5082,
+      "sprint": "5.14.5"
+    },
+    {
+      "artifact_type": "file",
+      "frozen": true,
+      "path": "docs/unified_architecture.md",
+      "required": true,
+      "role": "unified_architecture_document",
+      "sha256": "b652037945221507ec48e796cabeef63b0a43a09a5e4dcfd1cce870ad3bb98a4",
+      "size_bytes": 8629,
+      "sprint": "5.14.5"
+    }
+  ],
+  "manifest_version": "1.0",
+  "new_principal_runs": false,
+  "new_training": false,
+  "project": "Q-VLA Forge",
+  "sprint": "5.15.3"
+}

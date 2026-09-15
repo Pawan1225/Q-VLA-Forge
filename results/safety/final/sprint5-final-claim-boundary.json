@@ -1,0 +1,171 @@
+{
+  "analysis_only": true,
+  "artifact": "sprint5-final-claim-boundary",
+  "blocked_claim_ids": [
+    "S5-FINAL-C13",
+    "S5-FINAL-C14",
+    "S5-FINAL-C15",
+    "S5-FINAL-C16",
+    "S5-FINAL-C17",
+    "S5-FINAL-C18",
+    "S5-FINAL-C19",
+    "S5-FINAL-C20",
+    "S5-FINAL-C21",
+    "S5-FINAL-C22",
+    "S5-FINAL-C23",
+    "S5-FINAL-C24",
+    "S5-FINAL-C25"
+  ],
+  "claim_count": 25,
+  "new_principal_runs": false,
+  "new_robustness_runs": false,
+  "new_safety_runs": false,
+  "new_training": false,
+  "not_supported_claims": [
+    {
+      "claim_id": "S5-FINAL-C13",
+      "statement": "Quantum advantage was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C14",
+      "statement": "Quantum computational speedup was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C15",
+      "statement": "Hybrid QML demonstrated sample-efficiency superiority over classical PPO.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C16",
+      "statement": "TT/MPS demonstrated compression superiority over the strongest classical baseline.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C17",
+      "statement": "A robust training-efficiency advantage was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C18",
+      "statement": "A universal trained VLA policy was demonstrated across driving and robotics.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C19",
+      "statement": "Zero-shot cross-domain policy transfer was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C20",
+      "statement": "Formal Lyapunov closed-loop stability was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C21",
+      "statement": "A formal safety guarantee was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C22",
+      "statement": "Production safety or deployment readiness was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C23",
+      "statement": "Safety certification or standards compliance was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C24",
+      "statement": "Real-world autonomous-driving validation was demonstrated.",
+      "status": "not_supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C25",
+      "statement": "Physical-robot validation was demonstrated.",
+      "status": "not_supported"
+    }
+  ],
+  "project": "Q-VLA Forge",
+  "source_artifacts": [
+    "results/safety/final/sprint5-scientific-invariants.json",
+    "results/integration/sprint5-unified-claim-matrix.json",
+    "results/safety/cross-domain/sprint5-cross-domain-claim-matrix.json"
+  ],
+  "sprint": "5.15.5",
+  "status_counts": {
+    "not_supported": 13,
+    "supported": 9,
+    "supported_with_limitation": 3
+  },
+  "supported_claims": [
+    {
+      "claim_id": "S5-FINAL-C01",
+      "statement": "A shared computational framework was instantiated across autonomous-driving and robotics proxy domains.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C02",
+      "statement": "All four Volkswagen challenge bottlenecks were experimentally addressed in the Phase 1 pilot.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C03",
+      "statement": "INT8 satisfied the strongest Phase 1 compression criterion under the frozen pilot configuration.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C04",
+      "statement": "The hybrid PQC policy actor demonstrated substantial parameter compactness in both domains.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C05",
+      "statement": "Explicit clean safety filtering was empirically effective under the frozen driving and robotics proxy contracts.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C06",
+      "statement": "Gaussian observation robustness was evaluated under the frozen Phase 1 protocol.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C07",
+      "statement": "Structured-state robustness was evaluated under domain-specific perturbation contracts.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C08",
+      "statement": "Action perturbation robustness and unsafe-action recovery were quantified.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "S5-FINAL-C09",
+      "statement": "Cross-domain safety-framework reuse was demonstrated at the framework and interface level.",
+      "status": "supported"
+    }
+  ],
+  "supported_with_limitation": [
+    {
+      "claim_id": "S5-FINAL-C10",
+      "limitation": "The scale-up itself has not yet been experimentally demonstrated.",
+      "statement": "The Phase 1 architecture provides a modular Phase 2 scale-up pathway.",
+      "status": "supported_with_limitation"
+    },
+    {
+      "claim_id": "S5-FINAL-C11",
+      "limitation": "Observed interventions were often dominated by hard action/domain guards, and Lyapunov-specific activation was domain-dependent.",
+      "statement": "Lyapunov-guided safety was empirically effective under the frozen pilot safety contract.",
+      "status": "supported_with_limitation"
+    },
+    {
+      "claim_id": "S5-FINAL-C12",
+      "limitation": "The perturbation studies used synthetic proxy environments and do not establish real-world robustness.",
+      "statement": "Robustness was demonstrated under synthetic Gaussian, structured-state, and action perturbations.",
+      "status": "supported_with_limitation"
+    }
+  ],
+  "usage_rule": "Sprint 7 may reuse supported claims exactly or in weaker form. Supported-with-limitation claims must retain their limitations. Not-supported claims must not be rewritten as positive Phase 1 conclusions."
+}

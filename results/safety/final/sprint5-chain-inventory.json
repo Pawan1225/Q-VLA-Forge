@@ -1,0 +1,163 @@
+{
+  "all_stages_present": true,
+  "analysis_only": true,
+  "artifact": "sprint5-chain-inventory",
+  "chain_stage_count": 16,
+  "new_principal_runs": false,
+  "new_robustness_runs": false,
+  "new_safety_runs": false,
+  "new_training": false,
+  "project": "Q-VLA Forge",
+  "sprint": "5.15.2",
+  "stages": [
+    {
+      "candidate_count": 2,
+      "complete": true,
+      "existing_artifacts": [
+        "configs/safety.yaml",
+        "configs/safety_evaluation.yaml"
+      ],
+      "name": "Safety protocol",
+      "sprint": "5.1"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "configs/driving_safety.yaml"
+      ],
+      "name": "Driving safety constraints",
+      "sprint": "5.2"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "configs/robotics_safety.yaml"
+      ],
+      "name": "Robotics safety constraints",
+      "sprint": "5.3"
+    },
+    {
+      "candidate_count": 2,
+      "complete": true,
+      "existing_artifacts": [
+        "results/rl/checkpoint-recovery",
+        "results/rl/checkpoints"
+      ],
+      "name": "PPO checkpoint persistence recovery",
+      "sprint": "5.3.5"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "results/safety/baseline/sprint5-no-filter-safety-summary.json"
+      ],
+      "name": "NONE safety baseline",
+      "sprint": "5.4"
+    },
+    {
+      "candidate_count": 2,
+      "complete": true,
+      "existing_artifacts": [
+        "configs/safety_clipping.yaml",
+        "results/safety/clipping"
+      ],
+      "name": "Heuristic clipping",
+      "sprint": "5.5"
+    },
+    {
+      "candidate_count": 2,
+      "complete": true,
+      "existing_artifacts": [
+        "configs/lyapunov_safety.yaml",
+        "results/safety/lyapunov-foundation"
+      ],
+      "name": "Lyapunov foundation",
+      "sprint": "5.6"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "results/safety/lyapunov-filter"
+      ],
+      "name": "Lyapunov safety filter",
+      "sprint": "5.7"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "results/safety/driving"
+      ],
+      "name": "Driving Lyapunov evaluation",
+      "sprint": "5.8"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "results/safety/robotics"
+      ],
+      "name": "Robotics Lyapunov evaluation",
+      "sprint": "5.9"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "results/safety/gaussian-robustness/sprint5-gaussian-robustness-summary.json"
+      ],
+      "name": "Gaussian robustness",
+      "sprint": "5.10"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "results/safety/structured-state-robustness"
+      ],
+      "name": "Structured-state robustness",
+      "sprint": "5.11"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "results/safety/action-robustness/sprint5-action-robustness-summary.json"
+      ],
+      "name": "Action robustness",
+      "sprint": "5.12"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "results/safety/consolidated/sprint5-safety-evidence-package.json"
+      ],
+      "name": "Three-seed safety consolidation",
+      "sprint": "5.13"
+    },
+    {
+      "candidate_count": 1,
+      "complete": true,
+      "existing_artifacts": [
+        "results/safety/cross-domain/sprint5-cross-domain-package.json"
+      ],
+      "name": "Cross-domain safety analysis",
+      "sprint": "5.14"
+    },
+    {
+      "candidate_count": 2,
+      "complete": true,
+      "existing_artifacts": [
+        "results/integration/sprint5-unified-bridge-package.json",
+        "docs/unified_architecture.md"
+      ],
+      "name": "Unified architecture and Phase-2 bridge",
+      "sprint": "5.14.5"
+    }
+  ]
+}

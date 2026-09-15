@@ -1,0 +1,106 @@
+{
+  "analysis_only": true,
+  "artifact": "sprint5-final-limitations",
+  "limitation_count": 15,
+  "limitations": [
+    {
+      "category": "environment",
+      "id": "L01",
+      "statement": "Phase 1 used synthetic proxy environments."
+    },
+    {
+      "category": "model_scale",
+      "id": "L02",
+      "statement": "The shared Phase 1 VLA baseline is compact and does not represent a production-scale pretrained VLA backbone."
+    },
+    {
+      "category": "policy_integration",
+      "id": "L03",
+      "statement": "Sprint 4 RL policies consume compact environment state rather than the Sprint 1 shared VLA latent representation."
+    },
+    {
+      "category": "statistics",
+      "id": "L04",
+      "statement": "The principal trained-policy protocol uses three seeds."
+    },
+    {
+      "category": "evaluation_size",
+      "id": "L05",
+      "statement": "Safety evaluations use 20 held-out episodes per seed/condition in the principal protocol."
+    },
+    {
+      "category": "qml_scale",
+      "id": "L06",
+      "statement": "The Phase 1 hybrid QML pathway uses a small simulated 4-qubit, 2-layer PQC."
+    },
+    {
+      "category": "quantum_hardware",
+      "id": "L07",
+      "statement": "No quantum hardware execution was performed."
+    },
+    {
+      "category": "tensor_network_scale",
+      "id": "L08",
+      "statement": "TT/MPS compression was evaluated at pilot-model scale."
+    },
+    {
+      "category": "driving_validation",
+      "id": "L09",
+      "statement": "No principal CARLA, nuScenes, or physical-vehicle evaluation was performed."
+    },
+    {
+      "category": "robotics_validation",
+      "id": "L10",
+      "statement": "No principal RLBench, LIBERO, Open X-Embodiment, or physical-robot evaluation was performed."
+    },
+    {
+      "category": "state_estimation",
+      "id": "L11",
+      "statement": "During perception-perturbation experiments, the policy used perturbed/noisy observations while the safety layer retained access to true simulator state."
+    },
+    {
+      "category": "action_interface",
+      "id": "L12",
+      "statement": "Environment action-bound handling is accounted for separately from explicit safety-filter intervention."
+    },
+    {
+      "category": "lyapunov",
+      "id": "L13",
+      "statement": "The implemented Lyapunov quantity is an empirical safety potential and does not constitute a formal closed-loop stability proof."
+    },
+    {
+      "category": "certification",
+      "id": "L14",
+      "statement": "No functional-safety certification or standards compliance is claimed."
+    },
+    {
+      "category": "deployment",
+      "id": "L15",
+      "statement": "No production deployment or full-scale embedded VLA validation was performed."
+    }
+  ],
+  "lyapunov_nuance": {
+    "action_regime_lyapunov_specific_activation": true,
+    "canonical_statement": "Hard action/domain guards accounted for the observed interventions in clean, Gaussian, and structured-state regimes. Lyapunov-specific candidate selection became empirically active under action perturbation, with activation observed in autonomous driving but not robotics.",
+    "clean_regime_lyapunov_specific_activation": false,
+    "complete_filter_is_not_equivalent_to_lyapunov_decrease_only": true,
+    "driving_action_activation": true,
+    "formal_stability_claim": false,
+    "gaussian_regime_lyapunov_specific_activation": false,
+    "hard_guards_material_to_observed_interventions": true,
+    "robotics_action_activation": false,
+    "structured_state_regime_lyapunov_specific_activation": false
+  },
+  "new_principal_runs": false,
+  "new_robustness_runs": false,
+  "new_safety_runs": false,
+  "new_training": false,
+  "project": "Q-VLA Forge",
+  "source_artifacts": [
+    "results/safety/final/sprint5-scientific-invariants.json",
+    "results/safety/final/sprint5-final-claim-boundary.json",
+    "results/safety/cross-domain/sprint5-cross-domain-lyapunov-mechanism.json"
+  ],
+  "sprint": "5.15.6",
+  "usage_rule": "Sprint 7 must preserve these limitations and the Lyapunov mechanism nuance whenever related proposal claims are used."
+}

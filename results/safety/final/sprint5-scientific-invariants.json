@@ -1,0 +1,68 @@
+{
+  "analysis_only": true,
+  "artifact": "sprint5-scientific-invariants",
+  "invariants": {
+    "architecture": {
+      "allowed_summary": "Cross-domain reuse is supported at the framework and interface level, not as one universal trained policy.",
+      "same_trained_policy_weights": false,
+      "shared_computational_framework_supported": true,
+      "universal_safety_controller_supported": false,
+      "universal_trained_vla_supported": false,
+      "zero_shot_cross_domain_transfer_tested": false
+    },
+    "compression": {
+      "allowed_summary": "INT8 remained the strongest Phase 1 compression result; TT/MPS provided an implemented quantum-inspired pathway without demonstrating superiority.",
+      "int8_strongest_phase1_result": true,
+      "tt_mps_implemented_and_evaluated": true,
+      "tt_mps_superiority_demonstrated": false
+    },
+    "quantum_claims": {
+      "qml_superiority_demonstrated": false,
+      "quantum_advantage_demonstrated": false,
+      "quantum_speedup_demonstrated": false
+    },
+    "rl_qml": {
+      "allowed_summary": "Classical PPO reached all frozen targets. The hybrid PQC actor was substantially more compact but did not demonstrate sample-efficiency advantage.",
+      "classical_ppo_target_reaches": 6,
+      "hybrid_actor_parameter_reduction": {
+        "autonomous_driving_approx_percent": 95.9,
+        "robotics_approx_percent": 95.51
+      },
+      "hybrid_qml_target_reaches": 0,
+      "matched_classical_target_reaches": 1,
+      "qml_sample_efficiency_advantage": false
+    },
+    "safety": {
+      "action_robustness_evaluated": true,
+      "allowed_summary": "Explicit safety filtering produced strong empirical pilot effects. Robustness was evaluated across Gaussian, structured-state, and action perturbations. Lyapunov-specific mechanism activation remained domain-dependent.",
+      "clean_explicit_filtering_effective_both_domains": true,
+      "formal_lyapunov_stability_proof": false,
+      "formal_safety_guarantee": false,
+      "gaussian_robustness_evaluated": true,
+      "lyapunov_specific_activation": {
+        "autonomous_driving": true,
+        "robotics": false
+      },
+      "structured_state_robustness_evaluated": true,
+      "unsafe_action_recovery_quantified": true
+    },
+    "training_efficiency": {
+      "allowed_summary": "No robust >=10% training-efficiency improvement was demonstrated under the frozen Phase 1 protocol.",
+      "robust_ten_percent_improvement_demonstrated": false
+    }
+  },
+  "new_metrics": false,
+  "new_principal_runs": false,
+  "new_robustness_runs": false,
+  "new_safety_runs": false,
+  "new_training": false,
+  "project": "Q-VLA Forge",
+  "source_artifacts": {
+    "cross_domain_package": "results/safety/cross-domain/sprint5-cross-domain-package.json",
+    "phase1_findings": "results/integration/sprint5-phase1-findings.json",
+    "safety_package": "results/safety/consolidated/sprint5-safety-evidence-package.json",
+    "unified_bridge": "results/integration/sprint5-unified-bridge-package.json"
+  },
+  "sprint": "5.15.4",
+  "usage_rule": "Sprint 7 may summarize these frozen invariants but must not strengthen them into unsupported claims."
+}
