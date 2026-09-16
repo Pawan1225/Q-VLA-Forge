@@ -1,0 +1,11 @@
+area,comparison,finding,status
+compression,FP32 vs INT8,INT8 is on the Pareto frontier in both domains.,supported
+compression,INT8 vs SVD,Evaluated SVD settings did not satisfy the joint frozen pilot criterion.,supported
+compression,INT8 vs TT/MPS,TT/MPS was implemented and evaluated but did not demonstrate superiority.,supported
+training_efficiency,trainable SVD / TT-MPS vs FP32 target,Phase 1 did not demonstrate a robust 10% or greater optimizer-step efficiency improvement across all three locked seeds.,not_demonstrated
+rl_qml,Full PPO vs matched classical,Full PPO reached 6/6 frozen targets; matched classical reached 1/6.,supported
+rl_qml,Full PPO vs QML,Full PPO reached 6/6 frozen targets while QML reached 0/6; QML actor size was substantially lower.,supported_with_limitation
+safety,No filter vs clipping,Clipping reduced clean observed violation-step rate to zero in both proxy domains.,supported
+safety,No filter vs Lyapunov filter,Lyapunov filtering reduced clean observed violation-step rate to zero in both proxy domains.,supported_with_limitation
+robustness,Action perturbation recovery,Recovered 69367 of 111341 unsafe perturbed steps.,supported
+cross_domain,Framework reuse,"Cross-domain reuse is supported at the framework, interface, robustness-harness, metric-schema, and protocol levels, but not as one universal trained policy or universal safety controller.",supported_with_limitation

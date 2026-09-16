@@ -1,0 +1,159 @@
+{
+  "claim": "INT8 is the only evaluated method on the Pareto frontier in both proxy domains under the frozen Phase 1 compression criterion.",
+  "claim_boundaries": [
+    "The result applies to the evaluated Phase 1 proxy tasks and frozen model.",
+    "SVD and TT/MPS were evaluated but did not satisfy the joint frozen criterion.",
+    "No superiority claim is made for unseen architectures or real-world data."
+  ],
+  "criterion": {
+    "maximum_relative_mse_increase_percent": 5.0,
+    "minimum_compression_ratio": 2.0
+  },
+  "cross_domain_pareto_frontier": [
+    "INT8"
+  ],
+  "domains": {
+    "driving": {
+      "domain": "autonomous_driving",
+      "dominated": [
+        "SVD-75%",
+        "TT-rank-2"
+      ],
+      "methods": [
+        {
+          "all_runs_pilot_feasible": false,
+          "compression_ratio_mean": 1.0,
+          "compression_ratio_std": 0.0,
+          "configuration": "FP32",
+          "family": "reference",
+          "is_reference": true,
+          "mae_change_mean_percent": 0.0,
+          "mae_change_std_percent": 0.0,
+          "method": "fp32",
+          "mse_change_mean_percent": 0.0,
+          "mse_change_std_percent": 0.0,
+          "pilot_feasible_runs": 0
+        },
+        {
+          "all_runs_pilot_feasible": true,
+          "compression_ratio_mean": 3.846258709481975,
+          "compression_ratio_std": 0.0,
+          "configuration": "INT8",
+          "family": "classical_quantization",
+          "is_reference": false,
+          "mae_change_mean_percent": 0.35397373462460174,
+          "mae_change_std_percent": 0.31661518248832826,
+          "method": "int8",
+          "mse_change_mean_percent": -0.22516096466215424,
+          "mse_change_std_percent": 0.13334689015909043,
+          "pilot_feasible_runs": 3
+        },
+        {
+          "all_runs_pilot_feasible": false,
+          "compression_ratio_mean": 1.135999642106205,
+          "compression_ratio_std": 0.0,
+          "configuration": "SVD-75%",
+          "family": "classical_low_rank",
+          "is_reference": false,
+          "mae_change_mean_percent": 175.88719127378644,
+          "mae_change_std_percent": 9.93107540063336,
+          "method": "svd",
+          "mse_change_mean_percent": 382.6244778073404,
+          "mse_change_std_percent": 15.1872399337003,
+          "pilot_feasible_runs": 0
+        },
+        {
+          "all_runs_pilot_feasible": false,
+          "compression_ratio_mean": 1.8006240102110762,
+          "compression_ratio_std": 0.0,
+          "configuration": "TT-rank-2",
+          "family": "quantum_inspired_tensor_network",
+          "is_reference": false,
+          "mae_change_mean_percent": 344.9883997296834,
+          "mae_change_std_percent": 4.191561494914069,
+          "method": "tensor_train",
+          "mse_change_mean_percent": 1300.1915003210524,
+          "mse_change_std_percent": 254.20125367869903,
+          "pilot_feasible_runs": 0
+        }
+      ],
+      "pareto_frontier": [
+        "INT8"
+      ]
+    },
+    "robotics": {
+      "domain": "robotics",
+      "dominated": [
+        "SVD-50%",
+        "TT-rank-2"
+      ],
+      "methods": [
+        {
+          "all_runs_pilot_feasible": false,
+          "compression_ratio_mean": 1.0,
+          "compression_ratio_std": 0.0,
+          "configuration": "FP32",
+          "family": "reference",
+          "is_reference": true,
+          "mae_change_mean_percent": 0.0,
+          "mae_change_std_percent": 0.0,
+          "method": "fp32",
+          "mse_change_mean_percent": 0.0,
+          "mse_change_std_percent": 0.0,
+          "pilot_feasible_runs": 0
+        },
+        {
+          "all_runs_pilot_feasible": true,
+          "compression_ratio_mean": 3.846258709481975,
+          "compression_ratio_std": 0.0,
+          "configuration": "INT8",
+          "family": "classical_quantization",
+          "is_reference": false,
+          "mae_change_mean_percent": -0.0667613939396421,
+          "mae_change_std_percent": 0.050715548692474,
+          "method": "int8",
+          "mse_change_mean_percent": -0.15251875574570348,
+          "mse_change_std_percent": 1.1282471790678248,
+          "pilot_feasible_runs": 3
+        },
+        {
+          "all_runs_pilot_feasible": false,
+          "compression_ratio_mean": 1.295913854109962,
+          "compression_ratio_std": 0.0,
+          "configuration": "SVD-50%",
+          "family": "classical_low_rank",
+          "is_reference": false,
+          "mae_change_mean_percent": 710.0969217095092,
+          "mae_change_std_percent": 71.17560791899798,
+          "method": "svd",
+          "mse_change_mean_percent": 1818.5791423398518,
+          "mse_change_std_percent": 519.4089151238921,
+          "pilot_feasible_runs": 0
+        },
+        {
+          "all_runs_pilot_feasible": false,
+          "compression_ratio_mean": 1.8006240102110762,
+          "compression_ratio_std": 0.0,
+          "configuration": "TT-rank-2",
+          "family": "quantum_inspired_tensor_network",
+          "is_reference": false,
+          "mae_change_mean_percent": 890.4449818135568,
+          "mae_change_std_percent": 121.48318833782413,
+          "method": "tensor_train",
+          "mse_change_mean_percent": 3270.928450823199,
+          "mse_change_std_percent": 895.500820600516,
+          "pilot_feasible_runs": 0
+        }
+      ],
+      "pareto_frontier": [
+        "INT8"
+      ]
+    }
+  },
+  "int8_cross_domain_supported": true,
+  "new_training": false,
+  "protocol": "final_compression_comparison",
+  "source": "results/compression/compression-pareto-summary.json",
+  "sprint": "7.4",
+  "status": "FROZEN"
+}

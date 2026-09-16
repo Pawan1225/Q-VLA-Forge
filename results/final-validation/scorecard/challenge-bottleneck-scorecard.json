@@ -1,0 +1,39 @@
+{
+  "all_four_bottlenecks_experimentally_addressed": true,
+  "all_four_bottlenecks_solved": false,
+  "bottlenecks": [
+    {
+      "bottleneck": "model_footprint",
+      "boundary": "No TT/MPS superiority demonstrated.",
+      "headline": "INT8 is the only evaluated method on the Pareto frontier in both proxy domains under the frozen Phase 1 compression criterion.",
+      "phase1_status": "demonstrated",
+      "strongest_evidence": "INT8 ~3.85x effective compression with cross-domain Pareto support."
+    },
+    {
+      "bottleneck": "training_efficiency",
+      "boundary": "No robust >=10% optimizer-step reduction.",
+      "headline": "Phase 1 did not demonstrate a robust 10% or greater optimizer-step efficiency improvement across all three locked seeds.",
+      "phase1_status": "not_demonstrated",
+      "strongest_evidence": "All methods evaluated under the locked three-seed target-reaching protocol."
+    },
+    {
+      "bottleneck": "rl_alignment_sample_efficiency",
+      "boundary": "No QML sample-efficiency or computational advantage demonstrated.",
+      "headline": "The evaluated PQC/QML actor provides a large actor-parameter reduction relative to full PPO, but Phase 1 does not demonstrate QML sample-efficiency or computational advantage.",
+      "phase1_status": "mixed_evidence",
+      "strongest_evidence": "PPO reached 6/6 targets; QML actor achieved ~95.5-95.9% parameter reduction."
+    },
+    {
+      "bottleneck": "safety",
+      "boundary": "Empirical proxy evidence only; no formal safety or Lyapunov stability guarantee.",
+      "headline": "Explicit safety filtering produced strong empirical pilot effects across both proxy domains, including zero observed clean violation-step rate for clipping and Lyapunov filtering and quantified recovery under direct action perturbations.",
+      "phase1_status": "empirically_supported",
+      "strongest_evidence": "Clean filtered violation-step rate reached zero in both proxy domains; direct action recovery was quantified."
+    }
+  ],
+  "new_experiments": false,
+  "new_training": false,
+  "protocol": "challenge_bottleneck_scorecard",
+  "sprint": "7.10",
+  "status": "FROZEN"
+}

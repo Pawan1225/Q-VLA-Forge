@@ -1,0 +1,246 @@
+{
+  "blocked_claims": [
+    {
+      "claim_id": "S7-B01",
+      "reason": "No quantum advantage evidence exists in the frozen Phase 1 results.",
+      "statement": "Quantum advantage was demonstrated."
+    },
+    {
+      "claim_id": "S7-B02",
+      "reason": "QML reached 0/6 frozen targets in the matched comparison.",
+      "statement": "QML demonstrated superior sample efficiency."
+    },
+    {
+      "claim_id": "S7-B03",
+      "reason": "Evaluated TT/MPS configurations did not satisfy the frozen joint compression criterion.",
+      "statement": "TT/MPS demonstrated superior compression."
+    },
+    {
+      "claim_id": "S7-B04",
+      "reason": "The implemented quantity is an empirical safety potential; no formal proof was established.",
+      "statement": "The Lyapunov implementation provides a formal closed-loop stability guarantee."
+    },
+    {
+      "claim_id": "S7-B05",
+      "reason": "Phase 1 used compact synthetic proxy environments and no production deployment.",
+      "statement": "Q-VLA Forge is production ready."
+    },
+    {
+      "claim_id": "S7-B06",
+      "reason": "Separate domain policy weights were used and zero-shot transfer was not tested.",
+      "statement": "One trained policy transfers zero-shot between driving and robotics."
+    },
+    {
+      "claim_id": "S7-B07",
+      "reason": "No certification or standards-compliance claim is supported.",
+      "statement": "Formal functional-safety certification was achieved."
+    }
+  ],
+  "claims": [
+    {
+      "area": "architecture",
+      "claim_id": "S7-C01",
+      "evidence": "results/safety/cross-domain/sprint5-cross-domain-package.json",
+      "statement": "A shared computational framework was instantiated across autonomous-driving and robotics proxy domains.",
+      "status": "supported"
+    },
+    {
+      "area": "compression",
+      "claim_id": "S7-C02",
+      "evidence": "results/compression/compression-pareto-summary.json",
+      "statement": "INT8 was the only evaluated compression method on the Pareto frontier in both Phase 1 proxy domains under the frozen compression criterion.",
+      "status": "supported"
+    },
+    {
+      "area": "training_efficiency",
+      "claim_id": "S7-C03",
+      "evidence": "results/training/training-validation-summary.json",
+      "statement": "Phase 1 did not demonstrate a robust 10% or greater optimizer-step efficiency improvement across all three locked seeds.",
+      "status": "supported"
+    },
+    {
+      "area": "rl",
+      "claim_id": "S7-C04",
+      "evidence": "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+      "statement": "Classical PPO reached all six frozen domain-seed targets in the final matched comparison.",
+      "status": "supported"
+    },
+    {
+      "area": "qml",
+      "claim_id": "S7-C05",
+      "evidence": "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+      "limitation": "No QML sample-efficiency, computational, quantum-speedup, or quantum-hardware advantage was demonstrated.",
+      "statement": "The evaluated PQC/QML actor was substantially more parameter-compact than the full PPO actor.",
+      "status": "supported_with_limitation"
+    },
+    {
+      "area": "safety",
+      "claim_id": "S7-C06",
+      "evidence": "results/safety/consolidated/sprint5-safety-evidence-package.json",
+      "limitation": "This is empirical pilot evidence and does not establish a formal safety guarantee.",
+      "statement": "Explicit safety filtering reduced the observed clean violation-step rate to zero in both evaluated proxy domains.",
+      "status": "supported_with_limitation"
+    },
+    {
+      "area": "robustness",
+      "claim_id": "S7-C07",
+      "evidence": "results/safety/consolidated/sprint5-safety-evidence-package.json",
+      "statement": "Gaussian observation, structured-state, and direct action perturbation robustness were evaluated under the frozen Phase 1 protocol.",
+      "status": "supported"
+    },
+    {
+      "area": "robustness",
+      "claim_id": "S7-C08",
+      "evidence": "results/safety/consolidated/sprint5-safety-evidence-package.json",
+      "statement": "Explicit filtering recovered a measurable fraction of unsafe directly perturbed actions under the evaluated synthetic action-perturbation protocol.",
+      "status": "supported"
+    },
+    {
+      "area": "cross_domain",
+      "claim_id": "S7-C09",
+      "evidence": "results/safety/cross-domain/sprint5-cross-domain-package.json",
+      "limitation": "The Phase 1 evidence does not demonstrate one universal trained policy, zero-shot policy transfer, or one universal safety controller.",
+      "statement": "Cross-domain reuse was demonstrated at the framework, interface, evaluation, and protocol levels.",
+      "status": "supported_with_limitation"
+    }
+  ],
+  "frozen": true,
+  "global_limitations": [
+    {
+      "category": "environment",
+      "id": "L01",
+      "statement": "Phase 1 used synthetic proxy environments."
+    },
+    {
+      "category": "model_scale",
+      "id": "L02",
+      "statement": "The shared Phase 1 VLA baseline is compact and does not represent a production-scale pretrained VLA backbone."
+    },
+    {
+      "category": "policy_integration",
+      "id": "L03",
+      "statement": "Sprint 4 RL policies consume compact environment state rather than the Sprint 1 shared VLA latent representation."
+    },
+    {
+      "category": "statistics",
+      "id": "L04",
+      "statement": "The principal trained-policy protocol uses three seeds."
+    },
+    {
+      "category": "evaluation_size",
+      "id": "L05",
+      "statement": "Safety evaluations use 20 held-out episodes per seed/condition in the principal protocol."
+    },
+    {
+      "category": "qml_scale",
+      "id": "L06",
+      "statement": "The Phase 1 hybrid QML pathway uses a small simulated 4-qubit, 2-layer PQC."
+    },
+    {
+      "category": "quantum_hardware",
+      "id": "L07",
+      "statement": "No quantum hardware execution was performed."
+    },
+    {
+      "category": "tensor_network_scale",
+      "id": "L08",
+      "statement": "TT/MPS compression was evaluated at pilot-model scale."
+    },
+    {
+      "category": "driving_validation",
+      "id": "L09",
+      "statement": "No principal CARLA, nuScenes, or physical-vehicle evaluation was performed."
+    },
+    {
+      "category": "robotics_validation",
+      "id": "L10",
+      "statement": "No principal RLBench, LIBERO, Open X-Embodiment, or physical-robot evaluation was performed."
+    },
+    {
+      "category": "state_estimation",
+      "id": "L11",
+      "statement": "During perception-perturbation experiments, the policy used perturbed/noisy observations while the safety layer retained access to true simulator state."
+    },
+    {
+      "category": "action_interface",
+      "id": "L12",
+      "statement": "Environment action-bound handling is accounted for separately from explicit safety-filter intervention."
+    },
+    {
+      "category": "lyapunov",
+      "id": "L13",
+      "statement": "The implemented Lyapunov quantity is an empirical safety potential and does not constitute a formal closed-loop stability proof."
+    },
+    {
+      "category": "certification",
+      "id": "L14",
+      "statement": "No functional-safety certification or standards compliance is claimed."
+    },
+    {
+      "category": "deployment",
+      "id": "L15",
+      "statement": "No production deployment or full-scale embedded VLA validation was performed."
+    }
+  ],
+  "new_experiments": false,
+  "new_training": false,
+  "phase1_status": "frozen",
+  "protocol": "final_claim_registry_freeze",
+  "scientific_invariants": {
+    "architecture": {
+      "allowed_summary": "Cross-domain reuse is supported at the framework and interface level, not as one universal trained policy.",
+      "same_trained_policy_weights": false,
+      "shared_computational_framework_supported": true,
+      "universal_safety_controller_supported": false,
+      "universal_trained_vla_supported": false,
+      "zero_shot_cross_domain_transfer_tested": false
+    },
+    "compression": {
+      "allowed_summary": "INT8 remained the strongest Phase 1 compression result; TT/MPS provided an implemented quantum-inspired pathway without demonstrating superiority.",
+      "int8_strongest_phase1_result": true,
+      "tt_mps_implemented_and_evaluated": true,
+      "tt_mps_superiority_demonstrated": false
+    },
+    "quantum_claims": {
+      "qml_superiority_demonstrated": false,
+      "quantum_advantage_demonstrated": false,
+      "quantum_speedup_demonstrated": false
+    },
+    "rl_qml": {
+      "allowed_summary": "Classical PPO reached all frozen targets. The hybrid PQC actor was substantially more compact but did not demonstrate sample-efficiency advantage.",
+      "classical_ppo_target_reaches": 6,
+      "hybrid_actor_parameter_reduction": {
+        "autonomous_driving_approx_percent": 95.9,
+        "robotics_approx_percent": 95.51
+      },
+      "hybrid_qml_target_reaches": 0,
+      "matched_classical_target_reaches": 1,
+      "qml_sample_efficiency_advantage": false
+    },
+    "safety": {
+      "action_robustness_evaluated": true,
+      "allowed_summary": "Explicit safety filtering produced strong empirical pilot effects. Robustness was evaluated across Gaussian, structured-state, and action perturbations. Lyapunov-specific mechanism activation remained domain-dependent.",
+      "clean_explicit_filtering_effective_both_domains": true,
+      "formal_lyapunov_stability_proof": false,
+      "formal_safety_guarantee": false,
+      "gaussian_robustness_evaluated": true,
+      "lyapunov_specific_activation": {
+        "autonomous_driving": true,
+        "robotics": false
+      },
+      "structured_state_robustness_evaluated": true,
+      "unsafe_action_recovery_quantified": true
+    },
+    "training_efficiency": {
+      "allowed_summary": "No robust >=10% training-efficiency improvement was demonstrated under the frozen Phase 1 protocol.",
+      "robust_ten_percent_improvement_demonstrated": false
+    }
+  },
+  "sprint": "7.11",
+  "status": "FROZEN",
+  "summary": {
+    "blocked": 7,
+    "supported": 6,
+    "supported_with_limitation": 3
+  }
+}

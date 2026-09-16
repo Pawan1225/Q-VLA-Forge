@@ -1,0 +1,246 @@
+{
+  "batch_acceptances": {
+    "batch-a": {
+      "new_experiments": null,
+      "new_training": false,
+      "passed": true,
+      "path": "results/final-validation/batch-a/batch-a-acceptance.json"
+    },
+    "batch-b": {
+      "new_experiments": null,
+      "new_training": false,
+      "passed": true,
+      "path": "results/final-validation/batch-b/batch-b-acceptance.json"
+    },
+    "batch-c": {
+      "new_experiments": false,
+      "new_training": false,
+      "passed": true,
+      "path": "results/final-validation/batch-c/batch-c-acceptance.json"
+    },
+    "batch-d": {
+      "new_experiments": false,
+      "new_training": false,
+      "passed": true,
+      "path": "results/final-validation/batch-d/batch-d-acceptance.json"
+    }
+  },
+  "batches_passed": true,
+  "claim_freeze": {
+    "blocked": 7,
+    "frozen": true,
+    "new_experiments": false,
+    "new_training": false,
+    "status": "FROZEN",
+    "supported": 6,
+    "supported_with_limitation": 3
+  },
+  "frozen_evidence_preserved": true,
+  "new_experiments": false,
+  "new_training": false,
+  "passed": true,
+  "protocol": "final_reproducibility_verification",
+  "required_artifacts": {
+    "artifacts": [
+      {
+        "exists": true,
+        "path": "results/final-validation/three-seed/three-seed-validation.json",
+        "sha256": "26d27a2a3add5ede0335274fce005ff601837798bf0310c8eba1b0b3c7352419",
+        "size_bytes": 123691
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/evidence/phase1-evidence.json",
+        "sha256": "e77bca97df2c226e296c5a4874c5eb6d69864461be7465dfe8b56b65dd1f6a0f",
+        "size_bytes": 87564452
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/baseline/final-baseline-summary.json",
+        "sha256": "784617af07a6b74345140e179e2fb29ccd26dc70a7e6efbd249c95e822a008ca",
+        "size_bytes": 3647
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/compression/final-compression-summary.json",
+        "sha256": "163316574ec021f21b46e662373db662ae251825723b11d4f891a22d6d6ffa17",
+        "size_bytes": 5744
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/training-efficiency/final-training-efficiency-summary.json",
+        "sha256": "e85aafd42a781631ceb5f10af16789656a96151a73ea0df44c6b49198a36dc30",
+        "size_bytes": 4946
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/rl-qml/final-rl-qml-summary.json",
+        "sha256": "e3ab350975cff52642ac147a76a5da6b34b2c2a5707c8281ec0173aad3c31e07",
+        "size_bytes": 7011
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/safety-robustness/final-safety-robustness-summary.json",
+        "sha256": "1b2e31ab80c93f9402be7afa6c633c2f31b1cfd497485344660a31d19733006c",
+        "size_bytes": 3097
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/cross-domain/final-cross-domain-summary.json",
+        "sha256": "6644b0a1ed951ab113e86e4ecaecaaef7f649eaa504469a61a3434d2364189d3",
+        "size_bytes": 4597
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/ablation/final-ablation-matrix.json",
+        "sha256": "80170021728461d0cd5496709205d79845b0f1fb1914fce211b75ef5e3e7a74c",
+        "size_bytes": 2944
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/scorecard/challenge-bottleneck-scorecard.json",
+        "sha256": "850602ca046dade0fb1a992746f7e135356cc64d48dc3c080a9a9f3dd2430a27",
+        "size_bytes": 2200
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/claims/final-claim-registry.json",
+        "sha256": "69c856104fd997292e9d08a6ed561cf2231610bc41ac532df683976118584265",
+        "size_bytes": 10378
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/submission-assets/final-submission-assets.json",
+        "sha256": "98d7f03c75fc74f8ffde111a684385c3ed5a19b0700a24e6224121af6d2cadf7",
+        "size_bytes": 605
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/submission-assets/repository-evidence-layer.json",
+        "sha256": "02c0f473920687b7c08f8307da0a7559818ff4a010c9927231a984346a052fbd",
+        "size_bytes": 227
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/tables/final-ablation-matrix.csv",
+        "sha256": "9b57753e95e678f7860cfd6a7de83054dd12a88385849a04a154ec0dc52931c4",
+        "size_bytes": 1425
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/tables/challenge-bottleneck-scorecard.csv",
+        "sha256": "63da5af719dd839a72358efbe7efd537672415a27a793dfddb72ed1eed3cbc50",
+        "size_bytes": 1430
+      },
+      {
+        "exists": true,
+        "path": "results/final-validation/tables/final-claim-registry.csv",
+        "sha256": "6a4e69e5befe028ae64b5d1735bb3bb6e2e633183dd020af8af6d9e50f02b075",
+        "size_bytes": 2274
+      },
+      {
+        "exists": true,
+        "path": "figures/final/phase1_compression_pareto.png",
+        "sha256": "432b80e80428311b967ef82377e8a1c0554d6e0281588c32c9a2af87fd2ba997",
+        "size_bytes": 74309
+      },
+      {
+        "exists": true,
+        "path": "figures/final/phase1_rl_qml_target_reach.png",
+        "sha256": "c963da40f2403bfc9548f2d03a076f226ac3b055bec46ac8f7daaacb56deb28f",
+        "size_bytes": 46160
+      },
+      {
+        "exists": true,
+        "path": "README.md",
+        "sha256": "4ac129e6aac5b1c3c1398306605e1e6d65d142b6f1b9801eb4de05c7f3e57b63",
+        "size_bytes": 3238
+      },
+      {
+        "exists": true,
+        "path": "docs/final_evidence_index.md",
+        "sha256": "283cd04e379eaebf2e39e79d0687ced115e82ef67633c64fce4dc3c467f417d2",
+        "size_bytes": 740
+      }
+    ],
+    "missing": [],
+    "passed": true,
+    "present_count": 20,
+    "required_count": 20
+  },
+  "seed_contract": {
+    "expected_seeds": [
+      42,
+      123,
+      456
+    ],
+    "groups": [
+      {
+        "exact_match": true,
+        "group": "baseline",
+        "observed_seeds": [
+          42,
+          123,
+          456
+        ]
+      },
+      {
+        "exact_match": true,
+        "group": "compression",
+        "observed_seeds": [
+          42,
+          123,
+          456
+        ]
+      },
+      {
+        "exact_match": true,
+        "group": "training_efficiency",
+        "observed_seeds": [
+          42,
+          123,
+          456
+        ]
+      },
+      {
+        "exact_match": true,
+        "group": "ppo",
+        "observed_seeds": [
+          42,
+          123,
+          456
+        ]
+      },
+      {
+        "exact_match": true,
+        "group": "qml",
+        "observed_seeds": [
+          42,
+          123,
+          456
+        ]
+      },
+      {
+        "exact_match": true,
+        "group": "safety",
+        "observed_seeds": [
+          42,
+          123,
+          456
+        ]
+      },
+      {
+        "exact_match": true,
+        "group": "robustness",
+        "observed_seeds": [
+          42,
+          123,
+          456
+        ]
+      }
+    ],
+    "passed": true
+  },
+  "sprint": "7.14",
+  "status": "PASS"
+}

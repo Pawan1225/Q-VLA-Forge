@@ -1,0 +1,85 @@
+{
+  "action_recovery": {
+    "recovered_unsafe_steps": 69367,
+    "recovery_fraction": 0.6230139840669654,
+    "unresolved_unsafe_steps": 41974,
+    "unsafe_perturbed_steps": 111341
+  },
+  "claim": "Explicit safety filtering produced strong empirical pilot effects across both proxy domains, including zero observed clean violation-step rate for clipping and Lyapunov filtering and quantified recovery under direct action perturbations.",
+  "clean_evidence": {
+    "autonomous_driving": {
+      "clipping_violation_step_rate": 0.0,
+      "lyapunov_violation_step_rate": 0.0,
+      "none_violation_step_rate": 0.39084090909090907
+    },
+    "robotics": {
+      "clipping_violation_step_rate": 0.0,
+      "lyapunov_violation_step_rate": 0.0,
+      "none_violation_step_rate": 0.014666666666666666
+    }
+  },
+  "clean_explicit_filtering_zero_violation_rate_both_domains": true,
+  "formal_lyapunov_stability_proof": false,
+  "formal_safety_guarantee": false,
+  "limitations": [
+    "All Sprint 5 evidence is from synthetic pilot environments and finite evaluation corpora.",
+    "The statistical unit is the trained policy seed; only three principal seeds are available.",
+    "No statistical significance testing is claimed.",
+    "The safety layer retains true simulator state in the observation-perturbation evaluations.",
+    "Action perturbations are synthetic and are not validated physical actuator-fault models.",
+    "No formal Lyapunov stability theorem, formal worst-case robustness guarantee, production certification, ISO compliance, or quantum safety advantage is established."
+  ],
+  "lyapunov_mechanism": {
+    "action_lyapunov_decrease_reasons": 1584,
+    "active_regimes": [
+      "action_perturbation"
+    ],
+    "emergency_fallback_steps": 0,
+    "inactive_regimes": [
+      "clean",
+      "gaussian_state_perturbation",
+      "structured_state_perturbation"
+    ],
+    "selected_lower_steps": 4887,
+    "strict_decrease_steps": 70
+  },
+  "new_safety_episodes": false,
+  "new_training": false,
+  "protocol": "final_safety_robustness_summary",
+  "required_seeds": [
+    42,
+    123,
+    456
+  ],
+  "robustness": {
+    "action": {
+      "aggregates": 72,
+      "environment_interface_adjustments": 1579,
+      "episodes": 4320,
+      "perturbations": 24,
+      "recovered_unsafe_steps": 69367,
+      "recovery_fraction": 0.6230139840669654,
+      "seed_cells": 216,
+      "unresolved_unsafe_steps": 41974,
+      "unsafe_perturbed_steps": 111341
+    },
+    "gaussian": {
+      "aggregates": 24,
+      "new_noisy_episodes": 1080,
+      "policy_uses_noisy_observation": true,
+      "safety_layer_uses_true_state": true,
+      "seed_cells": 72
+    },
+    "structured_state": {
+      "aggregates": 66,
+      "episodes": 3960,
+      "perturbations": 22,
+      "policy_uses_perturbed_observation": true,
+      "safety_layer_uses_true_state": true,
+      "seed_cells": 198
+    }
+  },
+  "source": "results/safety/consolidated/sprint5-safety-evidence-package.json",
+  "sprint": "7.7",
+  "status": "FROZEN"
+}

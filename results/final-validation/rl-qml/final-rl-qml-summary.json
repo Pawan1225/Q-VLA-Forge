@@ -1,0 +1,214 @@
+{
+  "aggregate_target_reach": {
+    "available_per_method": 6,
+    "full_ppo": 6,
+    "matched_classical": 1,
+    "qml": 0
+  },
+  "claim": "The evaluated PQC/QML actor provides a large actor-parameter reduction relative to full PPO, but Phase 1 does not demonstrate QML sample-efficiency or computational advantage.",
+  "domains": {
+    "autonomous_driving": {
+      "full_ppo": {
+        "actor_parameters": 1318,
+        "best_normalized_progress": {
+          "mean": 1.0526315789473686,
+          "sample_standard_deviation": 1.2819751242557092e-16
+        },
+        "final_normalized_progress": {
+          "mean": 0.9952824582742731,
+          "sample_standard_deviation": 0.05359814404275625
+        },
+        "normalized_auc": {
+          "mean": 0.5548114402144297,
+          "sample_standard_deviation": 0.2646057407662727
+        },
+        "target_reach_count": 3,
+        "target_reach_rate": 1.0
+      },
+      "matched_classical": {
+        "actor_parameters": 54,
+        "best_normalized_progress": {
+          "mean": 0.7002180251303894,
+          "sample_standard_deviation": 0.2484199051239047
+        },
+        "final_normalized_progress": {
+          "mean": -0.04840735351602071,
+          "sample_standard_deviation": 0.5893515673194776
+        },
+        "normalized_auc": {
+          "mean": -0.17455507295540038,
+          "sample_standard_deviation": 0.20916746468168282
+        },
+        "target_reach_count": 0,
+        "target_reach_rate": 0.0
+      },
+      "paired_delta_summary": {
+        "best_progress_delta": {
+          "mean": 0.258390743547272,
+          "sample_standard_deviation": 0.48642246264517774,
+          "win_counts": {
+            "matched_classical_wins": 2,
+            "qml_wins": 1,
+            "ties": 0
+          }
+        },
+        "final_progress_delta": {
+          "mean": -0.3756965024040985,
+          "sample_standard_deviation": 0.5044684779133076,
+          "win_counts": {
+            "matched_classical_wins": 1,
+            "qml_wins": 2,
+            "ties": 0
+          }
+        },
+        "normalized_auc_delta": {
+          "mean": -0.33446702466304123,
+          "sample_standard_deviation": 0.3814332252513117,
+          "win_counts": {
+            "matched_classical_wins": 1,
+            "qml_wins": 2,
+            "ties": 0
+          }
+        }
+      },
+      "parameter_reduction": {
+        "matched_actor_vs_ppo_percent": 95.90288315629742,
+        "qml_actor_vs_ppo_percent": 95.90288315629742
+      },
+      "qml": {
+        "actor_parameters": 54,
+        "best_normalized_progress": {
+          "mean": 0.44182728158311746,
+          "sample_standard_deviation": 0.4728741308073594
+        },
+        "final_normalized_progress": {
+          "mean": 0.3272891488880778,
+          "sample_standard_deviation": 0.42098348389390194
+        },
+        "normalized_auc": {
+          "mean": 0.15991195170764086,
+          "sample_standard_deviation": 0.4341965431725851
+        },
+        "target_reach_count": 0,
+        "target_reach_rate": 0.0
+      }
+    },
+    "robotics": {
+      "full_ppo": {
+        "actor_parameters": 1382,
+        "best_normalized_progress": {
+          "mean": 1.0526315789473686,
+          "sample_standard_deviation": 0.0
+        },
+        "final_normalized_progress": {
+          "mean": 1.0159038656954695,
+          "sample_standard_deviation": 0.013049764495390644
+        },
+        "normalized_auc": {
+          "mean": 0.9229137368698397,
+          "sample_standard_deviation": 0.03220700626307124
+        },
+        "target_reach_count": 3,
+        "target_reach_rate": 1.0
+      },
+      "matched_classical": {
+        "actor_parameters": 62,
+        "best_normalized_progress": {
+          "mean": 0.9016516073636347,
+          "sample_standard_deviation": 0.08765489483404237
+        },
+        "final_normalized_progress": {
+          "mean": 0.8978076611459537,
+          "sample_standard_deviation": 0.09093812823438237
+        },
+        "normalized_auc": {
+          "mean": 0.653060017016295,
+          "sample_standard_deviation": 0.06408073551424327
+        },
+        "target_reach_count": 1,
+        "target_reach_rate": 0.3333333333333333
+      },
+      "paired_delta_summary": {
+        "best_progress_delta": {
+          "mean": 0.1431066186801723,
+          "sample_standard_deviation": 0.18540217661448458,
+          "win_counts": {
+            "matched_classical_wins": 3,
+            "qml_wins": 0,
+            "ties": 0
+          }
+        },
+        "final_progress_delta": {
+          "mean": 0.13926267246249127,
+          "sample_standard_deviation": 0.1886726930858653,
+          "win_counts": {
+            "matched_classical_wins": 3,
+            "qml_wins": 0,
+            "ties": 0
+          }
+        },
+        "normalized_auc_delta": {
+          "mean": 0.07915089636308091,
+          "sample_standard_deviation": 0.14535454357488312,
+          "win_counts": {
+            "matched_classical_wins": 2,
+            "qml_wins": 1,
+            "ties": 0
+          }
+        }
+      },
+      "parameter_reduction": {
+        "matched_actor_vs_ppo_percent": 95.51374819102749,
+        "qml_actor_vs_ppo_percent": 95.51374819102749
+      },
+      "qml": {
+        "actor_parameters": 62,
+        "best_normalized_progress": {
+          "mean": 0.7585449886834624,
+          "sample_standard_deviation": 0.23855667877731326
+        },
+        "final_normalized_progress": {
+          "mean": 0.7585449886834624,
+          "sample_standard_deviation": 0.23855667877731326
+        },
+        "normalized_auc": {
+          "mean": 0.5739091206532141,
+          "sample_standard_deviation": 0.19344567630901505
+        },
+        "target_reach_count": 0,
+        "target_reach_rate": 0.0
+      }
+    }
+  },
+  "new_training": false,
+  "parameter_matched_ablation": true,
+  "protocol": "final_rl_qml_ablation",
+  "qml_actor_parameter_reduction_vs_ppo_percent": {
+    "autonomous_driving": 95.90288315629742,
+    "robotics": 95.51374819102749
+  },
+  "qml_computational_advantage_demonstrated": false,
+  "qml_sample_efficiency_advantage_demonstrated": false,
+  "required_seeds": [
+    42,
+    123,
+    456
+  ],
+  "scientific_boundary": {
+    "environments_modified": false,
+    "formal_significance_test_performed": false,
+    "matched_classical_new_training": true,
+    "parameter_matched_representation_ablation": true,
+    "ppo_protocol_modified": false,
+    "qml_architecture_modified": false,
+    "qml_retrained": false,
+    "quantum_hardware_advantage_claimed": false,
+    "quantum_speedup_claimed": false,
+    "statistical_significance_claimed": false,
+    "targets_modified": false,
+    "universal_quantum_claimed": false
+  },
+  "source": "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+  "sprint": "7.6",
+  "status": "FROZEN"
+}

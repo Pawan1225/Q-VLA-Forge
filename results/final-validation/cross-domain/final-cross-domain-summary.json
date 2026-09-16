@@ -1,0 +1,107 @@
+{
+  "claim": "Cross-domain reuse is supported at the framework, interface, robustness-harness, metric-schema, and protocol levels, but not as one universal trained policy or universal safety controller.",
+  "classifications": {
+    "action_recovery_direction": {
+      "classification": "Cross-domain supported",
+      "evidence": {
+        "all_consistent": true,
+        "comparisons": 3,
+        "consistent": 3,
+        "different": 0
+      }
+    },
+    "clean_safety_direction": {
+      "classification": "Cross-domain supported",
+      "evidence": {
+        "all_consistent": true,
+        "comparisons": 2,
+        "consistent": 2,
+        "different": 0
+      }
+    },
+    "framework_reuse": {
+      "classification": "Cross-domain supported",
+      "evidence": "A common safety-filter interface, intervention protocol, robustness harness, metric schema, and seed protocol were reused across autonomous-driving and robotics proxy environments while retaining domain-specific constraints, predictors, clipping semantics, and Lyapunov potentials."
+    },
+    "gaussian_robustness_direction": {
+      "classification": "Domain-dependent",
+      "evidence": {
+        "all_consistent": false,
+        "comparisons": 9,
+        "consistent": 7,
+        "different": 2
+      }
+    },
+    "lyapunov_specific_activation": {
+      "classification": "Domain-dependent",
+      "evidence": {
+        "cross_domain_consistent": false,
+        "driving_activation_observed": true,
+        "robotics_activation_observed": false
+      }
+    },
+    "same_trained_policy_weights": {
+      "classification": "Not demonstrated",
+      "evidence": false
+    },
+    "structured_state_direction": {
+      "classification": "Cross-domain supported",
+      "evidence": {
+        "all_consistent": true,
+        "comparisons": 3,
+        "consistent": 3,
+        "different": 0
+      }
+    },
+    "universal_safety_controller": {
+      "classification": "Not demonstrated",
+      "evidence": false
+    },
+    "zero_shot_cross_domain_transfer": {
+      "classification": "Not demonstrated",
+      "evidence": false
+    }
+  },
+  "domain_specific_findings": [
+    "Driving and robotics retain different safety constraints and threshold semantics.",
+    "Driving and robotics use separate trained PPO policy weights.",
+    "Driving and robotics use different Lyapunov potentials and domain predictors.",
+    "Lyapunov-specific action-perturbation activation was observed only in autonomous driving."
+  ],
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "limitations": [
+    "Synthetic proxy environments.",
+    "Three principal policy seeds.",
+    "Different domain-specific state contracts.",
+    "Different domain-specific reward scales.",
+    "No direct raw reward ranking across domains.",
+    "No direct raw violation-rate ranking across domains.",
+    "Gaussian and structured-state robustness use noisy or perturbed policy observations while the safety layer retains true simulator state.",
+    "No cross-domain policy-weight transfer experiment.",
+    "No physical vehicle evaluation.",
+    "No physical robot evaluation.",
+    "No formal closed-loop stability proof.",
+    "No formal worst-case robustness proof.",
+    "No certification claim.",
+    "No production generalization claim.",
+    "No quantum safety advantage claim."
+  ],
+  "new_principal_runs": false,
+  "new_training": false,
+  "proposal_safe_conclusions": [
+    "A common safety architecture, intervention protocol, robustness harness, and evaluation schema were reused across autonomous driving and robotics.",
+    "Clean explicit safety filtering was effective under both domain-specific pilot safety contracts.",
+    "Structured-state robustness direction was consistent across the two domains for the tested methods.",
+    "Positive action recovery was observed in both domains for clipping and Lyapunov filtering.",
+    "Gaussian robustness was mostly but not universally directionally consistent, with seven of nine cross-domain comparisons aligned.",
+    "Lyapunov-specific candidate-selection activation occurred in driving but not robotics under the tested action perturbations.",
+    "The evidence supports reuse of the safety framework, not a universal controller, direct policy transfer, formal guarantee, or production deployment claim."
+  ],
+  "protocol": "final_cross_domain_comparison",
+  "source": "results/safety/cross-domain/sprint5-cross-domain-package.json",
+  "sprint": "7.8",
+  "status": "FROZEN"
+}
