@@ -1,0 +1,140 @@
+{
+  "architecture": {
+    "action_dim": 3,
+    "fp32_model_size_bytes": 304716,
+    "fusion_dim": 64,
+    "language_dim": 32,
+    "latent_dim": 32,
+    "parameters": 76179,
+    "state_dim": 16,
+    "vision_dim": 64
+  },
+  "baseline_name": "shared_vla_fp32",
+  "baseline_version": "1.0",
+  "domains": {
+    "driving": {
+      "domain": "autonomous_driving",
+      "fp32_model_size_bytes": 304716,
+      "mean_latency_ms": {
+        "mean": 1.736594332808939,
+        "std": 0.38992679633129945,
+        "values": [
+          2.1564800004125573,
+          1.6674169994075783,
+          1.3858859986066818
+        ]
+      },
+      "p95_latency_ms": {
+        "mean": 2.4112333388378224,
+        "std": 0.7021970775866622,
+        "values": [
+          3.2184000010602176,
+          2.0742999913636595,
+          1.9410000240895897
+        ]
+      },
+      "parameters": 76179,
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "test_mae": {
+        "mean": 0.06861458470424016,
+        "std": 0.0035753839920290385,
+        "values": [
+          0.07007423043251038,
+          0.0712292268872261,
+          0.06454029679298401
+        ]
+      },
+      "test_mse": {
+        "mean": 0.012067932014664015,
+        "std": 0.0015086088391748967,
+        "values": [
+          0.01089190412312746,
+          0.013768878765404224,
+          0.011543013155460358
+        ]
+      }
+    },
+    "robotics": {
+      "domain": "robotics",
+      "fp32_model_size_bytes": 304716,
+      "mean_latency_ms": {
+        "mean": 1.9888236651119466,
+        "std": 0.2928189396890631,
+        "values": [
+          2.2912920004455373,
+          1.7067169983056374,
+          1.968461996584665
+        ]
+      },
+      "p95_latency_ms": {
+        "mean": 2.5452999980188906,
+        "std": 0.5574760000503233,
+        "values": [
+          3.1872999970801175,
+          2.1835999796167016,
+          2.265000017359853
+        ]
+      },
+      "parameters": 76179,
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "test_mae": {
+        "mean": 0.0372947504123052,
+        "std": 0.005608959723537195,
+        "values": [
+          0.031649086624383926,
+          0.04286627098917961,
+          0.03736889362335205
+        ]
+      },
+      "test_mse": {
+        "mean": 0.008104669706275066,
+        "std": 0.002484056535872967,
+        "values": [
+          0.0054161748848855495,
+          0.01031467318534851,
+          0.008583161048591137
+        ]
+      }
+    }
+  },
+  "hardware_note": "Sprint 7.3 preserves the latency measurements recorded by the frozen Sprint 1 artifacts. No hardware configuration is inferred where the baseline summary does not explicitly record it.",
+  "protocol": "final_baseline_summary",
+  "provenance": {
+    "evidence_files": [
+      "driving-baseline-seed-42.json",
+      "driving-baseline-seed-123.json",
+      "driving-baseline-seed-456.json",
+      "robotics-baseline-seed-42.json",
+      "robotics-baseline-seed-123.json",
+      "robotics-baseline-seed-456.json",
+      "baseline-validation-summary.json"
+    ],
+    "manifest": "results/sprint1-baseline-manifest.json",
+    "summary": "results/baseline-validation-summary.json"
+  },
+  "required_seeds": [
+    42,
+    123,
+    456
+  ],
+  "sprint": "7.3",
+  "status": "FROZEN",
+  "training_protocol": {
+    "batch_size": 32,
+    "epochs": 20,
+    "loss": "MSELoss",
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "test_size": 128,
+    "train_size": 512,
+    "validation_size": 128
+  }
+}
