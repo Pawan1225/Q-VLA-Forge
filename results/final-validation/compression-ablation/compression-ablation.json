@@ -1,0 +1,201 @@
+{
+  "claim_controls": {
+    "production_scale_extrapolation_allowed": false,
+    "quantum_advantage_claim_allowed": false,
+    "quantum_inspired_compression_advantage_claim_allowed": false,
+    "seven_b_vla_generalization_allowed": false,
+    "tt_mps_superiority_claim_allowed": false
+  },
+  "cross_domain_conclusion": {
+    "methods_meeting_joint_criterion_in_both_domains": [
+      "int8"
+    ]
+  },
+  "domain_conclusions": {
+    "autonomous_driving": {
+      "failing_compressed_methods": [
+        "svd",
+        "tt_mps"
+      ],
+      "passing_compressed_methods": [
+        "int8"
+      ]
+    },
+    "robotics": {
+      "failing_compressed_methods": [
+        "svd",
+        "tt_mps"
+      ],
+      "passing_compressed_methods": [
+        "int8"
+      ]
+    }
+  },
+  "new_experiments": false,
+  "new_training": false,
+  "protocol": {
+    "domains": [
+      "autonomous_driving",
+      "robotics"
+    ],
+    "maximum_relative_mse_degradation_percent": 5.0,
+    "methods": [
+      "fp32",
+      "int8",
+      "svd",
+      "tt_mps"
+    ],
+    "minimum_compression_ratio": 2.0,
+    "statistics": {
+      "center": "arithmetic_mean",
+      "ddof": 1,
+      "n": 3,
+      "spread": "sample_standard_deviation"
+    }
+  },
+  "records": [
+    {
+      "classification": "reference",
+      "compression_ratio": 1.0,
+      "criterion_pass": null,
+      "domain": "autonomous_driving",
+      "latency_mean_ms": 1.7717366662691347,
+      "latency_sample_std_ms": 0.1021013792527053,
+      "method": "fp32",
+      "mse_mean": 0.012067932325104872,
+      "mse_sample_std": 0.001508610051261641,
+      "relative_mse_change_mean_percent": null,
+      "relative_mse_change_sample_std_percent": null,
+      "seed_pass_count": null,
+      "source_artifacts": [
+        "results/compression/compression-validation-summary.json"
+      ]
+    },
+    {
+      "classification": "pass",
+      "compression_ratio": 3.846258709481975,
+      "criterion_pass": true,
+      "domain": "autonomous_driving",
+      "latency_mean_ms": 1.9518523332468856,
+      "latency_sample_std_ms": 0.4673703763760076,
+      "method": "int8",
+      "mse_mean": 0.012040493078529835,
+      "mse_sample_std": 0.0015025893775508466,
+      "relative_mse_change_mean_percent": -0.22516096466215424,
+      "relative_mse_change_sample_std_percent": 0.13334689015909043,
+      "seed_pass_count": 3,
+      "source_artifacts": [
+        "results/compression/compression-validation-summary.json"
+      ]
+    },
+    {
+      "classification": "fail",
+      "compression_ratio": 1.135999642106205,
+      "criterion_pass": false,
+      "domain": "autonomous_driving",
+      "latency_mean_ms": 2.1071843332416997,
+      "latency_sample_std_ms": 0.4034240669513215,
+      "method": "svd",
+      "mse_mean": 0.05839543417096138,
+      "mse_sample_std": 0.009221587940391707,
+      "relative_mse_change_mean_percent": 382.6244778073404,
+      "relative_mse_change_sample_std_percent": 15.1872399337003,
+      "seed_pass_count": 0,
+      "source_artifacts": [
+        "results/compression/compression-validation-summary.json"
+      ]
+    },
+    {
+      "classification": "fail",
+      "compression_ratio": 1.8006240102110762,
+      "criterion_pass": false,
+      "domain": "autonomous_driving",
+      "latency_mean_ms": 2.1838433337203846,
+      "latency_sample_std_ms": 0.3307902469697613,
+      "method": "tt_mps",
+      "mse_mean": 0.16854468484719595,
+      "mse_sample_std": 0.032996984938087566,
+      "relative_mse_change_mean_percent": 1300.1915003210524,
+      "relative_mse_change_sample_std_percent": 254.20125367869903,
+      "seed_pass_count": 0,
+      "source_artifacts": [
+        "results/compression/compression-validation-summary.json"
+      ]
+    },
+    {
+      "classification": "reference",
+      "compression_ratio": 1.0,
+      "criterion_pass": null,
+      "domain": "robotics",
+      "latency_mean_ms": 1.919611666914231,
+      "latency_sample_std_ms": 0.22897578411899164,
+      "method": "fp32",
+      "mse_mean": 0.008104669395834208,
+      "mse_sample_std": 0.002484056121585695,
+      "relative_mse_change_mean_percent": null,
+      "relative_mse_change_sample_std_percent": null,
+      "seed_pass_count": null,
+      "source_artifacts": [
+        "results/compression/compression-validation-summary.json"
+      ]
+    },
+    {
+      "classification": "pass",
+      "compression_ratio": 3.846258709481975,
+      "criterion_pass": true,
+      "domain": "robotics",
+      "latency_mean_ms": 1.6837723331991583,
+      "latency_sample_std_ms": 0.25712918854931516,
+      "method": "int8",
+      "mse_mean": 0.008108097594231367,
+      "mse_sample_std": 0.0025593586530709344,
+      "relative_mse_change_mean_percent": -0.15251875574570348,
+      "relative_mse_change_sample_std_percent": 1.1282471790678248,
+      "seed_pass_count": 3,
+      "source_artifacts": [
+        "results/compression/compression-validation-summary.json"
+      ]
+    },
+    {
+      "classification": "fail",
+      "compression_ratio": 1.295913854109962,
+      "criterion_pass": false,
+      "domain": "robotics",
+      "latency_mean_ms": 1.9008970005476538,
+      "latency_sample_std_ms": 0.12806423677462447,
+      "method": "svd",
+      "mse_mean": 0.1470371832450231,
+      "mse_sample_std": 0.011154043931492412,
+      "relative_mse_change_mean_percent": 1818.5791423398518,
+      "relative_mse_change_sample_std_percent": 519.4089151238921,
+      "seed_pass_count": 0,
+      "source_artifacts": [
+        "results/compression/compression-validation-summary.json"
+      ]
+    },
+    {
+      "classification": "fail",
+      "compression_ratio": 1.8006240102110762,
+      "criterion_pass": false,
+      "domain": "robotics",
+      "latency_mean_ms": 2.3026369982593073,
+      "latency_sample_std_ms": 0.3277027527350446,
+      "method": "tt_mps",
+      "mse_mean": 0.25837425887584686,
+      "mse_sample_std": 0.02023623749337017,
+      "relative_mse_change_mean_percent": 3270.928450823199,
+      "relative_mse_change_sample_std_percent": 895.500820600516,
+      "seed_pass_count": 0,
+      "source_artifacts": [
+        "results/compression/compression-validation-summary.json"
+      ]
+    }
+  ],
+  "required_seeds": [
+    42,
+    123,
+    456
+  ],
+  "sprint": "7.3",
+  "title": "Final Compression Ablation"
+}
