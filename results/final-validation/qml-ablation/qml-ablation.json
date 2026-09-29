@@ -1,0 +1,581 @@
+{
+  "claim_controls": {
+    "production_vla_superiority_claim_allowed": false,
+    "qml_convergence_superiority_claim_allowed": false,
+    "qml_performance_superiority_claim_allowed": false,
+    "qml_sample_efficiency_advantage_claim_allowed": false,
+    "qpu_advantage_claim_allowed": false,
+    "quantum_advantage_claim_allowed": false,
+    "quantum_speedup_claim_allowed": false
+  },
+  "compactness": [
+    {
+      "classical_actor_parameters": 1318,
+      "domain": "autonomous_driving",
+      "parameter_reduction_percent": 95.90288315629742,
+      "qml_actor_parameters": 54,
+      "source_artifacts": [
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json"
+      ],
+      "statistical": false
+    },
+    {
+      "classical_actor_parameters": 1382,
+      "domain": "robotics",
+      "parameter_reduction_percent": 95.51374819102749,
+      "qml_actor_parameters": 62,
+      "source_artifacts": [
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json"
+      ],
+      "statistical": false
+    }
+  ],
+  "cross_domain_summary": {
+    "classical_ppo_target_reach": {
+      "available": 6,
+      "reached": 6
+    },
+    "matched_classical_target_reach": {
+      "available": 6,
+      "reached": 1
+    },
+    "qml_pqc_target_reach": {
+      "available": 6,
+      "reached": 0
+    }
+  },
+  "matched_classical_aggregate": {
+    "autonomous_driving": {
+      "actor_parameters": 54,
+      "environment_steps_to_target": {
+        "mean": null,
+        "sample_standard_deviation": null
+      },
+      "episodes_to_target": {
+        "mean": null,
+        "sample_standard_deviation": null
+      },
+      "final_evaluation_reward": {
+        "mean": -51.89467560698504,
+        "sample_standard_deviation": 23.971476853597913
+      },
+      "final_success_rate": {
+        "mean": 0.0,
+        "sample_standard_deviation": 0.0
+      },
+      "target_reach_count": 0,
+      "target_reach_total": 3,
+      "training_seconds": {
+        "mean": 40.8488593333362,
+        "sample_standard_deviation": 6.57083686228297
+      }
+    },
+    "robotics": {
+      "actor_parameters": 62,
+      "environment_steps_to_target": {
+        "mean": 20000.0,
+        "sample_standard_deviation": null
+      },
+      "episodes_to_target": {
+        "mean": 200.0,
+        "sample_standard_deviation": null
+      },
+      "final_evaluation_reward": {
+        "mean": 0.22066781584774844,
+        "sample_standard_deviation": 0.3507643290877798
+      },
+      "final_success_rate": {
+        "mean": 0.0,
+        "sample_standard_deviation": 0.0
+      },
+      "target_reach_count": 1,
+      "target_reach_total": 3,
+      "training_seconds": {
+        "mean": 41.590558000005935,
+        "sample_standard_deviation": 0.1760029200198811
+      }
+    }
+  },
+  "matched_classical_controls": [
+    {
+      "actor_parameters": 54,
+      "domain": "autonomous_driving",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "final_evaluation_reward": -36.85029827417476,
+      "final_success_rate": 0.0,
+      "seed": 42,
+      "source_artifacts": [
+        "results/rl/ablation/matched-classical-autonomous_driving-seed-42.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 37.49205309996614
+    },
+    {
+      "actor_parameters": 54,
+      "domain": "autonomous_driving",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "final_evaluation_reward": -79.53853755231007,
+      "final_success_rate": 0.0,
+      "seed": 123,
+      "source_artifacts": [
+        "results/rl/ablation/matched-classical-autonomous_driving-seed-123.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 48.4200365000288
+    },
+    {
+      "actor_parameters": 54,
+      "domain": "autonomous_driving",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "final_evaluation_reward": -39.2951909944703,
+      "final_success_rate": 0.0,
+      "seed": 456,
+      "source_artifacts": [
+        "results/rl/ablation/matched-classical-autonomous_driving-seed-456.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 36.63448840001365
+    },
+    {
+      "actor_parameters": 62,
+      "domain": "robotics",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "final_evaluation_reward": 0.029081905936083934,
+      "final_success_rate": 0.0,
+      "seed": 42,
+      "source_artifacts": [
+        "results/rl/ablation/matched-classical-robotics-seed-42.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 41.425773399998434
+    },
+    {
+      "actor_parameters": 62,
+      "domain": "robotics",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "final_evaluation_reward": 0.007419116810320525,
+      "final_success_rate": 0.0,
+      "seed": 123,
+      "source_artifacts": [
+        "results/rl/ablation/matched-classical-robotics-seed-123.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 41.569937899999786
+    },
+    {
+      "actor_parameters": 62,
+      "domain": "robotics",
+      "environment_steps_to_target": 20000,
+      "episodes_to_target": 200,
+      "final_evaluation_reward": 0.6255024247968409,
+      "final_success_rate": 0.0,
+      "seed": 456,
+      "source_artifacts": [
+        "results/rl/ablation/matched-classical-robotics-seed-456.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": true,
+      "training_seconds": 41.77596270001959
+    }
+  ],
+  "new_experiments": false,
+  "new_qml_training": false,
+  "new_training": false,
+  "primary_aggregate": {
+    "autonomous_driving": {
+      "ppo_mlp": {
+        "actor_parameters": 1318,
+        "all_seeds_reached_target": true,
+        "environment_steps_to_target": {
+          "mean": 13333.333333333334,
+          "sample_standard_deviation": 1527.5252316519466
+        },
+        "episodes_to_target": {
+          "mean": 133.66666666666666,
+          "sample_standard_deviation": 15.17673658377628
+        },
+        "final_evaluation_reward": {
+          "mean": -9.200229677202655,
+          "sample_standard_deviation": 1.9357000757441458
+        },
+        "final_success_rate": {
+          "mean": 0.049999999999999996,
+          "sample_standard_deviation": 0.08660254037844387
+        },
+        "target_reach_count": 3,
+        "target_reach_total": 3,
+        "training_seconds": {
+          "mean": 40.47642806667136,
+          "sample_standard_deviation": 0.37006316902033026
+        }
+      },
+      "ppo_pqc": {
+        "actor_parameters": 54,
+        "all_seeds_reached_target": false,
+        "environment_steps_to_target": {
+          "mean": null,
+          "sample_standard_deviation": null
+        },
+        "episodes_to_target": {
+          "mean": null,
+          "sample_standard_deviation": null
+        },
+        "final_evaluation_reward": {
+          "mean": -35.4441675826577,
+          "sample_standard_deviation": 18.964420832192783
+        },
+        "final_success_rate": {
+          "mean": 0.0,
+          "sample_standard_deviation": 0.0
+        },
+        "target_reach_count": 0,
+        "target_reach_total": 3,
+        "training_seconds": {
+          "mean": 5540.605235100006,
+          "sample_standard_deviation": 79.34696415301798
+        }
+      }
+    },
+    "robotics": {
+      "ppo_mlp": {
+        "actor_parameters": 1382,
+        "all_seeds_reached_target": true,
+        "environment_steps_to_target": {
+          "mean": 10000.0,
+          "sample_standard_deviation": 1732.0508075688772
+        },
+        "episodes_to_target": {
+          "mean": 100.0,
+          "sample_standard_deviation": 17.320508075688775
+        },
+        "final_evaluation_reward": {
+          "mean": 0.6328459382840874,
+          "sample_standard_deviation": 0.02881796527171248
+        },
+        "final_success_rate": {
+          "mean": 0.0,
+          "sample_standard_deviation": 0.0
+        },
+        "target_reach_count": 3,
+        "target_reach_total": 3,
+        "training_seconds": {
+          "mean": 47.148239800008014,
+          "sample_standard_deviation": 6.272654690975318
+        }
+      },
+      "ppo_pqc": {
+        "actor_parameters": 62,
+        "all_seeds_reached_target": false,
+        "environment_steps_to_target": {
+          "mean": null,
+          "sample_standard_deviation": null
+        },
+        "episodes_to_target": {
+          "mean": null,
+          "sample_standard_deviation": null
+        },
+        "final_evaluation_reward": {
+          "mean": -0.26700841941663056,
+          "sample_standard_deviation": 0.852654762072075
+        },
+        "final_success_rate": {
+          "mean": 0.0,
+          "sample_standard_deviation": 0.0
+        },
+        "target_reach_count": 0,
+        "target_reach_total": 3,
+        "training_seconds": {
+          "mean": 6403.601790433323,
+          "sample_standard_deviation": 16.11912323466384
+        }
+      }
+    }
+  },
+  "primary_records": [
+    {
+      "actor_parameters": 1318,
+      "domain": "autonomous_driving",
+      "environment_steps_to_target": 12000,
+      "episodes_to_target": 120,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": -11.330714319001789,
+      "final_success_rate": 0.0,
+      "policy": "ppo_mlp",
+      "quantum_hardware_used": false,
+      "seed": 42,
+      "source_artifacts": [
+        "results/rl/ppo/sprint4-ppo-summary.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": true,
+      "training_seconds": 40.859755799989216
+    },
+    {
+      "actor_parameters": 54,
+      "domain": "autonomous_driving",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": -44.04820391567478,
+      "final_success_rate": 0.0,
+      "policy": "ppo_pqc",
+      "quantum_hardware_used": false,
+      "seed": 42,
+      "source_artifacts": [
+        "results/rl/qml/autonomous_driving-seed-42.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 5487.063758800039
+    },
+    {
+      "actor_parameters": 1318,
+      "domain": "autonomous_driving",
+      "environment_steps_to_target": 15000,
+      "episodes_to_target": 150,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": -8.720402744322062,
+      "final_success_rate": 0.0,
+      "policy": "ppo_mlp",
+      "quantum_hardware_used": false,
+      "seed": 123,
+      "source_artifacts": [
+        "results/rl/ppo/sprint4-ppo-summary.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": true,
+      "training_seconds": 40.44829289999325
+    },
+    {
+      "actor_parameters": 54,
+      "domain": "autonomous_driving",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": -48.58139184767694,
+      "final_success_rate": 0.0,
+      "policy": "ppo_pqc",
+      "quantum_hardware_used": false,
+      "seed": 123,
+      "source_artifacts": [
+        "results/rl/qml/autonomous_driving-seed-123.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 5502.987127500004
+    },
+    {
+      "actor_parameters": 1318,
+      "domain": "autonomous_driving",
+      "environment_steps_to_target": 13000,
+      "episodes_to_target": 131,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": -7.549571968284115,
+      "final_success_rate": 0.15,
+      "policy": "ppo_mlp",
+      "quantum_hardware_used": false,
+      "seed": 456,
+      "source_artifacts": [
+        "results/rl/ppo/sprint4-ppo-summary.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": true,
+      "training_seconds": 40.12123550003162
+    },
+    {
+      "actor_parameters": 54,
+      "domain": "autonomous_driving",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": -13.702906984621373,
+      "final_success_rate": 0.0,
+      "policy": "ppo_pqc",
+      "quantum_hardware_used": false,
+      "seed": 456,
+      "source_artifacts": [
+        "results/rl/qml/autonomous_driving-seed-456.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 5631.7648189999745
+    },
+    {
+      "actor_parameters": 1382,
+      "domain": "robotics",
+      "environment_steps_to_target": 9000,
+      "episodes_to_target": 90,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": 0.6022628891812771,
+      "final_success_rate": 0.0,
+      "policy": "ppo_mlp",
+      "quantum_hardware_used": false,
+      "seed": 42,
+      "source_artifacts": [
+        "results/rl/ppo/sprint4-ppo-summary.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": true,
+      "training_seconds": 54.39085950003937
+    },
+    {
+      "actor_parameters": 62,
+      "domain": "robotics",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": -1.2142928619344266,
+      "final_success_rate": 0.0,
+      "policy": "ppo_pqc",
+      "quantum_hardware_used": false,
+      "seed": 42,
+      "source_artifacts": [
+        "results/rl/qml/robotics-seed-42.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 6387.881867999968
+    },
+    {
+      "actor_parameters": 1382,
+      "domain": "robotics",
+      "environment_steps_to_target": 9000,
+      "episodes_to_target": 90,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": 0.6594945290536207,
+      "final_success_rate": 0.0,
+      "policy": "ppo_mlp",
+      "quantum_hardware_used": false,
+      "seed": 123,
+      "source_artifacts": [
+        "results/rl/ppo/sprint4-ppo-summary.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": true,
+      "training_seconds": 43.594322699995246
+    },
+    {
+      "actor_parameters": 62,
+      "domain": "robotics",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": -0.025765169771201614,
+      "final_success_rate": 0.0,
+      "policy": "ppo_pqc",
+      "quantum_hardware_used": false,
+      "seed": 123,
+      "source_artifacts": [
+        "results/rl/qml/robotics-seed-123.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 6402.831041200028
+    },
+    {
+      "actor_parameters": 1382,
+      "domain": "robotics",
+      "environment_steps_to_target": 12000,
+      "episodes_to_target": 120,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": 0.6367803966173644,
+      "final_success_rate": 0.0,
+      "policy": "ppo_mlp",
+      "quantum_hardware_used": false,
+      "seed": 456,
+      "source_artifacts": [
+        "results/rl/ppo/sprint4-ppo-summary.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": true,
+      "training_seconds": 43.45953719998943
+    },
+    {
+      "actor_parameters": 62,
+      "domain": "robotics",
+      "environment_steps_to_target": null,
+      "episodes_to_target": null,
+      "execution_backend": "simulator",
+      "final_evaluation_reward": 0.43903277345573655,
+      "final_success_rate": 0.0,
+      "policy": "ppo_pqc",
+      "quantum_hardware_used": false,
+      "seed": 456,
+      "source_artifacts": [
+        "results/rl/qml/robotics-seed-456.json",
+        "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+        "results/rl/ppo/sprint4-ppo-targets.json"
+      ],
+      "target_reached": false,
+      "training_seconds": 6420.092462099972
+    }
+  ],
+  "protocol": {
+    "domains": [
+      "autonomous_driving",
+      "robotics"
+    ],
+    "execution_backend": "simulator",
+    "maximum_environment_steps_is_not_convergence": true,
+    "non_attainment_rule": "target_reached=false implies environment_steps_to_target=null and episodes_to_target=null",
+    "primary_metric": "environment_steps_to_target",
+    "primary_policies": [
+      "ppo_mlp",
+      "ppo_pqc"
+    ],
+    "quantum_hardware_used": false,
+    "secondary_metrics": [
+      "episodes_to_target",
+      "final_evaluation_reward",
+      "final_success_rate",
+      "training_seconds",
+      "policy_parameters"
+    ]
+  },
+  "required_seeds": [
+    42,
+    123,
+    456
+  ],
+  "scientific_conclusion": "The evaluated PQC policy used substantially fewer trainable actor parameters than the classical PPO actor, but did not demonstrate a sample-efficiency or performance advantage over the classical PPO reference under the frozen Phase 1 protocol.",
+  "source_provenance": [
+    "results/rl/ablation/matched-classical-autonomous_driving-seed-123.json",
+    "results/rl/ablation/matched-classical-autonomous_driving-seed-42.json",
+    "results/rl/ablation/matched-classical-autonomous_driving-seed-456.json",
+    "results/rl/ablation/matched-classical-robotics-seed-123.json",
+    "results/rl/ablation/matched-classical-robotics-seed-42.json",
+    "results/rl/ablation/matched-classical-robotics-seed-456.json",
+    "results/rl/ablation/sprint4-classical-vs-qml-ablation.json",
+    "results/rl/ppo/sprint4-ppo-summary.json",
+    "results/rl/ppo/sprint4-ppo-targets.json",
+    "results/rl/qml/autonomous_driving-seed-123.json",
+    "results/rl/qml/autonomous_driving-seed-42.json",
+    "results/rl/qml/autonomous_driving-seed-456.json",
+    "results/rl/qml/robotics-seed-123.json",
+    "results/rl/qml/robotics-seed-42.json",
+    "results/rl/qml/robotics-seed-456.json"
+  ],
+  "sprint": "7.4",
+  "title": "Final QML Ablation"
+}
