@@ -1,0 +1,207 @@
+{
+  "claim_controls": {
+    "cross_domain_zero_shot_claim_allowed": false,
+    "formal_safety_guarantee_claim_allowed": false,
+    "full_system_superiority_claim_allowed": false,
+    "integrated_phase1_pipeline_claim_allowed": false,
+    "production_safety_claim_allowed": false,
+    "qml_sample_efficiency_superiority_claim_allowed": false,
+    "quantum_advantage_claim_allowed": false,
+    "quantum_speedup_claim_allowed": false,
+    "training_efficiency_superiority_claim_allowed": false,
+    "tt_mps_superiority_claim_allowed": false
+  },
+  "figure_count": 7,
+  "figures": [
+    {
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "figure_id": "architecture",
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "The diagram represents the modular architecture and integration pathway. It does not imply that the complete shared-latent, compression, QML, and safety pipeline was executed end-to-end in Phase 1.",
+        "Driving and robotics used separate trained policy weights.",
+        "Zero-shot cross-domain policy transfer was not evaluated."
+      ],
+      "metrics": [
+        "architectural_component_reuse",
+        "integration_boundary"
+      ],
+      "output_path": "results\\final-validation\\figures\\figure-01-architecture.png",
+      "scientific_scope": "Conceptual representation of frozen Phase 1 components, shared interfaces, and the experimentally unclosed integration boundary.",
+      "source_artifacts": [
+        "results/integration/sprint5-unified-bridge-package.json",
+        "results/safety/cross-domain/sprint5-cross-domain-architecture.json",
+        "results/final-validation/claims/final-claim-registry.json",
+        "results/final-validation/full-system-ablation/full-system-ablation.json"
+      ],
+      "statistical_protocol": "frozen_architecture_and_integration_boundary",
+      "title": "Q-VLA Forge Phase 1 Architecture and Integration Boundary"
+    },
+    {
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "figure_id": "compression_pareto",
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "Compression results were obtained on the compact Phase 1 proxy model and do not establish production-scale VLA compression.",
+        "INT8 storage compression does not imply native compressed-runtime speedup."
+      ],
+      "metrics": [
+        "compression_ratio",
+        "relative_mse_degradation_percent"
+      ],
+      "output_path": "results\\final-validation\\figures\\figure-02-compression-pareto.png",
+      "scientific_scope": "Frozen Phase 1 compression tradeoff under the >=2x compression and <=5% relative MSE-degradation joint criterion.",
+      "source_artifacts": [
+        "results/final-validation/compression-ablation/compression-pareto.csv"
+      ],
+      "statistical_protocol": "three_seed_mean_sample_sd",
+      "title": "Compression Pareto Under Frozen Phase 1 Criteria"
+    },
+    {
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "figure_id": "training_convergence",
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "Target-reaching quantities remain absent when a candidate did not reach its paired FP32 target.",
+        "Phase 1 did not demonstrate a robust >=10% optimizer-step efficiency improvement across all locked seeds.",
+        "CPU wall-clock timing is descriptive."
+      ],
+      "metrics": [
+        "target_reach",
+        "optimizer_steps_to_target"
+      ],
+      "output_path": "results\\final-validation\\figures\\figure-03-training-convergence.png",
+      "scientific_scope": "Frozen target-attainment and optimizer-step evidence without extrapolating missing convergence points.",
+      "source_artifacts": [
+        "results/final-validation/training-efficiency/final-training-efficiency-summary.json",
+        "results/training/training-validation-summary.json"
+      ],
+      "statistical_protocol": "three_seed_mean_sample_sd",
+      "title": "Training Efficiency and Target Attainment"
+    },
+    {
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "figure_id": "rl_sample_efficiency",
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "QML target non-attainment remains non-attainment and is not replaced with the maximum environment-step budget.",
+        "Actor compactness is reported separately from sample efficiency.",
+        "No quantum advantage, quantum speedup, or QML sample-efficiency advantage was demonstrated."
+      ],
+      "metrics": [
+        "target_reach",
+        "environment_steps_to_target",
+        "actor_parameters"
+      ],
+      "output_path": "results\\final-validation\\figures\\figure-04-rl-sample-efficiency.png",
+      "scientific_scope": "Frozen classical PPO, PQC/QML, and matched-classical evidence; parameter compactness is separated from target attainment.",
+      "source_artifacts": [
+        "results/final-validation/qml-ablation/qml-ablation.json",
+        "results/final-validation/qml-ablation/qml-ablation-plot-data.csv"
+      ],
+      "statistical_protocol": "three_seed_mean_sample_sd",
+      "title": "RL/QML Target Attainment and Actor Compactness"
+    },
+    {
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "figure_id": "safety_violations",
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "Zero violation rate means zero observed violations under the frozen clean proxy evaluation only.",
+        "The implemented Lyapunov quantity is an empirical classical safety potential, not a formal closed-loop stability proof.",
+        "During perception perturbations the safety layer retained true simulator state."
+      ],
+      "metrics": [
+        "violation_rate_mean",
+        "violation_rate_sample_std"
+      ],
+      "output_path": "results\\final-validation\\figures\\figure-05-safety-violations.png",
+      "scientific_scope": "Observed clean proxy violation rates for NONE, CLIPPING, and classical LYAPUNOV filtering.",
+      "source_artifacts": [
+        "results/final-validation/safety-ablation/safety-ablation.json",
+        "results/final-validation/safety-ablation/safety-ablation-plot-data.csv"
+      ],
+      "statistical_protocol": "three_seed_mean_sample_sd",
+      "title": "Clean Safety Violation Rate"
+    },
+    {
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "figure_id": "cross_domain",
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "Metrics with different physical meanings and units are not combined into one synthetic aggregate score.",
+        "Cross-domain reuse is supported at framework, interface, evaluation, and protocol levels rather than as one universal trained policy."
+      ],
+      "metrics": [
+        "criterion_status",
+        "target_reach",
+        "observed_clean_violation_status"
+      ],
+      "output_path": "results\\final-validation\\figures\\figure-06-cross-domain.png",
+      "scientific_scope": "Categorical cross-domain evidence comparison without synthetic metric normalization.",
+      "source_artifacts": [
+        "results/final-validation/cross-domain/final-cross-domain-summary.json",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "frozen_cross_domain_categorical_evidence",
+      "title": "Cross-Domain Phase 1 Evidence Comparison"
+    },
+    {
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "figure_id": "ablation_summary",
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "The matrix visualizes evidence status rather than fabricated full-system performance.",
+        "No matched integrated Compression x QML x Safety configuration was directly executed in Phase 1.",
+        "Interaction effects remain a Phase 2 validation objective."
+      ],
+      "metrics": [
+        "evidence_status"
+      ],
+      "output_path": "results\\final-validation\\figures\\figure-07-ablation-evidence.png",
+      "scientific_scope": "Evidence-status visualization of the 2x2x2 full-system factorial design across both proxy domains.",
+      "source_artifacts": [
+        "results/final-validation/full-system-ablation/full-system-ablation.json",
+        "results/final-validation/full-system-ablation/full-system-ablation.csv"
+      ],
+      "statistical_protocol": "frozen_full_system_evidence_classification",
+      "title": "Full-System Factorial Evidence Status"
+    }
+  ],
+  "generated_from_frozen_evidence": true,
+  "new_experiments": false,
+  "new_scientific_results": false,
+  "new_training": false,
+  "required_figure_ids": [
+    "architecture",
+    "compression_pareto",
+    "training_convergence",
+    "rl_sample_efficiency",
+    "safety_violations",
+    "cross_domain",
+    "ablation_summary"
+  ],
+  "sprint": "7.7",
+  "status": "FROZEN"
+}
