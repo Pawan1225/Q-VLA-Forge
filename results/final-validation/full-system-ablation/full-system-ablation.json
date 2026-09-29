@@ -1,0 +1,375 @@
+{
+  "claim_controls": {
+    "cross_domain_zero_shot_claim_allowed": false,
+    "full_system_superiority_claim_allowed": false,
+    "integrated_factorial_validation_claim_allowed": false,
+    "interaction_effect_claim_allowed_without_direct_evidence": false,
+    "production_readiness_claim_allowed": false,
+    "quantum_advantage_claim_allowed": false
+  },
+  "factorial_design": {
+    "configurations": {
+      "a": {
+        "compression": true,
+        "qml": false,
+        "safety": false
+      },
+      "b": {
+        "compression": false,
+        "qml": true,
+        "safety": false
+      },
+      "baseline": {
+        "compression": false,
+        "qml": false,
+        "safety": false
+      },
+      "c": {
+        "compression": false,
+        "qml": false,
+        "safety": true
+      },
+      "d": {
+        "compression": true,
+        "qml": true,
+        "safety": false
+      },
+      "e": {
+        "compression": true,
+        "qml": false,
+        "safety": true
+      },
+      "f": {
+        "compression": false,
+        "qml": true,
+        "safety": true
+      },
+      "full": {
+        "compression": true,
+        "qml": true,
+        "safety": true
+      }
+    },
+    "domains": [
+      "autonomous_driving",
+      "robotics"
+    ],
+    "expected_classifications": 16,
+    "factors": [
+      "compression",
+      "qml",
+      "safety"
+    ]
+  },
+  "interaction_conclusion": "Compression, QML, and safety main effects or interaction effects cannot be estimated from the Phase 1 full-system factorial matrix because no matched integrated factorial configuration was directly executed.",
+  "new_experiments": false,
+  "new_training": false,
+  "phase1": {
+    "component_evidence": {
+      "compression": "Sprint 7.3",
+      "qml": "Sprint 7.4",
+      "safety": "Sprint 7.5"
+    },
+    "component_only_count": 16,
+    "direct_count": 0,
+    "direct_full_system_execution_found": false,
+    "matrix": [
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": false,
+        "configuration": "baseline",
+        "domain": "autonomous_driving",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": false,
+        "safety": false,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json",
+          "results/final-validation/qml-ablation/qml-ablation.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": true,
+        "configuration": "a",
+        "domain": "autonomous_driving",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": false,
+        "safety": false,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": false,
+        "configuration": "b",
+        "domain": "autonomous_driving",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": true,
+        "safety": false,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/qml-ablation/qml-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": false,
+        "configuration": "c",
+        "domain": "autonomous_driving",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": false,
+        "safety": true,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": true,
+        "configuration": "d",
+        "domain": "autonomous_driving",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": true,
+        "safety": false,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json",
+          "results/final-validation/qml-ablation/qml-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": true,
+        "configuration": "e",
+        "domain": "autonomous_driving",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": false,
+        "safety": true,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": false,
+        "configuration": "f",
+        "domain": "autonomous_driving",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": true,
+        "safety": true,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/qml-ablation/qml-ablation.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": true,
+        "configuration": "full",
+        "domain": "autonomous_driving",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": true,
+        "safety": true,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json",
+          "results/final-validation/qml-ablation/qml-ablation.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": false,
+        "configuration": "baseline",
+        "domain": "robotics",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": false,
+        "safety": false,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json",
+          "results/final-validation/qml-ablation/qml-ablation.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": true,
+        "configuration": "a",
+        "domain": "robotics",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": false,
+        "safety": false,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": false,
+        "configuration": "b",
+        "domain": "robotics",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": true,
+        "safety": false,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/qml-ablation/qml-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": false,
+        "configuration": "c",
+        "domain": "robotics",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": false,
+        "safety": true,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": true,
+        "configuration": "d",
+        "domain": "robotics",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": true,
+        "safety": false,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json",
+          "results/final-validation/qml-ablation/qml-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": true,
+        "configuration": "e",
+        "domain": "robotics",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": false,
+        "safety": true,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": false,
+        "configuration": "f",
+        "domain": "robotics",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": true,
+        "safety": true,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/qml-ablation/qml-ablation.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      },
+      {
+        "can_report_end_to_end_metrics": false,
+        "compression": true,
+        "configuration": "full",
+        "domain": "robotics",
+        "evidence_status": "component_only",
+        "notes": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+        "phase_status": "candidate_integrated_validation",
+        "qml": true,
+        "safety": true,
+        "source_artifacts": [
+          "results/final-validation/claims/final-claim-registry.json",
+          "results/safety/final/sprint7-handoff.json",
+          "results/final-validation/compression-ablation/compression-ablation.json",
+          "results/final-validation/qml-ablation/qml-ablation.json",
+          "results/final-validation/safety-ablation/safety-ablation.json"
+        ]
+      }
+    ],
+    "not_evaluated_count": 0,
+    "status": "evaluated_component_evidence"
+  },
+  "phase1_note": "Phase 1 independently evaluated the relevant component pathways, but no matched end-to-end Compression x QML x Safety factorial pipeline was executed. Sprint 4 RL/QML policies consumed compact environment state rather than the Sprint 1 shared VLA latent representation. Larger end-to-end integration remains a Phase 2 objective.",
+  "phase2": {
+    "interaction_effects_to_measure": [
+      "compression",
+      "qml",
+      "safety",
+      "compression_x_qml",
+      "compression_x_safety",
+      "qml_x_safety",
+      "compression_x_qml_x_safety"
+    ],
+    "matched_integrated_factorial_validation_required": true,
+    "status": "candidate_integrated_validation"
+  },
+  "protocol": "sprint7_6_full_system_ablation",
+  "scientific_conclusion": "Phase 1 independently evaluated compression, QML policy, and safety-filter components across both proxy domains. Exact end-to-end factorial combinations were not directly executed, so independently measured component results are not combined into synthetic full-system performance estimates. Matched integrated factorial execution remains a Phase 2 validation objective.",
+  "scientific_controls": {
+    "full_system_end_to_end_metrics_reported": false,
+    "interaction_effects_estimable_with_component_only": false,
+    "predicted_phase2_performance_reported": false,
+    "synthetic_metric_composition_allowed": false
+  },
+  "sprint": "7.6",
+  "status": "FROZEN"
+}
