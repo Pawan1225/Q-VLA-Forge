@@ -1,0 +1,232 @@
+{
+  "claim_controls": {
+    "formal_lyapunov_stability_proof_allowed": false,
+    "formal_stability_guarantee_allowed": false,
+    "forward_invariance_guarantee_allowed": false,
+    "guaranteed_zero_violations_claim_allowed": false,
+    "iso_26262_certification_claim_allowed": false,
+    "production_safety_claim_allowed": false,
+    "quantum_safety_advantage_claim_allowed": false,
+    "real_world_safety_claim_allowed": false,
+    "universal_safety_controller_claim_allowed": false,
+    "worst_case_safety_guarantee_allowed": false
+  },
+  "comparison_semantics": {
+    "binary_pass_fail_threshold_used": false,
+    "clipping": "EVALUATED",
+    "lyapunov": "EVALUATED",
+    "none": "REFERENCE"
+  },
+  "condition": "clean",
+  "domains": [
+    "autonomous_driving",
+    "robotics"
+  ],
+  "lyapunov_mechanism_observations": [
+    {
+      "domain": "autonomous_driving",
+      "interpretation": "Under the frozen clean driving protocol, the complete Lyapunov-guided filter achieved the measured safety outcome. Principal action changes were triggered by domain hard guards; no additional LYAPUNOV_DECREASE intervention was observed.",
+      "lyapunov_decrease_interventions_observed": false,
+      "source_artifacts": [
+        "results/safety/lyapunov-driving/sprint5-driving-lyapunov-summary.json"
+      ]
+    },
+    {
+      "domain": "robotics",
+      "interpretation": "Under the frozen clean robotics protocol, the complete Lyapunov-guided safety filter eliminated all measured executed constraint violations. All observed principal interventions were triggered by frozen robotics domain hard guards. No LYAPUNOV_DECREASE intervention was observed in the principal runs.",
+      "lyapunov_decrease_interventions_observed": false,
+      "source_artifacts": [
+        "results/safety/lyapunov-robotics/sprint5-robotics-lyapunov-summary.json"
+      ]
+    }
+  ],
+  "mechanism_conclusion": "No principal LYAPUNOV_DECREASE intervention was observed in either clean domain evaluation. Observed interventions were attributable to the frozen domain hard-guard mechanisms under the evaluated principal trajectories.",
+  "new_robustness_experiments_performed": false,
+  "new_safety_evaluations_performed": false,
+  "new_training_performed": false,
+  "primary_metric": "violation_rate",
+  "privileged_state_limitation": "The safety layer operated on true simulator state while the policy could receive perturbed observations. The results therefore apply to the frozen Phase 1 simulator contract and do not establish estimated-state or real-world sensing robustness.",
+  "records": [
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate_mean": null,
+      "intervention_rate_sample_std": null,
+      "lyapunov_method_classification": null,
+      "method": "none",
+      "reward_mean": -9.200229677202655,
+      "reward_sample_std": 1.935700075744146,
+      "role": "REFERENCE",
+      "safe_episode_rate_mean": null,
+      "safe_episode_rate_sample_std": null,
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "source_artifacts": [
+        "results/safety/baseline/sprint5-no-filter-safety-summary.json"
+      ],
+      "success_rate_mean": 0.049999999999999996,
+      "success_rate_sample_std": 0.08660254037844387,
+      "violation_absolute_difference_vs_none": 0.0,
+      "violation_rate_mean": 0.39084090909090907,
+      "violation_rate_sample_std": 0.42242665691834197,
+      "violation_relative_reduction_percent_vs_none": null,
+      "zero_observed_violations": false
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate_mean": 0.4175,
+      "intervention_rate_sample_std": 0.41951430249754296,
+      "lyapunov_method_classification": null,
+      "method": "clipping",
+      "reward_mean": -5.212558982989345,
+      "reward_sample_std": 8.335304578504005,
+      "role": "EVALUATED",
+      "safe_episode_rate_mean": null,
+      "safe_episode_rate_sample_std": null,
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "source_artifacts": [
+        "results/safety/clipping/sprint5-clipping-safety-summary.json"
+      ],
+      "success_rate_mean": 0.3333333333333333,
+      "success_rate_sample_std": 0.5773502691896257,
+      "violation_absolute_difference_vs_none": -0.39084090909090907,
+      "violation_rate_mean": 0.0,
+      "violation_rate_sample_std": 0.0,
+      "violation_relative_reduction_percent_vs_none": 99.99999999999999,
+      "zero_observed_violations": true
+    },
+    {
+      "domain": "autonomous_driving",
+      "intervention_rate_mean": 0.4175,
+      "intervention_rate_sample_std": 0.41951430249754296,
+      "lyapunov_method_classification": "classical",
+      "method": "lyapunov",
+      "reward_mean": -5.212558982989345,
+      "reward_sample_std": 8.335304578504005,
+      "role": "EVALUATED",
+      "safe_episode_rate_mean": null,
+      "safe_episode_rate_sample_std": null,
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "source_artifacts": [
+        "results/safety/lyapunov-driving/sprint5-driving-lyapunov-summary.json"
+      ],
+      "success_rate_mean": 0.3333333333333333,
+      "success_rate_sample_std": 0.5773502691896257,
+      "violation_absolute_difference_vs_none": -0.39084090909090907,
+      "violation_rate_mean": 0.0,
+      "violation_rate_sample_std": 0.0,
+      "violation_relative_reduction_percent_vs_none": 99.99999999999999,
+      "zero_observed_violations": true
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate_mean": null,
+      "intervention_rate_sample_std": null,
+      "lyapunov_method_classification": null,
+      "method": "none",
+      "reward_mean": 0.6328459382840873,
+      "reward_sample_std": 0.02881796527171248,
+      "role": "REFERENCE",
+      "safe_episode_rate_mean": null,
+      "safe_episode_rate_sample_std": null,
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "source_artifacts": [
+        "results/safety/baseline/sprint5-no-filter-safety-summary.json"
+      ],
+      "success_rate_mean": 0.0,
+      "success_rate_sample_std": 0.0,
+      "violation_absolute_difference_vs_none": 0.0,
+      "violation_rate_mean": 0.014666666666666666,
+      "violation_rate_sample_std": 0.018536001007049316,
+      "violation_relative_reduction_percent_vs_none": null,
+      "zero_observed_violations": false
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate_mean": 0.014666666666666666,
+      "intervention_rate_sample_std": 0.018536001007049316,
+      "lyapunov_method_classification": null,
+      "method": "clipping",
+      "reward_mean": 0.6778999451491963,
+      "reward_sample_std": 0.03578558135306393,
+      "role": "EVALUATED",
+      "safe_episode_rate_mean": null,
+      "safe_episode_rate_sample_std": null,
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "source_artifacts": [
+        "results/safety/clipping/sprint5-clipping-safety-summary.json"
+      ],
+      "success_rate_mean": 0.0,
+      "success_rate_sample_std": 0.0,
+      "violation_absolute_difference_vs_none": -0.014666666666666666,
+      "violation_rate_mean": 0.0,
+      "violation_rate_sample_std": 0.0,
+      "violation_relative_reduction_percent_vs_none": 100.0,
+      "zero_observed_violations": true
+    },
+    {
+      "domain": "robotics",
+      "intervention_rate_mean": 0.014666666666666666,
+      "intervention_rate_sample_std": 0.018536001007049316,
+      "lyapunov_method_classification": "classical",
+      "method": "lyapunov",
+      "reward_mean": 0.6779026320391401,
+      "reward_sample_std": 0.035787499033232854,
+      "role": "EVALUATED",
+      "safe_episode_rate_mean": null,
+      "safe_episode_rate_sample_std": null,
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "source_artifacts": [
+        "results/safety/lyapunov-robotics/sprint5-robotics-lyapunov-summary.json"
+      ],
+      "success_rate_mean": 0.0,
+      "success_rate_sample_std": 0.0,
+      "violation_absolute_difference_vs_none": -0.014666666666666666,
+      "violation_rate_mean": 0.0,
+      "violation_rate_sample_std": 0.0,
+      "violation_relative_reduction_percent_vs_none": 100.0,
+      "zero_observed_violations": true
+    }
+  ],
+  "required_seeds": [
+    42,
+    123,
+    456
+  ],
+  "safety_methods": [
+    "none",
+    "clipping",
+    "lyapunov"
+  ],
+  "scientific_conclusion": "Under the frozen Phase 1 synthetic clean-safety contracts, both clipping and the classical Lyapunov-guided filter produced zero observed violation-step rate in the evaluated runs, compared with nonzero violation rates for the no-safety reference. These empirical observations do not constitute a formal stability, forward-invariance, certification, production-safety, real-world-safety, or quantum-safety guarantee.",
+  "source_provenance": [
+    "results/safety/baseline/sprint5-no-filter-safety-summary.json",
+    "results/safety/clipping/sprint5-clipping-safety-summary.json",
+    "results/safety/lyapunov-driving/sprint5-driving-lyapunov-summary.json",
+    "results/safety/lyapunov-robotics/sprint5-robotics-lyapunov-summary.json"
+  ],
+  "sprint": "7.5",
+  "title": "Final Safety Ablation"
+}
