@@ -1,0 +1,9 @@
+Domain,Method,Parameters / Model Size,Compression Ratio,MSE,Relative ΔMSE,Latency,Criterion
+Driving,FP32,Not measured,1.000×,0.012068 ± 0.001509,Not applicable,Not measured,REFERENCE
+Driving,INT8,Not measured,3.846×,0.012040 ± 0.001503,-0.225% ± 0.133%,Not measured,PASS
+Driving,SVD,Not measured,1.136×,0.058395 ± 0.009222,382.624% ± 15.187%,Not measured,FAIL
+Driving,TT/MPS,Not measured,1.801×,0.168545 ± 0.032997,1300.192% ± 254.201%,Not measured,FAIL
+Robotics,FP32,Not measured,1.000×,0.008105 ± 0.002484,Not applicable,Not measured,REFERENCE
+Robotics,INT8,Not measured,3.846×,0.008108 ± 0.002559,-0.153% ± 1.128%,Not measured,PASS
+Robotics,SVD,Not measured,1.296×,0.147037 ± 0.011154,1818.579% ± 519.409%,Not measured,FAIL
+Robotics,TT/MPS,Not measured,1.801×,0.258374 ± 0.020236,3270.928% ± 895.501%,Not measured,FAIL

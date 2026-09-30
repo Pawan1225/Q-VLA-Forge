@@ -1,0 +1,252 @@
+{
+  "claim_controls": {
+    "formal_lyapunov_stability_claim_allowed": false,
+    "full_system_superiority_claim_allowed": false,
+    "guaranteed_zero_violations_claim_allowed": false,
+    "iso_26262_certification_claim_allowed": false,
+    "production_readiness_claim_allowed": false,
+    "qml_performance_superiority_claim_allowed": false,
+    "qml_sample_efficiency_advantage_claim_allowed": false,
+    "quantum_advantage_claim_allowed": false,
+    "quantum_speedup_claim_allowed": false,
+    "robust_training_efficiency_improvement_claim_allowed": false,
+    "tt_mps_superiority_claim_allowed": false,
+    "zero_shot_cross_domain_transfer_claim_allowed": false
+  },
+  "generated_from_frozen_evidence": true,
+  "new_experiments": false,
+  "new_scientific_results": false,
+  "new_training": false,
+  "required_table_ids": [
+    "compression",
+    "training",
+    "rl",
+    "safety",
+    "cross_domain"
+  ],
+  "sprint": "7.8",
+  "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+  "status": "FROZEN",
+  "synthetic_metric_composition": false,
+  "table_count": 5,
+  "tables": [
+    {
+      "claim_controls": {
+        "formal_lyapunov_stability_claim_allowed": false,
+        "full_system_superiority_claim_allowed": false,
+        "guaranteed_zero_violations_claim_allowed": false,
+        "iso_26262_certification_claim_allowed": false,
+        "production_readiness_claim_allowed": false,
+        "qml_performance_superiority_claim_allowed": false,
+        "qml_sample_efficiency_advantage_claim_allowed": false,
+        "quantum_advantage_claim_allowed": false,
+        "quantum_speedup_claim_allowed": false,
+        "robust_training_efficiency_improvement_claim_allowed": false,
+        "tt_mps_superiority_claim_allowed": false,
+        "zero_shot_cross_domain_transfer_claim_allowed": false
+      },
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "limitations": [
+        "Results are from the compact Phase 1 proxy VLA model.",
+        "MSE and MAE are supervised regression metrics; they must not be relabeled as generic accuracy.",
+        "INT8 storage compression does not establish native compressed-runtime speedup.",
+        "Evaluated SVD and TT/MPS configurations did not satisfy the joint frozen Phase 1 criterion."
+      ],
+      "metrics": [
+        "compression_ratio",
+        "mse",
+        "relative_mse_change_percent",
+        "latency",
+        "criterion_status"
+      ],
+      "output_file": "results/final-validation/tables/compression-table.csv",
+      "row_count": 8,
+      "source_artifacts": [
+        "results/final-validation/compression-ablation/compression-ablation.json",
+        "results/final-validation/compression-ablation/compression-pareto.csv",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "compression",
+      "title": "Compression Results"
+    },
+    {
+      "claim_controls": {
+        "formal_lyapunov_stability_claim_allowed": false,
+        "full_system_superiority_claim_allowed": false,
+        "guaranteed_zero_violations_claim_allowed": false,
+        "iso_26262_certification_claim_allowed": false,
+        "production_readiness_claim_allowed": false,
+        "qml_performance_superiority_claim_allowed": false,
+        "qml_sample_efficiency_advantage_claim_allowed": false,
+        "quantum_advantage_claim_allowed": false,
+        "quantum_speedup_claim_allowed": false,
+        "robust_training_efficiency_improvement_claim_allowed": false,
+        "tt_mps_superiority_claim_allowed": false,
+        "zero_shot_cross_domain_transfer_claim_allowed": false
+      },
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "limitations": [
+        "Phase 1 did not demonstrate a robust >=10% optimizer-step efficiency improvement across both domains and all locked seeds.",
+        "Target-reaching quantities remain missing when the paired target was not reached.",
+        "Memory must be reported as Not measured when the Sprint 3 evidence does not contain it.",
+        "CPU wall-clock timing is descriptive."
+      ],
+      "metrics": [
+        "target_reach",
+        "steps_to_target",
+        "training_time",
+        "memory_if_measured",
+        "final_validation_loss",
+        "test_mse",
+        "efficiency_result"
+      ],
+      "output_file": "results/final-validation/tables/training-table.csv",
+      "row_count": 4,
+      "source_artifacts": [
+        "results/final-validation/training-efficiency/final-training-efficiency-summary.json",
+        "results/training/training-validation-summary.json",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "training",
+      "title": "Training Efficiency Results"
+    },
+    {
+      "claim_controls": {
+        "formal_lyapunov_stability_claim_allowed": false,
+        "full_system_superiority_claim_allowed": false,
+        "guaranteed_zero_violations_claim_allowed": false,
+        "iso_26262_certification_claim_allowed": false,
+        "production_readiness_claim_allowed": false,
+        "qml_performance_superiority_claim_allowed": false,
+        "qml_sample_efficiency_advantage_claim_allowed": false,
+        "quantum_advantage_claim_allowed": false,
+        "quantum_speedup_claim_allowed": false,
+        "robust_training_efficiency_improvement_claim_allowed": false,
+        "tt_mps_superiority_claim_allowed": false,
+        "zero_shot_cross_domain_transfer_claim_allowed": false
+      },
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "limitations": [
+        "QML target non-attainment remains Not reached and is not replaced with the 20,000-step budget.",
+        "Actor compactness is reported separately from sample efficiency and performance.",
+        "No quantum advantage, quantum speedup, or QML sample-efficiency advantage was demonstrated."
+      ],
+      "metrics": [
+        "target_reach",
+        "steps_to_target",
+        "final_reward",
+        "final_success_rate",
+        "actor_parameters",
+        "parameter_reduction_percent"
+      ],
+      "output_file": "results/final-validation/tables/rl-table.csv",
+      "row_count": 6,
+      "source_artifacts": [
+        "results/final-validation/qml-ablation/qml-ablation.json",
+        "results/final-validation/qml-ablation/qml-ablation-plot-data.csv",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "rl",
+      "title": "RL / QML Results"
+    },
+    {
+      "claim_controls": {
+        "formal_lyapunov_stability_claim_allowed": false,
+        "full_system_superiority_claim_allowed": false,
+        "guaranteed_zero_violations_claim_allowed": false,
+        "iso_26262_certification_claim_allowed": false,
+        "production_readiness_claim_allowed": false,
+        "qml_performance_superiority_claim_allowed": false,
+        "qml_sample_efficiency_advantage_claim_allowed": false,
+        "quantum_advantage_claim_allowed": false,
+        "quantum_speedup_claim_allowed": false,
+        "robust_training_efficiency_improvement_claim_allowed": false,
+        "tt_mps_superiority_claim_allowed": false,
+        "zero_shot_cross_domain_transfer_claim_allowed": false
+      },
+      "domains": [
+        "autonomous_driving",
+        "robotics"
+      ],
+      "limitations": [
+        "Zero violation rate means zero observed violations under the frozen proxy evaluation only.",
+        "The Lyapunov quantity is an empirical classical safety potential, not a formal stability proof.",
+        "Action-perturbation recovery evidence must not be mixed into the primary clean safety-ablation rows.",
+        "During perception perturbations the safety layer retained true simulator state."
+      ],
+      "metrics": [
+        "violation_rate",
+        "reward",
+        "success_rate",
+        "intervention_rate",
+        "evidence_role"
+      ],
+      "output_file": "results/final-validation/tables/safety-table.csv",
+      "row_count": 6,
+      "source_artifacts": [
+        "results/final-validation/safety-ablation/safety-ablation.json",
+        "results/final-validation/safety-ablation/safety-ablation-plot-data.csv",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "safety",
+      "title": "Safety Results"
+    },
+    {
+      "claim_controls": {
+        "formal_lyapunov_stability_claim_allowed": false,
+        "full_system_superiority_claim_allowed": false,
+        "guaranteed_zero_violations_claim_allowed": false,
+        "iso_26262_certification_claim_allowed": false,
+        "production_readiness_claim_allowed": false,
+        "qml_performance_superiority_claim_allowed": false,
+        "qml_sample_efficiency_advantage_claim_allowed": false,
+        "quantum_advantage_claim_allowed": false,
+        "quantum_speedup_claim_allowed": false,
+        "robust_training_efficiency_improvement_claim_allowed": false,
+        "tt_mps_superiority_claim_allowed": false,
+        "zero_shot_cross_domain_transfer_claim_allowed": false
+      },
+      "domains": [
+        "autonomous_driving",
+        "robotics",
+        "cross_domain"
+      ],
+      "limitations": [
+        "Cross-domain reuse is supported at framework, interface, protocol, and evaluation levels.",
+        "Driving and robotics used separate trained policy weights.",
+        "Domain-specific constraints, predictors, and safety semantics remain distinct.",
+        "No synthetic aggregate score is permitted.",
+        "No matched integrated Compression x QML x Safety factorial pipeline was directly executed in Phase 1."
+      ],
+      "metrics": [
+        "component_result",
+        "shared_framework_status",
+        "shared_weights_status",
+        "evidence_boundary"
+      ],
+      "output_file": "results/final-validation/tables/cross-domain-table.csv",
+      "row_count": 9,
+      "source_artifacts": [
+        "results/final-validation/cross-domain/final-cross-domain-summary.json",
+        "results/final-validation/full-system-ablation/full-system-ablation.json",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "cross_domain",
+      "title": "Cross-Domain Evidence Summary"
+    }
+  ]
+}

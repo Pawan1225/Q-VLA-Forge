@@ -1,0 +1,10 @@
+Component / Method,Driving Result,Robotics Result,Shared Across Domains?,Evidence Boundary
+Shared AI/DL architecture,Shared architecture components available,Shared architecture components available,Framework/components: YES; same trained policy weights: NO,"Cross-domain reuse is supported at the framework, interface, robustness-harness, metric-schema, and protocol levels, but not as one universal trained policy or universal safety controller."
+INT8,PASS,PASS,Same method/protocol family: YES,Storage-compression evidence only; no production runtime claim.
+SVD,FAIL,FAIL,Same method/protocol family: YES,Evaluated configuration failed the joint criterion.
+TT/MPS,FAIL,FAIL,Same method/protocol family: YES,Quantum-inspired tensor-network method; no superiority claim.
+Classical PPO,Target reaches 3/3,Target reaches 3/3,Evaluation framework: YES; same learned weights: NO,Separate domain policies and reward/state contracts.
+QML/PQC,Target reaches 0/3,Target reaches 0/3,Evaluation framework/PQC family: YES; same trained weights: NO,No QML sample-efficiency advantage or quantum advantage demonstrated.
+Clipping,Violation rate 0.000 ± 0.000,Violation rate 0.000 ± 0.000,Safety abstraction: YES; constraints/semantics: domain-specific,Zero observed violations are empirical only.
+Lyapunov,Violation rate 0.000 ± 0.000,Violation rate 0.000 ± 0.000,Safety abstraction: YES; domain-specific predictor/constraints,Classical empirical safety potential; no formal stability guarantee.
+Full-system factorial,COMPONENT_ONLY,COMPONENT_ONLY,Direct integrated evidence: NO,DIRECT = 0; COMPONENT_ONLY = 16; interaction effects remain Phase 2 work.

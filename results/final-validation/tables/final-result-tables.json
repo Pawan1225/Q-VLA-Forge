@@ -1,0 +1,511 @@
+{
+  "claim_controls": {
+    "formal_lyapunov_stability_claim_allowed": false,
+    "full_system_superiority_claim_allowed": false,
+    "guaranteed_zero_violations_claim_allowed": false,
+    "iso_26262_certification_claim_allowed": false,
+    "production_readiness_claim_allowed": false,
+    "qml_performance_superiority_claim_allowed": false,
+    "qml_sample_efficiency_advantage_claim_allowed": false,
+    "quantum_advantage_claim_allowed": false,
+    "quantum_speedup_claim_allowed": false,
+    "robust_training_efficiency_improvement_claim_allowed": false,
+    "tt_mps_superiority_claim_allowed": false,
+    "zero_shot_cross_domain_transfer_claim_allowed": false
+  },
+  "generated_from_frozen_evidence": true,
+  "missing_value_semantics": {
+    "not_applicable": "Not applicable",
+    "not_measured": "Not measured",
+    "not_reached": "Not reached"
+  },
+  "new_experiments": false,
+  "new_scientific_results": false,
+  "new_training": false,
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "sprint": "7.8",
+  "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+  "status": "FROZEN",
+  "synthetic_metric_composition": false,
+  "tables": {
+    "compression": {
+      "columns": [
+        "Domain",
+        "Method",
+        "Parameters / Model Size",
+        "Compression Ratio",
+        "MSE",
+        "Relative \u0394MSE",
+        "Latency",
+        "Criterion"
+      ],
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "Results are from the compact Phase 1 proxy VLA model.",
+        "MSE and MAE are supervised regression metrics; they must not be relabeled as generic accuracy.",
+        "INT8 storage compression does not establish native compressed-runtime speedup.",
+        "Evaluated SVD and TT/MPS configurations did not satisfy the joint frozen Phase 1 criterion."
+      ],
+      "metrics": [
+        "compression_ratio",
+        "mse",
+        "relative_mse_change_percent",
+        "latency",
+        "criterion_status"
+      ],
+      "rows": [
+        {
+          "Compression Ratio": "1.000\u00d7",
+          "Criterion": "REFERENCE",
+          "Domain": "Driving",
+          "Latency": "Not measured",
+          "MSE": "0.012068 \u00b1 0.001509",
+          "Method": "FP32",
+          "Parameters / Model Size": "Not measured",
+          "Relative \u0394MSE": "Not applicable"
+        },
+        {
+          "Compression Ratio": "3.846\u00d7",
+          "Criterion": "PASS",
+          "Domain": "Driving",
+          "Latency": "Not measured",
+          "MSE": "0.012040 \u00b1 0.001503",
+          "Method": "INT8",
+          "Parameters / Model Size": "Not measured",
+          "Relative \u0394MSE": "-0.225% \u00b1 0.133%"
+        },
+        {
+          "Compression Ratio": "1.136\u00d7",
+          "Criterion": "FAIL",
+          "Domain": "Driving",
+          "Latency": "Not measured",
+          "MSE": "0.058395 \u00b1 0.009222",
+          "Method": "SVD",
+          "Parameters / Model Size": "Not measured",
+          "Relative \u0394MSE": "382.624% \u00b1 15.187%"
+        },
+        {
+          "Compression Ratio": "1.801\u00d7",
+          "Criterion": "FAIL",
+          "Domain": "Driving",
+          "Latency": "Not measured",
+          "MSE": "0.168545 \u00b1 0.032997",
+          "Method": "TT/MPS",
+          "Parameters / Model Size": "Not measured",
+          "Relative \u0394MSE": "1300.192% \u00b1 254.201%"
+        },
+        {
+          "Compression Ratio": "1.000\u00d7",
+          "Criterion": "REFERENCE",
+          "Domain": "Robotics",
+          "Latency": "Not measured",
+          "MSE": "0.008105 \u00b1 0.002484",
+          "Method": "FP32",
+          "Parameters / Model Size": "Not measured",
+          "Relative \u0394MSE": "Not applicable"
+        },
+        {
+          "Compression Ratio": "3.846\u00d7",
+          "Criterion": "PASS",
+          "Domain": "Robotics",
+          "Latency": "Not measured",
+          "MSE": "0.008108 \u00b1 0.002559",
+          "Method": "INT8",
+          "Parameters / Model Size": "Not measured",
+          "Relative \u0394MSE": "-0.153% \u00b1 1.128%"
+        },
+        {
+          "Compression Ratio": "1.296\u00d7",
+          "Criterion": "FAIL",
+          "Domain": "Robotics",
+          "Latency": "Not measured",
+          "MSE": "0.147037 \u00b1 0.011154",
+          "Method": "SVD",
+          "Parameters / Model Size": "Not measured",
+          "Relative \u0394MSE": "1818.579% \u00b1 519.409%"
+        },
+        {
+          "Compression Ratio": "1.801\u00d7",
+          "Criterion": "FAIL",
+          "Domain": "Robotics",
+          "Latency": "Not measured",
+          "MSE": "0.258374 \u00b1 0.020236",
+          "Method": "TT/MPS",
+          "Parameters / Model Size": "Not measured",
+          "Relative \u0394MSE": "3270.928% \u00b1 895.501%"
+        }
+      ],
+      "source_artifacts": [
+        "results/final-validation/compression-ablation/compression-ablation.json",
+        "results/final-validation/compression-ablation/compression-pareto.csv",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "compression",
+      "title": "Compression Results"
+    },
+    "cross_domain": {
+      "columns": [
+        "Component / Method",
+        "Driving Result",
+        "Robotics Result",
+        "Shared Across Domains?",
+        "Evidence Boundary"
+      ],
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "Cross-domain reuse is supported at framework, interface, protocol, and evaluation levels.",
+        "Driving and robotics used separate trained policy weights.",
+        "Domain-specific constraints, predictors, and safety semantics remain distinct.",
+        "No synthetic aggregate score is permitted.",
+        "No matched integrated Compression x QML x Safety factorial pipeline was directly executed in Phase 1."
+      ],
+      "metrics": [
+        "component_result",
+        "shared_framework_status",
+        "shared_weights_status",
+        "evidence_boundary"
+      ],
+      "rows": [
+        {
+          "Component / Method": "Shared AI/DL architecture",
+          "Driving Result": "Shared architecture components available",
+          "Evidence Boundary": "Cross-domain reuse is supported at the framework, interface, robustness-harness, metric-schema, and protocol levels, but not as one universal trained policy or universal safety controller.",
+          "Robotics Result": "Shared architecture components available",
+          "Shared Across Domains?": "Framework/components: YES; same trained policy weights: NO"
+        },
+        {
+          "Component / Method": "INT8",
+          "Driving Result": "PASS",
+          "Evidence Boundary": "Storage-compression evidence only; no production runtime claim.",
+          "Robotics Result": "PASS",
+          "Shared Across Domains?": "Same method/protocol family: YES"
+        },
+        {
+          "Component / Method": "SVD",
+          "Driving Result": "FAIL",
+          "Evidence Boundary": "Evaluated configuration failed the joint criterion.",
+          "Robotics Result": "FAIL",
+          "Shared Across Domains?": "Same method/protocol family: YES"
+        },
+        {
+          "Component / Method": "TT/MPS",
+          "Driving Result": "FAIL",
+          "Evidence Boundary": "Quantum-inspired tensor-network method; no superiority claim.",
+          "Robotics Result": "FAIL",
+          "Shared Across Domains?": "Same method/protocol family: YES"
+        },
+        {
+          "Component / Method": "Classical PPO",
+          "Driving Result": "Target reaches 3/3",
+          "Evidence Boundary": "Separate domain policies and reward/state contracts.",
+          "Robotics Result": "Target reaches 3/3",
+          "Shared Across Domains?": "Evaluation framework: YES; same learned weights: NO"
+        },
+        {
+          "Component / Method": "QML/PQC",
+          "Driving Result": "Target reaches 0/3",
+          "Evidence Boundary": "No QML sample-efficiency advantage or quantum advantage demonstrated.",
+          "Robotics Result": "Target reaches 0/3",
+          "Shared Across Domains?": "Evaluation framework/PQC family: YES; same trained weights: NO"
+        },
+        {
+          "Component / Method": "Clipping",
+          "Driving Result": "Violation rate 0.000 \u00b1 0.000",
+          "Evidence Boundary": "Zero observed violations are empirical only.",
+          "Robotics Result": "Violation rate 0.000 \u00b1 0.000",
+          "Shared Across Domains?": "Safety abstraction: YES; constraints/semantics: domain-specific"
+        },
+        {
+          "Component / Method": "Lyapunov",
+          "Driving Result": "Violation rate 0.000 \u00b1 0.000",
+          "Evidence Boundary": "Classical empirical safety potential; no formal stability guarantee.",
+          "Robotics Result": "Violation rate 0.000 \u00b1 0.000",
+          "Shared Across Domains?": "Safety abstraction: YES; domain-specific predictor/constraints"
+        },
+        {
+          "Component / Method": "Full-system factorial",
+          "Driving Result": "COMPONENT_ONLY",
+          "Evidence Boundary": "DIRECT = 0; COMPONENT_ONLY = 16; interaction effects remain Phase 2 work.",
+          "Robotics Result": "COMPONENT_ONLY",
+          "Shared Across Domains?": "Direct integrated evidence: NO"
+        }
+      ],
+      "source_artifacts": [
+        "results/final-validation/cross-domain/final-cross-domain-summary.json",
+        "results/final-validation/full-system-ablation/full-system-ablation.json",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "cross_domain",
+      "title": "Cross-Domain Evidence Summary"
+    },
+    "rl": {
+      "columns": [
+        "Domain",
+        "Policy",
+        "Target Reaches",
+        "Steps to Target",
+        "Final Reward",
+        "Final Success Rate",
+        "Actor Parameters",
+        "Parameter Reduction"
+      ],
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "QML target non-attainment remains Not reached and is not replaced with the 20,000-step budget.",
+        "Actor compactness is reported separately from sample efficiency and performance.",
+        "No quantum advantage, quantum speedup, or QML sample-efficiency advantage was demonstrated."
+      ],
+      "metrics": [
+        "target_reach",
+        "steps_to_target",
+        "final_reward",
+        "final_success_rate",
+        "actor_parameters",
+        "parameter_reduction_percent"
+      ],
+      "rows": [
+        {
+          "Actor Parameters": 1318,
+          "Domain": "Driving",
+          "Final Reward": "-9.200 \u00b1 1.936",
+          "Final Success Rate": "0.050 \u00b1 0.087",
+          "Parameter Reduction": "Not applicable",
+          "Policy": "Classical PPO / MLP",
+          "Steps to Target": "13333.333 \u00b1 1527.525",
+          "Target Reaches": "3/3"
+        },
+        {
+          "Actor Parameters": 54,
+          "Domain": "Driving",
+          "Final Reward": "-35.444 \u00b1 18.964",
+          "Final Success Rate": "0.000 \u00b1 0.000",
+          "Parameter Reduction": "95.90%",
+          "Policy": "QML / PQC",
+          "Steps to Target": "Not reached",
+          "Target Reaches": "0/3"
+        },
+        {
+          "Actor Parameters": 1382,
+          "Domain": "Robotics",
+          "Final Reward": "0.633 \u00b1 0.029",
+          "Final Success Rate": "0.000 \u00b1 0.000",
+          "Parameter Reduction": "Not applicable",
+          "Policy": "Classical PPO / MLP",
+          "Steps to Target": "10000.000 \u00b1 1732.051",
+          "Target Reaches": "3/3"
+        },
+        {
+          "Actor Parameters": 62,
+          "Domain": "Robotics",
+          "Final Reward": "-0.267 \u00b1 0.853",
+          "Final Success Rate": "0.000 \u00b1 0.000",
+          "Parameter Reduction": "95.51%",
+          "Policy": "QML / PQC",
+          "Steps to Target": "Not reached",
+          "Target Reaches": "0/3"
+        },
+        {
+          "Actor Parameters": 54,
+          "Domain": "Driving",
+          "Final Reward": "-51.895 \u00b1 23.971",
+          "Final Success Rate": "0.000 \u00b1 0.000",
+          "Parameter Reduction": "95.90%",
+          "Policy": "Matched classical control",
+          "Steps to Target": "Not reached",
+          "Target Reaches": "0/3"
+        },
+        {
+          "Actor Parameters": 62,
+          "Domain": "Robotics",
+          "Final Reward": "0.221 \u00b1 0.351",
+          "Final Success Rate": "0.000 \u00b1 0.000",
+          "Parameter Reduction": "95.51%",
+          "Policy": "Matched classical control",
+          "Steps to Target": "20000.000",
+          "Target Reaches": "1/3"
+        }
+      ],
+      "source_artifacts": [
+        "results/final-validation/qml-ablation/qml-ablation.json",
+        "results/final-validation/qml-ablation/qml-ablation-plot-data.csv",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "rl",
+      "title": "RL / QML Results"
+    },
+    "safety": {
+      "columns": [
+        "Domain",
+        "Method",
+        "Violation Rate",
+        "Reward",
+        "Success Rate",
+        "Activation / Intervention",
+        "Evidence Role"
+      ],
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "Zero violation rate means zero observed violations under the frozen proxy evaluation only.",
+        "The Lyapunov quantity is an empirical classical safety potential, not a formal stability proof.",
+        "Action-perturbation recovery evidence must not be mixed into the primary clean safety-ablation rows.",
+        "During perception perturbations the safety layer retained true simulator state."
+      ],
+      "metrics": [
+        "violation_rate",
+        "reward",
+        "success_rate",
+        "intervention_rate",
+        "evidence_role"
+      ],
+      "rows": [
+        {
+          "Activation / Intervention": "Not applicable",
+          "Domain": "Driving",
+          "Evidence Role": "Baseline",
+          "Method": "NONE",
+          "Reward": "-9.200 \u00b1 1.936",
+          "Success Rate": "0.050 \u00b1 0.087",
+          "Violation Rate": "0.391 \u00b1 0.422"
+        },
+        {
+          "Activation / Intervention": "0.417 \u00b1 0.420",
+          "Domain": "Driving",
+          "Evidence Role": "Classical empirical safety filter",
+          "Method": "CLIPPING",
+          "Reward": "-5.213 \u00b1 8.335",
+          "Success Rate": "0.333 \u00b1 0.577",
+          "Violation Rate": "0.000 \u00b1 0.000"
+        },
+        {
+          "Activation / Intervention": "0.417 \u00b1 0.420",
+          "Domain": "Driving",
+          "Evidence Role": "Classical empirical safety filter",
+          "Method": "LYAPUNOV",
+          "Reward": "-5.213 \u00b1 8.335",
+          "Success Rate": "0.333 \u00b1 0.577",
+          "Violation Rate": "0.000 \u00b1 0.000"
+        },
+        {
+          "Activation / Intervention": "Not applicable",
+          "Domain": "Robotics",
+          "Evidence Role": "Baseline",
+          "Method": "NONE",
+          "Reward": "0.633 \u00b1 0.029",
+          "Success Rate": "0.000 \u00b1 0.000",
+          "Violation Rate": "0.015 \u00b1 0.019"
+        },
+        {
+          "Activation / Intervention": "0.015 \u00b1 0.019",
+          "Domain": "Robotics",
+          "Evidence Role": "Classical empirical safety filter",
+          "Method": "CLIPPING",
+          "Reward": "0.678 \u00b1 0.036",
+          "Success Rate": "0.000 \u00b1 0.000",
+          "Violation Rate": "0.000 \u00b1 0.000"
+        },
+        {
+          "Activation / Intervention": "0.015 \u00b1 0.019",
+          "Domain": "Robotics",
+          "Evidence Role": "Classical empirical safety filter",
+          "Method": "LYAPUNOV",
+          "Reward": "0.678 \u00b1 0.036",
+          "Success Rate": "0.000 \u00b1 0.000",
+          "Violation Rate": "0.000 \u00b1 0.000"
+        }
+      ],
+      "source_artifacts": [
+        "results/final-validation/safety-ablation/safety-ablation.json",
+        "results/final-validation/safety-ablation/safety-ablation-plot-data.csv",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "safety",
+      "title": "Safety Results"
+    },
+    "training": {
+      "columns": [
+        "Domain",
+        "Method",
+        "Target Reached",
+        "Steps to Target",
+        "Training Time",
+        "Memory",
+        "Final Validation Loss / MSE",
+        "Efficiency Result"
+      ],
+      "generated_from_frozen_evidence": true,
+      "limitations": [
+        "Phase 1 did not demonstrate a robust >=10% optimizer-step efficiency improvement across both domains and all locked seeds.",
+        "Target-reaching quantities remain missing when the paired target was not reached.",
+        "Memory must be reported as Not measured when the Sprint 3 evidence does not contain it.",
+        "CPU wall-clock timing is descriptive."
+      ],
+      "metrics": [
+        "target_reach",
+        "steps_to_target",
+        "training_time",
+        "memory_if_measured",
+        "final_validation_loss",
+        "test_mse",
+        "efficiency_result"
+      ],
+      "rows": [
+        {
+          "Domain": "Driving",
+          "Efficiency Result": "FAIL",
+          "Final Validation Loss / MSE": "0.014642 \u00b1 0.003234",
+          "Memory": "Not measured",
+          "Method": "Trainable SVD",
+          "Steps to Target": "282.667 \u00b1 24.440",
+          "Target Reached": "3/3",
+          "Training Time": "9.371 \u00b1 0.511 s"
+        },
+        {
+          "Domain": "Driving",
+          "Efficiency Result": "FAIL",
+          "Final Validation Loss / MSE": "0.040067 \u00b1 0.029402",
+          "Memory": "Not measured",
+          "Method": "Trainable TT/MPS",
+          "Steps to Target": "Not reached",
+          "Target Reached": "0/3",
+          "Training Time": "Not reached"
+        },
+        {
+          "Domain": "Robotics",
+          "Efficiency Result": "FAIL",
+          "Final Validation Loss / MSE": "0.018958 \u00b1 0.006411",
+          "Memory": "Not measured",
+          "Method": "Trainable SVD",
+          "Steps to Target": "Not reached",
+          "Target Reached": "0/3",
+          "Training Time": "Not reached"
+        },
+        {
+          "Domain": "Robotics",
+          "Efficiency Result": "FAIL",
+          "Final Validation Loss / MSE": "0.049764 \u00b1 0.007475",
+          "Memory": "Not measured",
+          "Method": "Trainable TT/MPS",
+          "Steps to Target": "Not reached",
+          "Target Reached": "0/3",
+          "Training Time": "Not reached"
+        }
+      ],
+      "source_artifacts": [
+        "results/final-validation/training-efficiency/final-training-efficiency-summary.json",
+        "results/training/training-validation-summary.json",
+        "results/final-validation/statistics/final-statistics.json"
+      ],
+      "statistical_protocol": "mean \u00b1 sample SD across n=3 locked seeds (42, 123, 456) for seed-dependent quantities; deterministic values remain plain values",
+      "table_id": "training",
+      "title": "Training Efficiency Results"
+    }
+  }
+}
