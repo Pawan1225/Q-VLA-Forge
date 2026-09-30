@@ -1,667 +1,898 @@
+"""Final Phase 1 evidence dashboard for Q-VLA Forge."""
+
 from __future__ import annotations
 
-import json
 from pathlib import Path
+from typing import Any
 
 import pandas as pd
 import streamlit as st
 
-from dashboard.data_loader import (
-    experiments_dataframe,
-    load_result_files,
+from q_vla_forge.evaluation.dashboard_evidence import (
+    DOMAINS,
+    MISSING_CANONICAL_EVIDENCE,
+    REQUIRED_SEEDS,
+    MissingCanonicalEvidenceError,
+    load_dashboard_evidence,
 )
 
-RESULTS_DIR = Path("results")
+ROOT = Path(__file__).resolve().parents[1]
+
+DOMAIN_OPTIONS = {
+    "All Domains": None,
+    "Autonomous Driving": "Driving",
+    "Robotics": "Robotics",
+}
+
+DOMAIN_METADATA = {
+    "All Domains": None,
+    "Autonomous Driving": "autonomous_driving",
+    "Robotics": "robotics",
+}
 
 
 st.set_page_config(
-    page_title="Q-VLA Forge Dashboard",
+    page_title="Q-VLA Forge | Phase 1 Evidence",
     page_icon="⚛️",
     layout="wide",
 )
 
 
 @st.cache_data
-def load_dashboard_data() -> pd.DataFrame:
-    """Load experiment results into a DataFrame."""
-    records = load_result_files(RESULTS_DIR)
-    return experiments_dataframe(records)
+def load_evidence() -> dict[str, Any]:
+    """Load the canonical frozen Sprint 7 evidence package."""
+    return load_dashboard_evidence(ROOT)
 
 
-def render_overview(dataframe: pd.DataFrame) -> None:
-    """Render project-level experiment statistics."""
-    st.header("Overview")
+def filter_domain_rows(
+    rows: list[dict[str, str]],
+    selected_domain: str,
+) -> list[dict[str, str]]:
+    """Filter canonical table rows without recomputing statistics."""
+    domain_label = DOMAIN_OPTIONS[selected_domain]
 
-    total_experiments = len(dataframe)
+    if domain_label is None:
+        return rows
 
-    if dataframe.empty:
-        driving_experiments = 0
-        robotics_experiments = 0
-        unique_methods = 0
-        seeds = 0
-    else:
-        driving_experiments = int((dataframe["domain"] == "autonomous_driving").sum())
+    if not rows:
+        return rows
 
-        robotics_experiments = int((dataframe["domain"] == "robotics").sum())
+    if "Domain" not in rows[0]:
+        return rows
 
-        unique_methods = int(dataframe["method"].dropna().nunique())
+    return [row for row in rows if row.get("Domain") == domain_label]
 
-        seeds = int(dataframe["seed"].dropna().nunique())
+
+def render_header(
+    evidence: dict[str, Any],
+) -> None:
+    """Render Phase 1 dashboard headline status."""
+    st.title("Q-VLA Forge — Phase 1 Evidence Dashboard")
+
+    st.caption(
+        "Frozen reviewer-facing evidence for the "
+        "autonomous-driving and robotics proxy domains."
+    )
 
     (
-        column1,
-        column2,
-        column3,
-        column4,
-        column5,
-    ) = st.columns(5)
+        col1,
+        col2,
+        col3,
+        col4,
+        col5,
+        col6,
+    ) = st.columns(6)
 
-    column1.metric(
-        "Experiments",
-        total_experiments,
+    col1.metric(
+        "Domains",
+        len(evidence["domains"]),
     )
 
-    column2.metric(
-        "Driving",
-        driving_experiments,
-    )
-
-    column3.metric(
-        "Robotics",
-        robotics_experiments,
-    )
-
-    column4.metric(
-        "Methods",
-        unique_methods,
-    )
-
-    column5.metric(
+    col2.metric(
         "Seeds",
-        seeds,
+        len(evidence["seeds"]),
     )
 
-    st.subheader("Frozen Sprint 1 Baseline")
+    col3.metric(
+        "Challenge Bottlenecks",
+        len(evidence["challenge_bottlenecks"]),
+    )
 
-    summary_path = RESULTS_DIR / "baseline-validation-summary.json"
+    col4.metric(
+        "Final Figures",
+        len(evidence["figures"]),
+    )
 
-    manifest_path = RESULTS_DIR / "sprint1-baseline-manifest.json"
+    col5.metric(
+        "Final Tables",
+        len(evidence["tables"]),
+    )
 
-    if summary_path.exists() and manifest_path.exists():
-        summary = json.loads(
-            summary_path.read_text(
-                encoding="utf-8",
-            )
-        )
+    col6.metric(
+        "Direct Factorial Runs",
+        evidence["full_system_status"]["DIRECT"],
+    )
 
-        manifest = json.loads(
-            manifest_path.read_text(
-                encoding="utf-8",
-            )
-        )
-
-        (
-            baseline_col1,
-            baseline_col2,
-            baseline_col3,
-            baseline_col4,
-        ) = st.columns(4)
-
-        baseline_col1.metric(
-            "Baseline",
-            manifest["baseline_name"],
-        )
-
-        baseline_col2.metric(
-            "Version",
-            manifest["baseline_version"],
-        )
-
-        baseline_col3.metric(
-            "Parameters",
-            f"{manifest['parameters']:,}",
-        )
-
-        baseline_col4.metric(
-            "FP32 Size",
-            (f"{manifest['fp32_model_size_bytes'] / (1024**2):.4f} MB"),
-        )
-
-        (
-            metric_col1,
-            metric_col2,
-            metric_col3,
-            metric_col4,
-        ) = st.columns(4)
-
-        metric_col1.metric(
-            "Driving MSE",
-            (
-                f"{summary['driving']['test_mse']['mean']:.6f} "
-                f"± "
-                f"{summary['driving']['test_mse']['std']:.6f}"
-            ),
-        )
-
-        metric_col2.metric(
-            "Driving MAE",
-            (
-                f"{summary['driving']['test_mae']['mean']:.6f} "
-                f"± "
-                f"{summary['driving']['test_mae']['std']:.6f}"
-            ),
-        )
-
-        metric_col3.metric(
-            "Robotics MSE",
-            (
-                f"{summary['robotics']['test_mse']['mean']:.6f} "
-                f"± "
-                f"{summary['robotics']['test_mse']['std']:.6f}"
-            ),
-        )
-
-        metric_col4.metric(
-            "Robotics MAE",
-            (
-                f"{summary['robotics']['test_mae']['mean']:.6f} "
-                f"± "
-                f"{summary['robotics']['test_mae']['std']:.6f}"
-            ),
-        )
-
-        st.caption(
-            "Seeds: "
-            + ", ".join(str(seed) for seed in manifest["seeds"])
-            + " | Shared latent: "
-            + str(manifest["latent_dim"])
-            + "-D"
-            + " | Action output: "
-            + str(manifest["action_dim"])
-            + "-D"
-        )
-
-    else:
-        st.info("Frozen Sprint 1 baseline artifacts " "are not available yet.")
-
-    st.subheader("Frozen Sprint 2 Compression Result")
+    st.success("Evidence Status: PHASE 1 FROZEN")
 
     (
-        sprint2_col1,
-        sprint2_col2,
-        sprint2_col3,
-        sprint2_col4,
+        control1,
+        control2,
+        control3,
+        control4,
     ) = st.columns(4)
 
-    sprint2_col1.metric(
-        "Validation Results",
-        "18",
+    control1.metric(
+        "New Training",
+        "No",
     )
 
-    sprint2_col2.metric(
-        "Ablation Points",
-        "20",
+    control2.metric(
+        "New Experiments",
+        "No",
     )
 
-    sprint2_col3.metric(
-        "Frozen Artifacts",
-        "17",
+    control3.metric(
+        "Quantum Hardware Used",
+        "No",
     )
 
-    sprint2_col4.metric(
-        "Cross-Domain Pareto",
-        "INT8",
-    )
-
-    st.caption(
-        "INT8 was the only tested compression "
-        "family that satisfied the ≥2× compression "
-        "and ≤5% relative test-MSE-change pilot "
-        "criterion across all three seeds in both "
-        "domains."
+    control4.metric(
+        "Production Validation",
+        "No",
     )
 
     st.caption(
-        "TT/open-boundary MPS via TT-SVD was "
-        "evaluated as one quantum-inspired "
-        "tensor-network family. No quantum "
-        "hardware or native compressed-runtime "
-        "speedup is claimed."
-    )
-
-    sprint2_manifest_path = (
-        RESULTS_DIR / "compression" / "sprint2-compression-manifest.json"
-    )
-
-    if sprint2_manifest_path.exists():
-        sprint2_manifest = json.loads(
-            sprint2_manifest_path.read_text(
-                encoding="utf-8",
-            )
-        )
-
-        st.caption(
-            "Sprint 2 manifest status: "
-            f"{sprint2_manifest['status']} "
-            "| Validation seeds: "
-            + ", ".join(str(seed) for seed in sprint2_manifest["validation_seeds"])
-            + " | Quantum hardware used: "
-            + str(sprint2_manifest["quantum_hardware_used"])
-        )
-
-    st.subheader("Sprint Progress")
-
-    progress = pd.DataFrame(
-        [
-            (
-                "0.1 Repository",
-                "Complete",
-            ),
-            (
-                "0.2 Environment",
-                "Complete",
-            ),
-            (
-                "0.3 Classical Stack",
-                "Complete",
-            ),
-            (
-                "0.4 Quantum Stack",
-                "Complete",
-            ),
-            (
-                "0.5 Experiment Foundation",
-                "Complete",
-            ),
-            (
-                "0.6 Configuration",
-                "Complete",
-            ),
-            (
-                "0.7 Dashboard",
-                "Complete",
-            ),
-            (
-                "1 Shared AI/DL Baseline",
-                "Complete",
-            ),
-            (
-                "1.11 Driving Baseline",
-                "Complete",
-            ),
-            (
-                "1.12 Robotics Baseline",
-                "Complete",
-            ),
-            (
-                "1.13 Multi-Seed Validation",
-                "Complete",
-            ),
-            (
-                "1.14 Sprint 1 Final Quality Gate",
-                "Complete",
-            ),
-            (
-                "2 Compression",
-                "Complete",
-            ),
-            (
-                "2.1 Compression Contracts",
-                "Complete",
-            ),
-            (
-                "2.2 Compression Target Analysis",
-                "Complete",
-            ),
-            (
-                "2.3 INT8 Quantization",
-                "Complete",
-            ),
-            (
-                "2.4 SVD Low-Rank Compression",
-                "Complete",
-            ),
-            (
-                "2.5 TT / TT-SVD",
-                "Complete",
-            ),
-            (
-                "2.6 MPS Mapping",
-                "Complete",
-            ),
-            (
-                "2.7 Driving Compression Experiments",
-                "Complete",
-            ),
-            (
-                "2.8 Robotics Compression Experiments",
-                "Complete",
-            ),
-            (
-                "2.9 Three-Seed Compression Validation",
-                "Complete",
-            ),
-            (
-                "2.10 Compression–Accuracy Pareto",
-                "Complete",
-            ),
-            (
-                "2.11 Ablation + Classical vs QI",
-                "Complete",
-            ),
-            (
-                "2.12 Dashboard + Proposal Evidence",
-                "Complete",
-            ),
-            (
-                "2.13 Sprint 2 Final Quality Gate",
-                "Complete",
-            ),
-            (
-                "3 Training Efficiency",
-                "Pending",
-            ),
-            (
-                "4 RL + QML",
-                "Pending",
-            ),
-            (
-                "5 Safety + Robustness",
-                "Pending",
-            ),
-            (
-                "6 Unified Architecture",
-                "Pending",
-            ),
-            (
-                "7 Validation",
-                "Pending",
-            ),
-        ],
-        columns=[
-            "Sprint",
-            "Status",
-        ],
-    )
-
-    st.dataframe(
-        progress,
-        width="stretch",
-        hide_index=True,
+        "Primary statistics: mean ± sample SD, "
+        "n = 3 locked seeds "
+        f"({', '.join(str(seed) for seed in REQUIRED_SEEDS)})."
     )
 
 
-def render_experiment_tracker(
-    dataframe: pd.DataFrame,
-) -> None:
-    """Render the full experiment tracker."""
-    st.header("Experiment Tracker")
+def render_domain_selector() -> str:
+    """Render domain-level presentation filter."""
+    st.sidebar.header("Phase 1 Evidence")
 
-    if dataframe.empty:
-        st.info("No experiment results are available yet.")
-        return
-
-    domains = sorted(dataframe["domain"].dropna().unique().tolist())
-
-    methods = sorted(dataframe["method"].dropna().unique().tolist())
-
-    domain_filter = st.multiselect(
+    selected_domain = st.sidebar.selectbox(
         "Domain",
-        options=domains,
-        default=domains,
+        options=list(DOMAIN_OPTIONS),
+        index=0,
     )
 
-    method_filter = st.multiselect(
-        "Method",
-        options=methods,
-        default=methods,
+    st.sidebar.caption(
+        "Statistics are read from frozen evidence. "
+        "Changing this selector does not recompute results."
     )
 
-    filtered = dataframe.copy()
+    st.sidebar.markdown("### Locked Seeds")
 
-    if domain_filter:
-        filtered = filtered[filtered["domain"].isin(domain_filter)]
+    for seed in REQUIRED_SEEDS:
+        st.sidebar.code(str(seed))
 
-    if method_filter:
-        filtered = filtered[filtered["method"].isin(method_filter)]
-
-    st.dataframe(
-        filtered,
-        width="stretch",
-        hide_index=True,
-    )
+    return selected_domain
 
 
-def render_benchmarks(
-    dataframe: pd.DataFrame,
+def render_compression_card(
+    evidence: dict[str, Any],
+    selected_domain: str,
 ) -> None:
-    """Render benchmark metrics from experiment records."""
-    st.header("Benchmark Dashboard")
+    """Render criterion-specific compression evidence."""
+    st.subheader("Compression")
 
-    if dataframe.empty:
-        st.info("Benchmark results will appear here " "once experiments are executed.")
-        return
-
-    metric_columns = [
-        column for column in dataframe.columns if column.startswith("metric_")
-    ]
-
-    if not metric_columns:
-        st.info("No benchmark metrics are available yet.")
-        return
-
-    selected_metric = st.selectbox(
-        "Select metric",
-        metric_columns,
+    st.caption(
+        "Frozen criterion: ≥2.0× compression and " "≤5% relative MSE degradation."
     )
 
-    chart_data = dataframe[
-        [
-            "experiment_id",
-            selected_metric,
-        ]
-    ].dropna()
+    outcomes = evidence["criterion_outcomes"]["compression"]
 
-    if chart_data.empty:
-        st.info("No values are available for this metric.")
-        return
+    selected_label = DOMAIN_OPTIONS[selected_domain]
 
-    chart_data = chart_data.set_index("experiment_id")
+    methods = (
+        "INT8",
+        "SVD",
+        "TT/MPS",
+    )
 
-    st.bar_chart(chart_data)
+    columns = st.columns(3)
+
+    for column, method in zip(
+        columns,
+        methods,
+        strict=True,
+    ):
+        domain_results = outcomes[method]
+
+        if selected_label is None:
+            statuses = set(domain_results.values())
+
+            if statuses == {"PASS"}:
+                value = "PASS"
+                detail = "both domains"
+            elif statuses == {"FAIL"}:
+                value = "FAIL"
+                detail = "both domains"
+            else:
+                value = "MIXED"
+                detail = "domain dependent"
+        else:
+            value = domain_results[selected_label]
+
+            detail = selected_label
+
+        column.metric(
+            method,
+            value,
+        )
+
+        column.caption(detail)
+
+    st.info(
+        "INT8 is the only evaluated compression "
+        "method that satisfies the frozen joint "
+        "criterion in both proxy domains."
+    )
+
+
+def render_training_card(
+    evidence: dict[str, Any],
+) -> None:
+    """Render the frozen training-efficiency conclusion."""
+    st.subheader("Training Efficiency")
+
+    result = evidence["criterion_outcomes"]["training_efficiency"]
+
+    st.metric(
+        "Robust ≥10% Efficiency Improvement",
+        result["phase1_result"],
+    )
+
+    st.caption("Frozen target: " + result["threshold"])
+
+    st.warning(
+        "Isolated target reaches are not interpreted "
+        "as a robust cross-domain efficiency improvement."
+    )
+
+
+def _domain_rl_rows(
+    evidence: dict[str, Any],
+    selected_domain: str,
+) -> list[dict[str, str]]:
+    rows = evidence["tables"]["rl"]
+
+    return filter_domain_rows(
+        rows,
+        selected_domain,
+    )
+
+
+def _sum_target_reaches(
+    rows: list[dict[str, str]],
+    policy: str,
+) -> tuple[int, int]:
+    reached = 0
+    total = 0
+
+    for row in rows:
+        if row["Policy"] != policy:
+            continue
+
+        left, right = row["Target Reaches"].split("/")
+
+        reached += int(left)
+
+        total += int(right)
+
+    return (
+        reached,
+        total,
+    )
+
+
+def render_rl_card(
+    evidence: dict[str, Any],
+    selected_domain: str,
+) -> None:
+    """Render RL target attainment and separate PQC compactness."""
+    st.subheader("RL / QML")
+
+    rows = _domain_rl_rows(
+        evidence,
+        selected_domain,
+    )
+
+    policies = (
+        (
+            "Classical PPO / MLP",
+            "Classical PPO",
+        ),
+        (
+            "Matched classical control",
+            "Matched Classical",
+        ),
+        (
+            "QML / PQC",
+            "QML / PQC",
+        ),
+    )
+
+    columns = st.columns(3)
+
+    for column, (
+        policy,
+        label,
+    ) in zip(
+        columns,
+        policies,
+        strict=True,
+    ):
+        reached, total = _sum_target_reaches(
+            rows,
+            policy,
+        )
+
+        column.metric(
+            label,
+            f"{reached}/{total}",
+        )
+
+    st.markdown("#### PQC Actor Compactness")
+
+    compactness = evidence["criterion_outcomes"]["rl_alignment"]["pqc_compactness"]
+
+    selected_label = DOMAIN_OPTIONS[selected_domain]
+
+    if selected_label is None:
+        left, right = st.columns(2)
+
+        left.metric(
+            "Driving Parameter Reduction",
+            compactness["Driving"],
+        )
+
+        right.metric(
+            "Robotics Parameter Reduction",
+            compactness["Robotics"],
+        )
+    else:
+        st.metric(
+            f"{selected_label} Parameter Reduction",
+            compactness[selected_label],
+        )
+
+    st.warning(
+        "Actor compactness is separate from "
+        "sample efficiency and policy performance. "
+        "Phase 1 did not demonstrate a QML "
+        "sample-efficiency advantage."
+    )
+
+
+def render_safety_card(
+    evidence: dict[str, Any],
+    selected_domain: str,
+) -> None:
+    """Render clean empirical safety evidence."""
+    st.subheader("Safety")
+
+    safety = evidence["criterion_outcomes"]["safety"]
+
+    selected_label = DOMAIN_OPTIONS[selected_domain]
+
+    domains = (
+        (
+            "Driving",
+            "Autonomous Driving",
+        ),
+        (
+            "Robotics",
+            "Robotics",
+        ),
+    )
+
+    if selected_label is not None:
+        domains = tuple(item for item in domains if item[0] == selected_label)
+
+    for domain_key, domain_label in domains:
+        st.markdown(f"**{domain_label}**")
+
+        columns = st.columns(3)
+
+        for column, method in zip(
+            columns,
+            (
+                "NONE",
+                "CLIPPING",
+                "LYAPUNOV",
+            ),
+            strict=True,
+        ):
+            column.metric(
+                method,
+                safety[domain_key][method],
+            )
+
+    st.warning(
+        "Empirical proxy result only. Zero observed "
+        "violations do not establish formal stability, "
+        "certification, or production-safety guarantees."
+    )
+
+
+def render_bottleneck_overview(
+    evidence: dict[str, Any],
+    selected_domain: str,
+) -> None:
+    """Render the four challenge bottleneck sections."""
+    st.header("Challenge Bottleneck Overview")
+
+    left, right = st.columns(2)
+
+    with left:
+        with st.container(border=True):
+            render_compression_card(
+                evidence,
+                selected_domain,
+            )
+
+        with st.container(border=True):
+            render_rl_card(
+                evidence,
+                selected_domain,
+            )
+
+    with right:
+        with st.container(border=True):
+            render_training_card(evidence)
+
+        with st.container(border=True):
+            render_safety_card(
+                evidence,
+                selected_domain,
+            )
+
+
+def render_final_figures(
+    evidence: dict[str, Any],
+    selected_domain: str,
+) -> None:
+    """Render the seven frozen Sprint 7.7 figures."""
+    st.header("Final Phase 1 Figures")
+
+    st.info(
+        "These are frozen Sprint 7.7 figures. "
+        "The domain selector does not regenerate "
+        "or alter the underlying plots."
+    )
+
+    domain_metadata = DOMAIN_METADATA[selected_domain]
+
+    figures = []
+
+    for figure in evidence["figures"]:
+        domains = figure.get(
+            "domains",
+            [],
+        )
+
+        if domain_metadata is not None and domain_metadata not in domains:
+            continue
+
+        figures.append(figure)
+
+    for index in range(
+        0,
+        len(figures),
+        2,
+    ):
+        columns = st.columns(2)
+
+        for offset in range(2):
+            position = index + offset
+
+            if position >= len(figures):
+                continue
+
+            figure = figures[position]
+
+            path = ROOT / str(figure["output_path"]).replace(
+                "\\",
+                "/",
+            )
+
+            with columns[offset]:
+                st.subheader(figure["title"])
+
+                st.image(
+                    str(path),
+                    use_container_width=True,
+                )
+
+                st.caption(figure["scientific_scope"])
+
+                with st.expander("Figure provenance"):
+                    st.write(
+                        "**Figure ID:**",
+                        figure["figure_id"],
+                    )
+
+                    st.write(
+                        "**Statistical protocol:**",
+                        figure["statistical_protocol"],
+                    )
+
+                    st.write("**Source artifacts:**")
+
+                    for source in figure["source_artifacts"]:
+                        st.code(source)
+
+                    st.write("**Limitations:**")
+
+                    for limitation in figure["limitations"]:
+                        st.write(f"- {limitation}")
+
+
+def render_final_tables(
+    evidence: dict[str, Any],
+    selected_domain: str,
+) -> None:
+    """Render the five canonical Sprint 7.8 result tables."""
+    st.header("Final Result Tables")
+
+    table_manifest = evidence["table_manifest"]
+
+    metadata = {item["table_id"]: item for item in table_manifest["tables"]}
+
+    for table_id in (
+        "compression",
+        "training",
+        "rl",
+        "safety",
+        "cross_domain",
+    ):
+        record = metadata[table_id]
+
+        rows = filter_domain_rows(
+            evidence["tables"][table_id],
+            selected_domain,
+        )
+
+        st.subheader(record["title"])
+
+        st.dataframe(
+            pd.DataFrame(rows),
+            width="stretch",
+            hide_index=True,
+        )
+
+        with st.expander("Table provenance"):
+            st.write(
+                "**Statistical protocol:**",
+                record["statistical_protocol"],
+            )
+
+            st.write("**Source artifacts:**")
+
+            for source in record["source_artifacts"]:
+                st.code(source)
+
+            st.write("**Limitations:**")
+
+            for limitation in record["limitations"]:
+                st.write(f"- {limitation}")
+
+
+def _ablation_rows(
+    evidence: dict[str, Any],
+    area: str,
+) -> list[dict[str, str]]:
+    return [row for row in evidence["component_ablation"] if row["area"] == area]
 
 
 def render_ablation(
-    dataframe: pd.DataFrame,
+    evidence: dict[str, Any],
 ) -> None:
-    """Render current and planned Q-VLA Forge ablations."""
-    st.header("Ablation Dashboard")
+    """Render measured component evidence and full-system boundary."""
+    st.header("Ablation Evidence")
 
-    st.write(
-        "Sprint 2 compression-target ablation is "
-        "complete. The final system-level ablation "
-        "in Sprint 7 will compare:"
-    )
-
-    st.markdown("""
-| Variant | Compression | QML | Safety |
-|---|---|---|---|
-| Baseline | No | No | No |
-| Compression Only | Yes | No | No |
-| QML Only | No | Yes | No |
-| Safety Only | No | No | Yes |
-| Compression + QML | Yes | Yes | No |
-| Compression + Safety | Yes | No | Yes |
-| QML + Safety | No | Yes | Yes |
-| Full Hybrid | Yes | Yes | Yes |
-""")
-
-    st.subheader("Sprint 2 Compression Ablation")
-
-    st.metric(
-        "Completed Target-Level Points",
-        "20",
-    )
-
-    st.caption(
-        "Classical SVD and quantum-inspired "
-        "TT/MPS were evaluated on matched "
-        "architectural targets using seed 42."
-    )
-
-    st.caption(
-        "Targets: fusion, latent, action, " "fusion + latent, and all eligible layers."
-    )
-
-    if dataframe.empty:
-        st.info("Experiment-tracker records are not " "available yet.")
-        return
-
-    st.caption(
-        "Future system-level experiment records "
-        "will populate this section during Sprint 7."
-    )
-
-
-def render_evidence() -> None:
-    """Render proposal evidence tracking."""
-    st.header("Proposal Evidence")
-
-    evidence = pd.DataFrame(
-        [
-            {
-                "Claim": (
-                    "INT8 compression exceeds the " "2× pilot target in both domains"
-                ),
-                "Evidence": ("Sprint 2 — 3-seed validation"),
-                "Figure": "Compression Pareto",
-                "Proposal Ready": True,
-            },
-            {
-                "Claim": (
-                    "INT8 preserves task performance " "under the Sprint 2 criterion"
-                ),
-                "Evidence": ("Sprint 2 — 3-seed validation"),
-                "Figure": "Compression Pareto",
-                "Proposal Ready": True,
-            },
-            {
-                "Claim": (
-                    "TT/MPS quantum-inspired "
-                    "compression was implemented "
-                    "and evaluated"
-                ),
-                "Evidence": ("Sprint 2 — TT-SVD + MPS mapping"),
-                "Figure": ("Compression Pareto / Ablation"),
-                "Proposal Ready": True,
-            },
-            {
-                "Claim": (
-                    "TT/MPS did not satisfy the "
-                    "compression-quality pilot "
-                    "criterion"
-                ),
-                "Evidence": ("Sprint 2 — 3-seed validation"),
-                "Figure": "Compression Pareto",
-                "Proposal Ready": True,
-            },
-            {
-                "Claim": (
-                    "Classical SVD and quantum-inspired "
-                    "TT/MPS were compared on matched "
-                    "architectural targets"
-                ),
-                "Evidence": ("Sprint 2 — 20-point ablation"),
-                "Figure": "Compression Ablation",
-                "Proposal Ready": True,
-            },
-            {
-                "Claim": (
-                    "Shared architecture operates " "across driving and robotics"
-                ),
-                "Evidence": ("Sprint 1 + Sprint 2"),
-                "Figure": ("Cross-Domain Comparison"),
-                "Proposal Ready": True,
-            },
-            {
-                "Claim": ("Compressed representations " "improve training efficiency"),
-                "Evidence": "Pending Sprint 3",
-                "Figure": "Training Convergence",
-                "Proposal Ready": False,
-            },
-            {
-                "Claim": ("Hybrid QML policy is trainable"),
-                "Evidence": "Pending Sprint 4",
-                "Figure": "RL Learning Curve",
-                "Proposal Ready": False,
-            },
-            {
-                "Claim": ("Safety layer reduces violations"),
-                "Evidence": "Pending Sprint 5",
-                "Figure": "Safety Violations",
-                "Proposal Ready": False,
-            },
-        ]
-    )
+    st.subheader("Compression Ablation")
 
     st.dataframe(
-        evidence,
+        pd.DataFrame(
+            _ablation_rows(
+                evidence,
+                "compression",
+            )
+        ),
         width="stretch",
         hide_index=True,
     )
 
-    st.subheader("Sprint 2 Evidence Summary")
+    st.subheader("QML Ablation")
 
-    st.markdown("""
-**Proposal-safe Sprint 2 conclusions**
+    st.dataframe(
+        pd.DataFrame(
+            _ablation_rows(
+                evidence,
+                "rl_qml",
+            )
+        ),
+        width="stretch",
+        hide_index=True,
+    )
 
-- INT8 achieved approximately **3.846× effective whole-model compression** in both domains.
-- INT8 satisfied the **≥2× compression and ≤5% relative test-MSE-change** criterion in **3/3 seeds** for both autonomous driving and robotics.
-- INT8 was the only tested compression family on the three-seed Pareto frontier in both domains.
-- Classical truncated SVD and quantum-inspired TT/MPS were implemented and evaluated as comparison methods.
-- TT/MPS achieved greater compression than the selected SVD configurations, but substantially larger task-error degradation.
-- TT/MPS is treated as one **quantum-inspired tensor-network family**, not as an independent TT and MPS benchmark.
-- No quantum hardware was used in Sprint 2.
-- No native INT8, SVD-factorized, or TT/MPS compressed-runtime speedup is claimed.
-""")
+    st.subheader("Safety Ablation")
+
+    st.dataframe(
+        pd.DataFrame(
+            _ablation_rows(
+                evidence,
+                "safety",
+            )
+        ),
+        width="stretch",
+        hide_index=True,
+    )
+
+    st.subheader("Full-System Ablation")
+
+    status = evidence["full_system_status"]
+
+    (
+        col1,
+        col2,
+        col3,
+    ) = st.columns(3)
+
+    col1.metric(
+        "DIRECT",
+        status["DIRECT"],
+    )
+
+    col2.metric(
+        "COMPONENT_ONLY",
+        status["COMPONENT_ONLY"],
+    )
+
+    col3.metric(
+        "NOT_EVALUATED",
+        status["NOT_EVALUATED"],
+    )
+
+    st.warning(
+        "No matched integrated Compression × QML × "
+        "Safety factorial configuration was directly "
+        "executed in Phase 1. Component results are "
+        "not combined into synthetic full-system "
+        "performance estimates."
+    )
+
+    phase1 = evidence["full_system"]["phase1"]
+
+    matrix = phase1.get(
+        "matrix",
+        [],
+    )
+
+    if (
+        isinstance(
+            matrix,
+            list,
+        )
+        and matrix
+    ):
+        st.dataframe(
+            pd.DataFrame(matrix),
+            width="stretch",
+            hide_index=True,
+        )
+
+    st.caption(evidence["full_system"]["scientific_conclusion"])
+
+
+def _claim_status_label(
+    status: str,
+) -> str:
+    mapping = {
+        "supported": "SUPPORTED",
+        "supported_with_limitation": "LIMITED",
+        "not_demonstrated": "NOT DEMONSTRATED",
+        "blocked": "BLOCKED",
+    }
+
+    return mapping.get(
+        status.lower(),
+        status.upper(),
+    )
+
+
+def render_claims(
+    evidence: dict[str, Any],
+) -> None:
+    """Render final proposal claims and blocked claim controls."""
+    st.header("Proposal Claim Evidence")
+
+    rows = []
+
+    for claim in evidence["claim_registry"]:
+        rows.append(
+            {
+                "Claim ID": claim["claim_id"],
+                "Area": claim["area"],
+                "Status": _claim_status_label(claim["status"]),
+                "Statement": claim["statement"],
+                "Limitation": claim["limitation"],
+                "Evidence": claim["evidence"],
+            }
+        )
+
+    st.dataframe(
+        pd.DataFrame(rows),
+        width="stretch",
+        hide_index=True,
+    )
+
+    st.subheader("Blocked Claim Controls")
+
+    blocked = [
+        {
+            "Claim Control": key,
+            "Allowed": value,
+        }
+        for key, value in sorted(evidence["claim_controls"].items())
+    ]
+
+    st.dataframe(
+        pd.DataFrame(blocked),
+        width="stretch",
+        hide_index=True,
+    )
+
+    st.warning(
+        "Quantum advantage, quantum speedup, "
+        "formal Lyapunov stability, production readiness, "
+        "zero-shot transfer, and full-system superiority "
+        "remain blocked by the frozen Phase 1 evidence."
+    )
+
+
+def render_provenance(
+    evidence: dict[str, Any],
+) -> None:
+    """Render canonical evidence provenance."""
+    st.header("Evidence Provenance")
+
+    st.info(
+        "The final dashboard is a read-only evidence "
+        "browser. It performs no training, simulation, "
+        "retuning, policy execution, or scientific "
+        "recomputation."
+    )
+
+    st.subheader("Canonical Sources")
+
+    for label, path in evidence["provenance"].items():
+        st.code(f"{label}: {path}")
+
+    st.subheader("Evidence Contract")
+
+    contract_rows = [
+        {
+            "Property": "Phase",
+            "Value": evidence["phase"],
+        },
+        {
+            "Property": "Status",
+            "Value": evidence["status"],
+        },
+        {
+            "Property": "Domains",
+            "Value": ", ".join(DOMAINS),
+        },
+        {
+            "Property": "Seeds",
+            "Value": ", ".join(str(seed) for seed in REQUIRED_SEEDS),
+        },
+        {
+            "Property": "New training",
+            "Value": str(evidence["new_training"]),
+        },
+        {
+            "Property": "New experiments",
+            "Value": str(evidence["new_experiments"]),
+        },
+        {
+            "Property": "New scientific results",
+            "Value": str(evidence["new_scientific_results"]),
+        },
+        {
+            "Property": "Synthetic metric composition",
+            "Value": str(evidence["synthetic_metric_composition"]),
+        },
+    ]
+
+    st.dataframe(
+        pd.DataFrame(contract_rows),
+        width="stretch",
+        hide_index=True,
+    )
+
+
+def render_dashboard(
+    evidence: dict[str, Any],
+) -> None:
+    """Render the final Phase 1 evidence browser."""
+    selected_domain = render_domain_selector()
+
+    render_header(evidence)
+
+    tabs = st.tabs(
+        [
+            "Overview",
+            "Final Figures",
+            "Final Tables",
+            "Ablation",
+            "Proposal Claims",
+            "Provenance",
+        ]
+    )
+
+    with tabs[0]:
+        render_bottleneck_overview(
+            evidence,
+            selected_domain,
+        )
+
+        st.header("Phase 1 Bottleneck Scorecard")
+
+        st.dataframe(
+            pd.DataFrame(evidence["bottleneck_scorecard"]),
+            width="stretch",
+            hide_index=True,
+        )
+
+    with tabs[1]:
+        render_final_figures(
+            evidence,
+            selected_domain,
+        )
+
+    with tabs[2]:
+        render_final_tables(
+            evidence,
+            selected_domain,
+        )
+
+    with tabs[3]:
+        render_ablation(evidence)
+
+    with tabs[4]:
+        render_claims(evidence)
+
+    with tabs[5]:
+        render_provenance(evidence)
 
 
 def main() -> None:
-    """Run the Q-VLA Forge dashboard."""
-    st.title("Q-VLA Forge — Experiment Dashboard")
+    """Run the final Q-VLA Forge Phase 1 dashboard."""
+    try:
+        evidence = load_evidence()
 
-    st.caption(
-        "Quantum-Enhanced Vision-Language-Action "
-        "Pilot for Autonomous Driving and Robotics"
-    )
+    except MissingCanonicalEvidenceError as exc:
+        st.error(MISSING_CANONICAL_EVIDENCE)
 
-    dataframe = load_dashboard_data()
+        st.code(str(exc))
 
-    page = st.sidebar.radio(
-        "Dashboard",
-        [
-            "Overview",
-            "Experiment Tracker",
-            "Benchmarks",
-            "Ablation",
-            "Proposal Evidence",
-        ],
-    )
+        st.warning(
+            "Required final-validation evidence is "
+            "missing or invalid. The dashboard will "
+            "not substitute historical artifacts, "
+            "generate zeros, or recompute results."
+        )
 
-    if page == "Overview":
-        render_overview(dataframe)
+        st.stop()
 
-    elif page == "Experiment Tracker":
-        render_experiment_tracker(dataframe)
-
-    elif page == "Benchmarks":
-        render_benchmarks(dataframe)
-
-    elif page == "Ablation":
-        render_ablation(dataframe)
-
-    elif page == "Proposal Evidence":
-        render_evidence()
+    render_dashboard(evidence)
 
 
 if __name__ == "__main__":
