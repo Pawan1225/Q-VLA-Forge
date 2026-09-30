@@ -1,0 +1,51 @@
+# Q-VLA Forge — Phase 1 vs Phase 2 Separation
+
+Sprint 7.13 explicitly separates executed and frozen Phase 1 evidence from future Phase 2 validation objectives.
+
+No Phase 2 objective in this artifact is reported as an executed result, demonstrated improvement, or predicted outcome.
+
+## Frozen Phase 1 State
+
+- Principal seeds: 42, 123, 456
+- Phase 1 status: evaluated component evidence
+- Direct integrated full-system runs: 0
+- Component-only factorial cells: 16
+- New experiments in Sprint 7.13: no
+- New training in Sprint 7.13: no
+- New scientific results in Sprint 7.13: no
+
+## Phase Boundary Matrix
+
+| Area | Phase 1 Executed | Phase 1 Evidence | Phase 1 Boundary | Phase 2 Objective | Phase 2 Status | Evidence |
+|---|---|---|---|---|---|---|
+| shared_architecture | Shared lightweight VLA-style framework evaluated across autonomous-driving and robotics proxy domains. | Framework, interface, evaluation, robustness-harness, metric-schema, and protocol reuse. | No universal trained policy, shared trained policy weights, zero-shot transfer, or universal safety controller was demonstrated. | Evaluate stronger shared representations, explicit weight-sharing controls, and matched cross-domain transfer experiments. | candidate_integrated_validation | results/final-validation/tables/cross-domain-table.csv |
+| compression | FP32, INT8, SVD, and TT/MPS compression were evaluated under the frozen criterion. | INT8 passed the joint compression-quality criterion in both proxy domains at approximately 3.85x effective storage compression. | Evaluated SVD and TT/MPS configurations did not satisfy the same joint criterion. No TT/MPS superiority claim is supported. | Evaluate stronger low-rank and tensor-network configurations on larger VLA components. | candidate_integrated_validation | results/final-validation/tables/compression-table.csv |
+| training_efficiency | Training-efficiency experiments were evaluated under the locked three-seed target-reaching protocol. | The evaluated methods produced measurable target-reaching and validation statistics. | Phase 1 did not demonstrate a robust 10% or greater optimizer-step efficiency improvement across all three locked seeds. | Evaluate stronger optimization and representation strategies under matched target-reaching protocols. | candidate_integrated_validation | results/final-validation/tables/training-table.csv |
+| rl | Classical PPO was evaluated across both domains and all three principal seeds. | Classical PPO reached all 6 of 6 frozen domain-seed targets. | This result is limited to the frozen pilot-scale proxy environments and does not establish production policy performance. | Scale policy evaluation to stronger environments and more realistic VLA policy workloads. | candidate_integrated_validation | results/final-validation/tables/rl-table.csv |
+| qml | A compact 4-qubit PQC/QML actor and matched classical control were evaluated under the frozen RL protocol. | The QML actor was substantially more parameter-compact than the full PPO actor. | QML reached 0 of 6 frozen targets. No QML sample-efficiency, computational, quantum-speedup, or quantum-hardware advantage was demonstrated. | Screen alternative encodings, circuit structures, matched compact classical controls, and optional QPU execution only where scientifically justified. | candidate_integrated_validation | results/final-validation/tables/rl-table.csv |
+| safety | No-filter, clipping, and classical Lyapunov-guided filtering were evaluated under the frozen proxy safety contracts. | Clipping and Lyapunov filtering produced zero observed clean violation-step rate in both proxy domains. | This is empirical pilot evidence only. It does not establish formal safety, Lyapunov stability, invariance, certification, production readiness, or real-world vehicle or robot safety. | Evaluate stronger formal constraints, intervention latency, realistic failure modes, and closed-loop safety validation. | candidate_integrated_validation | results/final-validation/tables/safety-table.csv |
+| robustness | Gaussian observation noise, structured-state perturbation, and direct action perturbation were evaluated. | Robustness behavior and direct-action recovery were quantified under the frozen synthetic perturbation protocol. | Synthetic perturbation results do not establish real-world robustness or production fault coverage. | Expand to realistic sensor, actuator, environment, and distribution-shift failure models. | candidate_integrated_validation | results/safety/consolidated/sprint5-safety-evidence-package.json |
+| full_system | Compression, QML policy, and safety-filter components were independently evaluated across both proxy domains. | The intended factorial contains 16 domain/configuration cells classified as component-only evidence. | DIRECT = 0 and COMPONENT_ONLY = 16. No matched end-to-end Compression x QML x Safety factorial configuration was directly executed. No synthetic full-system metric, interaction effect, or full-system superiority claim is supported. | Execute all 16 matched Compression x QML x Safety domain/configuration cells and estimate main and interaction effects from direct integrated evidence. | candidate_integrated_validation | results/final-validation/full-system-ablation/full-system-ablation.json |
+
+## Phase 1 Claim Boundaries
+
+- No quantum advantage claim.
+- No quantum speedup claim.
+- No QML sample-efficiency superiority claim.
+- No TT/MPS superiority claim.
+- No formal safety or Lyapunov stability guarantee.
+- No production-readiness claim.
+- No certification claim.
+- No zero-shot cross-domain transfer claim.
+- No full-system superiority claim.
+- No interaction-effect claim from component-only evidence.
+- No synthetic end-to-end metric composition.
+- No predicted Phase 2 performance claim.
+
+## Phase 2 Integrated Validation
+
+The primary carry-over is direct matched execution of the 16 Compression × QML × Safety domain/configuration cells.
+
+Those runs are required before main effects, interaction effects, or integrated full-system performance can be reported.
+
+Phase 2 does not assume that quantum or quantum-inspired methods will outperform matched classical baselines.
