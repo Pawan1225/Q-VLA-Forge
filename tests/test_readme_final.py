@@ -126,9 +126,7 @@ def test_rl_target_counts_present() -> None:
 
     assert "Classical PPO / MLP" in text
     assert "6/6" in text
-
     assert "Matched classical control" in text
-
     assert "1/6" in text
     assert "QML / PQC" in text
     assert "0/6" in text
@@ -155,9 +153,7 @@ def test_safety_empirical_boundary_present() -> None:
     text = normalized()
 
     assert "zero observed violation-step rate" in text
-
     assert "This is empirical proxy evidence only" in text
-
     assert "formal closed-loop stability" in text
 
 
@@ -244,11 +240,8 @@ def test_reproduction_quality_commands_present() -> None:
     text = readme()
 
     assert "pytest tests -q" in text
-
     assert "ruff check src tests experiments dashboard" in text
-
     assert "black --check src tests experiments dashboard" in text
-
     assert "mypy src" in text
 
 
@@ -275,11 +268,14 @@ def test_requirements_manifest_is_complete() -> None:
         "PyYAML==",
         "gymnasium==",
         "PennyLane==",
+        "qiskit==",
+        "tensorly==",
         "streamlit==",
         "pytest==",
         "ruff==",
         "black==",
         "mypy==",
+        "types-PyYAML==",
     )
 
     for dependency in required:
